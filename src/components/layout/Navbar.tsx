@@ -74,94 +74,94 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <div className="hidden lg:flex items-center gap-1">
-            {NAV_LINKS.filter((link) => link.href !== "/contact").map((link) =>
-              link.children ? (
-                <div
-                  key={link.label}
-                  className="relative"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
-                  <button
-                    type="button"
-                    onClick={() => setServicesOpen(true)}
-                    aria-haspopup="true"
-                    aria-expanded={servicesOpen}
-                    aria-controls="desktop-services-menu"
-                    className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-slate-700 hover:text-[#C86A28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C86A28] transition-colors rounded-lg font-accent"
+          {/* Desktop Right Cluster: Navigation Links + Action CTA */}
+          <div className="hidden lg:flex items-center gap-6">
+            <div className="flex items-center gap-1">
+              {NAV_LINKS.filter((link) => link.href !== "/contact").map((link) =>
+                link.children ? (
+                  <div
+                    key={link.label}
+                    className="relative"
+                    onMouseEnter={() => setServicesOpen(true)}
+                    onMouseLeave={() => setServicesOpen(false)}
+                  >
+                    <button
+                      type="button"
+                      onClick={() => setServicesOpen(true)}
+                      aria-haspopup="true"
+                      aria-expanded={servicesOpen}
+                      aria-controls="desktop-services-menu"
+                      className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-slate-700 hover:text-[#C86A28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C86A28] transition-colors rounded-lg font-accent"
+                    >
+                      {link.label}
+                      <ChevronDown
+                        className={`w-4 h-4 transition-transform duration-200 ${
+                          servicesOpen ? "rotate-180 text-[#C86A28]" : "text-slate-400"
+                        }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {servicesOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 8 }}
+                          transition={{ duration: 0.18 }}
+                          id="desktop-services-menu"
+                          className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-xl border border-slate-100 p-2.5 overflow-hidden"
+                        >
+                          <div className="px-3 py-2 border-b border-slate-100 mb-1">
+                            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-accent">
+                              Capabilities
+                            </p>
+                          </div>
+                          {link.children.map((child) => {
+                            const IconComponent = serviceIcons[child.href] || Sparkles;
+                            return (
+                              <Link
+                                key={child.label}
+                                href={child.href}
+                                className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50/80 transition-colors group/item"
+                              >
+                                <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-[#C86A28] group-hover/item:text-white transition-colors">
+                                  <IconComponent className="w-4 h-4" />
+                                </div>
+                                <div>
+                                  <span className="block text-sm font-bold text-slate-800 group-hover/item:text-[#C86A28] transition-colors font-accent">
+                                    {child.label}
+                                  </span>
+                                  <span className="block text-xs text-slate-500 leading-snug mt-0.5">
+                                    {serviceDescriptions[child.href]}
+                                  </span>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                          <div className="mt-1 pt-2 border-t border-slate-100">
+                            <Link
+                              href="/services"
+                              className="block px-3 py-2 text-xs font-bold text-[#C86A28] hover:text-[#B05819] font-accent transition-colors text-center"
+                            >
+                              Explore Full Service Portfolio →
+                            </Link>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-[#C86A28] transition-colors rounded-lg font-accent"
                   >
                     {link.label}
-                    <ChevronDown
-                      className={`w-4 h-4 transition-transform duration-200 ${
-                        servicesOpen ? "rotate-180 text-[#C86A28]" : "text-slate-400"
-                      }`}
-                    />
-                  </button>
-                  <AnimatePresence>
-                    {servicesOpen && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 8 }}
-                        transition={{ duration: 0.18 }}
-                        id="desktop-services-menu"
-                        className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-xl border border-slate-100 p-2.5 overflow-hidden"
-                      >
-                        <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                          <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-accent">
-                            Capabilities
-                          </p>
-                        </div>
-                        {link.children.map((child) => {
-                          const IconComponent = serviceIcons[child.href] || Sparkles;
-                          return (
-                            <Link
-                              key={child.label}
-                              href={child.href}
-                              className="flex items-start gap-3 p-3 rounded-xl hover:bg-slate-50/80 transition-colors group/item"
-                            >
-                              <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-[#C86A28] group-hover/item:text-white transition-colors">
-                                <IconComponent className="w-4 h-4" />
-                              </div>
-                              <div>
-                                <span className="block text-sm font-bold text-slate-800 group-hover/item:text-[#C86A28] transition-colors font-accent">
-                                  {child.label}
-                                </span>
-                                <span className="block text-xs text-slate-500 leading-snug mt-0.5">
-                                  {serviceDescriptions[child.href]}
-                                </span>
-                              </div>
-                            </Link>
-                          );
-                        })}
-                        <div className="mt-1 pt-2 border-t border-slate-100">
-                          <Link
-                            href="/services"
-                            className="block px-3 py-2 text-xs font-bold text-[#C86A28] hover:text-[#B05819] font-accent transition-colors text-center"
-                          >
-                            Explore Full Service Portfolio →
-                          </Link>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ) : (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="px-4 py-2 text-sm font-semibold text-slate-700 hover:text-[#C86A28] transition-colors rounded-lg font-accent"
-                >
-                  {link.label}
-                </Link>
-              )
-            )}
-          </div>
+                  </Link>
+                )
+              )}
+            </div>
 
-          {/* Desktop Primary CTA */}
-          <div className="hidden lg:flex items-center gap-3">
+            {/* Desktop Primary CTA */}
             <Link href="/contact" className="nav-cta">
               Get in Touch
             </Link>
