@@ -36,17 +36,26 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20 text-xs font-bold uppercase tracking-[0.15em] mb-6 font-accent"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C86A28]" />
-                IGNOVA Consulting & Academy
+                Talent Acquisition · Talent Development · Growth &amp; Transformation
               </motion.div>
 
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-4xl sm:text-5xl md:text-6xl font-black text-[#0B2038] tracking-tight leading-[1.1] mb-6 font-heading"
+                className="text-4xl sm:text-5xl md:text-6xl font-black text-[#0B2038] tracking-tight leading-[1.1] mb-4 font-heading"
               >
                 Architect. <span className="text-[#C86A28]">Activate.</span> Accelerate.
               </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                className="text-sm sm:text-base font-bold text-[#C86A28] mb-4 font-accent tracking-wider uppercase"
+              >
+                Build Capability · Secure Talent · Engineer Performance
+              </motion.p>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

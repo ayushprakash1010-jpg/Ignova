@@ -76,7 +76,7 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex items-center gap-1">
-            {NAV_LINKS.map((link) =>
+            {NAV_LINKS.filter((link) => link.href !== "/contact").map((link) =>
               link.children ? (
                 <div
                   key={link.label}
@@ -191,7 +191,7 @@ export default function Navbar() {
             className="lg:hidden bg-white border-t border-slate-100 shadow-xl overflow-hidden"
           >
             <div className="px-5 py-6 space-y-2">
-              {NAV_LINKS.map((link) => (
+              {NAV_LINKS.filter((link) => link.href !== "/contact").map((link) => (
                 <div key={link.label}>
                   <Link
                     href={link.href}
