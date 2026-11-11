@@ -33,10 +33,13 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20 text-xs font-bold uppercase tracking-[0.15em] mb-6 font-accent"
+                className="inline-flex flex-wrap items-center gap-x-2 gap-y-1 px-3.5 py-1.5 rounded-full bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20 text-[11px] sm:text-xs font-bold uppercase tracking-[0.12em] mb-6 font-accent"
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C86A28]" />
-                Talent Acquisition · Talent Development · Growth &amp; Transformation
+                <span>Talent Acquisition</span>
+                <span className="opacity-40">|</span>
+                <span>Talent Development</span>
+                <span className="opacity-40">|</span>
+                <span>Growth &amp; Transformation</span>
               </motion.div>
 
               <motion.h1
@@ -52,9 +55,13 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.15 }}
-                className="text-sm sm:text-base font-bold text-[#C86A28] mb-4 font-accent tracking-wider uppercase"
+                className="text-xs sm:text-sm md:text-base font-bold text-[#C86A28] mb-4 font-accent tracking-wider uppercase flex flex-wrap items-center gap-x-2.5 gap-y-1"
               >
-                Build Capability · Secure Talent · Engineer Performance
+                <span>Build Capability</span>
+                <span className="opacity-40">|</span>
+                <span>Secure Talent</span>
+                <span className="opacity-40">|</span>
+                <span>Engineer Performance</span>
               </motion.p>
 
               <motion.p
