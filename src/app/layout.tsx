@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Manrope } from "next/font/google";
 import { MotionConfig } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -74,18 +76,58 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ignova-ek2m.vercel.app/#organization",
+      "name": "IGNOVA Consulting & Academy",
+      "url": "https://ignova-ek2m.vercel.app",
+      "logo": "https://ignova-ek2m.vercel.app/images/ignova-logo.png",
+      "email": "contact@ignovaconsulting.com",
+      "description":
+        "Three capabilities under one trusted partner. Connecting people to business execution through industrial depth, strategic search, and workforce transformation.",
+      "knowsAbout": [
+        "Workforce Capability Transformation",
+        "Strategic Talent Advisory & Search",
+        "Industrial Performance Consulting",
+        "Lean Manufacturing & Six Sigma",
+        "Quality Engineering"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ignova-ek2m.vercel.app/#website",
+      "url": "https://ignova-ek2m.vercel.app",
+      "name": "IGNOVA Consulting & Academy",
+      "publisher": {
+        "@id": "https://ignova-ek2m.vercel.app/#organization"
+      }
+    }
+  ]
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${playfair.variable} ${manrope.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-cream text-charcoal">
         <MotionConfig reducedMotion="user">
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
         </MotionConfig>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

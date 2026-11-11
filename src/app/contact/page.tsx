@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, MapPin, ArrowRight, CheckCircle } from "lucide-react";
+import { Mail, MapPin, ArrowRight, CheckCircle, Clock, Globe } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -375,7 +375,7 @@ export default function ContactPage() {
                         className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
                         style={{ fontFamily: "var(--font-accent)" }}
                       >
-                        Email
+                        Corporate Inquiries
                       </p>
                       <a
                         href="mailto:contact@ignovaconsulting.com"
@@ -386,6 +386,41 @@ export default function ContactPage() {
                     </div>
                   </div>
 
+                  {/* Response SLA */}
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-5 h-5 text-orange" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
+                        style={{ fontFamily: "var(--font-accent)" }}
+                      >
+                        Direct Response SLA
+                      </p>
+                      <p className="text-sm text-charcoal font-medium">
+                        Within 24 business hours
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Geographic Reach */}
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                      <Globe className="w-5 h-5 text-orange" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
+                        style={{ fontFamily: "var(--font-accent)" }}
+                      >
+                        Mandate Reach
+                      </p>
+                      <p className="text-sm text-charcoal font-medium">
+                        Pan-India & Global Client Engagements
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
