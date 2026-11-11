@@ -29,6 +29,7 @@ const inputStyles =
 export default function ContactPage() {
   const [submissionMessage, setSubmissionMessage] = useState("");
   const [submissionError, setSubmissionError] = useState("");
+  const [prefilledMailto, setPrefilledMailto] = useState<string | null>(null);
 
   const {
     register,
@@ -42,6 +43,13 @@ export default function ContactPage() {
   const onSubmit = async (data: ContactFormData) => {
     setSubmissionMessage("");
     setSubmissionError("");
+    setPrefilledMailto(null);
+
+    const fallbackMailto = `mailto:contact@ignovaconsulting.com?subject=${encodeURIComponent(
+      `Inquiry from ${data.name} (${data.company})`
+    )}&body=${encodeURIComponent(
+      `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nPhone: ${data.phone || "Not provided"}\nService: ${data.service || "General Inquiry"}\n\nMessage:\n${data.message}`
+    )}`;
 
     try {
       const response = await fetch("/api/contact", {
@@ -52,14 +60,16 @@ export default function ContactPage() {
       const result: { success?: boolean; error?: string } = await response.json();
 
       if (!response.ok || !result.success) {
-        setSubmissionError(result.error || "We couldn't send your message. Please try again.");
+        setPrefilledMailto(fallbackMailto);
+        setSubmissionError(result.error || "We couldn't deliver the message automatically.");
         return;
       }
 
       setSubmissionMessage("Thank you for reaching out. Your message has been sent.");
       reset();
     } catch {
-      setSubmissionError("We couldn't send your message. Please try again or email us directly.");
+      setPrefilledMailto(fallbackMailto);
+      setSubmissionError("We couldn't deliver the message automatically. Please click below to send via your email client.");
     }
   };
 
@@ -114,15 +124,33 @@ export default function ContactPage() {
               )}
 
               {submissionError && (
-                <p
-                  className="mb-8 rounded-xl border border-red-200 bg-red-50 px-5 py-4 text-sm font-medium text-red-800"
+                <div
+                  className="mb-8 rounded-xl border border-amber-300 bg-amber-50 p-5 text-sm text-slate-800"
                   role="alert"
                 >
-                  {submissionError} If you prefer, email us at{" "}
-                  <a className="underline" href="mailto:contact@ignovaconsulting.com">
-                    contact@ignovaconsulting.com
-                  </a>.
-                </p>
+                  <p className="font-semibold text-amber-900 mb-1">{submissionError}</p>
+                  {prefilledMailto ? (
+                    <div className="mt-3">
+                      <p className="text-xs text-slate-600 mb-2">
+                        Your message is saved. Click below to open your email app and send it directly to our team:
+                      </p>
+                      <a
+                        href={prefilledMailto}
+                        className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#C87533] text-white rounded-lg text-sm font-semibold hover:bg-[#B05819] transition-colors shadow-xs"
+                      >
+                        <Mail className="w-4 h-4" />
+                        Send Pre-filled Email to contact@ignovaconsulting.com
+                      </a>
+                    </div>
+                  ) : (
+                    <p className="mt-1">
+                      If you prefer, email us at{" "}
+                      <a className="underline font-semibold text-[#C87533]" href="mailto:contact@ignovaconsulting.com">
+                        contact@ignovaconsulting.com
+                      </a>.
+                    </p>
+                  )}
+                </div>
               )}
 
               <form
