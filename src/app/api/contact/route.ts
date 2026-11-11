@@ -53,10 +53,10 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.IGNOVA_FORM_FROM;
-  const to = process.env.CONTACT_TO || COMPANY.email;
+  const from = process.env.IGNOVA_FORM_FROM || "onboarding@resend.dev";
+  const to = process.env.CONTACT_TO || "growytvercel@gmail.com";
 
-  if (!apiKey || !from) {
+  if (!apiKey) {
     return json(
       { error: "The contact form is not configured yet. Please email us directly." },
       503
@@ -76,6 +76,7 @@ export async function POST(request: Request) {
       headers: {
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
+        "User-Agent": "IGNOVA-Website/1.0",
       },
       body: JSON.stringify({
         from,
