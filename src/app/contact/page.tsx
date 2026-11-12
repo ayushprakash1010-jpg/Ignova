@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Mail, MapPin, ArrowRight, CheckCircle, Clock, Globe } from "lucide-react";
+import { Mail, MapPin, ArrowRight, CheckCircle, Clock, Globe, Phone } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -45,7 +45,7 @@ export default function ContactPage() {
     setSubmissionError("");
     setPrefilledMailto(null);
 
-    const fallbackMailto = `mailto:contact@ignovaconsulting.com?subject=${encodeURIComponent(
+    const fallbackMailto = `mailto:ignovacobsulting26@gmail.com?subject=${encodeURIComponent(
       `Inquiry from ${data.name} (${data.company})`
     )}&body=${encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nPhone: ${data.phone || "Not provided"}\nService: ${data.service || "General Inquiry"}\n\nMessage:\n${data.message}`
@@ -139,14 +139,14 @@ export default function ContactPage() {
                         className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#C87533] text-white rounded-lg text-sm font-semibold hover:bg-[#B05819] transition-colors shadow-xs"
                       >
                         <Mail className="w-4 h-4" />
-                        Send Pre-filled Email to contact@ignovaconsulting.com
+                        Send Pre-filled Email to ignovacobsulting26@gmail.com
                       </a>
                     </div>
                   ) : (
                     <p className="mt-1">
                       If you prefer, email us at{" "}
-                      <a className="underline font-semibold text-[#C87533]" href="mailto:contact@ignovaconsulting.com">
-                        contact@ignovaconsulting.com
+                      <a className="underline font-semibold text-[#C87533]" href="mailto:ignovacobsulting26@gmail.com">
+                        ignovacobsulting26@gmail.com
                       </a>.
                     </p>
                   )}
@@ -347,7 +347,7 @@ export default function ContactPage() {
                 </h3>
 
                 <div className="space-y-5">
-                  {/* Company */}
+                  {/* Office Address */}
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
                       <MapPin className="w-5 h-5 text-orange" />
@@ -357,11 +357,32 @@ export default function ContactPage() {
                         className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
                         style={{ fontFamily: "var(--font-accent)" }}
                       >
-                        Company
+                        Corporate Office
                       </p>
-                      <p className="text-sm text-charcoal font-medium">
-                        IGNOVA Consulting & Academy
+                      <p className="text-sm text-charcoal font-medium leading-snug">
+                        L14C, Orchard Smartworld, Sector 61, Gurgaon, Haryana
                       </p>
+                    </div>
+                  </div>
+
+                  {/* Contact Number */}
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-orange" />
+                    </div>
+                    <div>
+                      <p
+                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
+                        style={{ fontFamily: "var(--font-accent)" }}
+                      >
+                        Direct Phone
+                      </p>
+                      <a
+                        href="tel:+919971524733"
+                        className="text-sm text-charcoal font-semibold hover:text-orange transition-colors"
+                      >
+                        +91 99715 24733
+                      </a>
                     </div>
                   </div>
 
@@ -378,10 +399,10 @@ export default function ContactPage() {
                         Corporate Inquiries
                       </p>
                       <a
-                        href="mailto:contact@ignovaconsulting.com"
+                        href="mailto:ignovacobsulting26@gmail.com"
                         className="text-sm text-charcoal font-medium hover:text-orange transition-colors"
                       >
-                        contact@ignovaconsulting.com
+                        ignovacobsulting26@gmail.com
                       </a>
                     </div>
                   </div>
@@ -400,24 +421,6 @@ export default function ContactPage() {
                       </p>
                       <p className="text-sm text-charcoal font-medium">
                         Within 24 business hours
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Geographic Reach */}
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center flex-shrink-0">
-                      <Globe className="w-5 h-5 text-orange" />
-                    </div>
-                    <div>
-                      <p
-                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
-                        style={{ fontFamily: "var(--font-accent)" }}
-                      >
-                        Mandate Reach
-                      </p>
-                      <p className="text-sm text-charcoal font-medium">
-                        Pan-India & Global Client Engagements
                       </p>
                     </div>
                   </div>

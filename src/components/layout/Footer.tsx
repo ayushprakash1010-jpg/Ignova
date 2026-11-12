@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { COMPANY, NAV_LINKS, SERVICES } from "@/lib/constants";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -81,6 +81,25 @@ export default function Footer() {
                   <span className="min-w-0 break-all">{COMPANY.email}</span>
                 </a>
               </li>
+              {COMPANY.phone && (
+                <li>
+                  <a
+                    href={`tel:${COMPANY.phoneRaw}`}
+                    className="flex items-center gap-2.5 text-slate-300 hover:text-white text-sm transition-colors"
+                  >
+                    <Phone className="w-4 h-4 text-[#DF7C36] flex-shrink-0" />
+                    <span>{COMPANY.phone}</span>
+                  </a>
+                </li>
+              )}
+              {COMPANY.address && (
+                <li>
+                  <div className="flex items-start gap-2.5 text-slate-300 text-xs leading-relaxed">
+                    <MapPin className="w-4 h-4 text-[#DF7C36] flex-shrink-0 mt-0.5" />
+                    <span>{COMPANY.address}</span>
+                  </div>
+                </li>
+              )}
             </ul>
           </div>
         </div>

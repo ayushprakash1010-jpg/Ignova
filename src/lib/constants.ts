@@ -4,7 +4,11 @@ export const COMPANY = {
   tagline: "Architect. Activate. Accelerate.",
   description:
     "Three capabilities. One partner. Connecting people to business execution.",
-  email: "contact@ignovaconsulting.com",
+  email: "ignovacobsulting26@gmail.com",
+  phone: "+91 99715 24733",
+  phoneRaw: "+919971524733",
+  address: "L14C, Orchard Smartworld, Sector 61, Gurugram, Haryana",
+  city: "Gurugram, Haryana",
 };
 
 export const NAV_LINKS = [

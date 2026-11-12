@@ -85,7 +85,15 @@ const jsonLd = {
       "name": "IGNOVA Consulting & Academy",
       "url": "https://ignova-ek2m.vercel.app",
       "logo": "https://ignova-ek2m.vercel.app/images/ignova-logo.png",
-      "email": "contact@ignovaconsulting.com",
+      "email": "ignovacobsulting26@gmail.com",
+      "telephone": "+91 99715 24733",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "L14C, Orchard Smartworld, Sector 61",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "addressCountry": "IN"
+      },
       "description":
         "Three capabilities under one trusted partner. Connecting people to business execution through industrial depth, strategic search, and workforce transformation.",
       "knowsAbout": [
