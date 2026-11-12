@@ -143,6 +143,86 @@ export const IGNOVA_FACTOR = [
   },
 ];
 
+export interface ClientLogo {
+  name: string;
+  logo: string;
+  alt: string;
+  maxHeight?: string;
+}
+
+export const CLIENT_LOGOS = {
+  industrial: [
+    {
+      name: "Hero Steels Limited",
+      logo: "/images/clients/hero-steels.png",
+      alt: "Hero Steels Limited Logo",
+      maxHeight: "max-h-8 sm:max-h-9",
+    },
+    {
+      name: "Gabriel",
+      logo: "/images/clients/gabriel.png",
+      alt: "Gabriel India Logo",
+      maxHeight: "max-h-8 sm:max-h-9",
+    },
+    {
+      name: "Motherson",
+      logo: "/images/clients/motherson.png",
+      alt: "Samvardhana Motherson Logo",
+      maxHeight: "max-h-9 sm:max-h-10",
+    },
+    {
+      name: "MSA",
+      logo: "/images/clients/msa.svg",
+      alt: "MSA Safety Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+    {
+      name: "Tenneco",
+      logo: "/images/clients/tenneco.svg",
+      alt: "Tenneco Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+  ] as ClientLogo[],
+  recruitment: [
+    {
+      name: "ICICI Bank",
+      logo: "/images/clients/icici-bank.svg",
+      alt: "ICICI Bank Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+    {
+      name: "HSBC",
+      logo: "/images/clients/hsbc.svg",
+      alt: "HSBC Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+    {
+      name: "Swiggy",
+      logo: "/images/clients/swiggy.svg",
+      alt: "Swiggy Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+    {
+      name: "Flipkart",
+      logo: "/images/clients/flipkart.svg",
+      alt: "Flipkart Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+    {
+      name: "Tata Group",
+      logo: "/images/clients/tata.svg",
+      alt: "Tata Group Logo",
+      maxHeight: "max-h-9 sm:max-h-10",
+    },
+    {
+      name: "Bandhan Bank",
+      logo: "/images/clients/bandhan-bank.svg",
+      alt: "Bandhan Bank Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+  ] as ClientLogo[],
+};
+
 export const CLIENTS = {
   industrial: [
     "Hero Steels Limited",
