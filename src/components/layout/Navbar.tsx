@@ -56,21 +56,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Brand Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative h-9 w-28 sm:w-32">
+          <Link href="/" className="flex items-center group py-0.5" aria-label="IGNOVA Homepage">
+            <div className="relative h-11 sm:h-12 md:h-[52px] w-36 sm:w-44 md:w-[172px] transition-transform duration-200 group-hover:scale-[1.02]">
               <Image
                 src="/images/ignova-logo.png"
                 alt="IGNOVA Logo"
                 fill
-                sizes="(max-width: 768px) 112px, 128px"
+                sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 192px"
                 priority
                 className="object-contain object-left"
               />
-            </div>
-            <div className="hidden sm:block border-l border-slate-200 pl-3">
-              <span className="block text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500 font-accent">
-                Consulting & Academy
-              </span>
             </div>
           </Link>
 
