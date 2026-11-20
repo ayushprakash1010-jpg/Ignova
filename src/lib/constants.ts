@@ -185,6 +185,12 @@ export const CLIENT_LOGOS = {
   ] as ClientLogo[],
   recruitment: [
     {
+      name: "ICICI Bank",
+      logo: "/images/clients/icici-bank.svg",
+      alt: "ICICI Bank Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
+    {
       name: "HSBC",
       logo: "/images/clients/hsbc.svg",
       alt: "HSBC Logo",
@@ -202,6 +208,18 @@ export const CLIENT_LOGOS = {
       alt: "Flipkart Logo",
       maxHeight: "max-h-7 sm:max-h-8",
     },
+    {
+      name: "Tata Group",
+      logo: "/images/clients/tata.svg",
+      alt: "Tata Group Logo",
+      maxHeight: "max-h-9 sm:max-h-10",
+    },
+    {
+      name: "Bandhan Bank",
+      logo: "/images/clients/bandhan-bank.svg",
+      alt: "Bandhan Bank Logo",
+      maxHeight: "max-h-7 sm:max-h-8",
+    },
   ] as ClientLogo[],
 };
 
@@ -214,9 +232,12 @@ export const CLIENTS = {
     "Tenneco",
   ],
   recruitment: [
+    "ICICI Bank",
     "HSBC",
     "Swiggy",
     "Flipkart",
+    "Tata Group",
+    "Bandhan Bank",
   ],
 };
 
