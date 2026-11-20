@@ -16,6 +16,7 @@ import {
   Hammer,
   Users,
   CheckCircle2,
+  Cpu,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProcessStep from "@/components/ui/ProcessStep";
@@ -58,30 +59,30 @@ const FOCUS_AREAS = [
 
 const AMBITION_COLUMNS = [
   {
-    title: "Market & Growth Strategy",
-    icon: TrendingUp,
+    title: "Industry 4.0 & Smart Factory",
+    icon: Cpu,
     items: [
-      "Marketing priorities and planning",
-      "Market and customer opportunities",
-      "Growth priorities and execution plans",
+      "Connected operations & real-time visibility",
+      "Automation, IoT & digital performance systems",
+      "Data-led decisions for quality, productivity & control",
     ],
   },
   {
-    title: "Expansion & Greenfield",
+    title: "Brownfield & Greenfield",
     icon: Layers,
     items: [
-      "Greenfield planning and setup",
-      "Operating model and organization design",
-      "Workforce and capability readiness",
+      "Greenfield project planning, setup & commissioning",
+      "Operating model, structure & governance design",
+      "Support from the initial planning to mass production",
     ],
   },
   {
     title: "Business Transformation",
     icon: RefreshCw,
     items: [
-      "Operations, lean and quality",
-      "Digital processes and controls",
-      "Team capability and change adoption",
+      "Operational excellence across quality, cost & delivery",
+      "Making Organization GPWD certified & strengthen culture",
+      "Leadership capability, change adoption & execution discipline",
     ],
   },
 ];
@@ -206,7 +207,7 @@ export default function ProjectExecutionPage() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-xl md:text-2xl text-charcoal-light max-w-2xl mb-10 leading-relaxed"
             >
-              People + Processes: Develop operating capability alongside the
+              People + Processes + Technology: Develop operating capability alongside the
               systems that sustain it.
             </motion.p>
           </div>
@@ -364,13 +365,47 @@ export default function ProjectExecutionPage() {
             ))}
           </div>
 
+          {/* Methodology KPI Banner (Slide 15) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-12 rounded-2xl bg-navy p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-1">
+                Execution Scorecard &amp; Controls
+              </span>
+              <h4 className="text-base sm:text-lg font-bold font-heading">
+                Operational KPIs Monitored
+              </h4>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-xs font-accent">
+              {[
+                "OEE (%)",
+                "First-pass yield (%)",
+                "Downtime (%)",
+                "Throughput",
+                "On-time delivery (%)",
+              ].map((kpi) => (
+                <span
+                  key={kpi}
+                  className="px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-semibold"
+                >
+                  {kpi}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+
           {/* Sustainability note */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="mt-12 flex justify-center"
+            className="mt-8 flex justify-center"
           >
             <div className="inline-flex items-center gap-3 px-6 py-4 bg-cream rounded-xl border border-cream-dark">
               <CheckCircle2 className="w-5 h-5 text-orange flex-shrink-0" />

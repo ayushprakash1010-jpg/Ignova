@@ -16,6 +16,16 @@ import {
   GraduationCap,
   Wrench,
   Briefcase,
+  Factory,
+  Layers,
+  Cpu,
+  GitMerge,
+  CheckCircle2,
+  Activity,
+  Zap,
+  Sliders,
+  Gauge,
+  BarChart2,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
@@ -27,53 +37,89 @@ const deliverColumns = [
   {
     icon: Wrench,
     title: "Technical Excellence",
-    items: ["Lean, Six Sigma and quality", "Structured problem solving"],
+    items: [
+      "Six Sigma Green/Black Belt, VSM & SMED",
+      "SPC, Root cause analysis & DOE",
+    ],
   },
   {
     icon: GraduationCap,
     title: "Leadership Effectiveness",
     items: [
-      "Judgment, coaching and teams",
-      "Cross-functional collaboration",
+      "High-Stakes Conversations & Negotiation",
+      "Decision-making & Team Collaboration",
     ],
   },
   {
-    icon: Briefcase,
-    title: "Workplace Application",
+    icon: Factory,
+    title: "Domain Insight",
     items: [
-      "Workshops + practical assignments",
-      "Observable workplace behavior change",
+      "Quality, Digital & Lean shop-floor transformation",
+      "Workplace application & practical assignments",
     ],
   },
 ];
 
 const journeySteps = [
-  { icon: Target, verb: "Assess", desc: "Role and behavioural gaps" },
+  { icon: Target, verb: "Assess", desc: "Role-based learning journeys" },
   { icon: Hammer, verb: "Build", desc: "Workshops + coaching" },
   { icon: ClipboardCheck, verb: "Apply", desc: "Real work challenges" },
   { icon: Eye, verb: "Verify", desc: "Observable progress" },
+];
+
+const domainCards = [
+  {
+    icon: Factory,
+    title: "Understand Operations",
+    desc: "Processes, roles & business priorities",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Strengthen Quality",
+    desc: "Standards & customer requirements",
+  },
+  {
+    icon: GitMerge,
+    title: "Improve Production Flow",
+    desc: "Bottlenecks, waste & material flow",
+  },
+  {
+    icon: Gauge,
+    title: "Understand Reliability",
+    desc: "Equipment losses & maintenance",
+  },
+  {
+    icon: Cpu,
+    title: "Enable Digital Adoption",
+    desc: "Shop-floor data & process controls",
+  },
+  {
+    icon: Layers,
+    title: "Connect the Value Chain",
+    desc: "Production, quality & supply chain",
+  },
 ];
 
 const leadershipCards = [
   {
     icon: Compass,
     title: "Set Direction",
-    desc: "Objectives and expectations",
+    desc: "Objectives & expectations",
   },
   {
     icon: Settings,
     title: "Transform Workplace",
-    desc: "Daily management and discipline",
+    desc: "Daily management & discipline",
   },
   {
     icon: ShieldCheck,
     title: "Strengthen Quality",
-    desc: "Capability and root cause analysis",
+    desc: "Capability & root cause analysis",
   },
   {
     icon: Users,
     title: "Lead Teams",
-    desc: "Coaching and collaboration",
+    desc: "Coaching & collaboration",
   },
   {
     icon: BrainCircuit,
@@ -83,7 +129,73 @@ const leadershipCards = [
   {
     icon: Link2,
     title: "Connect Functions",
-    desc: "Coordination and shared ownership",
+    desc: "Coordination & shared ownership",
+  },
+];
+
+const technicalMethods = [
+  {
+    icon: ShieldCheck,
+    tag: "Structure Improvement",
+    title: "Six Sigma Project Discipline",
+    desc: "Rigor to eliminate variability & institutionalize data-led problem solving across teams.",
+  },
+  {
+    icon: GitMerge,
+    tag: "Improve Flow",
+    title: "Waste & Bottlenecks via VSM",
+    desc: "Value Stream Mapping to eliminate non-value-added waste and improve production flow.",
+  },
+  {
+    icon: Zap,
+    tag: "Reduce Changeover Time",
+    title: "Faster Setups with SMED",
+    desc: "Single-Minute Exchange of Die to streamline equipment setups and maximize uptime.",
+  },
+  {
+    icon: Activity,
+    tag: "Control Variation",
+    title: "Process Stability through SPC",
+    desc: "Statistical Process Control charts and capability indices to lock in process repeatability.",
+  },
+  {
+    icon: Target,
+    tag: "Solve Root Causes",
+    title: "Root Causes & Corrective Actions",
+    desc: "Disciplined problem investigations preventing defect recurrence at the operating source.",
+  },
+  {
+    icon: Sliders,
+    tag: "Optimize Processes",
+    title: "Process Settings through DOE",
+    desc: "Design of Experiments to isolate critical parameters and optimize performance windows.",
+  },
+];
+
+const scorecardMetrics = [
+  {
+    domain: "Domain Development",
+    metric: "Kaizen Implementation & Sustainability Rate",
+    detail: "Observable adoption of shop-floor improvements sustained over 90-day operating cycles.",
+    category: "Shop Floor",
+  },
+  {
+    domain: "Workplace Application",
+    metric: "Workplace Application Rate (%)",
+    detail: "Percentage of participants actively applying workshop learning to live operational challenges.",
+    category: "Execution",
+  },
+  {
+    domain: "Leadership",
+    metric: "Team Production Target / Goal Attainment",
+    detail: "Measurable progress against shift production schedules and cross-functional performance goals.",
+    category: "Operational",
+  },
+  {
+    domain: "Technical Excellence",
+    metric: "First Pass Yield (FPY %) / Quality & Productivity Gain (%)",
+    detail: "Verified reduction in scrap and rework alongside tangible line productivity improvements.",
+    category: "P&L Impact",
   },
 ];
 
@@ -293,8 +405,109 @@ export default function TriagePage() {
         </div>
       </section>
 
-      {/* ── 4. Leadership Development ── */}
-      <section className="bg-white py-20 md:py-28">
+      {/* ── 4. Domain Development (Slide 7) ── */}
+      <section className="bg-white py-20 md:py-28 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            label="Domain Development"
+            title="Build Domain Expertise, Strengthen Business Execution"
+            subtitle="Connect shop-floor realities with cross-functional execution rigor."
+            centered
+          />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {domainCards.map((card, i) => {
+              const Icon = card.icon;
+              return (
+                <motion.div
+                  key={card.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
+                      <Icon className="w-6 h-6 text-orange group-hover:text-white transition-colors" />
+                    </div>
+                    <h3
+                      className="text-xl font-bold text-navy"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {card.title}
+                    </h3>
+                  </div>
+                  <p className="text-charcoal-light">{card.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Domain outcome + design principles */}
+          <div className="mt-16 grid md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-navy rounded-2xl p-8 text-center md:text-left"
+            >
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                Domain Outcome
+              </p>
+              <p
+                className="text-lg text-white font-semibold"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Translate domain knowledge into better operational decisions.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+            >
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                Context-Led Development
+              </p>
+              <p className="text-charcoal-light text-sm leading-relaxed">
+                Map industry, functional &amp; role requirements to focus development on the knowledge needed for daily execution.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+            >
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                A Journey Tailored to the Role
+              </p>
+              <p className="text-charcoal-light text-sm leading-relaxed">
+                Combine workshops, process observations &amp; workplace assignments around the operating context of each role.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. Leadership Development ── */}
+      <section className="bg-cream py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Leadership Development"
@@ -312,7 +525,7 @@ export default function TriagePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
+                  className="relative bg-white rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
@@ -359,7 +572,7 @@ export default function TriagePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+              className="bg-white rounded-2xl p-8 border border-cream-dark"
             >
               <p
                 className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
@@ -367,9 +580,118 @@ export default function TriagePage() {
               >
                 Assessment
               </p>
-              <p className="text-charcoal-light">
+              <p className="text-charcoal-light text-sm leading-relaxed">
                 Leadership and behavioral assessments, including MBTI, build
                 self-awareness and inform individual development priorities.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white rounded-2xl p-8 border border-cream-dark"
+            >
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                Journey
+              </p>
+              <p className="text-charcoal-light text-sm leading-relaxed">
+                Combine workshops, coaching and workplace application around the
+                demands of each leadership role.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. Technical Development (Slide 9) ── */}
+      <section className="bg-white py-20 md:py-28 border-t border-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SectionHeading
+            label="Technical Development"
+            title="Build Practical Skills, Improve Quality & Productivity"
+            subtitle="Convert technical competence into measurable quality and throughput gains."
+            centered
+          />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {technicalMethods.map((method, i) => {
+              const Icon = method.icon;
+              return (
+                <motion.div
+                  key={method.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
+                        <Icon className="w-6 h-6 text-orange group-hover:text-white transition-colors" />
+                      </div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-orange bg-orange/10 px-2.5 py-1 rounded-full font-accent">
+                        {method.tag}
+                      </span>
+                    </div>
+                    <h3
+                      className="text-xl font-bold text-navy mb-2"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {method.title}
+                    </h3>
+                    <p className="text-charcoal-light text-sm leading-relaxed">
+                      {method.desc}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Technical outcome + pedagogical pillars */}
+          <div className="mt-16 grid md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-navy rounded-2xl p-8 text-center md:text-left"
+            >
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                Technical Outcome
+              </p>
+              <p
+                className="text-lg text-white font-semibold"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Convert technical competence into quality &amp; productivity gains.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+            >
+              <p
+                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                Practical Skill Assessment
+              </p>
+              <p className="text-charcoal-light text-sm leading-relaxed">
+                Assess tool knowledge &amp; practical proficiency before &amp; after training to identify gaps &amp; verify progress.
               </p>
             </motion.div>
 
@@ -384,23 +706,23 @@ export default function TriagePage() {
                 className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
-                Journey
+                Learning Through Real Projects
               </p>
-              <p className="text-charcoal-light">
-                Combine workshops, coaching and workplace application around the
-                demands of each leadership role.
+              <p className="text-charcoal-light text-sm leading-relaxed">
+                Combine hands-on exercises &amp; workplace improvement projects to turn technical methods into repeatable execution.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ── 5. IGNOVA Triage Advantage ── */}
+      {/* ── 7. IGNOVA Triage Advantage & Learning Impact Scorecard (Slide 6) ── */}
       <section className="bg-cream py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="IGNOVA Triage Advantage"
-            title="Make Learning Visible in Workplace Behavior"
+            title="Make Learning Visible in Workplace Impact"
+            subtitle="Connect learning journeys directly to observable operational metrics."
             centered
           />
 
@@ -410,7 +732,7 @@ export default function TriagePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-cream-dark"
+            className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-cream-dark mb-16"
           >
             {/* Source */}
             <div className="text-center mb-10">
@@ -475,6 +797,60 @@ export default function TriagePage() {
               </motion.div>
             </div>
           </motion.div>
+
+          {/* Net-New: Learning Impact Scorecard Table */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden"
+          >
+            <div className="bg-navy px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block">
+                  Evidence-Based Validation
+                </span>
+                <h3 className="text-xl font-bold text-white font-heading mt-0.5">
+                  Learning Impact Scorecard
+                </h3>
+              </div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-emerald-400 border border-emerald-400/30 font-accent w-fit">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                Measurable Workplace ROI
+              </span>
+            </div>
+
+            <div className="divide-y divide-slate-100">
+              {scorecardMetrics.map((item, idx) => (
+                <div
+                  key={item.domain}
+                  className="px-6 sm:px-8 py-5 hover:bg-slate-50/70 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-4"
+                >
+                  <div className="md:w-1/3">
+                    <span className="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 font-accent mb-1.5">
+                      {item.category}
+                    </span>
+                    <h4 className="text-base font-bold text-[#0B2038] font-heading">
+                      {item.domain}
+                    </h4>
+                  </div>
+
+                  <div className="md:w-2/3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                      <p className="text-sm font-bold text-orange font-accent">
+                        {item.metric}
+                      </p>
+                      <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                        {item.detail}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
         </div>
       </section>
 

@@ -92,7 +92,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-6 text-xs text-slate-600 font-accent pt-6 border-t border-slate-100">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28]" />
-                  <span className="font-semibold text-slate-800">21 Years Industrial Expertise</span>
+                  <span className="font-semibold text-slate-800">50 Years Industrial Expertise</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28]" />
@@ -147,7 +147,7 @@ export default function HomePage() {
                       Workforce Capability Transformation
                     </h4>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Role-specific competency transformation, technical rigor & leadership development.
+                      Technical excellence, leadership development &amp; domain insight with applied learning.
                     </p>
                   </div>
 
@@ -162,10 +162,10 @@ export default function HomePage() {
                       </span>
                     </div>
                     <h4 className="text-sm font-bold text-[#0B2038] font-heading mb-1">
-                      Strategic Talent Advisory & Search
+                      Strategic Talent Advisory &amp; Search
                     </h4>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Calibrated mandates turned into evidence-backed hiring decisions & credible shortlists.
+                      Leadership &amp; specialist search, onboard &amp; perform with evidence-backed hiring decisions.
                     </p>
                   </div>
 
@@ -183,7 +183,7 @@ export default function HomePage() {
                       Industrial Performance Consulting
                     </h4>
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      Quality, yield, productivity & operational ownership with disciplined shop-floor handover.
+                      People + Processes + Technology: quality, reliability, performance management &amp; CFT productivity.
                     </p>
                   </div>
 
@@ -447,11 +447,11 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
-            {/* Primary Anchor Metric: 21 Years */}
+            {/* Primary Anchor Metric: 50 Years */}
             <div className="lg:col-span-5 bg-white/5 border border-white/10 rounded-2xl p-8 sm:p-10 flex flex-col justify-between">
               <div>
                 <div className="text-7xl sm:text-8xl font-black text-white tracking-tight font-heading mb-2">
-                  21
+                  50+
                 </div>
                 <p className="text-xl sm:text-2xl font-bold text-[#DF7C36] font-accent mb-2">
                   Years of Industrial Expertise
@@ -664,7 +664,7 @@ export default function HomePage() {
                   Performance Ambition
                 </p>
                 <h4 className="text-base sm:text-lg font-bold text-[#0B2038] font-heading">
-                  Unlock Capacity · Improve Yield · Accelerate Delivery · Strengthen Margins
+                  Close Talent Gaps · Build Critical Capability · Accelerate R&D · Improve P&L
                 </h4>
                 <p className="text-xs text-slate-500 mt-1">
                   Every mandate starts by aligning the mandate, capability gaps, and concrete measures of success.

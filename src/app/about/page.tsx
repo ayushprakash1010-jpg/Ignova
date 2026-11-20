@@ -106,7 +106,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-xl md:text-2xl text-charcoal-light max-w-2xl mx-auto leading-relaxed"
             >
-              21 years connecting shop floor realities to boardroom strategy.
+              50 years connecting shop floor realities to boardroom strategy.
             </motion.p>
           </div>
         </div>

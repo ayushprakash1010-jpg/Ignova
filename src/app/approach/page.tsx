@@ -14,10 +14,10 @@ import {
 } from "@/lib/constants";
 
 const AMBITION_PHRASES = [
-  "Unlock Capacity",
-  "Improve Yield",
-  "Accelerate Delivery",
-  "Strengthen Margins",
+  "Close Talent Gaps",
+  "Build Critical Capability",
+  "Accelerate R&D",
+  "Improve P&L",
 ];
 
 const GOVERNANCE_STEPS = [

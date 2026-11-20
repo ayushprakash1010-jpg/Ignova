@@ -28,7 +28,7 @@ export const NAV_LINKS = [
 ];
 
 export const STATS = [
-  { value: 21, suffix: "", label: "Years of Industrial Expertise" },
+  { value: 50, suffix: "+", label: "Years of Industrial Expertise" },
   { value: 1000, suffix: "+", label: "Candidates Hired" },
   { value: 8, suffix: "+", label: "Years Recruitment Expertise" },
   { value: 12, suffix: "+", label: "Major Recruitment Clients" },
@@ -42,7 +42,7 @@ export const SERVICES = {
     tagline: "Build Role-Specific Competencies & Drive Performance",
     items: [
       "Capability transformation",
-      "Technical and leadership development",
+      "Technical Excellence, Leadership development & Domain insight",
       "Applied learning",
     ],
     description:
@@ -55,11 +55,11 @@ export const SERVICES = {
     tagline: "Critical Mandates into Evidence-Backed Hiring Decisions",
     items: [
       "Strategic talent advisory",
-      "Leadership and specialist search",
-      "Credible shortlists",
+      "Leadership & Specialist search, onboard & perform",
+      "Credible Talent",
     ],
     description:
-      "Mandate precision. Structured assessment. Credible shortlists.",
+      "Mandate precision. Structured assessment. Onboard & perform.",
   },
   accelerate: {
     pillar: "Accelerate",
@@ -68,11 +68,11 @@ export const SERVICES = {
     tagline: "Connect Workforce Readiness to Operational Performance",
     items: [
       "Industrial performance consulting",
-      "Quality, productivity and reliability",
-      "Operational improvement",
+      "Quality, reliability, performance management & Cross-Functional Team productivity",
+      "Operational Excellence",
     ],
     description:
-      "Build ownership into implementation and handover.",
+      "People + Processes + Technology. Develop operating capability alongside the systems that sustain it.",
   },
 };
 
@@ -120,26 +120,26 @@ export const IGNOVA_FACTOR = [
   {
     number: "01",
     title: "Diagnose",
-    description: "Talent, capability and operating gaps",
+    description: "Talent gaps, competency needs & operating constraints",
     output: "Performance baseline",
   },
   {
     number: "02",
     title: "Prioritize",
-    description: "Objectives and critical resources",
+    description: "Must-have vs. could have roles & capabilities",
     output: "Focused priorities",
   },
   {
     number: "03",
     title: "Execute",
-    description: "Specialist expertise and progress reviews",
+    description: "Target industry search; talent + learning delivery",
     output: "Targeted interventions",
   },
   {
     number: "04",
-    title: "Sustain",
-    description: "Standards, ownership and improvement",
-    output: "Performance controls",
+    title: "Impact",
+    description: "Accelerated R&D; measurable P&L impact",
+    output: "Performance controls & P&L value",
   },
 ];
 
@@ -185,12 +185,6 @@ export const CLIENT_LOGOS = {
   ] as ClientLogo[],
   recruitment: [
     {
-      name: "ICICI Bank",
-      logo: "/images/clients/icici-bank.svg",
-      alt: "ICICI Bank Logo",
-      maxHeight: "max-h-7 sm:max-h-8",
-    },
-    {
       name: "HSBC",
       logo: "/images/clients/hsbc.svg",
       alt: "HSBC Logo",
@@ -208,18 +202,6 @@ export const CLIENT_LOGOS = {
       alt: "Flipkart Logo",
       maxHeight: "max-h-7 sm:max-h-8",
     },
-    {
-      name: "Tata Group",
-      logo: "/images/clients/tata.svg",
-      alt: "Tata Group Logo",
-      maxHeight: "max-h-9 sm:max-h-10",
-    },
-    {
-      name: "Bandhan Bank",
-      logo: "/images/clients/bandhan-bank.svg",
-      alt: "Bandhan Bank Logo",
-      maxHeight: "max-h-7 sm:max-h-8",
-    },
   ] as ClientLogo[],
 };
 
@@ -232,12 +214,9 @@ export const CLIENTS = {
     "Tenneco",
   ],
   recruitment: [
-    "ICICI Bank",
     "HSBC",
     "Swiggy",
     "Flipkart",
-    "Tata Group",
-    "Bandhan Bank",
   ],
 };
 

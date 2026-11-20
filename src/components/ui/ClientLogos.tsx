@@ -61,7 +61,7 @@ export default function ClientLogos() {
             Strategic Search &amp; Recruitment Mandates
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 max-w-3xl">
           {CLIENT_LOGOS.recruitment.map((client, index) => (
             <LogoCard key={client.name} client={client} index={index} />
           ))}
