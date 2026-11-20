@@ -89,7 +89,7 @@ export default function ApproachPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="IGNOVA FACTOR"
-            title="Four Steps to Accountable Performance"
+            title="Assess Performance Gaps | Accountable Execution"
             centered
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

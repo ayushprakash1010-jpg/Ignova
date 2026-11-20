@@ -13,10 +13,10 @@ const serviceEntries = Object.values(SERVICES);
 const numbers = ["01", "02", "03"];
 
 const performanceAmbitions = [
-  "Unlock capacity",
-  "Improve yield",
-  "Accelerate delivery",
-  "Strengthen margins",
+  "Close talent gaps",
+  "Build critical capability",
+  "Accelerate R&D",
+  "Improve P&L",
 ];
 
 export default function ServicesPage() {

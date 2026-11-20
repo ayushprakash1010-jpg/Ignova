@@ -139,7 +139,7 @@ export const IGNOVA_FACTOR = [
     number: "04",
     title: "Impact",
     description: "Accelerated R&D; measurable P&L impact",
-    output: "Performance controls & P&L value",
+    output: "Performance controls",
   },
 ];
 
