@@ -136,8 +136,6 @@ const ON_SITE_STEPS = [
   },
 ];
 
-const EXECUTION_FLOW = ["Observe", "Diagnose", "Implement", "Reinforce"];
-
 /* ──────────────────────── PAGE ──────────────────────── */
 
 export default function ProjectExecutionPage() {
@@ -244,9 +242,16 @@ export default function ProjectExecutionPage() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8">
             {FOCUS_AREAS.map((area, index) => {
               const Icon = area.icon;
+              const gridSpan =
+                index < 3
+                  ? "lg:col-span-2"
+                  : index === 3
+                  ? "lg:col-span-2 lg:col-start-2"
+                  : "lg:col-span-2";
+
               return (
                 <motion.div
                   key={area.title}
@@ -254,8 +259,8 @@ export default function ProjectExecutionPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group ${
-                    index >= 3 ? "lg:col-span-1 lg:last:col-start-2" : ""
+                  className={`relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group ${gridSpan} ${
+                    index === 4 ? "md:col-span-2 md:max-w-md md:mx-auto lg:max-w-none" : ""
                   }`}
                 >
                   {/* Number */}
@@ -360,7 +365,8 @@ export default function ProjectExecutionPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Project Execution Methodology"
-            title="Improvements Through Capability, Controls & Ownership"
+            title="Impact Through Capability, Controls & Ownership"
+            subtitle="Establishing baseline rigor, engineered countermeasures, and standard controls."
             centered
           />
 
@@ -478,77 +484,76 @@ export default function ProjectExecutionPage() {
             })}
           </div>
 
-          {/* Functions Covered */}
+          {/* Functions Covered - Cross-Functional Alignment (Slide 14) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-navy rounded-2xl p-8 md:p-12 relative overflow-hidden"
+            className="bg-navy rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-xl"
           >
             {/* Decorative circles */}
             <div className="absolute top-6 right-6 w-32 h-32 border border-white/5 rounded-full" />
             <div className="absolute bottom-6 left-6 w-48 h-48 border border-white/5 rounded-full" />
 
-            <div className="relative">
-              {/* Functions covered */}
-              <div className="text-center mb-8">
+            <div className="relative z-10">
+              <div className="text-center max-w-2xl mx-auto mb-10">
                 <p
-                  className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-4"
+                  className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
-                  Functions Covered
+                  Cross-Functional Ownership
                 </p>
-                <div className="flex flex-wrap justify-center gap-3">
-                  {["Production", "Quality", "Support"].map((fn) => (
-                    <span
-                      key={fn}
-                      className="px-5 py-2 bg-white/10 text-white text-sm font-semibold rounded-full border border-white/10"
-                      style={{ fontFamily: "var(--font-accent)" }}
-                    >
-                      {fn}
-                    </span>
-                  ))}
-                  <span
-                    className="px-5 py-2 bg-orange text-white text-sm font-semibold rounded-full"
-                    style={{ fontFamily: "var(--font-accent)" }}
-                  >
-                    → Shared Execution
+                <h3
+                  className="text-2xl sm:text-3xl font-bold text-white font-heading"
+                  style={{ fontFamily: "var(--font-heading)" }}
+                >
+                  Shared Execution Across Plant Functions
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 mt-2">
+                  Sustainable change happens when operating functions collaborate on root-cause solutions rather than working in departmental silos.
+                </p>
+              </div>
+
+              {/* 3 Pillars */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
+                  <span className="inline-block px-3.5 py-1.5 rounded-full bg-orange/20 text-orange-light text-xs font-bold uppercase tracking-wider mb-3 font-accent">
+                    Production
                   </span>
+                  <p className="text-xs text-slate-200 leading-relaxed">
+                    Line pacing, bottleneck resolution, and active shift-level ownership.
+                  </p>
+                </div>
+
+                <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
+                  <span className="inline-block px-3.5 py-1.5 rounded-full bg-orange/20 text-orange-light text-xs font-bold uppercase tracking-wider mb-3 font-accent">
+                    Quality
+                  </span>
+                  <p className="text-xs text-slate-200 leading-relaxed">
+                    Defect containment, root-cause investigation, and First Pass Yield (FPY).
+                  </p>
+                </div>
+
+                <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
+                  <span className="inline-block px-3.5 py-1.5 rounded-full bg-orange/20 text-orange-light text-xs font-bold uppercase tracking-wider mb-3 font-accent">
+                    Plant Support
+                  </span>
+                  <p className="text-xs text-slate-200 leading-relaxed">
+                    Equipment reliability, loss recovery, and maintenance scheduling.
+                  </p>
                 </div>
               </div>
 
-              {/* Execution approach flow */}
-              <div className="pt-8 border-t border-white/10">
-                <p
-                  className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-6 text-center"
+              {/* Outcome Banner */}
+              <div className="pt-6 border-t border-white/10 text-center">
+                <span
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-orange text-white text-xs sm:text-sm font-bold rounded-full shadow-md"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
-                  Execution Approach
-                </p>
-                <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
-                  {EXECUTION_FLOW.map((step, index) => (
-                    <div key={step} className="flex items-center gap-3 md:gap-4">
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: index * 0.15 }}
-                        className="px-6 py-3 bg-white/10 rounded-xl border border-white/10 hover:bg-white/20 transition-colors duration-300"
-                      >
-                        <span
-                          className="text-white font-semibold text-sm md:text-base"
-                          style={{ fontFamily: "var(--font-accent)" }}
-                        >
-                          {step}
-                        </span>
-                      </motion.div>
-                      {index < EXECUTION_FLOW.length - 1 && (
-                        <ArrowRight className="w-5 h-5 text-orange hidden md:block" />
-                      )}
-                    </div>
-                  ))}
-                </div>
+                  <span>&rarr;</span>
+                  <span>Shared Execution: Tangible Change Where Work Happens</span>
+                </span>
               </div>
             </div>
           </motion.div>
