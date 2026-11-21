@@ -389,7 +389,7 @@ export default function ProjectExecutionPage() {
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-1">
                 Execution Scorecard &amp; Controls
               </span>
-              <h4 className="text-base sm:text-lg font-bold font-heading">
+              <h4 className="text-base sm:text-lg font-bold text-white font-heading">
                 Operational KPIs Monitored
               </h4>
             </div>

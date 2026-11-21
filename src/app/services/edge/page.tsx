@@ -422,14 +422,14 @@ export default function EdgePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl bg-navy text-white p-8 sm:p-12 relative overflow-hidden"
+            className="rounded-3xl bg-navy text-white p-8 sm:p-12 relative overflow-hidden shadow-xl"
           >
             <div className="relative z-10 max-w-3xl mb-8">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
                 Operational Validation
               </span>
               <h3
-                className="text-2xl sm:text-3xl font-bold font-heading"
+                className="text-2xl sm:text-3xl font-bold text-white font-heading"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Where Impact Becomes Visible
@@ -440,58 +440,64 @@ export default function EdgePage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-3">
+              <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 transition-colors shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
                     <Factory className="w-5 h-5 text-orange-light" />
                   </div>
-                  <h4 className="text-base font-bold font-accent">Plant Leadership</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-accent">
+                    Plant Leadership
+                  </h4>
                 </div>
-                <div className="space-y-1.5 pt-2 border-t border-white/10 text-xs text-slate-300">
+                <div className="space-y-2 pt-3 border-t border-white/15 text-xs text-slate-200">
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
                     <span>Overall Equipment Effectiveness (OEE)</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
                     <span>Line Output &amp; Labor Productivity</span>
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-3">
+              <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 transition-colors shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
                     <ShieldCheck className="w-5 h-5 text-orange-light" />
                   </div>
-                  <h4 className="text-base font-bold font-accent">Quality Leadership</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-accent">
+                    Quality Leadership
+                  </h4>
                 </div>
-                <div className="space-y-1.5 pt-2 border-t border-white/10 text-xs text-slate-300">
+                <div className="space-y-2 pt-3 border-t border-white/15 text-xs text-slate-200">
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
                     <span>Defect PPM Reduction</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
                     <span>Cost of Poor Quality (COPQ)</span>
                   </p>
                 </div>
               </div>
 
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-3">
+              <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 transition-colors shadow-sm">
+                <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
                     <Truck className="w-5 h-5 text-orange-light" />
                   </div>
-                  <h4 className="text-base font-bold font-accent">Supply Chain Leadership</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-accent">
+                    Supply Chain Leadership
+                  </h4>
                 </div>
-                <div className="space-y-1.5 pt-2 border-t border-white/10 text-xs text-slate-300">
+                <div className="space-y-2 pt-3 border-t border-white/15 text-xs text-slate-200">
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
                     <span>On-Time Delivery (OTD %)</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
                     <span>Inventory Turns &amp; Working Capital</span>
                   </p>
                 </div>
