@@ -1,114 +1,109 @@
 import Link from "next/link";
-import { COMPANY, NAV_LINKS, SERVICES } from "@/lib/constants";
-import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#0B2038] text-white relative">
-      {/* Main Footer Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-2 mb-5">
-              <span className="text-2xl font-black tracking-tight text-white font-heading">
-                IGNOV<span className="text-[#DF7C36]">A</span>
-              </span>
+    <footer className="bg-[#F4F0E8] border-t border-[#E8E2D5] text-slate-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-12">
+          
+          {/* Column 1: Brand & Mandate */}
+          <div className="lg:col-span-5 pr-0 lg:pr-8">
+            <Link href="/" className="inline-block mb-4" aria-label="IGNOVA Homepage">
+              <div className="relative h-9 sm:h-10 w-32 sm:w-36">
+                <Image
+                  src="/images/ignova-logo.png"
+                  alt="IGNOVA Logo"
+                  fill
+                  sizes="144px"
+                  className="object-contain object-left"
+                />
+              </div>
             </Link>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6 max-w-sm">
-              Three capabilities. One partner. Connecting people to business
-              execution across talent acquisition, capability development, and operational improvement.
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed max-w-sm">
+              Talent acquisition &middot; Talent development &middot; Growth &amp; transformation
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-orange-200 border border-white/10 font-accent">
-              {COMPANY.tagline}
-            </div>
+            <p className="text-xs text-slate-500 mt-2">
+              Connecting people to business execution from shop floor to boardroom.
+            </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#DF7C36] mb-5 font-accent">
-              Navigation
+          {/* Column 2: Firm */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+              Firm
             </h4>
-            <ul className="space-y-3">
-              {NAV_LINKS.filter((l) => !l.children).map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-slate-300 hover:text-white text-sm transition-colors flex items-center gap-1 group font-accent"
-                  >
-                    {link.label}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-[#DF7C36]" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#DF7C36] mb-5 font-accent">
-              Capabilities
-            </h4>
-            <ul className="space-y-3">
-              {Object.values(SERVICES).map((service) => (
-                <li key={service.brand}>
-                  <Link
-                    href={service.href}
-                    className="text-slate-300 hover:text-white text-sm transition-colors flex items-center gap-1 group font-accent"
-                  >
-                    {service.brand}
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-[#DF7C36]" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#DF7C36] mb-5 font-accent">
-              Connect
-            </h4>
-            <ul className="space-y-3.5">
+            <ul className="space-y-2.5 text-xs sm:text-[13px]">
               <li>
-                <a
-                  href={`mailto:${COMPANY.email}`}
-                  className="flex items-center gap-2.5 text-slate-300 hover:text-white text-sm transition-colors"
-                >
-                  <Mail className="w-4 h-4 text-[#DF7C36] flex-shrink-0" />
-                  <span className="min-w-0 break-all">{COMPANY.email}</span>
-                </a>
+                <Link href="/about" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                  About
+                </Link>
               </li>
-              {COMPANY.phone && (
-                <li>
-                  <a
-                    href={`tel:${COMPANY.phoneRaw}`}
-                    className="flex items-center gap-2.5 text-slate-300 hover:text-white text-sm transition-colors"
-                  >
-                    <Phone className="w-4 h-4 text-[#DF7C36] flex-shrink-0" />
-                    <span>{COMPANY.phone}</span>
-                  </a>
-                </li>
-              )}
-              {COMPANY.address && (
-                <li>
-                  <div className="flex items-start gap-2.5 text-slate-300 text-xs leading-relaxed">
-                    <MapPin className="w-4 h-4 text-[#DF7C36] flex-shrink-0 mt-0.5" />
-                    <span>{COMPANY.address}</span>
-                  </div>
-                </li>
-              )}
+              <li>
+                <Link href="/approach" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                  Our approach
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
+
+          {/* Column 3: Services */}
+          <div className="lg:col-span-3">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+              Services
+            </h4>
+            <ul className="space-y-2.5 text-xs sm:text-[13px]">
+              <li>
+                <Link href="/services/triage" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                  IGNOVA Triage
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/edge" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                  IGNOVA Edge
+                </Link>
+              </li>
+              <li>
+                <Link href="/services/project-execution" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                  Project Execution
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact */}
+          <div className="lg:col-span-2">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+              Contact
+            </h4>
+            <ul className="space-y-2.5 text-xs sm:text-[13px]">
+              <li>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-1 text-slate-600 hover:text-[#C86A28] transition-colors font-medium"
+                >
+                  Get in touch
+                  <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
+                </Link>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {year} {COMPANY.fullName}. All rights reserved.</p>
-          <p className="font-accent tracking-wider uppercase text-slate-400">
-            {COMPANY.tagline}
+        {/* Bottom Copyright */}
+        <div className="pt-8 border-t border-[#E8E2D5] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <p>&copy; {currentYear} IGNOVA Consulting &amp; Academy. All rights reserved.</p>
+          <p className="font-accent tracking-wide text-slate-500">
+            Enabling execution &amp; impact.
           </p>
         </div>
       </div>

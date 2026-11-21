@@ -92,7 +92,7 @@ export default function ContactPage() {
           >
             <SectionHeading
               label="Contact Us"
-              title="Start With Your Business Priority"
+              title="Start With Mandate Calibration"
               subtitle="Capability gaps, critical hiring, or operational improvement — let's align the expertise."
             />
           </motion.div>
@@ -303,7 +303,7 @@ export default function ContactPage() {
                   <textarea
                     id="message"
                     rows={5}
-                    placeholder="Tell us about your business priority or challenge..."
+                    placeholder="Tell us about your organizational mandate or challenge..."
                     className={`${inputStyles} resize-none`}
                     style={{ fontFamily: "var(--font-body)" }}
                     {...register("message")}

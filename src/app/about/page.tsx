@@ -294,7 +294,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="How We Work"
-            title="Start With Your Business Priority"
+            title="Calibrate Mandates to Execution"
             centered
           />
 
@@ -323,7 +323,7 @@ export default function AboutPage() {
                   className="text-xs font-bold uppercase tracking-wider text-orange mb-2"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
-                  Your Priority
+                  Strategic Mandate
                 </p>
                 <h3
                   className="text-xl font-bold text-navy mb-6"

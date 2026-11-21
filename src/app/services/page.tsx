@@ -357,7 +357,7 @@ export default function ServicesPage() {
 
       {/* ───────── 6. CTA Banner ───────── */}
       <CTABanner
-        title="Start With Your Business Priority"
+        title="Calibrate Mandates to Execution"
         subtitle="Capability gaps, critical hiring, or operational improvement — we align the expertise."
         buttonText="Get in Touch"
         buttonHref="/contact"

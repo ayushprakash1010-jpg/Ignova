@@ -11,7 +11,7 @@ interface CTABannerProps {
 
 export default function CTABanner({
   title = "Ready to connect talent to business execution?",
-  subtitle = "Start with your business priority. We will align the industrial and talent expertise.",
+  subtitle = "Start with mandate calibration and performance goals. We align the industrial and talent expertise.",
   buttonText = "Schedule a Consultation",
   buttonHref = "/contact",
   variant = "navy",
