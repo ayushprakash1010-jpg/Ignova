@@ -24,7 +24,7 @@ function LogoCard({ client, index }: { client: ClientLogo; index: number }) {
           loading="lazy"
           decoding="async"
           onError={() => setHasError(true)}
-          className={`w-auto ${client.maxHeight || "max-h-8 sm:max-h-9"} max-w-[125px] sm:max-w-[145px] object-contain transition-all duration-300 filter grayscale contrast-90 opacity-75 group-hover:grayscale-0 group-hover:contrast-100 group-hover:opacity-100 group-hover:scale-105`}
+          className={`w-auto ${client.maxHeight || "max-h-8 sm:max-h-9"} max-w-[125px] sm:max-w-[145px] object-contain transition-all duration-300 opacity-100 group-hover:scale-105`}
         />
       ) : (
         <span className="text-xs sm:text-sm font-bold text-slate-700 font-accent tracking-tight">
