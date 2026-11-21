@@ -71,7 +71,7 @@ const domainCards = [
   {
     icon: Factory,
     title: "Understand Operations",
-    desc: "Processes, roles & business priorities",
+    desc: "Processes, roles & operating mandates",
   },
   {
     icon: ShieldCheck,
@@ -244,7 +244,7 @@ export default function TriagePage() {
 
             <div className="mt-10">
               <Button href="/contact" variant="primary" size="lg">
-                Discuss Your Training Needs
+                Discuss Your Capability Needs
               </Button>
             </div>
           </motion.div>
@@ -722,89 +722,17 @@ export default function TriagePage() {
           <SectionHeading
             label="IGNOVA Triage Advantage"
             title="Make Learning Visible in Workplace Impact"
-            subtitle="Connect learning journeys directly to observable operational metrics."
+            subtitle="Connect learning journeys directly to observable operational metrics and sustained shop-floor yield."
             centered
           />
 
-          {/* Flow visualization */}
+          {/* Learning Impact Scorecard Table */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-cream-dark mb-16"
-          >
-            {/* Source */}
-            <div className="text-center mb-10">
-              <div className="inline-block bg-navy rounded-xl px-8 py-4">
-                <p
-                  className="text-white font-bold text-lg"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  Role-Based Learning Journeys
-                </p>
-              </div>
-            </div>
-
-            {/* Flow arrows */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-2">
-              {journeySteps.map((step, i) => {
-                const Icon = step.icon;
-                return (
-                  <motion.div
-                    key={`adv-${step.verb}`}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: i * 0.12 }}
-                    className="flex items-center gap-2 md:gap-2"
-                  >
-                    <div className="flex flex-col items-center">
-                      <div className="w-14 h-14 rounded-full bg-orange/10 flex items-center justify-center">
-                        <Icon className="w-6 h-6 text-orange" />
-                      </div>
-                      <span
-                        className="mt-2 text-sm font-bold text-navy"
-                        style={{ fontFamily: "var(--font-accent)" }}
-                      >
-                        {step.verb}
-                      </span>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-orange/50 hidden md:block" />
-                  </motion.div>
-                );
-              })}
-
-              {/* Final destination */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="flex flex-col items-center"
-              >
-                <div className="w-14 h-14 rounded-full bg-orange flex items-center justify-center shadow-lg">
-                  <ArrowRight className="w-6 h-6 text-white" />
-                </div>
-                <span
-                  className="mt-2 text-sm font-bold text-navy text-center"
-                  style={{ fontFamily: "var(--font-accent)" }}
-                >
-                  Workplace
-                  <br />
-                  Performance
-                </span>
-              </motion.div>
-            </div>
-          </motion.div>
-
-          {/* Net-New: Learning Impact Scorecard Table */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden"
+            className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden mt-12"
           >
             <div className="bg-navy px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10">
               <div>
@@ -854,13 +782,15 @@ export default function TriagePage() {
         </div>
       </section>
 
-      {/* ── 6. CTA Banner ── */}
+      {/* ── 8. CTA Banner ── */}
       <CTABanner
         variant="orange"
         title="Ready to Build Workforce Capability?"
         subtitle="Start with a role-based assessment and design targeted interventions."
-        buttonText="Discuss Your Training Needs"
+        buttonText="Discuss Your Capability Needs"
         buttonHref="/contact"
+        secondaryButtonText="Explore IGNOVA Edge"
+        secondaryButtonHref="/services/edge"
       />
     </div>
   );
