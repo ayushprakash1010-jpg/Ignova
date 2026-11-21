@@ -242,16 +242,9 @@ export default function ProjectExecutionPage() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {FOCUS_AREAS.map((area, index) => {
               const Icon = area.icon;
-              const gridSpan =
-                index < 3
-                  ? "lg:col-span-2"
-                  : index === 3
-                  ? "lg:col-span-2 lg:col-start-2"
-                  : "lg:col-span-2";
-
               return (
                 <motion.div
                   key={area.title}
@@ -259,30 +252,32 @@ export default function ProjectExecutionPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group ${gridSpan} ${
-                    index === 4 ? "md:col-span-2 md:max-w-md md:mx-auto lg:max-w-none" : ""
+                  className={`relative bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/40 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between ${
+                    index === 4 ? "sm:col-span-2 lg:col-span-1" : ""
                   }`}
                 >
-                  {/* Number */}
-                  <span
-                    className="absolute top-6 right-6 text-5xl font-bold text-navy/5"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {area.number}
-                  </span>
+                  <div>
+                    {/* Number */}
+                    <span
+                      className="absolute top-5 right-5 text-4xl font-bold text-navy/10"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {area.number}
+                    </span>
 
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-orange/10 text-orange mb-6 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
-                    <Icon className="w-7 h-7" />
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-orange/10 text-orange mb-5 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-6 h-6" />
+                    </div>
+
+                    <h3
+                      className="text-lg font-bold text-navy mb-2 leading-snug"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {area.title}
+                    </h3>
                   </div>
 
-                  <h3
-                    className="text-xl font-bold text-navy mb-3"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {area.title}
-                  </h3>
-
-                  <p className="text-charcoal-light leading-relaxed">
+                  <p className="text-charcoal-light text-xs sm:text-sm leading-relaxed mt-2 pt-3 border-t border-navy/5">
                     {area.description}
                   </p>
                 </motion.div>
@@ -518,28 +513,28 @@ export default function ProjectExecutionPage() {
               {/* 3 Pillars */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
-                  <span className="inline-block px-3.5 py-1.5 rounded-full bg-orange/20 text-orange-light text-xs font-bold uppercase tracking-wider mb-3 font-accent">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
                     Production
                   </span>
-                  <p className="text-xs text-slate-200 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                     Line pacing, bottleneck resolution, and active shift-level ownership.
                   </p>
                 </div>
 
                 <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
-                  <span className="inline-block px-3.5 py-1.5 rounded-full bg-orange/20 text-orange-light text-xs font-bold uppercase tracking-wider mb-3 font-accent">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
                     Quality
                   </span>
-                  <p className="text-xs text-slate-200 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                     Defect containment, root-cause investigation, and First Pass Yield (FPY).
                   </p>
                 </div>
 
                 <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
-                  <span className="inline-block px-3.5 py-1.5 rounded-full bg-orange/20 text-orange-light text-xs font-bold uppercase tracking-wider mb-3 font-accent">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
                     Plant Support
                   </span>
-                  <p className="text-xs text-slate-200 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
                     Equipment reliability, loss recovery, and maintenance scheduling.
                   </p>
                 </div>
