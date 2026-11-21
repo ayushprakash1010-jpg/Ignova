@@ -72,11 +72,11 @@ export default function ApproachPage() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              Assess Performance Gaps |{" "}
+              From Performance Ambition to{" "}
               <span className="text-orange">Accountable Execution</span>
             </h1>
             <p className="text-lg md:text-xl text-charcoal-light max-w-3xl">
-              A structured methodology that connects diagnosis to sustained
+              A structured methodology that connects diagnosis to sustained P&L
               results.
             </p>
             <div className="mt-6 h-1 w-16 rounded-full bg-orange" />
@@ -88,8 +88,9 @@ export default function ApproachPage() {
       <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            label="IGNOVA FACTOR"
-            title="Assess Performance Gaps | Accountable Execution"
+            label="THE IGNOVA FACTOR"
+            title="Four Stages from Diagnostic to Measurable Impact"
+            subtitle="How we structure capability, resources, and performance controls to deliver measurable results."
             centered
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
