@@ -18,9 +18,21 @@ const serviceOptions = [
 ];
 
 const capabilities = [
-  { label: "IGNOVA TRIAGE", href: "/services/triage" },
-  { label: "IGNOVA EDGE", href: "/services/edge" },
-  { label: "PROJECT EXECUTION", href: "/services/project-execution" },
+  {
+    label: "IGNOVA TRIAGE",
+    href: "/services/triage",
+    desc: "Role Competency & Learning Delivery",
+  },
+  {
+    label: "IGNOVA EDGE",
+    href: "/services/edge",
+    desc: "Executive & Critical Specialist Search",
+  },
+  {
+    label: "PROJECT EXECUTION",
+    href: "/services/project-execution",
+    desc: "Plant Productivity & Operating Change",
+  },
 ];
 
 const inputStyles =
@@ -83,7 +95,7 @@ export default function ContactPage() {
           <div className="absolute bottom-20 left-0 w-[400px] h-[400px] bg-[#0B2038]/[0.02] rounded-full blur-[100px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 md:pb-28">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-10 md:pb-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -100,7 +112,7 @@ export default function ContactPage() {
       </section>
 
       {/* ============ CONTACT SECTION ============ */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white pt-6 md:pt-10 pb-20 md:pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left Side — Contact Form (60%) */}
@@ -360,7 +372,7 @@ export default function ContactPage() {
                         Corporate Office
                       </p>
                       <p className="text-sm text-charcoal font-medium leading-snug">
-                        L14C, Orchard Smartworld, Sector 61, Gurgaon, Haryana
+                        L14C, Orchard Smartworld, Sector 61, Gurugram, Haryana
                       </p>
                     </div>
                   </div>
@@ -428,10 +440,13 @@ export default function ContactPage() {
               </div>
 
               {/* Capabilities Links */}
-              <div className="bg-navy rounded-2xl p-8">
+              <div className="bg-navy rounded-2xl p-8 shadow-sm">
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
+                  Integrated Services
+                </span>
                 <h3
                   className="text-lg font-bold text-white mb-6"
-                  style={{ fontFamily: "var(--font-heading)" }}
+                  style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
                 >
                   Our Capabilities
                 </h3>
@@ -441,15 +456,20 @@ export default function ContactPage() {
                     <Link
                       key={cap.href}
                       href={cap.href}
-                      className="group flex items-center justify-between px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-orange/30 transition-all duration-300"
+                      className="group flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-orange/30 transition-all duration-300"
                     >
-                      <span
-                        className="text-sm font-bold text-white/90 group-hover:text-orange-light tracking-wide transition-colors"
-                        style={{ fontFamily: "var(--font-accent)" }}
-                      >
-                        {cap.label}
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-orange group-hover:translate-x-1 transition-all duration-300" />
+                      <div>
+                        <span
+                          className="text-sm font-bold text-white group-hover:text-orange-light tracking-wide transition-colors block"
+                          style={{ fontFamily: "var(--font-accent)" }}
+                        >
+                          {cap.label}
+                        </span>
+                        <span className="text-xs text-slate-300">
+                          {cap.desc}
+                        </span>
+                      </div>
+                      <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-orange group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
                     </Link>
                   ))}
                 </div>
