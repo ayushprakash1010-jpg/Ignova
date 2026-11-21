@@ -130,16 +130,16 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          3. EDITORIAL PULL QUOTE: Humanized Executive Operating Ethos (Slide 02 & 14)
+          3. EDITORIAL PULL QUOTE: Humanized Executive Operating Ethos
           ========================================================================= */}
       <div className="bg-white border-b border-[#E8E2D5] py-9 sm:py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-base sm:text-lg md:text-xl font-normal font-serif text-[#0B2038] italic leading-relaxed">
-            &ldquo;Industrial performance is not won in boardroom slide decks alone. It is achieved when plant leadership, quality engineers, and operators share common baselines and relentless execution discipline.&rdquo;
+            &ldquo;Industrial performance is not won in boardroom presentations alone. It is achieved when plant leadership, quality engineers, and operators share common baselines and relentless execution discipline.&rdquo;
           </p>
           <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
             <span className="w-8 h-px bg-[#C86A28]" />
-            IGNOVA Operating Ethos &middot; Slide 02 &amp; 14
+            IGNOVA Operating Ethos
             <span className="w-8 h-px bg-[#C86A28]" />
           </div>
         </div>
@@ -154,14 +154,14 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
-                SERVICE PORTFOLIO &middot; SLIDE 03
+                SERVICE PORTFOLIO
               </span>
               <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight">
                 Three capabilities. One partner.
               </h2>
             </div>
             
-            {/* Operational Triad Badge (From Slide 11) */}
+            {/* Operational Triad Badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700 font-accent">
               <span className="font-bold text-[#C86A28]">Focus:</span> People + Processes + Technology
             </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1">
-                    APPLIED LEARNING &middot; SLIDE 06
+                    APPLIED LEARNING
                   </span>
                   <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
                     IGNOVA Triage
@@ -221,7 +221,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1">
-                    CREDIBLE TALENT &middot; SLIDE 09
+                    CREDIBLE TALENT
                   </span>
                   <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
                     IGNOVA Edge
@@ -259,7 +259,7 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1">
-                    OPERATIONAL EXCELLENCE &middot; SLIDE 11
+                    OPERATIONAL EXCELLENCE
                   </span>
                   <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
                     Project Execution
@@ -289,7 +289,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          5. ON-SITE EXECUTION: Make change tangible where work happens (Slide 14 & 05)
+          5. ON-SITE EXECUTION: Make change tangible where work happens
           ========================================================================= */}
       <section className="bg-white py-16 sm:py-20 md:py-24 border-t border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -298,7 +298,7 @@ export default function HomePage() {
             {/* Left Column: Narrative & Philosophy */}
             <div className="lg:col-span-5">
               <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
-                ON-SITE EXECUTION &middot; SLIDE 14
+                ON-SITE EXECUTION
               </span>
               <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
                 Make change tangible where work happens.
@@ -307,17 +307,17 @@ export default function HomePage() {
                 Real operational improvement doesn&apos;t happen in abstract presentations. It happens directly on the shop floor—where operators, supervisors, and plant leadership address daily constraints in real time.
               </p>
               
-              {/* Core Design Principle from Slide 05 */}
+              {/* Core Advisory Principle */}
               <div className="p-4 rounded-lg bg-[#FAF9F6] border-l-4 border-[#C86A28] border-y border-r border-[#E8E2D5] mb-6">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent mb-1">
-                  Design Principle &middot; Slide 05
+                  Core Advisory Principle
                 </p>
                 <p className="text-xs sm:text-sm text-slate-800 font-medium italic leading-relaxed">
                   &ldquo;Customize the intervention around the role and the performance gap—not off-the-shelf packages.&rdquo;
                 </p>
               </div>
 
-              {/* Cross-Functional Triad from Slide 14 */}
+              {/* Cross-Functional Triad */}
               <div className="pt-2">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-accent block mb-2.5">
                   Shared Execution Across Functions:
@@ -338,7 +338,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: 3 On-Site Stages from Slide 14 */}
+            {/* Right Column: 3 On-Site Stages */}
             <div className="lg:col-span-7 space-y-4">
               
               {/* Step 1: Diagnose at Source */}
@@ -399,14 +399,14 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          6. WHERE IMPACT BECOMES VISIBLE: Real Industrial Metrics (Slides 10 & 13)
+          6. WHERE IMPACT BECOMES VISIBLE: Real Industrial Metrics
           ========================================================================= */}
       <section className="bg-[#FAF9F6] py-16 sm:py-20 border-y border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C86A28] font-accent block mb-2">
-              Performance Governance &middot; Slides 10 &amp; 13
+              Performance Governance
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
               Where Impact Becomes Visible
@@ -537,7 +537,7 @@ export default function HomePage() {
           
           <div className="mb-12">
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
-              PERFORMANCE AMBITION &middot; SLIDE 04 &amp; 05
+              PERFORMANCE AMBITION
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-[#0B2038] tracking-tight max-w-4xl leading-snug">
               Close talent gaps, build capability, accelerate R&amp;D and improve P&amp;L
@@ -643,7 +643,7 @@ export default function HomePage() {
               Applying cross-industry operating depth, structured candidate assessment, and disciplined shop-floor execution across Manufacturing, Automotive, BFSI, and Technology.
             </p>
 
-            {/* GPWD Culture Pill from Slide 17 */}
+            {/* GPWD Culture Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-[11px] font-semibold text-slate-700 font-accent">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C86A28]" />
               Supporting Organizations Towards GPWD Certification &amp; Culture Strengthening
