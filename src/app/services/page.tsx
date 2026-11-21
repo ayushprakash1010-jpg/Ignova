@@ -2,21 +2,54 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Target, Zap } from "lucide-react";
+import { ArrowRight, Target, Zap, TrendingUp, BarChart3 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
-import StepperTimeline from "@/components/ui/StepperTimeline";
+import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
 import { SERVICES, EXCELLENCE_AGENDA, CLIENTS, SECTORS } from "@/lib/constants";
 
 const serviceEntries = Object.values(SERVICES);
 const numbers = ["01", "02", "03"];
+const serviceCardActions = [
+  "Explore IGNOVA Triage",
+  "Explore IGNOVA Edge",
+  "Explore Project Execution",
+];
 
-const performanceAmbitions = [
-  "Close talent gaps",
-  "Build critical capability",
-  "Accelerate R&D",
-  "Improve P&L",
+const performanceOutcomes = [
+  {
+    num: "01",
+    tag: "TALENT RIGOR",
+    title: "Close Critical Talent Gaps",
+    desc: "High-precision search for business-critical plant leadership and specialist roles where traditional search firms lack technical depth.",
+    metric: "Credible shortlists • Reduced time-to-productivity • 90-day retention rigor",
+    icon: Target,
+  },
+  {
+    num: "02",
+    tag: "WORKFORCE DEPTH",
+    title: "Build Critical Capability",
+    desc: "Role-specific behavioral and technical interventions designed around operational deficits, verified through shop-floor application.",
+    metric: "Shop-floor behavior change • Kirkpatrick L3/L4 validation • Role competence",
+    icon: Zap,
+  },
+  {
+    num: "03",
+    tag: "TIME-TO-MARKET",
+    title: "Accelerate R&D & Ramp-Up",
+    desc: "Standardizing engineering handovers and aligning specialist talent to compress launch cycles and eliminate ramp-up bottlenecks.",
+    metric: "Cycle time reduction • Launch schedule adherence • First-time-right engineering",
+    icon: TrendingUp,
+  },
+  {
+    num: "04",
+    tag: "BOTTOM-LINE ECONOMICS",
+    title: "Improve P&L & Operating Gains",
+    desc: "Ground-level consulting and shop-floor coaching that directly improve plant throughput, reduce scrap, and lift OEE.",
+    metric: "OEE improvement • COPQ & scrap reduction • Direct labor productivity",
+    icon: BarChart3,
+  },
 ];
 
 export default function ServicesPage() {
@@ -24,7 +57,7 @@ export default function ServicesPage() {
     <div className="overflow-hidden">
       {/* ───────── 1. Hero ───────── */}
       <section className="relative bg-cream pt-32 pb-20 md:pb-28">
-        {/* Decorative background element */}
+        {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-orange/5" />
           <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full bg-navy/5" />
@@ -56,23 +89,38 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-charcoal-light max-w-3xl mx-auto"
+            className="text-lg md:text-xl text-charcoal-light max-w-3xl mx-auto mb-8"
           >
             We architect workforce capability, activate talent pipelines, and
             accelerate operational performance.
           </motion.p>
 
+          {/* Hero CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="flex flex-wrap items-center justify-center gap-4"
+          >
+            <Button href="#capabilities" variant="primary" size="lg">
+              Explore Capabilities
+            </Button>
+            <Button href="/contact" variant="outline" size="lg">
+              Calibrate Your Mandate
+            </Button>
+          </motion.div>
+
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 h-1 w-24 rounded-full bg-orange mx-auto origin-left"
+            className="mt-12 h-1 w-24 rounded-full bg-orange mx-auto origin-left"
           />
         </div>
       </section>
 
       {/* ───────── 2. Three Pillars ───────── */}
-      <section className="py-24 md:py-32 bg-white">
+      <section id="capabilities" className="py-24 md:py-32 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Our Capabilities"
@@ -92,14 +140,15 @@ export default function ServicesPage() {
                 description={service.description}
                 href={service.href}
                 index={index}
+                actionText={serviceCardActions[index]}
               />
             ))}
           </div>
         </div>
       </section>
 
-      {/* ───────── 3. The Excellence Agenda ───────── */}
-      <section className="py-24 md:py-32 bg-white">
+      {/* ───────── 3. The Excellence Agenda (PPT Slide 05) ───────── */}
+      <section className="py-24 md:py-32 bg-white border-t border-cream-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="The Excellence Agenda"
@@ -122,7 +171,7 @@ export default function ServicesPage() {
                   (header) => (
                     <div
                       key={header}
-                      className="px-8 py-5 text-sm font-bold uppercase tracking-wider"
+                      className="px-8 py-5 text-sm font-bold uppercase tracking-wider text-white"
                       style={{ fontFamily: "var(--font-accent)" }}
                     >
                       {header}
@@ -211,61 +260,109 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ───────── 4. Delivery Approach ───────── */}
+      {/* ───────── 4. Enterprise Value Realization (PPT Slides 03, 04, 16) ───────── */}
       <section className="py-24 md:py-32 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            label="One Delivery Approach"
-            title="From Assessment to Sustained Performance"
+            label="Enterprise Value Realization"
+            title="Translating Capabilities into Measurable P&L Impact"
+            subtitle="Whether deployed individually or as an integrated intervention, our three capabilities converge on four board-level outcomes."
             centered
           />
 
-          <StepperTimeline />
+          {/* 4 Outcome Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {performanceOutcomes.map((outcome, idx) => {
+              const Icon = outcome.icon;
+              return (
+                <motion.div
+                  key={outcome.title}
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  className="bg-white rounded-2xl p-7 border border-cream-dark shadow-sm hover:shadow-md hover:border-orange/30 transition-all flex flex-col justify-between"
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-orange font-accent">
+                        {outcome.tag}
+                      </span>
+                      <span className="text-xl font-black text-slate-300 font-heading">
+                        {outcome.num}
+                      </span>
+                    </div>
 
-          {/* Performance Ambition */}
+                    <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center mb-4 text-orange">
+                      <Icon className="w-5 h-5" />
+                    </div>
+
+                    <h3
+                      className="text-lg font-bold text-navy mb-3"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {outcome.title}
+                    </h3>
+
+                    <p className="text-xs text-charcoal-light leading-relaxed mb-6">
+                      {outcome.desc}
+                    </p>
+                  </div>
+
+                  <div className="pt-4 border-t border-cream-dark">
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal/60 font-accent block mb-1">
+                      Target Deliverable
+                    </span>
+                    <p className="text-xs font-semibold text-navy">
+                      {outcome.metric}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Methodology Bridge Banner */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 bg-navy rounded-2xl p-8 md:p-10"
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="rounded-2xl bg-navy text-white p-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl"
           >
-            <div className="flex items-center gap-2 mb-5">
-              <Zap className="w-5 h-5 text-orange" />
-              <p
-                className="text-sm font-bold uppercase tracking-wider text-orange-light"
-                style={{ fontFamily: "var(--font-accent)" }}
+            <div className="max-w-2xl">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
+                Unified Methodology & Governance
+              </span>
+              <h3
+                className="text-xl sm:text-2xl font-bold text-white mb-2"
+                style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
               >
-                Performance Ambition
+                Governed by Four Stages: Diagnose, Prioritize, Execute, Impact
+              </h3>
+              <p className="text-sm text-slate-300">
+                Every capability deployment follows our evidence-based execution architecture with dual-track leadership governance to guarantee accountability from day one.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {performanceAmbitions.map((item, index) => (
-                <motion.div
-                  key={item}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-3 bg-white/5 border border-white/10 rounded-xl px-5 py-4"
-                >
-                  <span className="w-2 h-2 rounded-full bg-orange flex-shrink-0" />
-                  <span className="text-white text-sm font-medium">
-                    {item}
-                  </span>
-                </motion.div>
-              ))}
-            </div>
+            <Link
+              href="/approach"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-orange hover:bg-orange-dark text-white text-sm font-bold transition-all shadow-md flex-shrink-0 font-accent"
+            >
+              <span>Explore Our Approach</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* ───────── 5. Selected Client Experience ───────── */}
-      <section className="py-24 md:py-32 bg-navy">
+      {/* ───────── 5. Selected Client Experience (PPT Slide 17) ───────── */}
+      <section className="py-24 md:py-32 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
+            label="Track Record & Credibility"
             title="Apply Experience Across Sectors & Business Functions"
+            subtitle="Demonstrated impact across Tier-1 industrial manufacturing and premier enterprise institutions."
             centered
             light
           />
@@ -293,7 +390,7 @@ export default function ServicesPage() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.08 }}
-                    className="flex items-center gap-3 text-white/80"
+                    className="flex items-center gap-3 text-white/90"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0" />
                     <span className="text-sm font-medium">{client}</span>
@@ -324,7 +421,7 @@ export default function ServicesPage() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.08 }}
-                    className="flex items-center gap-3 text-white/80"
+                    className="flex items-center gap-3 text-white/90"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0" />
                     <span className="text-sm font-medium">{client}</span>
@@ -345,7 +442,7 @@ export default function ServicesPage() {
             {SECTORS.map((sector) => (
               <span
                 key={sector}
-                className="px-5 py-2.5 rounded-full border border-white/20 text-white/70 text-sm font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
+                className="px-5 py-2.5 rounded-full border border-white/20 text-white/80 text-sm font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 {sector}
@@ -358,9 +455,11 @@ export default function ServicesPage() {
       {/* ───────── 6. CTA Banner ───────── */}
       <CTABanner
         title="Calibrate Mandates to Execution"
-        subtitle="Capability gaps, critical hiring, or operational improvement — we align the expertise."
-        buttonText="Get in Touch"
+        subtitle="Capability gaps, critical hiring, or operational improvement — we align the industrial and talent expertise."
+        buttonText="Calibrate Your Mandate"
         buttonHref="/contact"
+        secondaryButtonText="Explore Our Approach"
+        secondaryButtonHref="/approach"
       />
     </div>
   );

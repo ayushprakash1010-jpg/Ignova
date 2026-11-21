@@ -12,6 +12,7 @@ interface ServiceCardProps {
   description: string;
   href: string;
   index: number;
+  actionText?: string;
 }
 
 export default function ServiceCard({
@@ -22,6 +23,7 @@ export default function ServiceCard({
   description,
   href,
   index,
+  actionText,
 }: ServiceCardProps) {
   return (
     <motion.div
@@ -77,7 +79,7 @@ export default function ServiceCard({
 
           {/* Action Link */}
           <div className="pt-4 border-t border-slate-100 flex items-center justify-between text-sm font-bold text-[#0B2038] group-hover:text-[#C86A28] transition-colors font-accent">
-            <span>Explore Capability</span>
+            <span>{actionText || "Explore Capability"}</span>
             <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-[#C86A28] group-hover:text-white transition-all duration-200">
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </div>

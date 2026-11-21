@@ -445,7 +445,10 @@ export default function EdgePage() {
                   <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
                     <Factory className="w-5 h-5 text-orange-light" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-accent">
+                  <h4
+                    className="text-base sm:text-lg font-bold text-white font-accent"
+                    style={{ color: "#FFFFFF" }}
+                  >
                     Plant Leadership
                   </h4>
                 </div>
@@ -466,7 +469,10 @@ export default function EdgePage() {
                   <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
                     <ShieldCheck className="w-5 h-5 text-orange-light" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-accent">
+                  <h4
+                    className="text-base sm:text-lg font-bold text-white font-accent"
+                    style={{ color: "#FFFFFF" }}
+                  >
                     Quality Leadership
                   </h4>
                 </div>
@@ -487,7 +493,10 @@ export default function EdgePage() {
                   <div className="w-10 h-10 rounded-lg bg-orange/20 flex items-center justify-center">
                     <Truck className="w-5 h-5 text-orange-light" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-accent">
+                  <h4
+                    className="text-base sm:text-lg font-bold text-white font-accent"
+                    style={{ color: "#FFFFFF" }}
+                  >
                     Supply Chain Leadership
                   </h4>
                 </div>
