@@ -691,7 +691,7 @@ export default function TriagePage() {
                 Practical Skill Assessment
               </p>
               <p className="text-charcoal-light text-sm leading-relaxed">
-                Assess tool knowledge &amp; practical proficiency before &amp; after training to identify gaps &amp; verify progress.
+                Assess tool knowledge &amp; practical proficiency before &amp; after capability interventions to identify gaps &amp; verify progress.
               </p>
             </motion.div>
 
