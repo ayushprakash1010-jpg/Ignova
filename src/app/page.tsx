@@ -51,11 +51,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Real Automotive Manufacturing Assembly Plant Photography */}
+          {/* Right Column: Executive Strategic Consulting & Operations Leadership */}
           <div className="lg:col-span-6 xl:col-span-7 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full">
             <Image
-              src="/images/hero/hero-factory-floor.jpg"
-              alt="Real automotive assembly production line with automated tooling"
+              src="/images/hero/hero-consulting-operations.jpg"
+              alt="IGNOVA executive consultants and industrial operations leaders in strategic discussion"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 60vw"
