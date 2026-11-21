@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Factory, Users } from "lucide-react";
 import ClientLogos from "@/components/ui/ClientLogos";
 
 export default function HomePage() {
@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="bg-white text-[#1E293B]">
       
       {/* =========================================================================
-          1. HERO SECTION: Full-Width Edge-to-Edge Split Screen (High-Impact Consulting Style)
+          1. HERO SECTION: Full-Width Real Documentary Industrial Photography
           ========================================================================= */}
       <section className="relative pt-16 sm:pt-20 bg-[#0B2038] overflow-hidden">
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[580px] lg:min-h-[640px]">
@@ -16,9 +16,10 @@ export default function HomePage() {
           {/* Left Column: Full-Height Deep Navy Card flush to left margin */}
           <div className="lg:col-span-6 xl:col-span-5 bg-[#0B2038] text-white flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:px-12 xl:pl-24 xl:pr-12 py-16 lg:py-24 z-10">
             <div>
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent mb-6 block">
-                IGNOVA CONSULTING &amp; ACADEMY
-              </span>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[11px] font-bold uppercase tracking-[0.18em] text-[#DF7C36] font-accent mb-6 border border-white/10">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DF7C36]" />
+                Connecting Shop Floor to Boardroom
+              </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-normal text-white font-serif leading-[1.12] mb-6 tracking-tight">
                 Enabling<br />
@@ -27,7 +28,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed mb-8 max-w-md">
-                Talent acquisition, talent development, and growth &amp; transformation.
+                Talent acquisition, talent development, and growth &amp; transformation under one trusted partner.
               </p>
             </div>
 
@@ -50,11 +51,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Full-Bleed Manufacturing Plant Floor Photography */}
+          {/* Right Column: Real Automotive Manufacturing Assembly Plant Photography */}
           <div className="lg:col-span-6 xl:col-span-7 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full">
             <Image
               src="/images/hero/hero-factory-floor.jpg"
-              alt="Modern precision manufacturing facility with engineers"
+              alt="Real automotive assembly production line with automated tooling"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 60vw"
@@ -129,18 +130,41 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          3. SERVICE PORTFOLIO: Pure White Background, 3 Photographic Feature Cards
+          3. EDITORIAL PULL QUOTE: Humanized Executive Operating Ethos (Slide 02 & 14)
+          ========================================================================= */}
+      <div className="bg-white border-b border-[#E8E2D5] py-9 sm:py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-base sm:text-lg md:text-xl font-normal font-serif text-[#0B2038] italic leading-relaxed">
+            &ldquo;Industrial performance is not won in boardroom slide decks alone. It is achieved when plant leadership, quality engineers, and operators share common baselines and relentless execution discipline.&rdquo;
+          </p>
+          <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+            <span className="w-8 h-px bg-[#C86A28]" />
+            IGNOVA Operating Ethos &middot; Slide 02 &amp; 14
+            <span className="w-8 h-px bg-[#C86A28]" />
+          </div>
+        </div>
+      </div>
+
+      {/* =========================================================================
+          4. SERVICE PORTFOLIO: Pure White Background, 3 Photographic Feature Cards
           ========================================================================= */}
       <section className="bg-white py-16 sm:py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="mb-10">
-            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
-              SERVICE PORTFOLIO
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight">
-              Three capabilities. One partner.
-            </h2>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
+                SERVICE PORTFOLIO &middot; SLIDE 03
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight">
+                Three capabilities. One partner.
+              </h2>
+            </div>
+            
+            {/* Operational Triad Badge (From Slide 11) */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-semibold text-slate-700 font-accent">
+              <span className="font-bold text-[#C86A28]">Focus:</span> People + Processes + Technology
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -159,13 +183,16 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1">
-                    APPLIED LEARNING
+                    APPLIED LEARNING &middot; SLIDE 06
                   </span>
                   <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
                     IGNOVA Triage
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
                     Capability transformation through technical excellence, leadership development and domain insight.
+                  </p>
+                  <p className="text-[11px] font-semibold text-slate-500 font-accent">
+                    Six Sigma &middot; VSM &amp; SMED &middot; Root Cause Analysis
                   </p>
                 </div>
               </div>
@@ -194,13 +221,16 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1">
-                    CREDIBLE TALENT
+                    CREDIBLE TALENT &middot; SLIDE 09
                   </span>
                   <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
                     IGNOVA Edge
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
                     Strategic talent advisory, leadership and specialist search, onboarding and performance.
+                  </p>
+                  <p className="text-[11px] font-semibold text-slate-500 font-accent">
+                    Executive Search &middot; Plant Leadership &middot; Specialist Roles
                   </p>
                 </div>
               </div>
@@ -229,13 +259,16 @@ export default function HomePage() {
                 </div>
                 <div className="p-6">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1">
-                    OPERATIONAL EXCELLENCE
+                    OPERATIONAL EXCELLENCE &middot; SLIDE 11
                   </span>
                   <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
                     Project Execution
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
                     Industrial performance consulting across quality, reliability, performance management and cross-functional productivity.
+                  </p>
+                  <p className="text-[11px] font-semibold text-slate-500 font-accent">
+                    Yield Enhancement &middot; OEE Improvement &middot; Industry 4.0
                   </p>
                 </div>
               </div>
@@ -256,35 +289,255 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          EXECUTIVE PHILOSOPHY: Pull-Quote from Presentation Deck (Slides 2, 6, 12)
+          5. ON-SITE EXECUTION: Make change tangible where work happens (Slide 14 & 05)
           ========================================================================= */}
-      <section className="bg-[#FAF9F6] py-14 sm:py-16 border-y border-[#E8E2D5]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C86A28] font-accent block mb-4">
-            The IGNOVA Operating Philosophy
-          </span>
-          <blockquote className="text-xl sm:text-2xl md:text-[26px] font-normal font-serif text-[#0B2038] leading-snug tracking-tight">
-            &ldquo;Connect workforce readiness to operational performance &mdash; bridging shop-floor realities to executive strategy through capability transformation, evidence-backed search, and industrial rigor.&rdquo;
-          </blockquote>
-          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-slate-500 font-accent uppercase tracking-wider">
-            <span>Shop Floor to Boardroom</span>
-            <span className="opacity-40">&middot;</span>
-            <span>Evidence-Backed Rigor</span>
-            <span className="opacity-40">&middot;</span>
-            <span>Measurable Workplace Yield</span>
+      <section className="bg-white py-16 sm:py-20 md:py-24 border-t border-[#E8E2D5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Column: Narrative & Philosophy */}
+            <div className="lg:col-span-5">
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
+                ON-SITE EXECUTION &middot; SLIDE 14
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
+                Make change tangible where work happens.
+              </h2>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-6">
+                Real operational improvement doesn&apos;t happen in abstract presentations. It happens directly on the shop floor—where operators, supervisors, and plant leadership address daily constraints in real time.
+              </p>
+              
+              {/* Core Design Principle from Slide 05 */}
+              <div className="p-4 rounded-lg bg-[#FAF9F6] border-l-4 border-[#C86A28] border-y border-r border-[#E8E2D5] mb-6">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent mb-1">
+                  Design Principle &middot; Slide 05
+                </p>
+                <p className="text-xs sm:text-sm text-slate-800 font-medium italic leading-relaxed">
+                  &ldquo;Customize the intervention around the role and the performance gap—not off-the-shelf packages.&rdquo;
+                </p>
+              </div>
+
+              {/* Cross-Functional Triad from Slide 14 */}
+              <div className="pt-2">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-accent block mb-2.5">
+                  Shared Execution Across Functions:
+                </span>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="px-3 py-1.5 rounded-md bg-[#FAF9F6] border border-slate-200 text-slate-800 text-xs font-semibold font-accent">
+                    Production
+                  </span>
+                  <span className="text-slate-400 text-xs font-bold">&harr;</span>
+                  <span className="px-3 py-1.5 rounded-md bg-[#FAF9F6] border border-slate-200 text-slate-800 text-xs font-semibold font-accent">
+                    Quality
+                  </span>
+                  <span className="text-slate-400 text-xs font-bold">&harr;</span>
+                  <span className="px-3 py-1.5 rounded-md bg-[#FAF9F6] border border-slate-200 text-slate-800 text-xs font-semibold font-accent">
+                    Plant Support
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: 3 On-Site Stages from Slide 14 */}
+            <div className="lg:col-span-7 space-y-4">
+              
+              {/* Step 1: Diagnose at Source */}
+              <div className="p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/40 transition-colors">
+                <div className="flex items-start gap-4">
+                  <span className="w-8 h-8 rounded-full bg-[#0B2038] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5">
+                    01
+                  </span>
+                  <div>
+                    <h3 className="text-base sm:text-lg font-bold font-serif text-[#0B2038] mb-1">
+                      Diagnose at Source
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      Observe operating conditions, line bottlenecks, material flow, and equipment losses directly in the active plant environment.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 2: Build Through Practice */}
+              <div className="p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/40 transition-colors">
+                <div className="flex items-start gap-4">
+                  <span className="w-8 h-8 rounded-full bg-[#0B2038] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5">
+                    02
+                  </span>
+                  <div>
+                    <h3 className="text-base sm:text-lg font-bold font-serif text-[#0B2038] mb-1">
+                      Build Through Practice
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      Apply structured workshops and coaching directly to live shop-floor challenges—validating real work solutions rather than textbook theory.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 3: Execute Across Functions */}
+              <div className="p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/40 transition-colors">
+                <div className="flex items-start gap-4">
+                  <span className="w-8 h-8 rounded-full bg-[#0B2038] text-white text-xs font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5">
+                    03
+                  </span>
+                  <div>
+                    <h3 className="text-base sm:text-lg font-bold font-serif text-[#0B2038] mb-1">
+                      Execute Across Functions
+                    </h3>
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      Cross-functional teams take full ownership of root-cause corrective actions, standard process controls, and sustainable yield metrics.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* =========================================================================
-          4. PERFORMANCE AMBITION: Warm Sand / Beige (#F4F0E8) with Visual Progression
+          6. WHERE IMPACT BECOMES VISIBLE: Real Industrial Metrics (Slides 10 & 13)
+          ========================================================================= */}
+      <section className="bg-[#FAF9F6] py-16 sm:py-20 border-y border-[#E8E2D5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C86A28] font-accent block mb-2">
+              Performance Governance &middot; Slides 10 &amp; 13
+            </span>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
+              Where Impact Becomes Visible
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              We connect workforce readiness to operational performance. Measured at defined hiring, capability, and shop-floor yield milestones.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Domain 1: Plant Leadership */}
+            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                <Factory className="w-5 h-5" />
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-2">
+                Plant Leadership
+              </h3>
+              <ul className="space-y-2 text-xs text-slate-600">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span><strong>OEE (%)</strong> &middot; Overall Equipment Effectiveness</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span>Cross-functional line productivity</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span>Equipment availability &amp; loss recovery</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Domain 2: Quality Leadership */}
+            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-2">
+                Quality Leadership
+              </h3>
+              <ul className="space-y-2 text-xs text-slate-600">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span><strong>Defect PPM</strong> reduction &amp; containment</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span><strong>Cost of Poor Quality (COPQ)</strong> control</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span><strong>First Pass Yield (FPY %)</strong> improvement</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Domain 3: Supply Chain Leadership */}
+            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                <TrendingUp className="w-5 h-5" />
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-2">
+                Supply Chain &amp; Flow
+              </h3>
+              <ul className="space-y-2 text-xs text-slate-600">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span><strong>On-Time Delivery (OTIF)</strong> rates</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span>Inventory turns &amp; working capital</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span>Bottleneck removal through VSM</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Domain 4: Search & Hiring Precision */}
+            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                <Users className="w-5 h-5" />
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-2">
+                Hiring Precision
+              </h3>
+              <ul className="space-y-2 text-xs text-slate-600">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span>Accelerated <strong>time-to-qualified-shortlist</strong></span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span><strong>90-Day Contribution Milestone</strong> (%)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span>Long-term 12-month retention stability</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          {/* Governance Footer Note */}
+          <div className="mt-10 pt-6 border-t border-[#E8E2D5] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <span className="font-accent">
+              <strong>Governance Model:</strong> Establish Baselines &rarr; Set Measurable Targets &rarr; Assign Ownership &rarr; Review Results
+            </span>
+            <Link href="/approach" className="font-bold text-[#C86A28] hover:text-[#B05819] flex items-center gap-1 font-accent">
+              View Measurement Architecture &rarr;
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
+      {/* =========================================================================
+          7. PERFORMANCE AMBITION: Warm Sand / Beige (#F4F0E8) with Visual Progression
           ========================================================================= */}
       <section className="bg-[#F4F0E8] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-12">
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
-              PERFORMANCE AMBITION
+              PERFORMANCE AMBITION &middot; SLIDE 04 &amp; 05
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-[#0B2038] tracking-tight max-w-4xl leading-snug">
               Close talent gaps, build capability, accelerate R&amp;D and improve P&amp;L
@@ -304,9 +557,12 @@ export default function HomePage() {
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Diagnose
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-2">
                 Assess talent gaps, competency needs and operating constraints. Establish the performance baseline.
               </p>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                Output: Diagnostic Baseline
+              </span>
             </div>
 
             {/* Step 02 */}
@@ -320,9 +576,12 @@ export default function HomePage() {
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Prioritize
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-2">
                 Distinguish essential roles and capabilities from those that can wait. Agree focused priorities.
               </p>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                Output: Improvement Roadmap
+              </span>
             </div>
 
             {/* Step 03 */}
@@ -336,9 +595,12 @@ export default function HomePage() {
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Execute
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-2">
                 Target the industry search and deliver talent and learning interventions.
               </p>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                Output: On-Site Trials &amp; Capability
+              </span>
             </div>
 
             {/* Step 04 */}
@@ -351,9 +613,12 @@ export default function HomePage() {
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Impact
               </h3>
-              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed mb-2">
                 Put performance controls in place and track R&amp;D progress and P&amp;L impact.
               </p>
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                Output: Standard KPI Controls
+              </span>
             </div>
 
           </div>
@@ -362,7 +627,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          5. SECTOR REACH & CREDENTIALS: India's Industrial & Enterprise Leaders
+          8. SECTOR REACH & CREDENTIALS: India's Industrial & Enterprise Leaders
           ========================================================================= */}
       <section className="bg-[#FAF9F6] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -397,7 +662,7 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          6. CALL TO ACTION BANNER: Deep Navy (#0B2038), Strictly NO "your priority"
+          9. CALL TO ACTION BANNER: Deep Navy (#0B2038), Strictly NO "your priority"
           ========================================================================= */}
       <section className="bg-[#0B2038] py-14 sm:py-16 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
