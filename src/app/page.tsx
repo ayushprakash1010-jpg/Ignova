@@ -1,89 +1,88 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import ClientLogos from "@/components/ui/ClientLogos";
 
 export default function HomePage() {
   return (
     <div className="bg-white text-[#1E293B]">
       
       {/* =========================================================================
-          1. HERO SECTION: Split Screen (Deep Navy Card Left + Manufacturing Photo Right)
+          1. HERO SECTION: Full-Width Edge-to-Edge Split Screen (High-Impact Consulting Style)
           ========================================================================= */}
-      <section className="pt-24 pb-8 md:pt-28 md:pb-12 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 rounded-xl overflow-hidden shadow-sm border border-slate-200/80 bg-[#0B2038]">
-            
-            {/* Left 5 Columns: Editorial Deep Navy Card */}
-            <div className="lg:col-span-5 bg-[#0B2038] text-white p-8 sm:p-12 md:p-14 flex flex-col justify-between">
-              <div>
-                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent mb-6 block">
-                  IGNOVA CONSULTING &amp; ACADEMY
-                </span>
-                
-                <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-normal text-white font-serif leading-[1.12] mb-6 tracking-tight">
-                  Enabling<br />
-                  execution<br />
-                  <span className="italic font-normal">&amp; impact.</span>
-                </h1>
+      <section className="relative pt-16 sm:pt-20 bg-[#0B2038] overflow-hidden">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[580px] lg:min-h-[640px]">
+          
+          {/* Left Column: Full-Height Deep Navy Card flush to left margin */}
+          <div className="lg:col-span-6 xl:col-span-5 bg-[#0B2038] text-white flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:px-12 xl:pl-24 xl:pr-12 py-16 lg:py-24 z-10">
+            <div>
+              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent mb-6 block">
+                IGNOVA CONSULTING &amp; ACADEMY
+              </span>
+              
+              <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-normal text-white font-serif leading-[1.12] mb-6 tracking-tight">
+                Enabling<br />
+                execution<br />
+                <span className="italic font-normal">&amp; impact.</span>
+              </h1>
 
-                <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed mb-8 max-w-sm">
-                  Talent acquisition, talent development, and growth &amp; transformation.
-                </p>
-              </div>
-
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-4">
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-xs sm:text-sm font-semibold transition-colors shadow-xs"
-                >
-                  Explore services
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-1.5 px-4 sm:px-5 py-2.5 text-white hover:text-orange-200 text-xs sm:text-sm font-semibold transition-colors"
-                >
-                  Get in touch
-                  <ArrowUpRight className="w-4 h-4" />
-                </Link>
-              </div>
+              <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed mb-8 max-w-md">
+                Talent acquisition, talent development, and growth &amp; transformation.
+              </p>
             </div>
 
-            {/* Right 7 Columns: Modern Precision Manufacturing Floor Photography */}
-            <div className="lg:col-span-7 relative min-h-[340px] sm:min-h-[440px] lg:min-h-[500px]">
-              <Image
-                src="/images/hero/hero-factory-floor.jpg"
-                alt="Modern advanced manufacturing facility with engineers"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
-              />
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-1.5 px-5 py-3 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-xs sm:text-sm font-semibold transition-colors shadow-xs"
+              >
+                Explore services
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-1.5 px-5 py-3 rounded-md text-white hover:text-orange-200 text-xs sm:text-sm font-semibold transition-colors border border-white/20 hover:border-white/40"
+              >
+                Get in touch
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
             </div>
-
           </div>
+
+          {/* Right Column: Full-Bleed Manufacturing Plant Floor Photography */}
+          <div className="lg:col-span-6 xl:col-span-7 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full">
+            <Image
+              src="/images/hero/hero-factory-floor.jpg"
+              alt="Modern advanced manufacturing facility with engineers"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover"
+            />
+          </div>
+
         </div>
       </section>
 
       {/* =========================================================================
           2. STATS BAR: Full-Width Warm Sand / Beige (#F4F0E8)
           ========================================================================= */}
-      <section className="bg-[#F4F0E8] border-y border-[#E8E2D5]">
+      <section className="bg-[#F4F0E8] border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             
-            {/* Stat 1 */}
+            {/* Stat 1: 50+ Years */}
             <div>
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
-                50
+                50+
               </div>
               <p className="text-xs sm:text-[13px] text-slate-600 mt-1 font-normal">
                 Years of industrial expertise
               </p>
             </div>
 
-            {/* Stat 2 */}
+            {/* Stat 2: 1,000+ Candidates */}
             <div>
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
                 1,000+
@@ -93,7 +92,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Stat 3 */}
+            {/* Stat 3: 8+ Years */}
             <div>
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
                 8+
@@ -103,7 +102,7 @@ export default function HomePage() {
               </p>
             </div>
 
-            {/* Stat 4 */}
+            {/* Stat 4: 12+ Clients */}
             <div>
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
                 12+
@@ -259,7 +258,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Step 01 */}
             <div>
@@ -315,45 +314,34 @@ export default function HomePage() {
 
           </div>
 
-          {/* =========================================================================
-              5. SELECTED CLIENT EXPERIENCE: Text Table Layout
-              ========================================================================= */}
-          <div className="pt-8 border-t border-[#E8E2D5]">
+        </div>
+      </section>
+
+      {/* =========================================================================
+          5. SECTOR REACH & CREDENTIALS: India's Industrial & Enterprise Leaders
+             (With All 11 Client Logo Cards, Matching User's Image 3 Request)
+          ========================================================================= */}
+      <section className="bg-[#FAF9F6] py-16 sm:py-20 md:py-24 border-t border-[#E8E2D5]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="max-w-3xl mb-12">
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
-              SELECTED CLIENT EXPERIENCE
+              SECTOR REACH &amp; CREDENTIALS
             </span>
-            <h3 className="text-2xl sm:text-3xl font-normal font-serif text-[#0B2038] tracking-tight mb-8">
-              Experience across sectors
-            </h3>
+            <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
+              Trusted by India&apos;s Industrial &amp; Enterprise Leaders
+            </h2>
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+              Applying cross-industry operating depth, structured candidate assessment, and disciplined shop-floor execution across Manufacturing, Automotive, BFSI, and Technology.
+            </p>
+          </div>
 
-            <div className="space-y-0">
-              
-              {/* Row 1: Industrial Consulting */}
-              <div className="flex flex-col sm:flex-row sm:items-center py-3.5 border-b border-[#E8E2D5]">
-                <div className="w-48 sm:w-56 text-xs sm:text-sm font-bold text-[#0B2038] font-accent mb-1 sm:mb-0">
-                  Industrial consulting
-                </div>
-                <div className="flex-1 text-xs sm:text-sm text-slate-700 font-normal">
-                  Hero Steels Limited &middot; Gabriel &middot; Motherson &middot; MSA &middot; Tenneco
-                </div>
-              </div>
+          {/* Client Logos: Visual Cards with SVGs/PNGs */}
+          <ClientLogos />
 
-              {/* Row 2: Recruitment */}
-              <div className="flex flex-col sm:flex-row sm:items-center py-3.5 border-b border-[#E8E2D5]">
-                <div className="w-48 sm:w-56 text-xs sm:text-sm font-bold text-[#0B2038] font-accent mb-1 sm:mb-0">
-                  Recruitment
-                </div>
-                <div className="flex-1 text-xs sm:text-sm text-slate-700 font-normal">
-                  HSBC &middot; Swiggy &middot; Flipkart &middot; ICICI Bank &middot; Tata Group &middot; Bandhan Bank
-                </div>
-              </div>
-
-              {/* Sector tags footer */}
-              <div className="pt-4 text-xs text-slate-500 font-normal">
-                Manufacturing &middot; Automotive &middot; Financial services &middot; Technology &middot; Healthcare
-              </div>
-
-            </div>
+          {/* Industry Sectors Footer */}
+          <div className="mt-12 pt-6 border-t border-slate-200/80 text-xs text-slate-500 font-normal">
+            Manufacturing &middot; Automotive &middot; Financial services &middot; Technology &middot; Healthcare
           </div>
 
         </div>
