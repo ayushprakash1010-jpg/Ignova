@@ -5,11 +5,9 @@ import Link from "next/link";
 import { ArrowRight, Target, Users, Cog, BarChart3 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProcessStep from "@/components/ui/ProcessStep";
-import StepperTimeline from "@/components/ui/StepperTimeline";
 import CTABanner from "@/components/ui/CTABanner";
 import {
   IGNOVA_FACTOR,
-  DELIVERY_STEPS,
   PERFORMANCE_DOMAINS,
 } from "@/lib/constants";
 
@@ -137,24 +135,13 @@ export default function ApproachPage() {
         </div>
       </section>
 
-      {/* ─── 4. Delivery Approach ─── */}
+      {/* ─── 4. Performance Measurement ─── */}
       <section className="bg-cream py-20 md:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="ONE DELIVERY APPROACH"
-            title="From Assessment to Sustained Performance"
-            centered
-          />
-          <StepperTimeline steps={DELIVERY_STEPS} />
-        </div>
-      </section>
-
-      {/* ─── 5. Performance Measurement ─── */}
-      <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="PERFORMANCE MEASUREMENT"
             title="Integrated Performance View for Leadership"
+            subtitle="Connect operating realities to agreed leadership baselines and standard governance."
             centered
           />
 
@@ -260,8 +247,8 @@ export default function ApproachPage() {
         </div>
       </section>
 
-      {/* ─── 6. Starting Point ─── */}
-      <section className="bg-cream py-20 md:py-28">
+      {/* ─── 5. Starting Point ─── */}
+      <section className="bg-white py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -301,7 +288,7 @@ export default function ApproachPage() {
                 >
                   <Link
                     href={path.href}
-                    className="group block bg-white rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 h-full"
+                    className="group block bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 h-full"
                   >
                     <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors">
                       <Icon className="w-6 h-6 text-orange" />
