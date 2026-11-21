@@ -6,6 +6,8 @@ interface CTABannerProps {
   subtitle?: string;
   buttonText?: string;
   buttonHref?: string;
+  secondaryButtonText?: string;
+  secondaryButtonHref?: string;
   variant?: "orange" | "navy";
 }
 
@@ -14,6 +16,8 @@ export default function CTABanner({
   subtitle = "Start with mandate calibration and performance goals. We align the industrial and talent expertise.",
   buttonText = "Schedule a Consultation",
   buttonHref = "/contact",
+  secondaryButtonText = "Learn About Our Firm",
+  secondaryButtonHref = "/about",
   variant = "navy",
 }: CTABannerProps) {
   return (
@@ -60,12 +64,14 @@ export default function CTABanner({
                 {buttonText}
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link
-                href="/about"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl text-white/90 hover:text-white border border-white/20 hover:bg-white/10 transition-all font-accent"
-              >
-                Learn About Our Firm
-              </Link>
+              {secondaryButtonText && secondaryButtonHref && (
+                <Link
+                  href={secondaryButtonHref}
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl text-white/90 hover:text-white border border-white/20 hover:bg-white/10 transition-all font-accent"
+                >
+                  {secondaryButtonText}
+                </Link>
+              )}
             </div>
           </div>
         </div>
