@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -38,19 +39,41 @@ const capabilities = [
 const inputStyles =
   "w-full px-4 py-3 bg-cream border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-orange/50 focus:border-orange transition-colors text-charcoal";
 
-export default function ContactPage() {
+function ContactPageContent() {
   const [submissionMessage, setSubmissionMessage] = useState("");
   const [submissionError, setSubmissionError] = useState("");
   const [prefilledMailto, setPrefilledMailto] = useState<string | null>(null);
+
+  const searchParams = useSearchParams();
+  const roles = searchParams.get("roles");
+  const days = searchParams.get("days");
+  const oee = searchParams.get("oee");
+  const drag = searchParams.get("drag");
 
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    setValue,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
   });
+
+  useEffect(() => {
+    if (roles && days && drag) {
+      setValue(
+        "message",
+        `Mandate Calibration Inquiry (Operational Diagnostic Benchmark):\n` +
+          `• Open Critical Leadership / Specialist Roles: ${roles}\n` +
+          `• Average Days to Qualified Placement: ${days} days\n` +
+          `• Current Shop-Floor OEE Level: ${oee}%\n` +
+          `• Estimated Quarterly P&L Exposure: ₹${drag} Lakhs\n\n` +
+          `We would like to calibrate targeted countermeasures and operating interventions with IGNOVA.`
+      );
+      setValue("service", "Project Execution — Operational Improvement");
+    }
+  }, [roles, days, oee, drag, setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     setSubmissionMessage("");
@@ -479,5 +502,13 @@ export default function ContactPage() {
         </div>
       </section>
     </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-cream" />}>
+      <ContactPageContent />
+    </Suspense>
   );
 }
