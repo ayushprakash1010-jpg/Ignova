@@ -49,6 +49,13 @@ export default function HomePage() {
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
+
+            {/* Subtle Scroll Indicator */}
+            <div className="pt-8 sm:pt-12 hidden lg:flex items-center gap-3 text-slate-400 text-[11px] font-accent tracking-[0.18em] uppercase">
+              <span className="w-6 h-px bg-white/20" />
+              <span>Scroll to explore</span>
+              <span className="text-[#DF7C36] animate-bounce">&darr;</span>
+            </div>
           </div>
 
           {/* Right Column: Architectural Bridge - Shop Floor to Boardroom */}
@@ -175,7 +182,7 @@ export default function HomePage() {
                 <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                   <Image
                     src="/images/services/triage-engineers.jpg"
-                    alt="Engineers reviewing blueprints on factory floor"
+                    alt="Industrial engineering blueprints, mechanical tooling schematics, and precision digital calipers on plant workstation"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -213,7 +220,7 @@ export default function HomePage() {
                 <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                   <Image
                     src="/images/services/edge-boardroom.jpg"
-                    alt="Corporate executives in strategic talent discussion"
+                    alt="Prestigious executive boardroom suite with floor-to-ceiling glass windows and conference table for leadership search"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -251,7 +258,7 @@ export default function HomePage() {
                 <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                   <Image
                     src="/images/services/execution-robotics.jpg"
-                    alt="Industrial robotics and automated manufacturing cell"
+                    alt="Orange multi-axis industrial robotic arm performing precision automated manufacturing welding"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
