@@ -62,8 +62,8 @@ export default function HomePage() {
           {/* Right Column: Architectural Bridge - Shop Floor to Boardroom */}
           <div className="lg:col-span-6 xl:col-span-7 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full">
             <Image
-              src="/images/hero/hero-industrial-leadership.jpg"
-              alt="Senior industrial operations director reviewing precision manufacturing execution and telemetry on the plant floor"
+              src="/images/hero/hero-precision-plant.jpg"
+              alt="State-of-the-art precision manufacturing plant with automated robotic systems and structural steel architecture"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 60vw"
