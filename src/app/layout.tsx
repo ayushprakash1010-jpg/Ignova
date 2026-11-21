@@ -26,6 +26,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ignova-ek2m.vercel.app"),
   title: {
     default: "IGNOVA Consulting & Academy | Architect. Activate. Accelerate.",
     template: "%s | IGNOVA",

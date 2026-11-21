@@ -131,6 +131,20 @@ export default function AboutPage() {
             >
               50 years connecting shop floor realities to boardroom strategy.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="mt-8 flex flex-wrap items-center justify-center gap-4"
+            >
+              <Button href="#who-we-are" variant="primary" size="lg">
+                Explore Our Story
+              </Button>
+              <Button href="/contact" variant="outline" size="lg">
+                Discuss Strategic Mandates
+              </Button>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -138,7 +152,7 @@ export default function AboutPage() {
       <div className="section-divider" />
 
       {/* ============ WHO WE ARE ============ */}
-      <section className="py-24 md:py-32 bg-white">
+      <section id="who-we-are" className="py-24 md:py-32 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left column */}
