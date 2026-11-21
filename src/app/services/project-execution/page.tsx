@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ProcessStep from "@/components/ui/ProcessStep";
+import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
 
 /* ──────────────────────── DATA ──────────────────────── */
@@ -205,11 +206,22 @@ export default function ProjectExecutionPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl text-charcoal-light max-w-2xl mb-10 leading-relaxed"
+              className="text-xl md:text-2xl text-charcoal-light max-w-2xl mb-8 leading-relaxed"
             >
               People + Processes + Technology: Develop operating capability alongside the
               systems that sustain it.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="mb-8"
+            >
+              <Button href="/contact" variant="primary" size="lg">
+                Discuss Your Operational Challenges
+              </Button>
+            </motion.div>
           </div>
         </div>
 
@@ -336,8 +348,8 @@ export default function ProjectExecutionPage() {
               className="inline-block px-6 py-3 bg-navy/5 text-navy text-sm font-medium rounded-full border border-navy/10"
               style={{ fontFamily: "var(--font-accent)" }}
             >
-              The scope follows your business priorities. Industrial improvement
-              is one part of the offer.
+              The scope aligns with your strategic mandates — from Industry 4.0 and
+              capacity expansion to operational performance transformation.
             </p>
           </motion.div>
         </div>
@@ -550,6 +562,8 @@ export default function ProjectExecutionPage() {
         subtitle="From quality engineering to plant readiness — we execute on site."
         buttonText="Discuss Your Operational Challenges"
         buttonHref="/contact"
+        secondaryButtonText="Explore IGNOVA Triage"
+        secondaryButtonHref="/services/triage"
       />
     </>
   );

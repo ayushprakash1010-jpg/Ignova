@@ -24,6 +24,7 @@ import {
   Truck,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
 
 /* ── Hiring Process Steps (Slide 10) ── */
@@ -81,33 +82,33 @@ const advisoryScope = [
 /* ── Scale Hiring Features ── */
 const scaleFeatures = [
   {
-    title: "Hiring capacity when you need it",
+    title: "Dedicated Capacity When Demanded",
     description:
-      "End-to-end support from sourcing to onboarding, aligned with your internal team.",
+      "End-to-end talent acquisition support from role scoping to onboarding, seamlessly integrated with in-house HR.",
     icon: HeadphonesIcon,
   },
   {
-    title: "Coordinated volume hiring",
+    title: "Coordinated Volume Hiring",
     description:
-      "Plan recruitment drives around ramp-up dates, locations and workforce requirements.",
+      "Structured recruitment drives synchronized with plant commissioning, ramp-up schedules, and site expansions.",
     icon: CalendarCheck,
   },
   {
-    title: "Hard-to-fill roles",
+    title: "Niche & Critical Leadership Roles",
     description:
-      "Focused pipelines for specialist and leadership vacancies that need dedicated attention.",
+      "Targeted search pipelines for senior plant directors, functional heads, and rare technical specialists.",
     icon: Focus,
   },
   {
-    title: "HR foundations for growth",
+    title: "Institutional Talent Infrastructure",
     description:
-      "Build recruitment processes, policies and talent pipelines for a new or expanding business.",
+      "Standardizing assessment frameworks, hiring rubrics, and pipeline governance for long-term scalability.",
     icon: Building2,
   },
   {
-    title: "Visibility for HR",
+    title: "Executive Visibility & Reporting",
     description:
-      "Agreed hiring priorities, structured assessments and clear recruitment reporting.",
+      "Real-time reporting on pipeline velocity, candidate scorecards, and hiring milestone adherence.",
     icon: BarChart3,
   },
 ];
@@ -177,21 +178,31 @@ export default function EdgePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl text-charcoal-light max-w-2xl leading-relaxed"
+              className="text-xl md:text-2xl text-charcoal-light max-w-2xl leading-relaxed mb-8"
             >
               Mandate precision. Structured assessment. Credible shortlists.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <Button href="/contact" variant="primary" size="lg">
+                Discuss Your Hiring Mandate
+              </Button>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* ============ HIRING PROCESS ============ */}
+      {/* ============ SEARCH OUTCOME ============ */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
-            label="Hiring Process"
-            title="Four Steps to the Right Hire"
-            subtitle="A structured, evidence-backed hiring process that delivers credible shortlists."
+            label="Search Outcome"
+            title="Evidence-Backed Search to Workplace Performance"
+            subtitle="Moving from calibrated mandates through structured capability assessment to onboarding and active performance enablement."
             centered
           />
 
@@ -322,96 +333,6 @@ export default function EdgePage() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      {/* ============ SEARCH OUTCOME SUMMARY ============ */}
-      <section className="py-20 md:py-28 bg-navy relative overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-10 right-10 w-40 h-40 border border-white/5 rounded-full" />
-        <div className="absolute bottom-10 left-10 w-60 h-60 border border-white/5 rounded-full" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange/5 rounded-full blur-3xl" />
-
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p
-              className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-6"
-              style={{ fontFamily: "var(--font-accent)" }}
-            >
-              The IGNOVA Edge Outcome
-            </p>
-
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Source Talent <span className="text-orange">|</span> Assess Capability{" "}
-              <span className="text-orange">|</span> Fastrack Onboarding{" "}
-              <span className="text-orange">|</span> Drive Performance
-            </h2>
-
-            <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-              Every search engagement is designed to deliver evidence-backed hiring decisions — moving from calibrated mandates through structured capability assessment to onboarding and active performance enablement.
-            </p>
-          </motion.div>
-
-          {/* Four lifecycle pillars (Slide 10) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14 text-left"
-          >
-            {[
-              {
-                number: "01",
-                label: "Source Talent",
-                desc: "Calibrate the role, map talent markets & screen candidates against benchmarks.",
-              },
-              {
-                number: "02",
-                label: "Assess Capability",
-                desc: "Validate expertise, behavioral competencies & organizational fit systematically.",
-              },
-              {
-                number: "03",
-                label: "Fastrack Onboarding",
-                desc: "Support joining, establish role clarity & accelerate cross-functional integration.",
-              },
-              {
-                number: "04",
-                label: "Drive Performance",
-                desc: "Set 90-day milestones, build capability & review observable business progress.",
-              },
-            ].map((item, index) => (
-              <div
-                key={item.label}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-bold text-orange font-accent">
-                      {item.number}
-                    </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange" />
-                  </div>
-                  <h4
-                    className="text-lg font-bold text-white mb-2"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {item.label}
-                  </h4>
-                  <p className="text-xs text-white/60 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
@@ -585,8 +506,10 @@ export default function EdgePage() {
         variant="orange"
         title="Need to Fill Business-Critical Roles?"
         subtitle="From executive search to volume hiring — we deliver credible shortlists."
-        buttonText="Discuss Your Hiring Needs"
+        buttonText="Discuss Your Hiring Mandate"
         buttonHref="/contact"
+        secondaryButtonText="Explore Project Execution"
+        secondaryButtonHref="/services/project-execution"
       />
     </>
   );
