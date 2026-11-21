@@ -77,7 +77,7 @@ export default function ServicesPage() {
           <SectionHeading
             label="Our Capabilities"
             title="Integrated Services for Business Impact"
-            subtitle="Each pillar addresses a distinct performance priority — together, they connect people to business execution."
+            subtitle="Each pillar addresses a distinct operational mandate — together, they connect people to business execution."
             centered
           />
 
@@ -118,7 +118,7 @@ export default function ServicesPage() {
             <div className="bg-white rounded-2xl border border-cream-dark overflow-hidden shadow-lg">
               {/* Header */}
               <div className="grid grid-cols-3 bg-navy text-white">
-                {["Priority", "IGNOVA Capability", "Intended Outcome"].map(
+                {["Strategic Mandate", "IGNOVA Capability", "Intended Outcome"].map(
                   (header) => (
                     <div
                       key={header}

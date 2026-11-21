@@ -29,7 +29,7 @@ const philosophyItems = [
     icon: Crosshair,
     title: "Rigor",
     description:
-      "Apply structured methodology — not templates. Every intervention is customized around the role, the performance gap, and the business priority.",
+      "Apply structured methodology — not templates. Every intervention is customized around the role, the performance gap, and the strategic mandate.",
   },
   {
     icon: BarChart3,
