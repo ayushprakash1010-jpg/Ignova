@@ -51,11 +51,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Right Column: Executive Strategic Consulting & Operations Leadership */}
+          {/* Right Column: Architectural Bridge - Shop Floor to Boardroom */}
           <div className="lg:col-span-6 xl:col-span-7 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full">
             <Image
               src="/images/hero/hero-consulting-operations.jpg"
-              alt="IGNOVA executive consultants and industrial operations leaders in strategic discussion"
+              alt="Architectural view connecting the executive boardroom mezzanine to advanced smart manufacturing operations"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 60vw"
