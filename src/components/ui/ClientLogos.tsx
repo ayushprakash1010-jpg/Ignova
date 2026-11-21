@@ -12,8 +12,8 @@ function LogoCard({ client, index }: { client: ClientLogo; index: number }) {
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.3, delay: index * 0.04 }}
-      className="group relative flex items-center justify-center h-20 sm:h-24 px-4 py-3 bg-white rounded-xl border border-slate-200/90 shadow-xs hover:border-[#C86A28]/50 hover:shadow-md transition-all duration-300 text-center overflow-hidden"
+      transition={{ duration: 0.3, delay: index * 0.03 }}
+      className="group relative flex items-center justify-center h-20 sm:h-24 px-4 py-3 bg-white rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/50 hover:shadow-md transition-all duration-300 text-center overflow-hidden"
       title={client.name}
       aria-label={client.name}
     >
@@ -24,7 +24,7 @@ function LogoCard({ client, index }: { client: ClientLogo; index: number }) {
           loading="lazy"
           decoding="async"
           onError={() => setHasError(true)}
-          className={`w-auto ${client.maxHeight || "max-h-8 sm:max-h-9"} max-w-[125px] sm:max-w-[145px] object-contain transition-all duration-300 group-hover:scale-105 filter group-hover:contrast-105`}
+          className={`w-auto ${client.maxHeight || "max-h-8 sm:max-h-9"} max-w-[125px] sm:max-w-[145px] object-contain transition-all duration-300 filter grayscale contrast-90 opacity-75 group-hover:grayscale-0 group-hover:contrast-100 group-hover:opacity-100 group-hover:scale-105`}
         />
       ) : (
         <span className="text-xs sm:text-sm font-bold text-slate-700 font-accent tracking-tight">

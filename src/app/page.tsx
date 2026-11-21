@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import ClientLogos from "@/components/ui/ClientLogos";
 
 export default function HomePage() {
@@ -35,17 +35,17 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/services"
-                className="inline-flex items-center gap-1.5 px-5 py-3 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-xs sm:text-sm font-semibold transition-colors shadow-xs"
+                className="group inline-flex items-center gap-1.5 px-5 py-3 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-xs sm:text-sm font-semibold transition-all shadow-xs hover:shadow-md"
               >
                 Explore services
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-1.5 px-5 py-3 rounded-md text-white hover:text-orange-200 text-xs sm:text-sm font-semibold transition-colors border border-white/20 hover:border-white/40"
+                className="group inline-flex items-center gap-1.5 px-5 py-3 rounded-md text-white hover:text-orange-200 text-xs sm:text-sm font-semibold transition-colors border border-white/20 hover:border-white/40"
               >
                 Get in touch
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
           </div>
@@ -54,7 +54,7 @@ export default function HomePage() {
           <div className="lg:col-span-6 xl:col-span-7 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full">
             <Image
               src="/images/hero/hero-factory-floor.jpg"
-              alt="Modern advanced manufacturing facility with engineers"
+              alt="Modern precision manufacturing facility with engineers"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 60vw"
@@ -66,49 +66,61 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          2. STATS BAR: Full-Width Warm Sand / Beige (#F4F0E8)
+          2. STATS BAR: Full-Width Warm Sand / Beige (#F4F0E8) with Institutional Dividers
           ========================================================================= */}
       <section className="bg-[#F4F0E8] border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0">
             
             {/* Stat 1: 50+ Years */}
-            <div>
+            <div className="md:border-r md:border-[#E8E2D5] md:pr-6 md:pl-2 first:pl-0">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
                 50+
               </div>
-              <p className="text-xs sm:text-[13px] text-slate-600 mt-1 font-normal">
+              <p className="text-xs sm:text-[13px] text-slate-800 font-semibold mt-1 font-accent">
                 Years of industrial expertise
+              </p>
+              <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
+                Shop-floor realities to boardroom strategy
               </p>
             </div>
 
             {/* Stat 2: 1,000+ Candidates */}
-            <div>
+            <div className="md:border-r md:border-[#E8E2D5] md:px-6">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
                 1,000+
               </div>
-              <p className="text-xs sm:text-[13px] text-slate-600 mt-1 font-normal">
+              <p className="text-xs sm:text-[13px] text-slate-800 font-semibold mt-1 font-accent">
                 Candidates hired
+              </p>
+              <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
+                Specialist &amp; executive placements
               </p>
             </div>
 
             {/* Stat 3: 8+ Years */}
-            <div>
+            <div className="md:border-r md:border-[#E8E2D5] md:px-6">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
                 8+
               </div>
-              <p className="text-xs sm:text-[13px] text-slate-600 mt-1 font-normal">
+              <p className="text-xs sm:text-[13px] text-slate-800 font-semibold mt-1 font-accent">
                 Years in recruitment
+              </p>
+              <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
+                Evidence-backed search rigor
               </p>
             </div>
 
             {/* Stat 4: 12+ Clients */}
-            <div>
+            <div className="md:pl-6">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
                 12+
               </div>
-              <p className="text-xs sm:text-[13px] text-slate-600 mt-1 font-normal">
+              <p className="text-xs sm:text-[13px] text-slate-800 font-semibold mt-1 font-accent">
                 Major recruitment clients
+              </p>
+              <p className="text-[11px] text-slate-500 mt-0.5 hidden sm:block">
+                Long-term enterprise partnerships
               </p>
             </div>
 
@@ -134,15 +146,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Card 1: IGNOVA Triage */}
-            <div className="border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors bg-white">
+            <div className="group border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg transition-all duration-300 bg-white">
               <div>
-                <div className="relative h-48 sm:h-52 w-full bg-slate-100">
+                <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                   <Image
                     src="/images/services/triage-engineers.jpg"
                     alt="Engineers reviewing blueprints on factory floor"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
@@ -160,24 +172,24 @@ export default function HomePage() {
               <div className="p-6 pt-0">
                 <Link
                   href="/services/triage"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#0B2038] hover:text-[#C86A28] font-accent transition-colors"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
                 >
                   Explore Triage
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </div>
             </div>
 
             {/* Card 2: IGNOVA Edge */}
-            <div className="border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors bg-white">
+            <div className="group border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg transition-all duration-300 bg-white">
               <div>
-                <div className="relative h-48 sm:h-52 w-full bg-slate-100">
+                <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                   <Image
                     src="/images/services/edge-boardroom.jpg"
                     alt="Corporate executives in strategic talent discussion"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
@@ -195,24 +207,24 @@ export default function HomePage() {
               <div className="p-6 pt-0">
                 <Link
                   href="/services/edge"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#0B2038] hover:text-[#C86A28] font-accent transition-colors"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
                 >
                   Explore Edge
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </div>
             </div>
 
             {/* Card 3: Project Execution */}
-            <div className="border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-slate-300 transition-colors bg-white">
+            <div className="group border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg transition-all duration-300 bg-white">
               <div>
-                <div className="relative h-48 sm:h-52 w-full bg-slate-100">
+                <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                   <Image
                     src="/images/services/execution-robotics.jpg"
                     alt="Industrial robotics and automated manufacturing cell"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
@@ -230,10 +242,10 @@ export default function HomePage() {
               <div className="p-6 pt-0">
                 <Link
                   href="/services/project-execution"
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#0B2038] hover:text-[#C86A28] font-accent transition-colors"
+                  className="inline-flex items-center gap-1 text-xs font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
                 >
                   Explore Project Execution
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
               </div>
             </div>
@@ -244,9 +256,30 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          4. PERFORMANCE AMBITION: Warm Sand / Beige (#F4F0E8)
+          EXECUTIVE PHILOSOPHY: Pull-Quote from Presentation Deck (Slides 2, 6, 12)
           ========================================================================= */}
-      <section className="bg-[#F4F0E8] py-16 sm:py-20 md:py-24 border-t border-[#E8E2D5]">
+      <section className="bg-[#FAF9F6] py-14 sm:py-16 border-y border-[#E8E2D5]">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#C86A28] font-accent block mb-4">
+            The IGNOVA Operating Philosophy
+          </span>
+          <blockquote className="text-xl sm:text-2xl md:text-[26px] font-normal font-serif text-[#0B2038] leading-snug tracking-tight">
+            &ldquo;Connect workforce readiness to operational performance &mdash; bridging shop-floor realities to executive strategy through capability transformation, evidence-backed search, and industrial rigor.&rdquo;
+          </blockquote>
+          <div className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-slate-500 font-accent uppercase tracking-wider">
+            <span>Shop Floor to Boardroom</span>
+            <span className="opacity-40">&middot;</span>
+            <span>Evidence-Backed Rigor</span>
+            <span className="opacity-40">&middot;</span>
+            <span>Measurable Workplace Yield</span>
+          </div>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          4. PERFORMANCE AMBITION: Warm Sand / Beige (#F4F0E8) with Visual Progression
+          ========================================================================= */}
+      <section className="bg-[#F4F0E8] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-12">
@@ -261,10 +294,13 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Step 01 */}
-            <div>
-              <span className="text-xs font-bold text-slate-400 font-accent block mb-1">
-                01
-              </span>
+            <div className="relative">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-slate-400 font-accent">
+                  01
+                </span>
+                <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block" />
+              </div>
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Diagnose
               </h3>
@@ -274,10 +310,13 @@ export default function HomePage() {
             </div>
 
             {/* Step 02 */}
-            <div>
-              <span className="text-xs font-bold text-slate-400 font-accent block mb-1">
-                02
-              </span>
+            <div className="relative">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-slate-400 font-accent">
+                  02
+                </span>
+                <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block" />
+              </div>
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Prioritize
               </h3>
@@ -287,10 +326,13 @@ export default function HomePage() {
             </div>
 
             {/* Step 03 */}
-            <div>
-              <span className="text-xs font-bold text-slate-400 font-accent block mb-1">
-                03
-              </span>
+            <div className="relative">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-slate-400 font-accent">
+                  03
+                </span>
+                <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block" />
+              </div>
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Execute
               </h3>
@@ -300,10 +342,12 @@ export default function HomePage() {
             </div>
 
             {/* Step 04 */}
-            <div>
-              <span className="text-xs font-bold text-slate-400 font-accent block mb-1">
-                04
-              </span>
+            <div className="relative">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-bold text-slate-400 font-accent">
+                  04
+                </span>
+              </div>
               <h3 className="text-lg font-bold font-serif text-[#0B2038] mb-2">
                 Impact
               </h3>
@@ -319,24 +363,29 @@ export default function HomePage() {
 
       {/* =========================================================================
           5. SECTOR REACH & CREDENTIALS: India's Industrial & Enterprise Leaders
-             (With All 11 Client Logo Cards, Matching User's Image 3 Request)
           ========================================================================= */}
-      <section className="bg-[#FAF9F6] py-16 sm:py-20 md:py-24 border-t border-[#E8E2D5]">
+      <section className="bg-[#FAF9F6] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="max-w-3xl mb-12">
+          <div className="max-w-3xl mb-10">
             <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
               SECTOR REACH &amp; CREDENTIALS
             </span>
             <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
               Trusted by India&apos;s Industrial &amp; Enterprise Leaders
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal mb-5">
               Applying cross-industry operating depth, structured candidate assessment, and disciplined shop-floor execution across Manufacturing, Automotive, BFSI, and Technology.
             </p>
+
+            {/* GPWD Culture Pill from Slide 17 */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200/90 shadow-2xs text-[11px] font-semibold text-slate-700 font-accent">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#C86A28]" />
+              Supporting Organizations Towards GPWD Certification &amp; Culture Strengthening
+            </div>
           </div>
 
-          {/* Client Logos: Visual Cards with SVGs/PNGs */}
+          {/* Client Logos: Grayscale-to-Color Visual Cards */}
           <ClientLogos />
 
           {/* Industry Sectors Footer */}
@@ -359,14 +408,17 @@ export default function HomePage() {
             <p className="text-xs sm:text-sm text-slate-300 font-normal">
               Start with mandate calibration and performance goals.
             </p>
+            <p className="text-[11px] text-slate-400 mt-2">
+              Confidential executive consultation &middot; Response within 1 business day &middot; Gurugram &amp; Pan-India
+            </p>
           </div>
           <div className="flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 px-5 py-3 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-xs sm:text-sm font-semibold transition-colors shadow-xs"
+              className="group inline-flex items-center gap-1.5 px-5 py-3 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-xs sm:text-sm font-semibold transition-all shadow-xs hover:shadow-md"
             >
               Get in touch
-              <ArrowUpRight className="w-4 h-4" />
+              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
         </div>

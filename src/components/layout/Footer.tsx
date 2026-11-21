@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
+import { COMPANY } from "@/lib/constants";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -56,7 +57,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Services */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
               Services
             </h4>
@@ -79,20 +80,35 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
-          <div className="lg:col-span-2">
+          {/* Column 4: Contact & Direct Presence */}
+          <div className="lg:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
-              Contact
+              Connect
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-[13px]">
               <li>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-1 text-slate-600 hover:text-[#C86A28] transition-colors font-medium"
+                <a
+                  href={`mailto:${COMPANY.email}`}
+                  className="inline-flex items-center gap-2 text-slate-600 hover:text-[#C86A28] transition-colors"
                 >
-                  Get in touch
-                  <ArrowUpRight className="w-3.5 h-3.5 text-slate-400" />
-                </Link>
+                  <Mail className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span className="break-all">{COMPANY.email}</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${COMPANY.phoneRaw}`}
+                  className="inline-flex items-center gap-2 text-slate-600 hover:text-[#C86A28] transition-colors"
+                >
+                  <Phone className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <span>{COMPANY.phone}</span>
+                </a>
+              </li>
+              <li>
+                <div className="inline-flex items-start gap-2 text-slate-500 text-xs">
+                  <MapPin className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0 mt-0.5" />
+                  <span>{COMPANY.address}</span>
+                </div>
               </li>
             </ul>
           </div>
