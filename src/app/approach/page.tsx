@@ -276,17 +276,12 @@ export default function ApproachPage() {
                   key={step}
                   className="px-6 py-5 sm:py-6 flex items-center justify-between gap-3 hover:bg-cream/35 transition-colors"
                 >
-                  <div>
-                    <span className="block text-xs font-bold tracking-[0.18em] text-orange font-accent mb-1">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <p
-                      className="text-base sm:text-lg font-bold text-navy leading-snug"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      {step}
-                    </p>
-                  </div>
+                  <p
+                    className="text-base sm:text-lg font-bold text-navy leading-snug"
+                    style={{ fontFamily: "var(--font-heading)" }}
+                  >
+                    {step}
+                  </p>
                   {index < GOVERNANCE_STEPS.length - 1 && (
                     <ArrowRight className="w-4 h-4 text-orange/60 hidden lg:block flex-shrink-0" />
                   )}
