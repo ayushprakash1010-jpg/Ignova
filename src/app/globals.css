@@ -248,6 +248,45 @@
   }
 }
 
+/* Seamless editorial dissolve between cream hero canvas and edge-to-edge photography */
+.practice-hero-mask {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 10%,
+    rgba(0, 0, 0, 0.88) 22%,
+    #000 32%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.45) 10%,
+    rgba(0, 0, 0, 0.88) 22%,
+    #000 32%
+  );
+}
+
+@media (min-width: 1024px) {
+  .practice-hero-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.12) 10%,
+      rgba(0, 0, 0, 0.56) 20%,
+      rgba(0, 0, 0, 0.88) 29%,
+      #000 37%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.12) 10%,
+      rgba(0, 0, 0, 0.56) 20%,
+      rgba(0, 0, 0, 0.88) 29%,
+      #000 37%
+    );
+  }
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
   width: 8px;

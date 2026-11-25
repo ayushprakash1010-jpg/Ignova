@@ -206,61 +206,68 @@ export default function TriagePage() {
   return (
     <div className="overflow-hidden">
       {/* ── 1. Hero ── */}
-      <section className="relative bg-cream pt-28 sm:pt-32 pb-20 md:pb-24 overflow-hidden">
-        {/* subtle decorative circle */}
-        <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-orange/5 pointer-events-none" />
+      <section className="relative pt-16 sm:pt-20 bg-cream border-b border-[#E8E2D5] overflow-hidden">
+        {/* Subtle blueprint grid & warm glow beneath integrated photography */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
+          <div className="absolute top-16 left-0 w-[420px] h-[420px] rounded-full bg-orange/[0.04] blur-[100px]" />
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-7"
-            >
-              {/* Pillar tag */}
+        <div className="relative flex flex-col lg:block lg:min-h-[540px] xl:min-h-[560px]">
+          <PracticeHeroVisual
+            src="/images/services/triage-engineers.jpg"
+            alt="Industrial engineering blueprints, precision calipers, and mechanical tooling on a shop-floor workbench"
+            objectPosition="object-[15%_center]"
+          />
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 w-full lg:w-[49%] xl:w-[48%] px-4 sm:px-6 lg:pr-6 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[540px] xl:min-h-[560px] flex flex-col justify-center"
+          >
+            {/* Pillar tag */}
+            <div>
               <span
                 className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-5"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Architect
               </span>
-
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-3"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                IGNOVA Triage
-              </p>
-
-              <h1
-                className="text-4xl sm:text-5xl xl:text-[54px] font-bold text-navy leading-[1.12]"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                Build Role-Specific Competencies &amp; Drive Performance
-              </h1>
-
-              <p className="mt-6 text-lg md:text-xl text-charcoal-light max-w-xl leading-relaxed">
-                Customize the intervention around the role and the performance
-                gap.
-              </p>
-
-              <div className="mt-8">
-                <Button href="/contact" variant="primary" size="lg">
-                  Discuss Your Capability Needs
-                </Button>
-              </div>
-            </motion.div>
-
-            <div className="lg:col-span-5">
-              <PracticeHeroVisual
-                src="/images/services/triage-engineers.jpg"
-                alt="Industrial engineering blueprints, precision calipers, and mechanical tooling on a shop-floor workbench"
-                eyebrow="Applied Technical Rigor"
-                caption="Role-specific competencies translated into observable workplace application."
-              />
             </div>
-          </div>
+
+            <p
+              className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-3"
+              style={{ fontFamily: "var(--font-accent)" }}
+            >
+              IGNOVA Triage
+            </p>
+
+            <h1
+              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12]"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Build Role-Specific Competencies &amp; Drive Performance
+            </h1>
+
+            <p className="mt-6 text-lg md:text-xl text-charcoal-light max-w-lg leading-relaxed">
+              Customize the intervention around the role and the performance
+              gap.
+            </p>
+
+            <div className="mt-8">
+              <Button href="/contact" variant="primary" size="lg">
+                Discuss Your Capability Needs
+              </Button>
+            </div>
+          </motion.div>
         </div>
       </section>
 

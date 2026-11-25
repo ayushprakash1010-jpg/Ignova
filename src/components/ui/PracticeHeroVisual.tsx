@@ -6,51 +6,33 @@ import { motion } from "framer-motion";
 interface PracticeHeroVisualProps {
   src: string;
   alt: string;
-  eyebrow: string;
-  caption: string;
   objectPosition?: string;
 }
 
+/**
+ * Renders full-bleed architectural photography integrated directly into the
+ * cream hero canvas via responsive directional alpha masking.
+ */
 export default function PracticeHeroVisual({
   src,
   alt,
-  eyebrow,
-  caption,
   objectPosition = "object-center",
 }: PracticeHeroVisualProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 24 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.65, delay: 0.2 }}
-      className="relative"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.7 }}
+      className="order-2 lg:order-none relative w-full h-[280px] sm:h-[340px] lg:h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:w-[57%] xl:w-[56%] practice-hero-mask overflow-hidden pointer-events-none select-none"
     >
-      {/* Subtle layered accent backing */}
-      <div
-        aria-hidden="true"
-        className="hidden sm:block absolute -inset-3 rounded-3xl bg-gradient-to-br from-orange/15 via-transparent to-navy/10 -z-10"
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority
+        sizes="(max-width: 1024px) 100vw, 57vw"
+        className={`object-cover ${objectPosition}`}
       />
-
-      <div className="relative aspect-[4/3] lg:aspect-[5/4] w-full rounded-2xl overflow-hidden shadow-2xl border border-[#E8E2D5] bg-navy">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          priority
-          sizes="(max-width: 1024px) 100vw, 42vw"
-          className={`object-cover ${objectPosition}`}
-        />
-
-        {/* High-contrast editorial caption scrim */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071526]/95 via-[#0B2038]/85 via-55% to-transparent pt-20 pb-5 px-6">
-          <span className="block text-xs font-bold uppercase tracking-[0.2em] text-[#F59E56] font-accent mb-1">
-            {eyebrow}
-          </span>
-          <p className="text-sm sm:text-[15px] font-medium text-white leading-snug">
-            {caption}
-          </p>
-        </div>
-      </div>
     </motion.div>
   );
 }

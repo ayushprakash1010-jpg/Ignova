@@ -142,11 +142,10 @@ export default function ProjectExecutionPage() {
   return (
     <>
       {/* ============ HERO ============ */}
-      <section className="relative bg-cream overflow-hidden">
-        {/* Decorative */}
+      <section className="relative pt-16 sm:pt-20 bg-cream border-b border-[#E8E2D5] overflow-hidden">
+        {/* Decorative blueprint background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-0 w-96 h-96 bg-orange/5 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 left-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-16 left-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl" />
           <div
             className="absolute inset-0 opacity-[0.03]"
             style={{
@@ -157,77 +156,72 @@ export default function ProjectExecutionPage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-20 md:pt-36 md:pb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            <div className="lg:col-span-7">
-              {/* Pillar tag */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="mb-5"
-              >
-                <span
-                  className="inline-block px-4 py-2 bg-orange/10 text-orange text-sm font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
-                  style={{ fontFamily: "var(--font-accent)" }}
-                >
-                  Accelerate
-                </span>
-              </motion.div>
+        <div className="relative flex flex-col lg:block lg:min-h-[540px] xl:min-h-[560px]">
+          <PracticeHeroVisual
+            src="/images/services/execution-robotics.jpg"
+            alt="Automated precision industrial robotic arm performing high-efficiency manufacturing operations"
+            objectPosition="object-right"
+          />
 
-              {/* Label */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-sm font-bold uppercase tracking-[0.25em] text-orange mb-3"
+          <div className="relative z-10 w-full lg:w-[49%] xl:w-[48%] px-4 sm:px-6 lg:pr-6 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[540px] xl:min-h-[560px] flex flex-col justify-center">
+            {/* Pillar tag */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-5"
+            >
+              <span
+                className="inline-block px-4 py-2 bg-orange/10 text-orange text-sm font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
-                Project Execution
-              </motion.p>
+                Accelerate
+              </span>
+            </motion.div>
 
-              {/* Heading */}
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-4xl sm:text-5xl xl:text-[54px] font-bold text-navy leading-[1.12] mb-6"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                Connect Workforce Readiness to{" "}
-                <span className="text-orange">Operational Performance</span>
-              </motion.h1>
+            {/* Label */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-sm font-bold uppercase tracking-[0.25em] text-orange mb-3"
+              style={{ fontFamily: "var(--font-accent)" }}
+            >
+              Project Execution
+            </motion.p>
 
-              {/* Subtitle */}
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="text-lg md:text-xl text-charcoal-light max-w-xl mb-8 leading-relaxed"
-              >
-                People + Processes + Technology: Develop operating capability alongside the
-                systems that sustain it.
-              </motion.p>
+            {/* Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12] mb-6"
+              style={{ fontFamily: "var(--font-heading)" }}
+            >
+              Connect Workforce Readiness to{" "}
+              <span className="text-orange">Operational Performance</span>
+            </motion.h1>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-              >
-                <Button href="/contact" variant="primary" size="lg">
-                  Discuss Your Operational Challenges
-                </Button>
-              </motion.div>
-            </div>
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-lg md:text-xl text-charcoal-light max-w-lg mb-8 leading-relaxed"
+            >
+              People + Processes + Technology: Develop operating capability alongside the
+              systems that sustain it.
+            </motion.p>
 
-            <div className="lg:col-span-5">
-              <PracticeHeroVisual
-                src="/images/services/execution-robotics.jpg"
-                alt="Automated precision industrial robotic arm performing high-efficiency manufacturing operations"
-                eyebrow="Shop-Floor Turnaround"
-                caption="Baseline diagnostics, engineered countermeasures, and standard KPI controls."
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+              <Button href="/contact" variant="primary" size="lg">
+                Discuss Your Operational Challenges
+              </Button>
+            </motion.div>
           </div>
         </div>
       </section>
