@@ -37,35 +37,19 @@ function LogoCard({ client, index }: { client: ClientLogo; index: number }) {
 
 export default function ClientLogos() {
   return (
-    <div className="space-y-10 w-full">
+    <div className="space-y-3.5 sm:space-y-4 w-full">
       {/* Industrial Clients Row */}
-      <div>
-        <div className="flex items-center gap-3 mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#C86A28]" />
-          <p className="text-xs font-bold uppercase tracking-wider text-slate-500 font-accent">
-            Industrial &amp; Operational Excellence Mandates
-          </p>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
-          {CLIENT_LOGOS.industrial.map((client, index) => (
-            <LogoCard key={client.name} client={client} index={index} />
-          ))}
-        </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
+        {CLIENT_LOGOS.industrial.map((client, index) => (
+          <LogoCard key={client.name} client={client} index={index} />
+        ))}
       </div>
 
       {/* Recruitment Clients Row */}
-      <div>
-        <div className="flex items-center gap-3 mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#C86A28]" />
-          <p className="text-xs font-bold uppercase tracking-wider text-slate-500 font-accent">
-            Strategic Search &amp; Recruitment Mandates
-          </p>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
-          {CLIENT_LOGOS.recruitment.map((client, index) => (
-            <LogoCard key={client.name} client={client} index={index} />
-          ))}
-        </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
+        {CLIENT_LOGOS.recruitment.map((client, index) => (
+          <LogoCard key={client.name} client={client} index={index} />
+        ))}
       </div>
     </div>
   );
