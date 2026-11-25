@@ -311,14 +311,6 @@ export default function AboutPage() {
                 {/* Top accent */}
                 <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange via-orange-light to-orange" />
 
-                {/* Step number */}
-                <div
-                  className="text-6xl font-bold text-navy/[0.04] absolute top-4 right-6"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </div>
-
                 <p
                   className="text-sm font-bold uppercase tracking-wider text-orange mb-2"
                   style={{ fontFamily: "var(--font-accent)" }}

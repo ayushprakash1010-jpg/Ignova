@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Factory, Users } from "lucide-react";
+import { ArrowUpRight, ArrowRight, CheckCircle2, ShieldCheck, Factory, Truck } from "lucide-react";
 import ClientLogos from "@/components/ui/ClientLogos";
 
 export default function HomePage() {
@@ -432,100 +432,64 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             
             {/* Domain 1: Plant Leadership */}
-            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
-              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+            <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
                 <Factory className="w-5 h-5" />
               </div>
               <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
                 Plant Leadership
               </h3>
-              <ul className="space-y-2.5 text-sm text-slate-600">
+              <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
                   <span><strong>OEE (%)</strong> &middot; Overall Equipment Effectiveness</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span>Cross-functional line productivity</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span>Equipment availability &amp; loss recovery</span>
+                  <span><strong>Productivity</strong> &middot; Line output &amp; efficiency</span>
                 </li>
               </ul>
             </div>
 
             {/* Domain 2: Quality Leadership */}
-            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
-              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+            <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
                 <ShieldCheck className="w-5 h-5" />
               </div>
               <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
                 Quality Leadership
               </h3>
-              <ul className="space-y-2.5 text-sm text-slate-600">
+              <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>Defect PPM</strong> reduction &amp; containment</span>
+                  <span><strong>Defect PPM</strong> reduction</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>Cost of Poor Quality (COPQ)</strong> control</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>First Pass Yield (FPY %)</strong> improvement</span>
+                  <span><strong>Cost of Poor Quality (COPQ)</strong></span>
                 </li>
               </ul>
             </div>
 
             {/* Domain 3: Supply Chain Leadership */}
-            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
-              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
-                <TrendingUp className="w-5 h-5" />
+            <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                <Truck className="w-5 h-5" />
               </div>
               <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
-                Supply Chain &amp; Flow
+                Supply Chain Leadership
               </h3>
-              <ul className="space-y-2.5 text-sm text-slate-600">
+              <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>On-Time Delivery (OTIF)</strong> rates</span>
+                  <span><strong>On-Time Delivery (%)</strong></span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span>Inventory turns &amp; working capital</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span>Bottleneck removal through VSM</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Domain 4: Search & Hiring Precision */}
-            <div className="p-6 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
-              <div className="w-9 h-9 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
-                <Users className="w-5 h-5" />
-              </div>
-              <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
-                Hiring Precision
-              </h3>
-              <ul className="space-y-2.5 text-sm text-slate-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span>Accelerated <strong>time-to-qualified-shortlist</strong></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>90-Day Contribution Milestone</strong> (%)</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span>Long-term 12-month retention stability</span>
+                  <span><strong>Inventory Turns</strong> &amp; working capital</span>
                 </li>
               </ul>
             </div>

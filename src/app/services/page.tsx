@@ -31,7 +31,7 @@ const performanceOutcomes = [
     tag: "WORKFORCE DEPTH",
     title: "Build Critical Capability",
     desc: "Role-specific behavioral and technical interventions designed around operational deficits, verified through shop-floor application.",
-    metric: "Shop-floor behavior change • Kirkpatrick L3/L4 validation • Role competence",
+    metric: "Kaizen sustainability • Workplace application • First Pass Yield (FPY %)",
     icon: Zap,
   },
   {

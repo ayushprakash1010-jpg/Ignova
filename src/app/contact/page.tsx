@@ -471,7 +471,7 @@ export default function ContactPage() {
                         Direct Response SLA
                       </p>
                       <p className="text-[15px] text-charcoal font-medium">
-                        Within 24 business hours
+                        Within 1 business day
                       </p>
                     </div>
                   </div>
