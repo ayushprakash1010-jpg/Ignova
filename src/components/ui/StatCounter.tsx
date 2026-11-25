@@ -60,7 +60,7 @@ export default function StatCounter({
     <div ref={ref} className="text-center sm:text-left px-4">
       <div
         className={`text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-2 ${
-          light ? "text-[#DF7C36]" : "text-[#C86A28]"
+          light ? "text-[#DF7C36]" : "text-[#A84D14]"
         }`}
         style={{ fontFamily: "var(--font-heading)" }}
       >

@@ -789,7 +789,7 @@ export default function TriagePage() {
                       <p className="text-base font-bold text-orange font-accent">
                         {item.metric}
                       </p>
-                      <p className="text-sm text-slate-500 mt-1 leading-relaxed">
+                      <p className="text-sm text-slate-600 mt-1 leading-relaxed">
                         {item.detail}
                       </p>
                     </div>

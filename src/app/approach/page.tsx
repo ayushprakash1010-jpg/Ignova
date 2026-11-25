@@ -156,7 +156,7 @@ export default function ApproachPage() {
           }}
         />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="text-center max-w-3xl mx-auto mb-10">
             <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#F59E56] mb-2 font-accent">
               Performance Ambition
             </p>

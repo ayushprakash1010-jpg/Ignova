@@ -5,14 +5,14 @@
   --color-navy-light: #163A63;
   --color-navy-dark: #071526;
   --color-slate: #2A4D6E;
-  --color-orange: #C86A28;
+  --color-orange: #A84D14;
   --color-orange-light: #DF7C36;
-  --color-orange-dark: #B05819;
+  --color-orange-dark: #8C3F0F;
   --color-cream: #F8F7F4;
   --color-cream-light: #FAF9F6;
   --color-cream-dark: #EAE7E1;
   --color-charcoal: #1E293B;
-  --color-charcoal-light: #64748B;
+  --color-charcoal-light: #475569;
 
   --font-heading: var(--font-manrope), var(--font-inter), system-ui, sans-serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
@@ -47,12 +47,12 @@
   }
 
   :where(a, button, input, textarea, select):focus-visible {
-    outline: 2px solid #C86A28;
+    outline: 2px solid #A84D14;
     outline-offset: 3px;
   }
 
   ::selection {
-    background: #C86A28;
+    background: #A84D14;
     color: #ffffff;
   }
 }
@@ -82,7 +82,7 @@
 }
 
 .executive-card:hover {
-  border-color: rgba(200, 106, 40, 0.35);
+  border-color: rgba(168, 77, 20, 0.35);
   box-shadow: 0 20px 35px -4px rgba(11, 32, 56, 0.08), 0 8px 16px -2px rgba(11, 32, 56, 0.04);
   transform: translateY(-4px);
 }
@@ -96,7 +96,7 @@
 
 .executive-card-subtle:hover {
   background: #ffffff;
-  border-color: rgba(200, 106, 40, 0.3);
+  border-color: rgba(168, 77, 20, 0.3);
   box-shadow: 0 16px 30px -4px rgba(11, 32, 56, 0.06);
   transform: translateY(-3px);
 }
@@ -112,18 +112,18 @@
   font-weight: 600;
   font-family: var(--font-accent);
   color: #ffffff !important;
-  background: #C86A28;
+  background: #A84D14;
   border-radius: 12px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(200, 106, 40, 0.28);
+  box-shadow: 0 4px 14px rgba(168, 77, 20, 0.28);
   transition: all 0.25s ease;
 }
 
 .btn-primary:hover {
-  background: #B05819;
-  box-shadow: 0 6px 20px rgba(200, 106, 40, 0.38);
+  background: #8C3F0F;
+  box-shadow: 0 6px 20px rgba(168, 77, 20, 0.38);
   transform: translateY(-2px);
   color: #ffffff !important;
 }
@@ -175,7 +175,7 @@
 
 .btn-white:hover {
   background: #F8F7F4;
-  color: #C86A28 !important;
+  color: #A84D14 !important;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
@@ -190,16 +190,16 @@
   font-weight: 600;
   font-family: var(--font-accent);
   color: #ffffff !important;
-  background: #C86A28;
+  background: #A84D14;
   border-radius: 10px;
   text-decoration: none;
-  box-shadow: 0 2px 10px rgba(200, 106, 40, 0.25);
+  box-shadow: 0 2px 10px rgba(168, 77, 20, 0.25);
   transition: all 0.2s ease;
 }
 
 .nav-cta:hover {
-  background: #B05819;
-  box-shadow: 0 4px 14px rgba(200, 106, 40, 0.35);
+  background: #8C3F0F;
+  box-shadow: 0 4px 14px rgba(168, 77, 20, 0.35);
   transform: translateY(-1px);
   color: #ffffff !important;
 }
@@ -215,9 +215,9 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   border-radius: 999px;
-  background: rgba(200, 106, 40, 0.08);
-  color: #C86A28;
-  border: 1px solid rgba(200, 106, 40, 0.2);
+  background: rgba(168, 77, 20, 0.08);
+  color: #A84D14;
+  border: 1px solid rgba(168, 77, 20, 0.2);
 }
 
 .executive-pill-navy {

@@ -21,7 +21,7 @@ export default function SectionHeading({
             className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider ${
               light
                 ? "bg-white/10 text-orange-200 border border-white/15"
-                : "bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20"
+                : "bg-orange-500/10 text-[#A84D14] border border-[#A84D14]/25"
             }`}
             style={{ fontFamily: "var(--font-accent)" }}
           >

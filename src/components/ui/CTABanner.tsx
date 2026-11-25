@@ -26,7 +26,7 @@ export default function CTABanner({
         <div
           className={`relative rounded-2xl p-8 sm:p-12 lg:p-14 overflow-hidden shadow-xl ${
             variant === "orange"
-              ? "bg-[#C86A28]"
+              ? "bg-[#A84D14]"
               : "bg-[#0B2038] border border-white/10"
           }`}
         >

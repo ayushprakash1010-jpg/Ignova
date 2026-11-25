@@ -34,11 +34,11 @@ export default function StepperTimeline({
             <div>
               {/* Step indicator */}
               <div className="flex items-center justify-between mb-4">
-                <span className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20 flex items-center justify-center text-sm font-bold font-accent group-hover:bg-[#C86A28] group-hover:text-white transition-colors duration-200">
+                <span className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#A84D14] border border-[#A84D14]/25 flex items-center justify-center text-sm font-bold font-accent group-hover:bg-[#A84D14] group-hover:text-white transition-colors duration-200">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 {index < steps.length - 1 && (
-                  <ArrowRight className="w-4 h-4 text-slate-300 hidden md:block group-hover:text-[#C86A28] transition-colors" />
+                  <ArrowRight className="w-4 h-4 text-slate-300 hidden md:block group-hover:text-[#A84D14] transition-colors" />
                 )}
               </div>
 
@@ -56,7 +56,7 @@ export default function StepperTimeline({
               )}
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[13px] font-semibold text-slate-400 group-hover:text-[#C86A28] transition-colors font-accent">
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[13px] font-semibold text-slate-600 group-hover:text-[#A84D14] transition-colors font-accent">
               <span>Phase {index + 1}</span>
             </div>
           </motion.div>

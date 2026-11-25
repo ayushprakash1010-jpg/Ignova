@@ -62,7 +62,7 @@ export default function NotFound() {
 
         {/* Quick Capabilities */}
         <div className="border-t border-slate-200/80 pt-10">
-          <p className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-6 font-accent">
+          <p className="text-sm font-bold uppercase tracking-wider text-slate-600 mb-6 font-accent">
             Explore Core Capabilities
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
@@ -80,7 +80,7 @@ export default function NotFound() {
                   <p className="text-base font-bold text-navy group-hover:text-orange transition-colors">
                     {item.label}
                   </p>
-                  <p className="text-sm text-slate-500 mt-1 line-clamp-2">
+                  <p className="text-sm text-slate-600 mt-1 line-clamp-2">
                     {item.desc}
                   </p>
                 </Link>

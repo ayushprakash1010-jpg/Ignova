@@ -143,7 +143,7 @@ function ContactForm() {
               </p>
               <a
                 href={prefilledMailto}
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#C87533] text-white rounded-lg text-sm font-semibold hover:bg-[#B05819] transition-colors shadow-xs"
+                className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#A84D14] text-white rounded-lg text-sm font-semibold hover:bg-[#8C3F0F] transition-colors shadow-xs"
               >
                 <Mail className="w-4 h-4" />
                 Send Pre-filled Email to ignovacobsulting26@gmail.com
@@ -152,7 +152,7 @@ function ContactForm() {
           ) : (
             <p className="mt-1">
               If you prefer, email us at{" "}
-              <a className="underline font-semibold text-[#C87533]" href="mailto:ignovacobsulting26@gmail.com">
+              <a className="underline font-semibold text-[#A84D14]" href="mailto:ignovacobsulting26@gmail.com">
                 ignovacobsulting26@gmail.com
               </a>.
             </p>
@@ -362,7 +362,7 @@ export default function ContactPage() {
             <div className="max-w-2xl">
               <div className="mb-3">
                 <span
-                  className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-orange-500/10 text-[#A84D14] border border-[#A84D14]/25"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
                   Contact Us
@@ -384,17 +384,17 @@ export default function ContactPage() {
             {/* Compact Mandate Trust Strip */}
             <div className="flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-5 px-4 py-3 rounded-xl bg-white/80 backdrop-blur-sm border border-[#E8E2D5] shadow-sm text-xs sm:text-[13px] text-slate-600 shrink-0">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-[#C86A28] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#A84D14] shrink-0" />
                 <span className="font-semibold text-navy">Gurugram HQ</span>
               </div>
               <span className="hidden sm:inline text-slate-300">|</span>
               <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-[#C86A28] shrink-0" />
+                <Globe className="w-4 h-4 text-[#A84D14] shrink-0" />
                 <span className="font-semibold text-navy">Pan-India Practice</span>
               </div>
               <span className="hidden sm:inline text-slate-300">|</span>
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-[#C86A28] shrink-0" />
+                <Clock className="w-4 h-4 text-[#A84D14] shrink-0" />
                 <span className="font-semibold text-navy">Within 1 Business Day</span>
               </div>
             </div>
@@ -410,7 +410,7 @@ export default function ContactPage() {
             <motion.div initial={false} className="lg:col-span-3">
               <Suspense
                 fallback={
-                  <div className="w-full h-96 bg-cream/50 rounded-2xl border border-cream-dark animate-pulse flex items-center justify-center text-sm text-slate-400">
+                  <div className="w-full h-96 bg-cream/50 rounded-2xl border border-cream-dark animate-pulse flex items-center justify-center text-sm text-slate-600">
                     Loading Mandate Calibration Form...
                   </div>
                 }

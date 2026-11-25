@@ -104,7 +104,7 @@ export default function OperationalDiagnosticCalculator() {
                   onChange={(e) => setOpenRoles(Number(e.target.value))}
                   className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[#DF7C36]"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500 font-accent mt-1">
+                <div className="flex justify-between text-[11px] text-slate-300 font-accent mt-1">
                   <span>1 Role</span>
                   <span>5 Roles</span>
                   <span>10 Roles</span>
@@ -135,7 +135,7 @@ export default function OperationalDiagnosticCalculator() {
                   onChange={(e) => setDaysToFill(Number(e.target.value))}
                   className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[#DF7C36]"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500 font-accent mt-1">
+                <div className="flex justify-between text-[11px] text-slate-300 font-accent mt-1">
                   <span>30 Days (Fast)</span>
                   <span>75 Days (Avg)</span>
                   <span>120 Days (Critical Lag)</span>
@@ -166,7 +166,7 @@ export default function OperationalDiagnosticCalculator() {
                   onChange={(e) => setCurrentOee(Number(e.target.value))}
                   className="w-full h-2 bg-white/20 rounded-lg appearance-none cursor-pointer accent-[#DF7C36]"
                 />
-                <div className="flex justify-between text-[11px] text-slate-500 font-accent mt-1">
+                <div className="flex justify-between text-[11px] text-slate-300 font-accent mt-1">
                   <span>50% (High Drag)</span>
                   <span>65% (Typical)</span>
                   <span>85% (World Class)</span>
@@ -253,7 +253,7 @@ export default function OperationalDiagnosticCalculator() {
             {/* Direct Consultation Action Button */}
             <Link
               href={`/contact?${queryParams}`}
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#DF7C36] hover:bg-[#C86A28] text-white text-sm font-bold transition-all shadow-lg hover:shadow-xl font-accent group"
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-[#A84D14] hover:bg-[#8C3F0F] text-white text-sm font-bold transition-all shadow-lg hover:shadow-xl font-accent group"
             >
               <span>Calibrate Mandate Countermeasures</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

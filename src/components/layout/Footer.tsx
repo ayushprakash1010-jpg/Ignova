@@ -39,17 +39,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-[15px] sm:text-base">
               <li>
-                <Link href="/about" className="text-slate-700 hover:text-[#C86A28] transition-colors">
+                <Link href="/about" className="text-slate-700 hover:text-[#A84D14] transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/approach" className="text-slate-700 hover:text-[#C86A28] transition-colors">
+                <Link href="/approach" className="text-slate-700 hover:text-[#A84D14] transition-colors">
                   Our Approach
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-700 hover:text-[#C86A28] transition-colors">
+                <Link href="/contact" className="text-slate-700 hover:text-[#A84D14] transition-colors">
                   Contact
                 </Link>
               </li>
@@ -63,17 +63,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-[15px] sm:text-base">
               <li>
-                <Link href="/services/triage" className="text-slate-700 hover:text-[#C86A28] transition-colors">
+                <Link href="/services/triage" className="text-slate-700 hover:text-[#A84D14] transition-colors">
                   IGNOVA Triage
                 </Link>
               </li>
               <li>
-                <Link href="/services/edge" className="text-slate-700 hover:text-[#C86A28] transition-colors">
+                <Link href="/services/edge" className="text-slate-700 hover:text-[#A84D14] transition-colors">
                   IGNOVA Edge
                 </Link>
               </li>
               <li>
-                <Link href="/services/project-execution" className="text-slate-700 hover:text-[#C86A28] transition-colors">
+                <Link href="/services/project-execution" className="text-slate-700 hover:text-[#A84D14] transition-colors">
                   Project Execution
                 </Link>
               </li>
@@ -89,24 +89,24 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${COMPANY.email}`}
-                  className="inline-flex items-center gap-2.5 text-slate-700 hover:text-[#C86A28] transition-colors"
+                  className="inline-flex items-center gap-2.5 text-slate-700 hover:text-[#A84D14] transition-colors"
                 >
-                  <Mail className="w-[18px] h-[18px] text-[#C86A28] flex-shrink-0" />
+                  <Mail className="w-[18px] h-[18px] text-[#A84D14] flex-shrink-0" />
                   <span className="break-all">{COMPANY.email}</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`tel:${COMPANY.phoneRaw}`}
-                  className="inline-flex items-center gap-2.5 text-slate-700 hover:text-[#C86A28] transition-colors"
+                  className="inline-flex items-center gap-2.5 text-slate-700 hover:text-[#A84D14] transition-colors"
                 >
-                  <Phone className="w-[18px] h-[18px] text-[#C86A28] flex-shrink-0" />
+                  <Phone className="w-[18px] h-[18px] text-[#A84D14] flex-shrink-0" />
                   <span>{COMPANY.phone}</span>
                 </a>
               </li>
               <li>
                 <div className="inline-flex items-start gap-2.5 text-slate-700 text-[15px] sm:text-base">
-                  <MapPin className="w-[18px] h-[18px] text-[#C86A28] flex-shrink-0 mt-1" />
+                  <MapPin className="w-[18px] h-[18px] text-[#A84D14] flex-shrink-0 mt-1" />
                   <span>{COMPANY.address}</span>
                 </div>
               </li>

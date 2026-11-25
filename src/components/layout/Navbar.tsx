@@ -98,20 +98,20 @@ export default function Navbar() {
                       className={`relative flex items-center gap-1.5 px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent ${
                         active
                           ? "text-[#0B2038] font-bold"
-                          : "text-slate-700 hover:text-[#C86A28]"
+                          : "text-slate-700 hover:text-[#A84D14]"
                       }`}
                     >
                       {link.label}
                       <ChevronDown
                         className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                          servicesOpen ? "rotate-180 text-[#C86A28]" : "text-slate-400"
+                          servicesOpen ? "rotate-180 text-[#A84D14]" : "text-slate-600"
                         }`}
                       />
                       {active && (
                         <motion.span
                           layoutId="navbar-active-indicator"
                           transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                          className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#C86A28] rounded-full"
+                          className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#A84D14] rounded-full"
                         />
                       )}
                     </button>
@@ -126,7 +126,7 @@ export default function Navbar() {
                           className="absolute top-full left-0 w-80 bg-white rounded-xl shadow-xl border border-slate-100 p-2.5 overflow-hidden"
                         >
                           <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 font-accent">
+                            <p className="text-xs font-bold uppercase tracking-wider text-slate-600 font-accent">
                               Capabilities
                             </p>
                           </div>
@@ -138,14 +138,14 @@ export default function Navbar() {
                                 href={child.href}
                                 className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 transition-colors group/item"
                               >
-                                <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-[#C86A28] group-hover/item:text-white transition-colors">
+                                <div className="w-8 h-8 rounded-lg bg-orange-500/10 text-[#A84D14] flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/item:bg-[#A84D14] group-hover/item:text-white transition-colors">
                                   <IconComponent className="w-4 h-4" />
                                 </div>
                                 <div>
-                                  <span className="block text-sm font-bold text-slate-800 group-hover/item:text-[#C86A28] transition-colors font-accent">
+                                  <span className="block text-sm font-bold text-slate-800 group-hover/item:text-[#A84D14] transition-colors font-accent">
                                     {child.label}
                                   </span>
-                                  <span className="block text-xs text-slate-500 leading-snug mt-0.5">
+                                  <span className="block text-xs text-slate-600 leading-snug mt-0.5">
                                     {serviceDescriptions[child.href]}
                                   </span>
                                 </div>
@@ -155,7 +155,7 @@ export default function Navbar() {
                           <div className="mt-1 pt-2 border-t border-slate-100">
                             <Link
                               href="/services"
-                              className="block px-3 py-1.5 text-sm font-bold text-[#C86A28] hover:text-[#B05819] font-accent transition-colors text-center"
+                              className="block px-3 py-1.5 text-sm font-bold text-[#A84D14] hover:text-[#8C3F0F] font-accent transition-colors text-center"
                             >
                               Explore Full Portfolio →
                             </Link>
@@ -171,7 +171,7 @@ export default function Navbar() {
                     className={`relative px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent ${
                       active
                         ? "text-[#0B2038] font-bold"
-                        : "text-slate-700 hover:text-[#C86A28]"
+                        : "text-slate-700 hover:text-[#A84D14]"
                     }`}
                   >
                     {link.label}
@@ -179,7 +179,7 @@ export default function Navbar() {
                       <motion.span
                         layoutId="navbar-active-indicator"
                         transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                        className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#C86A28] rounded-full"
+                        className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#A84D14] rounded-full"
                       />
                     )}
                   </Link>
@@ -193,7 +193,7 @@ export default function Navbar() {
               className="group inline-flex items-center gap-1.5 px-4 py-2 border border-slate-300 hover:border-[#0B2038] rounded-xl text-sm font-semibold text-[#0B2038] transition-all font-accent"
             >
               Get in touch
-              <ArrowUpRight className="w-4 h-4 text-slate-500 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#C86A28]" />
+              <ArrowUpRight className="w-4 h-4 text-slate-600 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#A84D14]" />
             </Link>
           </div>
 
@@ -226,7 +226,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-3 py-2 text-base font-bold text-slate-800 hover:text-[#C86A28] rounded-lg transition-colors font-accent"
+                    className="block px-3 py-2 text-base font-bold text-slate-800 hover:text-[#A84D14] rounded-lg transition-colors font-accent"
                   >
                     {link.label}
                   </Link>
@@ -237,7 +237,7 @@ export default function Navbar() {
                           key={child.label}
                           href={child.href}
                           onClick={() => setIsOpen(false)}
-                          className="block px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-[#C86A28] transition-colors"
+                          className="block px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-[#A84D14] transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -253,7 +253,7 @@ export default function Navbar() {
                   className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 border border-slate-300 rounded-xl text-sm font-semibold text-[#0B2038] font-accent"
                 >
                   Get in touch
-                  <ArrowUpRight className="w-4 h-4 text-slate-500" />
+                  <ArrowUpRight className="w-4 h-4 text-slate-600" />
                 </Link>
               </div>
             </div>

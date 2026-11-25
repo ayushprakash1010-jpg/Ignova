@@ -8,7 +8,7 @@ function LogoCard({ client }: { client: ClientLogo }) {
 
   return (
     <div
-      className="group relative flex items-center justify-center h-20 sm:h-24 px-4 py-3 bg-white rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center overflow-hidden"
+      className="group relative flex items-center justify-center h-20 sm:h-24 px-4 py-3 bg-white rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#A84D14]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center overflow-hidden"
       title={client.name}
       aria-label={client.name}
     >
