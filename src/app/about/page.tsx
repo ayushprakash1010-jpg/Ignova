@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import {
   Factory,
   Cog,
@@ -10,13 +11,14 @@ import {
   ArrowRight,
   GraduationCap,
   Briefcase,
+  TrendingUp,
   CheckCircle2,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import StatCounter from "@/components/ui/StatCounter";
 import CTABanner from "@/components/ui/CTABanner";
 import Button from "@/components/ui/Button";
-import { STATS } from "@/lib/constants";
+import { STATS, SERVICES } from "@/lib/constants";
 
 const sectors = [
   {
@@ -43,6 +45,24 @@ const sectors = [
     name: "Healthcare",
     icon: Heart,
     focus: "Life sciences, diagnostics & rigorous compliance standards",
+  },
+];
+
+const capabilityPillars = [
+  {
+    ...SERVICES.architect,
+    subheading: "Architect the Foundation",
+    icon: GraduationCap,
+  },
+  {
+    ...SERVICES.activate,
+    subheading: "Activate the Vanguard",
+    icon: Briefcase,
+  },
+  {
+    ...SERVICES.accelerate,
+    subheading: "Accelerate Value Realization",
+    icon: TrendingUp,
   },
 ];
 
@@ -130,96 +150,69 @@ export default function AboutPage() {
       {/* ============ WHO WE ARE ============ */}
       <section id="who-we-are" className="py-24 md:py-32 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left column */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-5 space-y-6"
-            >
-              <SectionHeading
-                label="Who We Are"
-                title="A Dual-Capability Firm Connecting People to Business Execution"
-              />
+          <SectionHeading
+            label="Who We Are"
+            title="Three Capabilities. One Partner."
+            subtitle="IGNOVA Consulting & Academy operates at the intersection of capability transformation, strategic search, and operational execution — connecting shopfloor realities directly to boardroom strategy."
+            centered
+          />
 
-              <p className="text-base sm:text-lg text-charcoal leading-relaxed">
-                IGNOVA Consulting &amp; Academy operates at the critical intersection of workforce capability, specialist talent, and operational performance. We connect shop-floor realities directly to boardroom strategy.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7 lg:gap-8">
+            {capabilityPillars.map((cap, index) => {
+              const Icon = cap.icon;
+              return (
+                <motion.div
+                  key={cap.brand}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.45, delay: index * 0.12 }}
+                  className="group relative bg-[#FAF8F5] rounded-2xl p-8 border border-[#EBE4DA] shadow-xs hover:shadow-xl hover:bg-white hover:border-orange/30 transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                >
+                  <div
+                    aria-hidden="true"
+                    className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange via-orange-light to-orange opacity-80 group-hover:opacity-100 transition-opacity"
+                  />
 
-              <div className="flex flex-wrap gap-2.5 pt-2">
-                {["Vision. Rigor. Results.", "Foresight. Execution. Impact"].map(
-                  (tagline) => (
-                    <span
-                      key={tagline}
-                      className="px-4 py-2 bg-cream text-navy text-sm font-bold rounded-full border border-navy/10 font-accent"
-                    >
-                      {tagline}
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center text-orange mb-5 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-6 h-6" />
+                    </div>
+
+                    <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-orange font-accent block">
+                      {cap.subheading}
                     </span>
-                  )
-                )}
-              </div>
-            </motion.div>
 
-            {/* Right column - Dual Capability Cards */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6"
-            >
-              {/* Capability 1: Academy & Capability */}
-              <div className="bg-[#FAF8F5] rounded-2xl p-7 border border-[#EBE4DA] shadow-xs hover:border-orange/30 transition-all flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center text-orange mb-5">
-                    <GraduationCap className="w-6 h-6" />
-                  </div>
-                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-orange font-accent">
-                    Applied Learning
-                  </span>
-                  <h3
-                    className="text-2xl font-bold text-navy mt-1.5 mb-3"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    IGNOVA Academy
-                  </h3>
-                  <p className="text-[15px] sm:text-base text-charcoal-light leading-relaxed mb-4">
-                    Architect role-specific competencies, technical rigor (Six Sigma, VSM, SMED), and shop-floor discipline. We transform daily habits to produce observable workplace yield.
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-[#EBE4DA] flex items-center gap-2 text-sm font-semibold text-navy font-accent">
-                  <CheckCircle2 className="w-4 h-4 text-orange" />
-                  Shop Floor Capability Transformation
-                </div>
-              </div>
+                    <h3
+                      className="text-2xl font-bold text-navy mt-1.5 mb-5"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {cap.brand}
+                    </h3>
 
-              {/* Capability 2: Executive Advisory & Search */}
-              <div className="bg-[#FAF8F5] rounded-2xl p-7 border border-[#EBE4DA] shadow-xs hover:border-navy/30 transition-all flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-xl bg-navy/10 flex items-center justify-center text-navy mb-5">
-                    <Briefcase className="w-6 h-6" />
+                    <ul className="space-y-3 mb-6">
+                      {cap.items.map((item) => (
+                        <li
+                          key={item}
+                          className="flex items-start gap-2.5 text-[15px] sm:text-base text-charcoal-light leading-relaxed"
+                        >
+                          <CheckCircle2 className="w-4 h-4 text-orange flex-shrink-0 mt-1" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-navy/70 font-accent">
-                    Strategic Execution
-                  </span>
-                  <h3
-                    className="text-2xl font-bold text-navy mt-1.5 mb-3"
-                    style={{ fontFamily: "var(--font-heading)" }}
+
+                  <Link
+                    href={cap.href}
+                    className="pt-4 border-t border-[#EBE4DA] flex items-center justify-between text-[15px] font-bold text-navy group-hover:text-orange transition-colors font-accent"
                   >
-                    Consulting &amp; Search
-                  </h3>
-                  <p className="text-[15px] sm:text-base text-charcoal-light leading-relaxed mb-4">
-                    Activate talent pipelines for critical plant leadership and specialist roles. We align operating models, improve reliability, and engineer measurable OEE and P&amp;L growth.
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-[#EBE4DA] flex items-center gap-2 text-sm font-semibold text-navy font-accent">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28]" />
-                  Boardroom Alignment &amp; Performance
-                </div>
-              </div>
-            </motion.div>
+                    <span>Explore {cap.brand}</span>
+                    <ArrowRight className="w-4 h-4 text-orange group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
