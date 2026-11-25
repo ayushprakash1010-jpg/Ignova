@@ -227,10 +227,7 @@ export default function TriagePage() {
             objectPosition="object-[15%_center]"
           />
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="relative z-10 w-full lg:w-[49%] xl:w-[48%] px-4 sm:px-6 lg:pr-6 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[540px] xl:min-h-[560px] flex flex-col justify-center"
           >
             {/* Pillar tag */}
@@ -267,7 +264,7 @@ export default function TriagePage() {
                 Discuss Your Capability Needs
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

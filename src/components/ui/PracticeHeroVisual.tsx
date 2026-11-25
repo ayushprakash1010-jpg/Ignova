@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 interface PracticeHeroVisualProps {
   src: string;
@@ -19,12 +16,7 @@ export default function PracticeHeroVisual({
   objectPosition = "object-center",
 }: PracticeHeroVisualProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.7 }}
-      className="order-2 lg:order-none relative w-full h-[280px] sm:h-[340px] lg:h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:w-[57%] xl:w-[56%] practice-hero-mask overflow-hidden pointer-events-none select-none"
-    >
+    <div className="order-2 lg:order-none relative w-full h-[280px] sm:h-[340px] lg:h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:w-[57%] xl:w-[56%] practice-hero-mask overflow-hidden pointer-events-none select-none">
       <Image
         src={src}
         alt={alt}
@@ -33,6 +25,6 @@ export default function PracticeHeroVisual({
         sizes="(max-width: 1024px) 100vw, 57vw"
         className={`object-cover ${objectPosition}`}
       />
-    </motion.div>
+    </div>
   );
 }
