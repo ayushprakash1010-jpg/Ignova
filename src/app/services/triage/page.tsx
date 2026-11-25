@@ -217,7 +217,7 @@ export default function TriagePage() {
           >
             {/* Pillar tag */}
             <span
-              className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-6"
+              className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-6"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               Architect
@@ -286,9 +286,9 @@ export default function TriagePage() {
                     {col.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-2 text-charcoal-light"
+                        className="flex items-start gap-2.5 text-[15px] sm:text-base text-charcoal-light"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-orange flex-shrink-0" />
+                        <span className="mt-2 h-1.5 w-1.5 rounded-full bg-orange flex-shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -346,12 +346,12 @@ export default function TriagePage() {
                     <Icon className="w-8 h-8 text-orange" />
                   </div>
                   <h4
-                    className="mt-4 text-lg font-bold text-navy"
+                    className="mt-4 text-lg sm:text-xl font-bold text-navy"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {step.verb}
                   </h4>
-                  <p className="mt-1 text-sm text-charcoal-light max-w-[160px]">
+                  <p className="mt-1 text-[15px] text-charcoal-light max-w-[180px]">
                     {step.desc}
                   </p>
                 </motion.div>
@@ -438,7 +438,7 @@ export default function TriagePage() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-charcoal-light">{card.desc}</p>
+                  <p className="text-[15px] sm:text-base text-charcoal-light">{card.desc}</p>
                 </motion.div>
               );
             })}
@@ -454,13 +454,13 @@ export default function TriagePage() {
               className="bg-navy rounded-2xl p-8 text-center md:text-left"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Domain Outcome
               </p>
               <p
-                className="text-lg text-white font-semibold"
+                className="text-xl text-white font-semibold"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Translate domain knowledge into better operational decisions.
@@ -475,12 +475,12 @@ export default function TriagePage() {
               className="bg-cream rounded-2xl p-8 border border-cream-dark"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Context-Led Development
               </p>
-              <p className="text-charcoal-light text-sm leading-relaxed">
+              <p className="text-charcoal-light text-[15px] leading-relaxed">
                 Map industry, functional &amp; role requirements to focus development on the knowledge needed for daily execution.
               </p>
             </motion.div>
@@ -493,12 +493,12 @@ export default function TriagePage() {
               className="bg-cream rounded-2xl p-8 border border-cream-dark"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 A Journey Tailored to the Role
               </p>
-              <p className="text-charcoal-light text-sm leading-relaxed">
+              <p className="text-charcoal-light text-[15px] leading-relaxed">
                 Combine workshops, process observations &amp; workplace assignments around the operating context of each role.
               </p>
             </motion.div>
@@ -538,7 +538,7 @@ export default function TriagePage() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-charcoal-light">{card.desc}</p>
+                  <p className="text-[15px] sm:text-base text-charcoal-light">{card.desc}</p>
                 </motion.div>
               );
             })}
@@ -554,13 +554,13 @@ export default function TriagePage() {
               className="bg-navy rounded-2xl p-8 text-center md:text-left"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Leadership Outcome
               </p>
               <p
-                className="text-lg text-white font-semibold"
+                className="text-xl text-white font-semibold"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Translate leadership decisions into operational action.
@@ -575,12 +575,12 @@ export default function TriagePage() {
               className="bg-white rounded-2xl p-8 border border-cream-dark"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Assessment
               </p>
-              <p className="text-charcoal-light text-sm leading-relaxed">
+              <p className="text-charcoal-light text-[15px] leading-relaxed">
                 Leadership and behavioral assessments, including MBTI, build
                 self-awareness and inform individual development priorities.
               </p>
@@ -594,12 +594,12 @@ export default function TriagePage() {
               className="bg-white rounded-2xl p-8 border border-cream-dark"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Journey
               </p>
-              <p className="text-charcoal-light text-sm leading-relaxed">
+              <p className="text-charcoal-light text-[15px] leading-relaxed">
                 Combine workshops, coaching and workplace application around the
                 demands of each leadership role.
               </p>
@@ -635,7 +635,7 @@ export default function TriagePage() {
                       <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
                         <Icon className="w-6 h-6 text-orange group-hover:text-white transition-colors" />
                       </div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-orange bg-orange/10 px-2.5 py-1 rounded-full font-accent">
+                      <span className="text-xs font-bold uppercase tracking-wider text-orange bg-orange/10 px-3 py-1 rounded-full font-accent">
                         {method.tag}
                       </span>
                     </div>
@@ -645,7 +645,7 @@ export default function TriagePage() {
                     >
                       {method.title}
                     </h3>
-                    <p className="text-charcoal-light text-sm leading-relaxed">
+                    <p className="text-charcoal-light text-[15px] leading-relaxed">
                       {method.desc}
                     </p>
                   </div>
@@ -664,13 +664,13 @@ export default function TriagePage() {
               className="bg-navy rounded-2xl p-8 text-center md:text-left"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Technical Outcome
               </p>
               <p
-                className="text-lg text-white font-semibold"
+                className="text-xl text-white font-semibold"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Convert technical competence into quality &amp; productivity gains.
@@ -685,12 +685,12 @@ export default function TriagePage() {
               className="bg-cream rounded-2xl p-8 border border-cream-dark"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Practical Skill Assessment
               </p>
-              <p className="text-charcoal-light text-sm leading-relaxed">
+              <p className="text-charcoal-light text-[15px] leading-relaxed">
                 Assess tool knowledge &amp; practical proficiency before &amp; after capability interventions to identify gaps &amp; verify progress.
               </p>
             </motion.div>
@@ -703,12 +703,12 @@ export default function TriagePage() {
               className="bg-cream rounded-2xl p-8 border border-cream-dark"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange mb-2"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Learning Through Real Projects
               </p>
-              <p className="text-charcoal-light text-sm leading-relaxed">
+              <p className="text-charcoal-light text-[15px] leading-relaxed">
                 Combine hands-on exercises &amp; workplace improvement projects to turn technical methods into repeatable execution.
               </p>
             </motion.div>
@@ -736,14 +736,14 @@ export default function TriagePage() {
           >
             <div className="bg-navy px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block">
                   Evidence-Based Validation
                 </span>
-                <h3 className="text-xl font-bold text-white font-heading mt-0.5">
+                <h3 className="text-2xl font-bold text-white font-heading mt-0.5">
                   Learning Impact Scorecard
                 </h3>
               </div>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-emerald-400 border border-emerald-400/30 font-accent w-fit">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-white/10 text-emerald-400 border border-emerald-400/30 font-accent w-fit">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                 Measurable Workplace ROI
               </span>
@@ -756,20 +756,20 @@ export default function TriagePage() {
                   className="px-6 sm:px-8 py-5 hover:bg-slate-50/70 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-4"
                 >
                   <div className="md:w-1/3">
-                    <span className="inline-block px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-slate-100 text-slate-700 font-accent mb-1.5">
+                    <span className="inline-block px-3 py-1 rounded text-xs font-bold uppercase tracking-wider bg-slate-100 text-slate-700 font-accent mb-1.5">
                       {item.category}
                     </span>
-                    <h4 className="text-base font-bold text-[#0B2038] font-heading">
+                    <h4 className="text-lg font-bold text-[#0B2038] font-heading">
                       {item.domain}
                     </h4>
                   </div>
 
                   <div className="md:w-2/3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <div>
-                      <p className="text-sm font-bold text-orange font-accent">
+                      <p className="text-base font-bold text-orange font-accent">
                         {item.metric}
                       </p>
-                      <p className="text-xs text-slate-500 mt-0.5 leading-relaxed">
+                      <p className="text-sm text-slate-500 mt-1 leading-relaxed">
                         {item.detail}
                       </p>
                     </div>

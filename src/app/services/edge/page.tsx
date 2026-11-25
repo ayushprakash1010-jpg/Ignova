@@ -142,7 +142,7 @@ export default function EdgePage() {
               className="mb-6"
             >
               <span
-                className="inline-block px-4 py-2 bg-orange/10 text-orange text-xs font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
+                className="inline-block px-4 py-2 bg-orange/10 text-orange text-sm font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Activate
@@ -237,7 +237,7 @@ export default function EdgePage() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-charcoal-light text-sm">
+                  <p className="text-charcoal-light text-[15px] leading-relaxed">
                     {step.description}
                   </p>
 
@@ -278,13 +278,13 @@ export default function EdgePage() {
                   </div>
 
                   <h3
-                    className="text-lg font-bold text-navy mb-2"
+                    className="text-xl font-bold text-navy mb-2"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {card.title}
                   </h3>
 
-                  <p className="text-charcoal-light text-sm">
+                  <p className="text-charcoal-light text-[15px] leading-relaxed">
                     {card.description}
                   </p>
                 </motion.div>
@@ -320,13 +320,13 @@ export default function EdgePage() {
                   </div>
 
                   <h3
-                    className="text-lg font-bold text-navy mb-3"
+                    className="text-xl font-bold text-navy mb-3"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {feature.title}
                   </h3>
 
-                  <p className="text-charcoal-light text-sm leading-relaxed">
+                  <p className="text-charcoal-light text-[15px] leading-relaxed">
                     {feature.description}
                   </p>
                 </motion.div>
@@ -393,21 +393,21 @@ export default function EdgePage() {
                       <Icon className="w-6 h-6 text-orange" />
                     </div>
                     <h3
-                      className="text-lg font-bold text-navy mb-2"
+                      className="text-xl font-bold text-navy mb-2"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {outcome.title}
                     </h3>
-                    <p className="text-xs text-charcoal-light leading-relaxed mb-6">
+                    <p className="text-sm sm:text-[15px] text-charcoal-light leading-relaxed mb-6">
                       {outcome.desc}
                     </p>
                   </div>
 
                   <div className="pt-4 border-t border-navy/10">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-orange font-accent block mb-1">
+                    <span className="text-xs font-bold uppercase tracking-wider text-orange font-accent block mb-1">
                       {outcome.measureLabel}
                     </span>
-                    <p className="text-xs font-bold text-navy font-accent">
+                    <p className="text-sm font-bold text-navy font-accent">
                       {outcome.measureValue}
                     </p>
                   </div>
@@ -425,7 +425,7 @@ export default function EdgePage() {
             className="rounded-3xl bg-navy text-white p-8 sm:p-12 relative overflow-hidden shadow-xl"
           >
             <div className="relative z-10 max-w-3xl mb-8">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
                 Operational Validation
               </span>
               <h3
@@ -434,7 +434,7 @@ export default function EdgePage() {
               >
                 Where Impact Becomes Visible
               </h3>
-              <p className="text-sm text-slate-300 mt-2">
+              <p className="text-base text-slate-300 mt-2">
                 Hiring precision verified where production and supply chain economics happen.
               </p>
             </div>
@@ -446,19 +446,19 @@ export default function EdgePage() {
                     <Factory className="w-5 h-5 text-orange-light" />
                   </div>
                   <h4
-                    className="text-base sm:text-lg font-bold text-white font-accent"
+                    className="text-lg sm:text-xl font-bold text-white font-accent"
                     style={{ color: "#FFFFFF" }}
                   >
                     Plant Leadership
                   </h4>
                 </div>
-                <div className="space-y-2 pt-3 border-t border-white/15 text-xs text-slate-200">
+                <div className="space-y-2.5 pt-3 border-t border-white/15 text-sm text-slate-200">
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-orange-light flex-shrink-0" />
                     <span>Overall Equipment Effectiveness (OEE)</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-orange-light flex-shrink-0" />
                     <span>Line Output &amp; Labor Productivity</span>
                   </p>
                 </div>
@@ -470,19 +470,19 @@ export default function EdgePage() {
                     <ShieldCheck className="w-5 h-5 text-orange-light" />
                   </div>
                   <h4
-                    className="text-base sm:text-lg font-bold text-white font-accent"
+                    className="text-lg sm:text-xl font-bold text-white font-accent"
                     style={{ color: "#FFFFFF" }}
                   >
                     Quality Leadership
                   </h4>
                 </div>
-                <div className="space-y-2 pt-3 border-t border-white/15 text-xs text-slate-200">
+                <div className="space-y-2.5 pt-3 border-t border-white/15 text-sm text-slate-200">
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-orange-light flex-shrink-0" />
                     <span>Defect PPM Reduction</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-orange-light flex-shrink-0" />
                     <span>Cost of Poor Quality (COPQ)</span>
                   </p>
                 </div>
@@ -494,19 +494,19 @@ export default function EdgePage() {
                     <Truck className="w-5 h-5 text-orange-light" />
                   </div>
                   <h4
-                    className="text-base sm:text-lg font-bold text-white font-accent"
+                    className="text-lg sm:text-xl font-bold text-white font-accent"
                     style={{ color: "#FFFFFF" }}
                   >
                     Supply Chain Leadership
                   </h4>
                 </div>
-                <div className="space-y-2 pt-3 border-t border-white/15 text-xs text-slate-200">
+                <div className="space-y-2.5 pt-3 border-t border-white/15 text-sm text-slate-200">
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-orange-light flex-shrink-0" />
                     <span>On-Time Delivery (OTD %)</span>
                   </p>
                   <p className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-orange-light flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-orange-light flex-shrink-0" />
                     <span>Inventory Turns &amp; Working Capital</span>
                   </p>
                 </div>

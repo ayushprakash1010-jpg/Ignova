@@ -37,7 +37,7 @@ export default function CTABanner({
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-orange-200 border border-white/15 text-xs font-bold uppercase tracking-wider mb-6 font-accent">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-orange-200 border border-white/15 text-xs sm:text-[13px] font-bold uppercase tracking-wider mb-6 font-accent">
               <span className="w-2 h-2 rounded-full bg-[#DF7C36]" />
               Executive Engagement
             </div>
@@ -52,7 +52,7 @@ export default function CTABanner({
               {title}
             </h2>
 
-            <p className="text-base sm:text-lg text-slate-300 mb-8 leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
               {subtitle}
             </p>
 
@@ -67,7 +67,7 @@ export default function CTABanner({
               {secondaryButtonText && secondaryButtonHref && (
                 <Link
                   href={secondaryButtonHref}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl text-white/90 hover:text-white border border-white/20 hover:bg-white/10 transition-all font-accent"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[15px] font-semibold rounded-xl text-white/90 hover:text-white border border-white/20 hover:bg-white/10 transition-all font-accent"
                 >
                   {secondaryButtonText}
                 </Link>

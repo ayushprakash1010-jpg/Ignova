@@ -167,7 +167,7 @@ export default function ProjectExecutionPage() {
               className="mb-6"
             >
               <span
-                className="inline-block px-4 py-2 bg-orange/10 text-orange text-xs font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
+                className="inline-block px-4 py-2 bg-orange/10 text-orange text-sm font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Accelerate
@@ -270,14 +270,14 @@ export default function ProjectExecutionPage() {
                     </div>
 
                     <h3
-                      className="text-lg font-bold text-navy mb-2 leading-snug"
+                      className="text-xl font-bold text-navy mb-2 leading-snug"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {area.title}
                     </h3>
                   </div>
 
-                  <p className="text-charcoal-light text-xs sm:text-sm leading-relaxed mt-2 pt-3 border-t border-navy/5">
+                  <p className="text-charcoal-light text-sm sm:text-[15px] leading-relaxed mt-2 pt-3 border-t border-navy/5">
                     {area.description}
                   </p>
                 </motion.div>
@@ -324,7 +324,7 @@ export default function ProjectExecutionPage() {
                     {col.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-3 text-charcoal-light"
+                        className="flex items-start gap-3 text-[15px] sm:text-base text-charcoal-light"
                       >
                         <ArrowRight className="w-4 h-4 text-orange mt-1 flex-shrink-0" />
                         <span>{item}</span>
@@ -345,7 +345,7 @@ export default function ProjectExecutionPage() {
             className="mt-12 text-center"
           >
             <p
-              className="inline-block px-6 py-3 bg-navy/5 text-navy text-sm font-medium rounded-full border border-navy/10"
+              className="inline-block px-6 py-3 bg-navy/5 text-navy text-[15px] font-medium rounded-full border border-navy/10"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               The scope aligns with your strategic mandates — from Industry 4.0 and
@@ -387,14 +387,14 @@ export default function ProjectExecutionPage() {
             className="mt-12 rounded-2xl bg-navy p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6"
           >
             <div>
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-1">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-1">
                 Execution Scorecard &amp; Controls
               </span>
-              <h4 className="text-base sm:text-lg font-bold text-white font-heading">
+              <h4 className="text-lg sm:text-xl font-bold text-white font-heading">
                 Operational KPIs Monitored
               </h4>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-xs font-accent">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-sm font-accent">
               {[
                 "OEE (%)",
                 "First-pass yield (%)",
@@ -404,7 +404,7 @@ export default function ProjectExecutionPage() {
               ].map((kpi) => (
                 <span
                   key={kpi}
-                  className="px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-semibold"
+                  className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-slate-200 font-semibold"
                 >
                   {kpi}
                 </span>
@@ -423,7 +423,7 @@ export default function ProjectExecutionPage() {
             <div className="inline-flex items-center gap-3 px-6 py-4 bg-cream rounded-xl border border-cream-dark">
               <CheckCircle2 className="w-5 h-5 text-orange flex-shrink-0" />
               <p
-                className="text-sm font-semibold text-navy"
+                className="text-[15px] sm:text-base font-semibold text-navy"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Build ownership into implementation and handover.
@@ -473,7 +473,7 @@ export default function ProjectExecutionPage() {
                     {step.title}
                   </h3>
 
-                  <p className="text-charcoal-light">{step.description}</p>
+                  <p className="text-[15px] sm:text-base text-charcoal-light">{step.description}</p>
                 </motion.div>
               );
             })}
@@ -494,7 +494,7 @@ export default function ProjectExecutionPage() {
             <div className="relative z-10">
               <div className="text-center max-w-2xl mx-auto mb-10">
                 <p
-                  className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
+                  className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
                   Cross-Functional Ownership
@@ -505,7 +505,7 @@ export default function ProjectExecutionPage() {
                 >
                   Shared Execution Across Plant Functions
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 mt-2">
+                <p className="text-sm sm:text-base text-slate-300 mt-2">
                   Sustainable change happens when operating functions collaborate on root-cause solutions rather than working in departmental silos.
                 </p>
               </div>
@@ -513,28 +513,28 @@ export default function ProjectExecutionPage() {
               {/* 3 Pillars */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
                     Production
                   </span>
-                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                  <p className="text-sm sm:text-[15px] text-slate-200 leading-relaxed">
                     Line pacing, bottleneck resolution, and active shift-level ownership.
                   </p>
                 </div>
 
                 <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
                     Quality
                   </span>
-                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                  <p className="text-sm sm:text-[15px] text-slate-200 leading-relaxed">
                     Defect containment, root-cause investigation, and First Pass Yield (FPY).
                   </p>
                 </div>
 
                 <div className="bg-white/[0.08] hover:bg-white/[0.12] border border-white/15 rounded-2xl p-6 text-center transition-colors shadow-sm">
-                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
+                  <span className="inline-block px-4 py-1.5 rounded-full bg-orange text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-3 font-accent shadow-xs">
                     Plant Support
                   </span>
-                  <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                  <p className="text-sm sm:text-[15px] text-slate-200 leading-relaxed">
                     Equipment reliability, loss recovery, and maintenance scheduling.
                   </p>
                 </div>
@@ -543,7 +543,7 @@ export default function ProjectExecutionPage() {
               {/* Outcome Banner */}
               <div className="pt-6 border-t border-white/10 text-center">
                 <span
-                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-orange text-white text-xs sm:text-sm font-bold rounded-full shadow-md"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 bg-orange text-white text-sm sm:text-[15px] font-bold rounded-full shadow-md"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
                   <span>&rarr;</span>

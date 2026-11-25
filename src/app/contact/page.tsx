@@ -37,7 +37,7 @@ const capabilities = [
 ];
 
 const inputStyles =
-  "w-full px-4 py-3 bg-cream border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-orange/50 focus:border-orange transition-colors text-charcoal";
+  "w-full px-4 py-3 bg-cream border border-cream-dark rounded-xl focus:outline-none focus:ring-2 focus:ring-orange/50 focus:border-orange transition-colors text-charcoal text-[15px]";
 
 function ContactForm() {
   const [submissionMessage, setSubmissionMessage] = useState("");
@@ -130,7 +130,7 @@ function ContactForm() {
           <p className="font-semibold text-amber-900 mb-1">{submissionError}</p>
           {prefilledMailto ? (
             <div className="mt-3">
-              <p className="text-xs text-slate-600 mb-2">
+              <p className="text-sm text-slate-600 mb-2">
                 Your message is saved. Click below to open your email app and send it directly to our team:
               </p>
               <a
@@ -175,7 +175,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="name"
-              className="text-sm font-semibold text-navy mb-1.5 block"
+              className="text-[15px] font-semibold text-navy mb-1.5 block"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               Name <span className="text-orange">*</span>
@@ -189,7 +189,7 @@ function ContactForm() {
               {...register("name")}
             />
             {errors.name && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-red-500 text-sm mt-1">
                 {errors.name.message}
               </p>
             )}
@@ -198,7 +198,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="email"
-              className="text-sm font-semibold text-navy mb-1.5 block"
+              className="text-[15px] font-semibold text-navy mb-1.5 block"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               Email <span className="text-orange">*</span>
@@ -212,7 +212,7 @@ function ContactForm() {
               {...register("email")}
             />
             {errors.email && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-red-500 text-sm mt-1">
                 {errors.email.message}
               </p>
             )}
@@ -224,7 +224,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="company"
-              className="text-sm font-semibold text-navy mb-1.5 block"
+              className="text-[15px] font-semibold text-navy mb-1.5 block"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               Company <span className="text-orange">*</span>
@@ -238,7 +238,7 @@ function ContactForm() {
               {...register("company")}
             />
             {errors.company && (
-              <p className="text-red-500 text-xs mt-1">
+              <p className="text-red-500 text-sm mt-1">
                 {errors.company.message}
               </p>
             )}
@@ -247,7 +247,7 @@ function ContactForm() {
           <div>
             <label
               htmlFor="phone"
-              className="text-sm font-semibold text-navy mb-1.5 block"
+              className="text-[15px] font-semibold text-navy mb-1.5 block"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               Phone
@@ -267,7 +267,7 @@ function ContactForm() {
         <div>
           <label
             htmlFor="service"
-            className="text-sm font-semibold text-navy mb-1.5 block"
+            className="text-[15px] font-semibold text-navy mb-1.5 block"
             style={{ fontFamily: "var(--font-accent)" }}
           >
             Service Interest
@@ -294,7 +294,7 @@ function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="text-sm font-semibold text-navy mb-1.5 block"
+            className="text-[15px] font-semibold text-navy mb-1.5 block"
             style={{ fontFamily: "var(--font-accent)" }}
           >
             Message <span className="text-orange">*</span>
@@ -308,7 +308,7 @@ function ContactForm() {
             {...register("message")}
           />
           {errors.message && (
-            <p className="text-red-500 text-xs mt-1">
+            <p className="text-red-500 text-sm mt-1">
               {errors.message.message}
             </p>
           )}
@@ -391,7 +391,7 @@ export default function ContactPage() {
               {/* Contact Details Card */}
               <div className="bg-cream rounded-2xl p-8 mb-8 shadow-sm border border-cream-dark">
                 <h3
-                  className="text-lg font-bold text-navy mb-6"
+                  className="text-xl font-bold text-navy mb-6"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   Get in Touch
@@ -405,12 +405,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p
-                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
+                        className="text-xs sm:text-[13px] font-semibold uppercase tracking-wider text-charcoal-light mb-1"
                         style={{ fontFamily: "var(--font-accent)" }}
                       >
                         Corporate Office
                       </p>
-                      <p className="text-sm text-charcoal font-medium leading-snug">
+                      <p className="text-[15px] text-charcoal font-medium leading-snug">
                         L14C, Orchard Smartworld, Sector 61, Gurugram, Haryana
                       </p>
                     </div>
@@ -423,14 +423,14 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p
-                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
+                        className="text-xs sm:text-[13px] font-semibold uppercase tracking-wider text-charcoal-light mb-1"
                         style={{ fontFamily: "var(--font-accent)" }}
                       >
                         Direct Phone
                       </p>
                       <a
                         href="tel:+919971524733"
-                        className="text-sm text-charcoal font-medium hover:text-orange transition-colors"
+                        className="text-[15px] text-charcoal font-medium hover:text-orange transition-colors"
                       >
                         +91 99715 24733
                       </a>
@@ -444,14 +444,14 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p
-                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
+                        className="text-xs sm:text-[13px] font-semibold uppercase tracking-wider text-charcoal-light mb-1"
                         style={{ fontFamily: "var(--font-accent)" }}
                       >
                         Corporate Inquiries
                       </p>
                       <a
                         href="mailto:ignovacobsulting26@gmail.com"
-                        className="text-sm text-charcoal font-medium hover:text-orange transition-colors break-all"
+                        className="text-[15px] text-charcoal font-medium hover:text-orange transition-colors break-all"
                       >
                         ignovacobsulting26@gmail.com
                       </a>
@@ -465,12 +465,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p
-                        className="text-xs font-semibold uppercase tracking-wider text-charcoal-light mb-1"
+                        className="text-xs sm:text-[13px] font-semibold uppercase tracking-wider text-charcoal-light mb-1"
                         style={{ fontFamily: "var(--font-accent)" }}
                       >
                         Direct Response SLA
                       </p>
-                      <p className="text-sm text-charcoal font-medium">
+                      <p className="text-[15px] text-charcoal font-medium">
                         Within 24 business hours
                       </p>
                     </div>
@@ -483,12 +483,12 @@ export default function ContactPage() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#DF7C36]/10 rounded-full blur-2xl pointer-events-none" />
 
                 <span
-                  className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent block mb-2"
+                  className="text-xs font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent block mb-2"
                 >
                   Integrated Services
                 </span>
                 <h3
-                  className="text-lg font-bold text-white mb-6"
+                  className="text-xl font-bold text-white mb-6"
                   style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
                 >
                   Our Capabilities
@@ -503,12 +503,12 @@ export default function ContactPage() {
                     >
                       <div>
                         <span
-                          className="text-sm font-bold text-white group-hover:text-orange-light tracking-wide transition-colors block"
+                          className="text-[15px] font-bold text-white group-hover:text-orange-light tracking-wide transition-colors block"
                           style={{ fontFamily: "var(--font-accent)" }}
                         >
                           {cap.label}
                         </span>
-                        <span className="text-xs text-slate-300">
+                        <span className="text-sm text-slate-300">
                           {cap.desc}
                         </span>
                       </div>

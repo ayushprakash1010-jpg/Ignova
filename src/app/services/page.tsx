@@ -171,7 +171,7 @@ export default function ServicesPage() {
                   (header) => (
                     <div
                       key={header}
-                      className="px-8 py-5 text-sm font-bold uppercase tracking-wider text-white"
+                      className="px-8 py-5 text-[15px] font-bold uppercase tracking-wider text-white"
                       style={{ fontFamily: "var(--font-accent)" }}
                     >
                       {header}
@@ -185,7 +185,7 @@ export default function ServicesPage() {
                 <Link
                   key={row.capability}
                   href={row.href}
-                  className="group grid grid-cols-3 border-t border-cream-dark hover:bg-cream/50 transition-colors duration-300"
+                  className="group grid grid-cols-3 border-t border-cream-dark hover:bg-cream/50 transition-colors duration-300 text-base"
                 >
                   <div className="px-8 py-6 text-charcoal font-medium">
                     {row.priority}
@@ -222,16 +222,16 @@ export default function ServicesPage() {
                   className="block bg-white rounded-xl border border-cream-dark p-6 hover:border-orange/30 transition-all"
                 >
                   <p
-                    className="text-xs font-bold uppercase tracking-wider text-orange mb-2"
+                    className="text-sm font-bold uppercase tracking-wider text-orange mb-2"
                     style={{ fontFamily: "var(--font-accent)" }}
                   >
                     {row.capability}
                   </p>
-                  <p className="text-charcoal font-medium mb-2">
+                  <p className="text-base text-charcoal font-medium mb-2">
                     {row.priority}
                   </p>
                   <div className="flex items-center justify-between">
-                    <p className="text-sm text-charcoal-light">
+                    <p className="text-[15px] text-charcoal-light">
                       → {row.outcome}
                     </p>
                     <ArrowRight className="w-4 h-4 text-orange" />
@@ -250,7 +250,7 @@ export default function ServicesPage() {
             className="mt-10 flex items-center justify-center gap-3 text-charcoal-light"
           >
             <Target className="w-5 h-5 text-orange flex-shrink-0" />
-            <p className="text-sm md:text-base italic">
+            <p className="text-base md:text-lg italic">
               <span className="font-semibold text-navy not-italic">
                 Starting point:
               </span>{" "}
@@ -285,7 +285,7 @@ export default function ServicesPage() {
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-orange font-accent">
+                      <span className="text-xs font-bold uppercase tracking-widest text-orange font-accent">
                         {outcome.tag}
                       </span>
                       <span className="text-xl font-black text-slate-300 font-heading">
@@ -298,22 +298,22 @@ export default function ServicesPage() {
                     </div>
 
                     <h3
-                      className="text-lg font-bold text-navy mb-3"
+                      className="text-xl font-bold text-navy mb-3"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {outcome.title}
                     </h3>
 
-                    <p className="text-xs text-charcoal-light leading-relaxed mb-6">
+                    <p className="text-sm sm:text-[15px] text-charcoal-light leading-relaxed mb-6">
                       {outcome.desc}
                     </p>
                   </div>
 
                   <div className="pt-4 border-t border-cream-dark">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal/60 font-accent block mb-1">
+                    <span className="text-xs font-bold uppercase tracking-wider text-charcoal/60 font-accent block mb-1">
                       Target Deliverable
                     </span>
-                    <p className="text-xs font-semibold text-navy">
+                    <p className="text-sm font-semibold text-navy">
                       {outcome.metric}
                     </p>
                   </div>
@@ -331,23 +331,23 @@ export default function ServicesPage() {
             className="rounded-2xl bg-navy text-white p-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl"
           >
             <div className="max-w-2xl">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
+              <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
                 Unified Methodology & Governance
               </span>
               <h3
-                className="text-xl sm:text-2xl font-bold text-white mb-2"
+                className="text-2xl font-bold text-white mb-2"
                 style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
               >
                 Governed by Four Stages: Diagnose, Prioritize, Execute, Impact
               </h3>
-              <p className="text-sm text-slate-300">
+              <p className="text-[15px] sm:text-base text-slate-300">
                 Every capability deployment follows our evidence-based execution architecture with dual-track leadership governance to guarantee accountability from day one.
               </p>
             </div>
 
             <Link
               href="/approach"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-orange hover:bg-orange-dark text-white text-sm font-bold transition-all shadow-md flex-shrink-0 font-accent"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-orange hover:bg-orange-dark text-white text-[15px] font-bold transition-all shadow-md flex-shrink-0 font-accent"
             >
               <span>Explore Our Approach</span>
               <ArrowRight className="w-4 h-4" />
@@ -377,7 +377,7 @@ export default function ServicesPage() {
               className="bg-white/5 border border-white/10 rounded-2xl p-8"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-6"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-6"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Industrial Consulting
@@ -392,8 +392,8 @@ export default function ServicesPage() {
                     transition={{ duration: 0.3, delay: index * 0.08 }}
                     className="flex items-center gap-3 text-white/90"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0" />
-                    <span className="text-sm font-medium">{client}</span>
+                    <span className="w-2 h-2 rounded-full bg-orange flex-shrink-0" />
+                    <span className="text-base font-medium">{client}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -408,7 +408,7 @@ export default function ServicesPage() {
               className="bg-white/5 border border-white/10 rounded-2xl p-8"
             >
               <p
-                className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light mb-6"
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-6"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Recruitment Experience
@@ -423,8 +423,8 @@ export default function ServicesPage() {
                     transition={{ duration: 0.3, delay: index * 0.08 }}
                     className="flex items-center gap-3 text-white/90"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange flex-shrink-0" />
-                    <span className="text-sm font-medium">{client}</span>
+                    <span className="w-2 h-2 rounded-full bg-orange flex-shrink-0" />
+                    <span className="text-base font-medium">{client}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -442,7 +442,7 @@ export default function ServicesPage() {
             {SECTORS.map((sector) => (
               <span
                 key={sector}
-                className="px-5 py-2.5 rounded-full border border-white/20 text-white/80 text-sm font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
+                className="px-5 py-2.5 rounded-full border border-white/20 text-white/80 text-[15px] font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 {sector}

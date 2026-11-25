@@ -34,7 +34,7 @@ export default function StepperTimeline({
             <div>
               {/* Step indicator */}
               <div className="flex items-center justify-between mb-4">
-                <span className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20 flex items-center justify-center text-xs font-bold font-accent group-hover:bg-[#C86A28] group-hover:text-white transition-colors duration-200">
+                <span className="w-9 h-9 rounded-xl bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20 flex items-center justify-center text-sm font-bold font-accent group-hover:bg-[#C86A28] group-hover:text-white transition-colors duration-200">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 {index < steps.length - 1 && (
@@ -43,20 +43,20 @@ export default function StepperTimeline({
               </div>
 
               <h4
-                className="text-lg font-bold text-[#0B2038] mb-2"
+                className="text-xl font-bold text-[#0B2038] mb-2"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {step.step}
               </h4>
 
               {!compact && (
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-[15px] text-slate-600 leading-relaxed">
                   {step.description}
                 </p>
               )}
             </div>
 
-            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-slate-400 group-hover:text-[#C86A28] transition-colors font-accent">
+            <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-[13px] font-semibold text-slate-400 group-hover:text-[#C86A28] transition-colors font-accent">
               <span>Phase {index + 1}</span>
             </div>
           </motion.div>

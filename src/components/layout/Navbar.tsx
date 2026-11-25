@@ -95,7 +95,7 @@ export default function Navbar() {
                       aria-haspopup="true"
                       aria-expanded={servicesOpen}
                       aria-controls="desktop-services-menu"
-                      className={`flex items-center gap-1.5 px-3 py-1.5 text-xs sm:text-[13px] font-semibold transition-colors font-accent border-b-2 ${
+                      className={`flex items-center gap-1.5 px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent border-b-2 ${
                         active
                           ? "border-[#C86A28] text-[#0B2038] font-bold"
                           : "border-transparent text-slate-700 hover:text-[#C86A28]"
@@ -119,7 +119,7 @@ export default function Navbar() {
                           className="absolute top-full left-0 w-80 bg-white rounded-xl shadow-xl border border-slate-100 p-2.5 overflow-hidden"
                         >
                           <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 font-accent">
+                            <p className="text-xs font-bold uppercase tracking-wider text-slate-400 font-accent">
                               Capabilities
                             </p>
                           </div>
@@ -135,10 +135,10 @@ export default function Navbar() {
                                   <IconComponent className="w-4 h-4" />
                                 </div>
                                 <div>
-                                  <span className="block text-xs font-bold text-slate-800 group-hover/item:text-[#C86A28] transition-colors font-accent">
+                                  <span className="block text-sm font-bold text-slate-800 group-hover/item:text-[#C86A28] transition-colors font-accent">
                                     {child.label}
                                   </span>
-                                  <span className="block text-[11px] text-slate-500 leading-snug mt-0.5">
+                                  <span className="block text-xs text-slate-500 leading-snug mt-0.5">
                                     {serviceDescriptions[child.href]}
                                   </span>
                                 </div>
@@ -148,7 +148,7 @@ export default function Navbar() {
                           <div className="mt-1 pt-2 border-t border-slate-100">
                             <Link
                               href="/services"
-                              className="block px-3 py-1.5 text-xs font-bold text-[#C86A28] hover:text-[#B05819] font-accent transition-colors text-center"
+                              className="block px-3 py-1.5 text-sm font-bold text-[#C86A28] hover:text-[#B05819] font-accent transition-colors text-center"
                             >
                               Explore Full Portfolio →
                             </Link>
@@ -161,7 +161,7 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`px-3 py-1.5 text-xs sm:text-[13px] font-semibold transition-colors font-accent border-b-2 ${
+                    className={`px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent border-b-2 ${
                       active
                         ? "border-[#C86A28] text-[#0B2038] font-bold"
                         : "border-transparent text-slate-700 hover:text-[#C86A28]"
@@ -176,10 +176,10 @@ export default function Navbar() {
             {/* Desktop Right Action: Editorial Outline Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 px-4 py-2 border border-slate-300 hover:border-[#0B2038] rounded-md text-xs font-semibold text-[#0B2038] transition-colors font-accent"
+              className="inline-flex items-center gap-1.5 px-4 py-2 border border-slate-300 hover:border-[#0B2038] rounded-md text-sm font-semibold text-[#0B2038] transition-colors font-accent"
             >
               Get in touch
-              <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
+              <ArrowUpRight className="w-4 h-4 text-slate-500" />
             </Link>
           </div>
 
@@ -212,7 +212,7 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block px-3 py-2 text-sm font-bold text-slate-800 hover:text-[#C86A28] rounded-lg transition-colors font-accent"
+                    className="block px-3 py-2 text-base font-bold text-slate-800 hover:text-[#C86A28] rounded-lg transition-colors font-accent"
                   >
                     {link.label}
                   </Link>
@@ -223,7 +223,7 @@ export default function Navbar() {
                           key={child.label}
                           href={child.href}
                           onClick={() => setIsOpen(false)}
-                          className="block px-3 py-1.5 text-xs font-medium text-slate-600 hover:text-[#C86A28] transition-colors"
+                          className="block px-3 py-1.5 text-sm font-medium text-slate-600 hover:text-[#C86A28] transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -236,10 +236,10 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 border border-slate-300 rounded-md text-xs font-semibold text-[#0B2038] font-accent"
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 border border-slate-300 rounded-md text-sm font-semibold text-[#0B2038] font-accent"
                 >
                   Get in touch
-                  <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
+                  <ArrowUpRight className="w-4 h-4 text-slate-500" />
                 </Link>
               </div>
             </div>

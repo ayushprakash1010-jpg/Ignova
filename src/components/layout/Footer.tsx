@@ -24,20 +24,20 @@ export default function Footer() {
                 />
               </div>
             </Link>
-            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed max-w-sm">
+            <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-sm">
               Talent acquisition &middot; Talent development &middot; Growth &amp; transformation
             </p>
-            <p className="text-xs text-slate-500 mt-2">
+            <p className="text-sm text-slate-500 mt-2">
               Connecting people to business execution from shop floor to boardroom.
             </p>
           </div>
 
           {/* Column 2: Firm */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
               Firm
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-[13px]">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/about" className="text-slate-600 hover:text-[#C86A28] transition-colors">
                   About
@@ -58,10 +58,10 @@ export default function Footer() {
 
           {/* Column 3: Services */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
               Services
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-[13px]">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <Link href="/services/triage" className="text-slate-600 hover:text-[#C86A28] transition-colors">
                   IGNOVA Triage
@@ -82,16 +82,16 @@ export default function Footer() {
 
           {/* Column 4: Contact & Direct Presence */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
               Connect
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-[13px]">
+            <ul className="space-y-2.5 text-sm">
               <li>
                 <a
                   href={`mailto:${COMPANY.email}`}
                   className="inline-flex items-center gap-2 text-slate-600 hover:text-[#C86A28] transition-colors"
                 >
-                  <Mail className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <Mail className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
                   <span className="break-all">{COMPANY.email}</span>
                 </a>
               </li>
@@ -100,13 +100,13 @@ export default function Footer() {
                   href={`tel:${COMPANY.phoneRaw}`}
                   className="inline-flex items-center gap-2 text-slate-600 hover:text-[#C86A28] transition-colors"
                 >
-                  <Phone className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0" />
+                  <Phone className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
                   <span>{COMPANY.phone}</span>
                 </a>
               </li>
               <li>
-                <div className="inline-flex items-start gap-2 text-slate-500 text-xs">
-                  <MapPin className="w-3.5 h-3.5 text-[#C86A28] flex-shrink-0 mt-0.5" />
+                <div className="inline-flex items-start gap-2 text-slate-500 text-sm">
+                  <MapPin className="w-4 h-4 text-[#C86A28] flex-shrink-0 mt-0.5" />
                   <span>{COMPANY.address}</span>
                 </div>
               </li>
@@ -116,7 +116,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-8 border-t border-[#E8E2D5] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 border-t border-[#E8E2D5] flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
           <p>&copy; {currentYear} IGNOVA Consulting &amp; Academy. All rights reserved.</p>
           <p className="font-accent tracking-wide text-slate-500">
             Enabling execution &amp; impact.

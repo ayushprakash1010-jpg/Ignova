@@ -28,8 +28,8 @@ export default function NotFound() {
     <div className="min-h-[80vh] flex items-center justify-center bg-cream px-4 sm:px-6 lg:px-8 py-24">
       <div className="max-w-2xl w-full text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange/10 border border-orange/20 text-orange text-xs font-bold uppercase tracking-widest mb-6">
-          <Compass className="w-3.5 h-3.5" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange/10 border border-orange/20 text-orange text-sm font-bold uppercase tracking-widest mb-6">
+          <Compass className="w-4 h-4" />
           <span>Error 404 — Page Not Found</span>
         </div>
 
@@ -62,7 +62,7 @@ export default function NotFound() {
 
         {/* Quick Capabilities */}
         <div className="border-t border-slate-200/80 pt-10">
-          <p className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-6 font-accent">
+          <p className="text-sm font-bold uppercase tracking-wider text-slate-400 mb-6 font-accent">
             Explore Core Capabilities
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
@@ -77,10 +77,10 @@ export default function NotFound() {
                   <div className="w-8 h-8 rounded-lg bg-orange/10 text-orange flex items-center justify-center mb-2.5 group-hover:bg-orange group-hover:text-white transition-colors">
                     <Icon className="w-4 h-4" />
                   </div>
-                  <p className="text-sm font-bold text-navy group-hover:text-orange transition-colors">
+                  <p className="text-base font-bold text-navy group-hover:text-orange transition-colors">
                     {item.label}
                   </p>
-                  <p className="text-xs text-slate-500 mt-1 line-clamp-2">
+                  <p className="text-sm text-slate-500 mt-1 line-clamp-2">
                     {item.desc}
                   </p>
                 </Link>

@@ -37,9 +37,9 @@ export default function Button({
   };
 
   const sizes = {
-    sm: "px-5 py-2.5 text-xs gap-1.5 min-w-[100px]",
-    md: "px-7 py-3 text-sm gap-2 min-w-[140px]",
-    lg: "px-10 py-4 text-base gap-3 min-w-[180px]",
+    sm: "px-5 py-2.5 text-sm gap-1.5 min-w-[100px]",
+    md: "px-7 py-3 text-[15px] gap-2 min-w-[140px]",
+    lg: "px-10 py-4 text-base sm:text-lg gap-3 min-w-[180px]",
   };
 
   const combinedClassName = cn(

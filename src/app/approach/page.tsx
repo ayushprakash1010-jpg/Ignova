@@ -131,7 +131,7 @@ export default function ApproachPage() {
       <section className="bg-gradient-to-r from-orange to-orange-dark py-14 md:py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p
-            className="text-xs font-bold uppercase tracking-[0.25em] text-white/80 mb-6 font-accent"
+            className="text-sm font-bold uppercase tracking-[0.25em] text-white/80 mb-6 font-accent"
           >
             Performance Ambition
           </p>
@@ -180,13 +180,13 @@ export default function ApproachPage() {
                 <thead>
                   <tr className="bg-navy">
                     <th
-                      className="text-left py-4 px-6 text-sm font-bold uppercase tracking-wider text-white"
+                      className="text-left py-4 px-6 text-[15px] font-bold uppercase tracking-wider text-white"
                       style={{ fontFamily: "var(--font-accent)" }}
                     >
                       Performance Domain
                     </th>
                     <th
-                      className="text-left py-4 px-6 text-sm font-bold uppercase tracking-wider text-white"
+                      className="text-left py-4 px-6 text-[15px] font-bold uppercase tracking-wider text-white"
                       style={{ fontFamily: "var(--font-accent)" }}
                     >
                       Measures to Agree
@@ -201,22 +201,22 @@ export default function ApproachPage() {
                         key={domain.domain}
                         className={`border-t border-cream-dark ${
                           index % 2 === 0 ? "bg-cream/50" : "bg-white"
-                        } hover:bg-cream transition-colors`}
+                        } hover:bg-cream transition-colors text-base`}
                       >
-                        <td className="py-4 px-6">
+                        <td className="py-5 px-6">
                           <div className="flex items-center gap-3">
                             <div className="w-8 h-8 rounded-lg bg-orange/10 flex items-center justify-center flex-shrink-0">
                               <Icon className="w-4 h-4 text-orange" />
                             </div>
                             <span
-                              className="font-bold text-navy"
+                              className="font-bold text-navy text-base sm:text-lg"
                               style={{ fontFamily: "var(--font-heading)" }}
                             >
                               {domain.domain}
                             </span>
                           </div>
                         </td>
-                        <td className="py-4 px-6 text-charcoal-light">
+                        <td className="py-5 px-6 text-charcoal-light text-[15px] sm:text-base">
                           {domain.measures}
                         </td>
                       </tr>
@@ -250,11 +250,11 @@ export default function ApproachPage() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="relative bg-cream rounded-xl p-5 text-center border border-cream-dark group shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
                 >
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange text-white text-xs font-bold mb-3">
+                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange text-white text-sm font-bold mb-3">
                     {index + 1}
                   </span>
                   <p
-                    className="text-sm font-semibold text-navy"
+                    className="text-[15px] sm:text-base font-semibold text-navy"
                     style={{ fontFamily: "var(--font-accent)" }}
                   >
                     {step}
@@ -315,7 +315,7 @@ export default function ApproachPage() {
                     <div>
                       {/* Top badge & icon */}
                       <div className="flex items-center justify-between mb-6">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-orange/10 text-orange border border-orange/20 font-accent">
+                        <span className="inline-flex items-center px-3.5 py-1 rounded-full text-[13px] font-bold uppercase tracking-wider bg-orange/10 text-orange border border-orange/20 font-accent">
                           {path.mandate}
                         </span>
                         <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange/20 transition-colors">
@@ -332,24 +332,24 @@ export default function ApproachPage() {
                       </h3>
 
                       {/* Intervention Description */}
-                      <p className="text-sm text-charcoal-light mb-6 leading-relaxed">
+                      <p className="text-[15px] sm:text-base text-charcoal-light mb-6 leading-relaxed">
                         {path.desc}
                       </p>
 
                       {/* Intended Outcome Pill */}
                       <div className="mb-6 pt-4 border-t border-cream-dark">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-charcoal/60 font-accent block mb-1">
+                        <span className="text-xs font-bold uppercase tracking-wider text-charcoal/60 font-accent block mb-1">
                           Intended Outcome
                         </span>
-                        <p className="text-xs font-bold text-navy flex items-center gap-1.5">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-orange flex-shrink-0" />
+                        <p className="text-sm font-bold text-navy flex items-center gap-1.5">
+                          <CheckCircle2 className="w-4 h-4 text-orange flex-shrink-0" />
                           <span>{path.outcome}</span>
                         </p>
                       </div>
                     </div>
 
                     {/* Action link */}
-                    <div className="pt-4 border-t border-cream-dark flex items-center justify-between text-sm font-bold text-navy group-hover:text-orange transition-colors font-accent">
+                    <div className="pt-4 border-t border-cream-dark flex items-center justify-between text-[15px] font-bold text-navy group-hover:text-orange transition-colors font-accent">
                       <span>{path.action}</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-orange" />
                     </div>

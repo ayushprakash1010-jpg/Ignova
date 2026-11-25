@@ -177,7 +177,7 @@ export default function AboutPage() {
                   (tagline) => (
                     <span
                       key={tagline}
-                      className="px-4 py-2 bg-cream text-navy text-xs font-bold rounded-full border border-navy/10 font-accent"
+                      className="px-4 py-2 bg-cream text-navy text-sm font-bold rounded-full border border-navy/10 font-accent"
                     >
                       {tagline}
                     </span>
@@ -200,20 +200,20 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center text-orange mb-5">
                     <GraduationCap className="w-6 h-6" />
                   </div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-orange font-accent">
+                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-orange font-accent">
                     Applied Learning
                   </span>
                   <h3
-                    className="text-xl font-bold text-navy mt-1 mb-3"
+                    className="text-2xl font-bold text-navy mt-1.5 mb-3"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     IGNOVA Academy
                   </h3>
-                  <p className="text-sm text-charcoal-light leading-relaxed mb-4">
+                  <p className="text-[15px] sm:text-base text-charcoal-light leading-relaxed mb-4">
                     Architect role-specific competencies, technical rigor (Six Sigma, VSM, SMED), and shop-floor discipline. We transform daily habits to produce observable workplace yield.
                   </p>
                 </div>
-                <div className="pt-4 border-t border-[#EBE4DA] flex items-center gap-2 text-xs font-semibold text-navy font-accent">
+                <div className="pt-4 border-t border-[#EBE4DA] flex items-center gap-2 text-sm font-semibold text-navy font-accent">
                   <CheckCircle2 className="w-4 h-4 text-orange" />
                   Shop Floor Capability Transformation
                 </div>
@@ -225,20 +225,20 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-xl bg-navy/10 flex items-center justify-center text-navy mb-5">
                     <Briefcase className="w-6 h-6" />
                   </div>
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-navy/70 font-accent">
+                  <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-navy/70 font-accent">
                     Strategic Execution
                   </span>
                   <h3
-                    className="text-xl font-bold text-navy mt-1 mb-3"
+                    className="text-2xl font-bold text-navy mt-1.5 mb-3"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     Consulting &amp; Search
                   </h3>
-                  <p className="text-sm text-charcoal-light leading-relaxed mb-4">
+                  <p className="text-[15px] sm:text-base text-charcoal-light leading-relaxed mb-4">
                     Activate talent pipelines for critical plant leadership and specialist roles. We align operating models, improve reliability, and engineer measurable OEE and P&amp;L growth.
                   </p>
                 </div>
-                <div className="pt-4 border-t border-[#EBE4DA] flex items-center gap-2 text-xs font-semibold text-navy font-accent">
+                <div className="pt-4 border-t border-[#EBE4DA] flex items-center gap-2 text-sm font-semibold text-navy font-accent">
                   <CheckCircle2 className="w-4 h-4 text-[#C86A28]" />
                   Boardroom Alignment &amp; Performance
                 </div>
@@ -281,7 +281,7 @@ export default function AboutPage() {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-charcoal-light leading-relaxed">
+                  <p className="text-base text-charcoal-light leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>
@@ -312,7 +312,7 @@ export default function AboutPage() {
               <StatCounter key={stat.label} {...stat} light />
             ))}
           </div>
-          <p className="mt-8 text-center text-xs text-slate-400">
+          <p className="mt-8 text-center text-sm text-slate-400">
             Experience figures are based on the IGNOVA-provided corporate profile.
           </p>
         </div>
@@ -345,12 +345,12 @@ export default function AboutPage() {
                       <Icon className="w-6 h-6 text-navy group-hover:text-orange transition-colors duration-300" />
                     </div>
                     <h3
-                      className="text-base font-bold text-navy mb-2"
+                      className="text-lg sm:text-xl font-bold text-navy mb-2"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {sector.name}
                     </h3>
-                    <p className="text-xs text-charcoal-light leading-relaxed">
+                    <p className="text-sm sm:text-[15px] text-charcoal-light leading-relaxed">
                       {sector.focus}
                     </p>
                   </div>
@@ -394,13 +394,13 @@ export default function AboutPage() {
                 </div>
 
                 <p
-                  className="text-xs font-bold uppercase tracking-wider text-orange mb-2"
+                  className="text-sm font-bold uppercase tracking-wider text-orange mb-2"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
                   Strategic Mandate
                 </p>
                 <h3
-                  className="text-xl font-bold text-navy mb-6"
+                  className="text-2xl font-bold text-navy mb-6"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {item.trigger}
@@ -409,7 +409,7 @@ export default function AboutPage() {
                 <div className="flex items-center gap-3 mb-6">
                   <ArrowRight className="w-5 h-5 text-orange flex-shrink-0" />
                   <span
-                    className="text-base font-bold text-navy"
+                    className="text-lg font-bold text-navy"
                     style={{ fontFamily: "var(--font-accent)" }}
                   >
                     {item.solution}
