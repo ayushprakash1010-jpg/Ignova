@@ -241,6 +241,13 @@
   background: linear-gradient(90deg, transparent, rgba(11, 32, 56, 0.08), transparent);
 }
 
+/* Align full-bleed hero text left edge with max-w-7xl navbar container */
+@media (min-width: 1024px) {
+  .hero-content-pad {
+    padding-left: max(2rem, calc((100vw - 80rem) / 2 + 2rem));
+  }
+}
+
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar {
   width: 8px;

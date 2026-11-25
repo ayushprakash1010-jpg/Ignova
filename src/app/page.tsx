@@ -12,23 +12,22 @@ export default function HomePage() {
           1. HERO SECTION: Full-Width Real Documentary Industrial Photography
           ========================================================================= */}
       <section className="relative pt-16 sm:pt-20 bg-[#0B2038] overflow-hidden">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[580px] lg:min-h-[640px]">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[540px] lg:min-h-[580px]">
           
-          {/* Left Column: Full-Height Deep Navy Card flush to left margin */}
-          <div className="lg:col-span-6 xl:col-span-5 bg-[#0B2038] text-white flex flex-col justify-center px-6 sm:px-12 md:px-16 lg:px-12 xl:pl-24 xl:pr-12 py-16 lg:py-24 z-10">
+          {/* Left Column: Dominant Deep Navy Card flush to left margin */}
+          <div className="lg:col-span-7 bg-[#0B2038] text-white flex flex-col justify-center px-4 sm:px-6 lg:pr-12 xl:pr-16 hero-content-pad py-14 lg:py-20 z-10">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[11px] font-bold uppercase tracking-[0.18em] text-[#DF7C36] font-accent mb-6 border border-white/10">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#DF7C36]" />
                 Connecting Shop Floor to Boardroom
               </div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-normal text-white font-serif leading-[1.12] mb-6 tracking-tight">
-                Enabling<br />
-                execution<br />
+              <h1 className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[58px] font-normal text-white font-serif leading-[1.1] mb-6 tracking-tight">
+                Enabling execution<br />
                 <span className="italic font-normal">&amp; impact.</span>
               </h1>
 
-              <p className="text-sm sm:text-base text-slate-300 font-normal leading-relaxed mb-8 max-w-md">
+              <p className="text-sm sm:text-base lg:text-[17px] text-slate-300 font-normal leading-relaxed mb-8 max-w-xl">
                 Talent acquisition, talent development, and growth &amp; transformation under one trusted partner.
               </p>
             </div>
@@ -52,22 +51,22 @@ export default function HomePage() {
             </div>
 
             {/* Subtle Scroll Indicator */}
-            <div className="pt-8 sm:pt-12 hidden lg:flex items-center gap-3 text-slate-400 text-[11px] font-accent tracking-[0.18em] uppercase">
+            <div className="pt-8 sm:pt-10 hidden lg:flex items-center gap-3 text-slate-400 text-[11px] font-accent tracking-[0.18em] uppercase">
               <span className="w-6 h-px bg-white/20" />
               <span>Scroll to explore</span>
               <span className="text-[#DF7C36] animate-bounce">&darr;</span>
             </div>
           </div>
 
-          {/* Right Column: Architectural Bridge - Shop Floor to Boardroom */}
-          <div className="lg:col-span-6 xl:col-span-7 relative min-h-[380px] sm:min-h-[480px] lg:min-h-full">
+          {/* Right Column: Precision Industrial Operations */}
+          <div className="lg:col-span-5 relative min-h-[340px] sm:min-h-[420px] lg:min-h-full">
             <Image
               src="/images/hero/hero-precision-plant.jpg"
               alt="State-of-the-art precision manufacturing plant with automated robotic systems and structural steel architecture"
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 60vw"
-              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 42vw"
+              className="object-cover object-center"
             />
           </div>
 
