@@ -160,7 +160,7 @@ export default function EdgePage() {
 
             {/* Main Heading */}
             <h1
-              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12] mb-6"
+              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12] mb-6 text-balance"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Critical Mandates into{" "}
@@ -174,7 +174,7 @@ export default function EdgePage() {
             </p>
 
             <div>
-              <Button href="/contact" variant="primary" size="lg">
+              <Button href="/contact?service=edge" variant="primary" size="lg">
                 Discuss Your Hiring Mandate
               </Button>
             </div>

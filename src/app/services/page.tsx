@@ -56,66 +56,50 @@ export default function ServicesPage() {
   return (
     <div className="overflow-hidden">
       {/* ───────── 1. Hero ───────── */}
-      <section className="relative bg-cream pt-32 pb-20 md:pb-28">
-        {/* Decorative background elements */}
+      <section className="relative bg-cream pt-28 pb-16 md:pb-20 border-b border-[#E8E2D5] overflow-hidden">
+        {/* Subtle blueprint grid & warm radial accent */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-orange/5" />
-          <div className="absolute -bottom-20 -left-20 w-[400px] h-[400px] rounded-full bg-navy/5" />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-4"
+          <p
+            className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-4 inline-block px-4 py-1.5 rounded-full bg-orange/10 border border-orange/20"
             style={{ fontFamily: "var(--font-accent)" }}
           >
             Service Portfolio
-          </motion.p>
+          </p>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6"
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6 text-balance"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Three Capabilities.{" "}
             <span className="text-orange">One Partner.</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-charcoal-light max-w-3xl mx-auto mb-8"
-          >
+          <p className="text-lg md:text-xl text-charcoal-light max-w-3xl mx-auto mb-8 leading-relaxed">
             We architect workforce capability, activate talent pipelines, and
             accelerate operational performance.
-          </motion.p>
+          </p>
 
           {/* Hero CTAs */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4"
-          >
+          <div className="flex flex-wrap items-center justify-center gap-4">
             <Button href="#capabilities" variant="primary" size="lg">
               Explore Capabilities
             </Button>
             <Button href="/contact" variant="outline" size="lg">
               Calibrate Your Mandate
             </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-12 h-1 w-24 rounded-full bg-orange mx-auto origin-left"
-          />
+          </div>
         </div>
       </section>
 

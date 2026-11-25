@@ -88,64 +88,53 @@ export default function AboutPage() {
   return (
     <>
       {/* ============ HERO SECTION ============ */}
-      <section className="relative bg-cream overflow-hidden">
-        {/* Background decorative elements */}
+      <section className="relative bg-cream border-b border-[#E8E2D5] overflow-hidden">
+        {/* Subtle blueprint grid & warm glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-orange-500/[0.03] rounded-full blur-[100px]" />
-          <div className="absolute bottom-20 left-0 w-[400px] h-[400px] bg-[#0B2038]/[0.02] rounded-full blur-[100px]" />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
+          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 md:pt-40 md:pb-28">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-36 md:pb-20">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-sm font-bold uppercase tracking-[0.25em] text-orange mb-6 inline-block px-4 py-1.5 rounded-full bg-orange/5"
+            <p
+              className="text-sm font-bold uppercase tracking-[0.25em] text-orange mb-6 inline-block px-4 py-1.5 rounded-full bg-orange/10 border border-orange/20"
               style={{ fontFamily: "var(--font-accent)" }}
             >
               About Us
-            </motion.p>
+            </p>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-navy leading-[1.1] mb-6"
+            <h1
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-navy leading-[1.1] mb-6 text-balance"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Bring Industrial Depth to{" "}
               <span className="text-orange">Talent</span> and{" "}
               <span className="text-orange">Capability</span> Decisions
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-xl md:text-2xl text-charcoal-light max-w-2xl mx-auto leading-relaxed"
-            >
-              50 years connecting shop floor realities to boardroom strategy.
-            </motion.p>
+            <p className="text-xl md:text-2xl text-charcoal-light max-w-2xl mx-auto leading-relaxed">
+              50+ years connecting shop floor realities to boardroom strategy.
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-8 flex flex-wrap items-center justify-center gap-4"
-            >
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Button href="/approach" variant="primary" size="lg">
                 Explore Our Approach
               </Button>
               <Button href="/contact" variant="outline" size="lg">
                 Discuss Strategic Mandates
               </Button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
-
-      <div className="section-divider" />
 
       {/* ============ WHO WE ARE ============ */}
       <section id="who-we-are" className="py-24 md:py-32 bg-white scroll-mt-20">

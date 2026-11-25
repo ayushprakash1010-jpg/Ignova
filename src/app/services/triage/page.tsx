@@ -245,7 +245,7 @@ export default function TriagePage() {
             </p>
 
             <h1
-              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12]"
+              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12] text-balance"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Build Role-Specific Competencies &amp; Drive Performance
@@ -257,7 +257,7 @@ export default function TriagePage() {
             </p>
 
             <div className="mt-8">
-              <Button href="/contact" variant="primary" size="lg">
+              <Button href="/contact?service=triage" variant="primary" size="lg">
                 Discuss Your Capability Needs
               </Button>
             </div>

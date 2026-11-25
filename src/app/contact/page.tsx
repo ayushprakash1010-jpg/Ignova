@@ -8,7 +8,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Mail, MapPin, ArrowRight, CheckCircle, Clock, Globe, Phone } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import SectionHeading from "@/components/ui/SectionHeading";
 import { contactSchema, type ContactFormData } from "@/lib/contact-schema";
 
 const serviceOptions = [
@@ -17,6 +16,12 @@ const serviceOptions = [
   "Project Execution — Operational Improvement",
   "General Inquiry",
 ];
+
+const serviceParamMap: Record<string, string> = {
+  triage: "IGNOVA Triage — Capability Development",
+  edge: "IGNOVA Edge — Talent Acquisition",
+  execution: "Project Execution — Operational Improvement",
+};
 
 const capabilities = [
   {
@@ -49,6 +54,7 @@ function ContactForm() {
   const days = searchParams.get("days");
   const oee = searchParams.get("oee");
   const drag = searchParams.get("drag");
+  const serviceParam = searchParams.get("service")?.toLowerCase() ?? null;
 
   const {
     register,
@@ -72,8 +78,10 @@ function ContactForm() {
           `We would like to calibrate targeted countermeasures and operating interventions with IGNOVA.`
       );
       setValue("service", "Project Execution — Operational Improvement");
+    } else if (serviceParam && serviceParamMap[serviceParam]) {
+      setValue("service", serviceParamMap[serviceParam]);
     }
-  }, [roles, days, oee, drag, setValue]);
+  }, [roles, days, oee, drag, serviceParam, setValue]);
 
   const onSubmit = async (data: ContactFormData) => {
     setSubmissionMessage("");
@@ -334,41 +342,71 @@ export default function ContactPage() {
   return (
     <>
       {/* ============ HERO SECTION ============ */}
-      <section className="relative bg-cream overflow-hidden">
-        {/* Background decorative elements */}
+      <section className="relative bg-cream border-b border-[#E8E2D5] overflow-hidden">
+        {/* Subtle blueprint grid & warm glow */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-orange-500/[0.03] rounded-full blur-[100px]" />
-          <div className="absolute bottom-20 left-0 w-[400px] h-[400px] bg-[#0B2038]/[0.02] rounded-full blur-[100px]" />
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
+          <div className="absolute -top-24 right-0 w-[420px] h-[300px] bg-orange-500/[0.04] rounded-full blur-[90px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-10 md:pb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <SectionHeading
-              label="Contact Us"
-              title="Start With Mandate Calibration"
-              subtitle="Capability gaps, critical hiring, or operational improvement — let's align the expertise."
-            />
-          </motion.div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-8 md:pb-10">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <div className="mb-3">
+                <span
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-orange-500/10 text-[#C86A28] border border-[#C86A28]/20"
+                  style={{ fontFamily: "var(--font-accent)" }}
+                >
+                  Contact Us
+                </span>
+              </div>
+              <h1
+                className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-navy leading-[1.12] text-balance"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Start With{" "}
+                <span className="text-orange">Mandate Calibration</span>
+              </h1>
+              <p className="mt-3 text-base sm:text-lg text-charcoal-light leading-relaxed max-w-xl">
+                Capability gaps, critical hiring, or operational improvement —
+                let&apos;s align the expertise.
+              </p>
+            </div>
+
+            {/* Compact Mandate Trust Strip */}
+            <div className="flex flex-wrap sm:flex-nowrap items-center gap-4 sm:gap-5 px-4 py-3 rounded-xl bg-white/80 backdrop-blur-sm border border-[#E8E2D5] shadow-sm text-xs sm:text-[13px] text-slate-600 shrink-0">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-[#C86A28] shrink-0" />
+                <span className="font-semibold text-navy">Gurugram HQ</span>
+              </div>
+              <span className="hidden sm:inline text-slate-300">|</span>
+              <div className="flex items-center gap-2">
+                <Globe className="w-4 h-4 text-[#C86A28] shrink-0" />
+                <span className="font-semibold text-navy">Pan-India Practice</span>
+              </div>
+              <span className="hidden sm:inline text-slate-300">|</span>
+              <div className="flex items-center gap-2">
+                <Clock className="w-4 h-4 text-[#C86A28] shrink-0" />
+                <span className="font-semibold text-navy">Within 1 Business Day</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ============ CONTACT SECTION ============ */}
-      <section className="bg-white pt-6 md:pt-10 pb-20 md:pb-28">
+      <section className="bg-white pt-8 md:pt-12 pb-20 md:pb-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left Side — Contact Form (60%) */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-3"
-            >
+            <motion.div initial={false} className="lg:col-span-3">
               <Suspense
                 fallback={
                   <div className="w-full h-96 bg-cream/50 rounded-2xl border border-cream-dark animate-pulse flex items-center justify-center text-sm text-slate-400">
@@ -381,13 +419,7 @@ export default function ContactPage() {
             </motion.div>
 
             {/* Right Side — Contact Info (40%) */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-2"
-            >
+            <motion.div initial={false} className="lg:col-span-2">
               {/* Contact Details Card */}
               <div className="bg-cream rounded-2xl p-8 mb-8 shadow-sm border border-cream-dark">
                 <h3

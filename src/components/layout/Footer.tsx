@@ -45,7 +45,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/approach" className="text-slate-700 hover:text-[#C86A28] transition-colors">
-                  Our approach
+                  Our Approach
                 </Link>
               </li>
               <li>

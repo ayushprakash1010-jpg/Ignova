@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Target, Users, Cog, BarChart3, CheckCircle2 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
+import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
 import ProcessStep from "@/components/ui/ProcessStep";
 import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
@@ -62,34 +63,52 @@ export default function ApproachPage() {
   return (
     <div>
       {/* ─── 1. Hero ─── */}
-      <section className="bg-cream pt-32 pb-20 md:pb-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-4xl"
-          >
-            <p
-              className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-4"
-              style={{ fontFamily: "var(--font-accent)" }}
-            >
-              OUR APPROACH
-            </p>
+      <section className="relative pt-16 sm:pt-20 bg-cream border-b border-[#E8E2D5] overflow-hidden">
+        {/* Subtle blueprint grid & warm glow beneath integrated photography */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage:
+                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
+              backgroundSize: "60px 60px",
+            }}
+          />
+          <div className="absolute top-16 left-0 w-[420px] h-[420px] rounded-full bg-orange/[0.04] blur-[100px]" />
+        </div>
+
+        <div className="relative flex flex-col lg:block lg:min-h-[540px] xl:min-h-[560px]">
+          <PracticeHeroVisual
+            src="/images/hero/hero-executive-shopfloor.jpg"
+            alt="Plant boardroom overlooking automated manufacturing bays with industrial process blueprints"
+            objectPosition="object-[65%_center]"
+          />
+
+          <div className="relative z-10 w-full lg:w-[49%] xl:w-[48%] px-4 sm:px-6 lg:pr-6 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[540px] xl:min-h-[560px] flex flex-col justify-center">
+            <div>
+              <span
+                className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-orange bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20 mb-5"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                OUR APPROACH
+              </span>
+            </div>
+
             <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6"
+              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12] mb-6 text-balance"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               From Performance Ambition to{" "}
               <span className="text-orange">Accountable Execution</span>
             </h1>
-            <p className="text-lg md:text-xl text-charcoal-light max-w-3xl mb-8">
-              A structured methodology that connects diagnosis to sustained P&L
+
+            <p className="text-lg md:text-xl text-charcoal-light max-w-lg leading-relaxed mb-8">
+              A structured methodology that connects diagnosis to sustained P&amp;L
               results.
             </p>
 
             {/* Hero CTAs */}
-            <div className="flex flex-wrap items-center gap-4 mb-8">
+            <div className="flex flex-wrap items-center gap-4">
               <Button href="#framework" variant="primary" size="lg">
                 Explore 4-Stage Methodology
               </Button>
@@ -97,9 +116,7 @@ export default function ApproachPage() {
                 Calibrate Your Mandate
               </Button>
             </div>
-
-            <div className="h-1 w-16 rounded-full bg-orange" />
-          </motion.div>
+          </div>
         </div>
       </section>
 

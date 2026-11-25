@@ -184,7 +184,7 @@ export default function ProjectExecutionPage() {
 
             {/* Heading */}
             <h1
-              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12] mb-6"
+              className="text-4xl sm:text-[42px] lg:text-[44px] xl:text-[48px] font-bold text-navy leading-[1.12] mb-6 text-balance"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               Connect Workforce Readiness to{" "}
@@ -198,7 +198,7 @@ export default function ProjectExecutionPage() {
             </p>
 
             <div>
-              <Button href="/contact" variant="primary" size="lg">
+              <Button href="/contact?service=execution" variant="primary" size="lg">
                 Discuss Your Operational Challenges
               </Button>
             </div>
