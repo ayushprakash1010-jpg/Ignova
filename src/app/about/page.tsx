@@ -8,9 +8,6 @@ import {
   Monitor,
   Heart,
   ArrowRight,
-  Eye,
-  Crosshair,
-  BarChart3,
   GraduationCap,
   Briefcase,
   CheckCircle2,
@@ -20,27 +17,6 @@ import StatCounter from "@/components/ui/StatCounter";
 import CTABanner from "@/components/ui/CTABanner";
 import Button from "@/components/ui/Button";
 import { STATS } from "@/lib/constants";
-
-const philosophyItems = [
-  {
-    icon: Eye,
-    title: "Vision",
-    description:
-      "See what the business needs before the gap becomes a crisis. We assess talent, capability and operating gaps to establish a performance baseline.",
-  },
-  {
-    icon: Crosshair,
-    title: "Rigor",
-    description:
-      "Apply structured methodology — not templates. Every intervention is customized around the role, the performance gap, and the strategic mandate.",
-  },
-  {
-    icon: BarChart3,
-    title: "Results",
-    description:
-      "Measure what matters. From skill-gap closure to OEE improvement, we track performance domains with agreed baselines and clear ownership.",
-  },
-];
 
 const sectors = [
   {
@@ -244,49 +220,6 @@ export default function AboutPage() {
                 </div>
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* ============ OUR PHILOSOPHY ============ */}
-      <section className="py-24 md:py-32 bg-cream">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="Our Philosophy"
-            title="Vision. Rigor. Results."
-            subtitle="Three principles that define every engagement."
-            centered
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {philosophyItems.map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="bg-white rounded-2xl p-8 border-t-4 border-t-orange border border-cream-dark shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="w-16 h-16 rounded-xl bg-orange/10 flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-orange" />
-                  </div>
-                  <h3
-                    className="text-2xl font-bold text-navy mb-4"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="text-base text-charcoal-light leading-relaxed">
-                    {item.description}
-                  </p>
-                </motion.div>
-              );
-            })}
           </div>
         </div>
       </section>
