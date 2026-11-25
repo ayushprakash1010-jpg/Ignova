@@ -104,7 +104,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── 2. Three Pillars ───────── */}
-      <section id="capabilities" className="py-24 md:py-32 bg-white scroll-mt-20">
+      <section id="capabilities" className="py-16 md:py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Our Capabilities"
@@ -132,7 +132,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── 3. The Excellence Agenda (PPT Slide 05) ───────── */}
-      <section className="py-24 md:py-32 bg-white border-t border-cream-dark">
+      <section className="py-16 md:py-24 bg-[#FAF9F6] border-y border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="The Excellence Agenda"
@@ -245,7 +245,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── 4. Enterprise Value Realization (PPT Slides 03, 04, 16) ───────── */}
-      <section className="py-24 md:py-32 bg-cream">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Enterprise Value Realization"
@@ -265,7 +265,7 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="bg-white rounded-2xl p-7 border border-cream-dark shadow-sm hover:shadow-md hover:border-orange/30 transition-all flex flex-col justify-between"
+                  className="bg-cream rounded-2xl p-7 border border-cream-dark shadow-sm hover:shadow-md hover:border-orange/30 transition-all flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -341,7 +341,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── 5. Selected Client Experience (PPT Slide 17) ───────── */}
-      <section className="py-24 md:py-32 bg-navy text-white">
+      <section className="py-16 md:py-24 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Track Record & Credibility"

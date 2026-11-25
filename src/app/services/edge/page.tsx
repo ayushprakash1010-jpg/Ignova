@@ -183,7 +183,7 @@ export default function EdgePage() {
       </section>
 
       {/* ============ SEARCH OUTCOME ============ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Search Outcome"
@@ -245,7 +245,7 @@ export default function EdgePage() {
       </section>
 
       {/* ============ ADVISORY SCOPE ============ */}
-      <section className="py-20 md:py-28 bg-cream">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Advisory Scope"
@@ -287,7 +287,7 @@ export default function EdgePage() {
       </section>
 
       {/* ============ SCALE HIRING ============ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="IGNOVA Edge"
@@ -329,7 +329,7 @@ export default function EdgePage() {
       </section>
 
       {/* ============ IGNOVA IMPACT: BEYOND PLACEMENT (Slide 11) ============ */}
-      <section className="py-24 md:py-32 bg-white border-b border-slate-200/80">
+      <section className="py-16 md:py-24 bg-cream border-y border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="IGNOVA Impact"
@@ -339,7 +339,7 @@ export default function EdgePage() {
           />
 
           {/* 4 Measured Hiring Outcomes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
               {
                 icon: Clock,
@@ -378,7 +378,7 @@ export default function EdgePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-xs flex flex-col justify-between hover:border-orange/40 hover:-translate-y-1 transition-all"
+                  className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-xs flex flex-col justify-between hover:border-orange/40 hover:-translate-y-1 transition-all"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-5">

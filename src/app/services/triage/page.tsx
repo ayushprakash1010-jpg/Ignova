@@ -266,7 +266,7 @@ export default function TriagePage() {
       </section>
 
       {/* ── 2. What We Deliver ── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="What We Deliver"
@@ -275,7 +275,7 @@ export default function TriagePage() {
             centered
           />
 
-          <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {deliverColumns.map((col, i) => {
               const Icon = col.icon;
               return (
@@ -285,18 +285,18 @@ export default function TriagePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.15 }}
-                  className="bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                  className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-orange/10 flex items-center justify-center mb-6 group-hover:bg-orange/20 transition-colors">
-                    <Icon className="w-7 h-7 text-orange" />
+                  <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-colors">
+                    <Icon className="w-6 h-6 text-orange" />
                   </div>
                   <h3
-                    className="text-xl font-bold text-navy mb-4"
+                    className="text-xl font-bold text-navy mb-3.5"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {col.title}
                   </h3>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5">
                     {col.items.map((item) => (
                       <li
                         key={item}
@@ -318,7 +318,7 @@ export default function TriagePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-16 bg-navy rounded-2xl p-8 md:p-12 text-center"
+            className="mt-10 md:mt-12 bg-navy rounded-2xl p-7 md:p-10 text-center"
           >
             <p
               className="text-xl md:text-2xl text-white font-semibold italic"
@@ -332,7 +332,7 @@ export default function TriagePage() {
       </section>
 
       {/* ── 3. Learning Journey ── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Learning Journey"
@@ -341,7 +341,7 @@ export default function TriagePage() {
           />
 
           {/* Horizontal stepper */}
-          <div className="relative flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-0 mt-4">
+          <div className="relative flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-0 mt-2">
             {/* Scroll-drawn connector line (desktop) */}
             <motion.div
               initial={{ scaleX: 0 }}
@@ -404,11 +404,11 @@ export default function TriagePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-16 max-w-3xl mx-auto text-center"
+            className="mt-10 md:mt-12 max-w-3xl mx-auto text-center"
           >
-            <div className="bg-white rounded-2xl p-8 border border-cream-dark shadow-sm">
+            <div className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-sm">
               <p
-                className="text-sm font-bold uppercase tracking-[0.15em] text-orange mb-3"
+                className="text-sm font-bold uppercase tracking-[0.15em] text-orange mb-2.5"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 The Right Question
@@ -426,7 +426,7 @@ export default function TriagePage() {
       </section>
 
       {/* ── 4. Domain Development (Slide 7) ── */}
-      <section className="bg-white py-20 md:py-28 border-t border-slate-100">
+      <section className="bg-white py-16 md:py-20 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Domain Development"
@@ -435,7 +435,7 @@ export default function TriagePage() {
             centered
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {domainCards.map((card, i) => {
               const Icon = card.icon;
               return (
@@ -445,11 +445,11 @@ export default function TriagePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
+                  className="relative bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
-                      <Icon className="w-6 h-6 text-orange group-hover:text-white transition-colors" />
+                  <div className="flex items-center gap-3.5 mb-3">
+                    <div className="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
+                      <Icon className="w-5 h-5 text-orange group-hover:text-white transition-colors" />
                     </div>
                     <h3
                       className="text-xl font-bold text-navy"
@@ -458,20 +458,20 @@ export default function TriagePage() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-[15px] sm:text-base text-charcoal-light">{card.desc}</p>
+                  <p className="text-[15px] text-charcoal-light leading-relaxed">{card.desc}</p>
                 </motion.div>
               );
             })}
           </div>
 
           {/* Domain outcome + design principles */}
-          <div className="mt-16 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-navy rounded-2xl p-8 text-center md:text-left"
+              className="bg-navy rounded-2xl p-6 sm:p-7 text-center md:text-left"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
@@ -492,7 +492,7 @@ export default function TriagePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
@@ -510,7 +510,7 @@ export default function TriagePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
@@ -527,7 +527,7 @@ export default function TriagePage() {
       </section>
 
       {/* ── 5. Leadership Development ── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Leadership Development"
@@ -535,7 +535,7 @@ export default function TriagePage() {
             centered
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {leadershipCards.map((card, i) => {
               const Icon = card.icon;
               return (
@@ -545,11 +545,11 @@ export default function TriagePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative bg-white rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
+                  className="relative bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
-                      <Icon className="w-6 h-6 text-orange group-hover:text-white transition-colors" />
+                  <div className="flex items-center gap-3.5 mb-3">
+                    <div className="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
+                      <Icon className="w-5 h-5 text-orange group-hover:text-white transition-colors" />
                     </div>
                     <h3
                       className="text-xl font-bold text-navy"
@@ -558,20 +558,20 @@ export default function TriagePage() {
                       {card.title}
                     </h3>
                   </div>
-                  <p className="text-[15px] sm:text-base text-charcoal-light">{card.desc}</p>
+                  <p className="text-[15px] text-charcoal-light leading-relaxed">{card.desc}</p>
                 </motion.div>
               );
             })}
           </div>
 
           {/* Leadership outcome + notes */}
-          <div className="mt-16 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-navy rounded-2xl p-8 text-center md:text-left"
+              className="bg-navy rounded-2xl p-6 sm:p-7 text-center md:text-left"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
@@ -592,7 +592,7 @@ export default function TriagePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-2xl p-8 border border-cream-dark"
+              className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
@@ -611,7 +611,7 @@ export default function TriagePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-2xl p-8 border border-cream-dark"
+              className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
@@ -629,7 +629,7 @@ export default function TriagePage() {
       </section>
 
       {/* ── 6. Technical Development (Slide 9) ── */}
-      <section className="bg-white py-20 md:py-28 border-t border-slate-100">
+      <section className="bg-white py-16 md:py-20 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Technical Development"
@@ -638,7 +638,7 @@ export default function TriagePage() {
             centered
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {technicalMethods.map((method, i) => {
               const Icon = method.icon;
               return (
@@ -648,12 +648,12 @@ export default function TriagePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
+                  className="relative bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between"
                 >
                   <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
-                        <Icon className="w-6 h-6 text-orange group-hover:text-white transition-colors" />
+                    <div className="flex items-center justify-between mb-3.5">
+                      <div className="w-11 h-11 rounded-xl bg-orange/10 flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors">
+                        <Icon className="w-5 h-5 text-orange group-hover:text-white transition-colors" />
                       </div>
                       <span className="text-xs font-bold uppercase tracking-wider text-orange bg-orange/10 px-3 py-1 rounded-full font-accent">
                         {method.tag}
@@ -675,13 +675,13 @@ export default function TriagePage() {
           </div>
 
           {/* Technical outcome + pedagogical pillars */}
-          <div className="mt-16 grid md:grid-cols-3 gap-6">
+          <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-navy rounded-2xl p-8 text-center md:text-left"
+              className="bg-navy rounded-2xl p-6 sm:p-7 text-center md:text-left"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
@@ -702,7 +702,7 @@ export default function TriagePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
@@ -720,13 +720,13 @@ export default function TriagePage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-cream rounded-2xl p-8 border border-cream-dark"
+              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
             >
               <p
                 className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
-                Learning Through Real Projects
+                Applied Real Projects
               </p>
               <p className="text-charcoal-light text-[15px] leading-relaxed">
                 Combine hands-on exercises &amp; workplace improvement projects to turn technical methods into repeatable execution.
@@ -737,7 +737,7 @@ export default function TriagePage() {
       </section>
 
       {/* ── 7. IGNOVA Triage Advantage & Learning Impact Scorecard (Slide 6) ── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-16 md:py-20 border-y border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="IGNOVA Triage Advantage"
@@ -752,7 +752,7 @@ export default function TriagePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden mt-12"
+            className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden mt-2"
           >
             <div className="bg-navy px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10">
               <div>

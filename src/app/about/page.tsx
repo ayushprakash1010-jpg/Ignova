@@ -102,7 +102,7 @@ export default function AboutPage() {
           <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-36 md:pb-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-36 md:pb-24">
           <div className="max-w-4xl mx-auto text-center">
             <p
               className="text-sm font-bold uppercase tracking-[0.25em] text-orange mb-6 inline-block px-4 py-1.5 rounded-full bg-orange/10 border border-orange/20"
@@ -137,7 +137,7 @@ export default function AboutPage() {
       </section>
 
       {/* ============ WHO WE ARE ============ */}
-      <section id="who-we-are" className="py-24 md:py-32 bg-white scroll-mt-20">
+      <section id="who-we-are" className="py-16 md:py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Who We Are"
@@ -207,7 +207,7 @@ export default function AboutPage() {
       </section>
 
       {/* ============ CREDIBILITY STATS ============ */}
-      <section className="py-24 md:py-32 bg-navy relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-navy relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-10 right-10 w-52 h-52 border border-white/[0.04] rounded-full" />
           <div className="absolute bottom-10 left-10 w-72 h-72 border border-white/[0.04] rounded-full" />
@@ -234,7 +234,7 @@ export default function AboutPage() {
       </section>
 
       {/* ============ SECTORS SERVED ============ */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Sectors We Serve"
@@ -276,10 +276,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <div className="section-divider" />
-
       {/* ============ HOW WE WORK ============ */}
-      <section className="py-24 md:py-32 bg-cream">
+      <section className="py-16 md:py-24 bg-cream border-y border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="How We Work"

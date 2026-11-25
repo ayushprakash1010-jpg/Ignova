@@ -21,7 +21,7 @@ export default function CTABanner({
   variant = "navy",
 }: CTABannerProps) {
   return (
-    <section className="py-16 md:py-24 bg-[#FDFCFB]">
+    <section className="py-12 md:py-16 bg-[#FDFCFB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className={`relative rounded-2xl p-8 sm:p-12 lg:p-14 overflow-hidden shadow-xl ${

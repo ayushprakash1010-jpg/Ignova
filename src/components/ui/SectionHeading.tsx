@@ -14,7 +14,7 @@ export default function SectionHeading({
   light = false,
 }: SectionHeadingProps) {
   return (
-    <div className={`mb-12 md:mb-16 ${centered ? "text-center max-w-3xl mx-auto" : "max-w-3xl"}`}>
+    <div className={`mb-10 md:mb-12 ${centered ? "text-center max-w-3xl mx-auto" : "max-w-3xl"}`}>
       {label && (
         <div className="mb-3.5">
           <span

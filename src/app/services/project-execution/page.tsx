@@ -207,7 +207,7 @@ export default function ProjectExecutionPage() {
       </section>
 
       {/* ============ OPERATIONAL CAPABILITIES ============ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Operational Capability"
@@ -261,7 +261,7 @@ export default function ProjectExecutionPage() {
       </section>
 
       {/* ============ BUSINESS AMBITION SCOPE ============ */}
-      <section className="py-20 md:py-28 bg-cream">
+      <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Project Execution"
@@ -315,7 +315,7 @@ export default function ProjectExecutionPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-12 text-center"
+            className="mt-10 text-center"
           >
             <p
               className="inline-block px-6 py-3 bg-navy/5 text-navy text-[15px] font-medium rounded-full border border-navy/10"
@@ -329,7 +329,7 @@ export default function ProjectExecutionPage() {
       </section>
 
       {/* ============ METHODOLOGY ============ */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Project Execution Methodology"
@@ -357,7 +357,7 @@ export default function ProjectExecutionPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 rounded-2xl bg-navy p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6"
+            className="mt-10 rounded-2xl bg-navy p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6"
           >
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-1">
@@ -407,7 +407,7 @@ export default function ProjectExecutionPage() {
       </section>
 
       {/* ============ ON-SITE EXECUTION ============ */}
-      <section className="py-20 md:py-28 bg-cream">
+      <section className="py-16 md:py-24 bg-cream border-t border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="On-Site Execution"

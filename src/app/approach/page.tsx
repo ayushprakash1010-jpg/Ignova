@@ -121,7 +121,7 @@ export default function ApproachPage() {
       </section>
 
       {/* ─── 2. IGNOVA Factor (PPT Slide 04) ─── */}
-      <section id="framework" className="bg-white py-20 md:py-28 scroll-mt-20">
+      <section id="framework" className="bg-white py-16 md:py-24 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="THE IGNOVA FACTOR"
@@ -198,7 +198,7 @@ export default function ApproachPage() {
       </section>
 
       {/* ─── 4. Performance Measurement & Governance (PPT Slide 16) ─── */}
-      <section className="bg-cream py-20 md:py-28">
+      <section className="bg-cream py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="PERFORMANCE MEASUREMENT"
@@ -310,32 +310,14 @@ export default function ApproachPage() {
       </section>
 
       {/* ─── 5. Starting Point (PPT Slide 05) ─── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white py-16 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-14"
-          >
-            <p
-              className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-4"
-              style={{ fontFamily: "var(--font-accent)" }}
-            >
-              WHERE TO START
-            </p>
-            <h2
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-navy leading-tight mb-4"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Choose Your Starting Point
-            </h2>
-            <p className="text-lg text-charcoal-light max-w-2xl mx-auto">
-              Align the mandate, capability gaps and measures of success.
-            </p>
-            <div className="mt-6 h-1 w-16 rounded-full bg-orange mx-auto" />
-          </motion.div>
+          <SectionHeading
+            label="WHERE TO START"
+            title="Choose Your Starting Point"
+            subtitle="Align the mandate, capability gaps and measures of success."
+            centered
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {STARTING_PATHS.map((path, index) => {
