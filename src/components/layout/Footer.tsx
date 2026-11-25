@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 
 export default function Footer() {
@@ -14,42 +14,42 @@ export default function Footer() {
           {/* Column 1: Brand & Mandate */}
           <div className="lg:col-span-5 pr-0 lg:pr-8">
             <Link href="/" className="inline-block mb-4" aria-label="IGNOVA Homepage">
-              <div className="relative h-9 sm:h-10 w-32 sm:w-36">
+              <div className="relative h-10 sm:h-11 w-36 sm:w-40">
                 <Image
                   src="/images/ignova-logo.png"
                   alt="IGNOVA Logo"
                   fill
-                  sizes="144px"
+                  sizes="160px"
                   className="object-contain object-left"
                 />
               </div>
             </Link>
-            <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed max-w-sm">
+            <p className="text-base sm:text-[17px] font-medium text-[#0B2038]/90 leading-relaxed max-w-md">
               Talent acquisition &middot; Talent development &middot; Growth &amp; transformation
             </p>
-            <p className="text-sm text-slate-500 mt-2">
+            <p className="text-[15px] sm:text-base text-slate-600 leading-relaxed mt-2.5 max-w-md">
               Connecting people to business execution from shop floor to boardroom.
             </p>
           </div>
 
           {/* Column 2: Firm */}
           <div className="lg:col-span-2">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+            <h4 className="text-[15px] sm:text-base font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
               Firm
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-[15px] sm:text-base">
               <li>
-                <Link href="/about" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                <Link href="/about" className="text-slate-700 hover:text-[#C86A28] transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/approach" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                <Link href="/approach" className="text-slate-700 hover:text-[#C86A28] transition-colors">
                   Our approach
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                <Link href="/contact" className="text-slate-700 hover:text-[#C86A28] transition-colors">
                   Contact
                 </Link>
               </li>
@@ -58,22 +58,22 @@ export default function Footer() {
 
           {/* Column 3: Services */}
           <div className="lg:col-span-2">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+            <h4 className="text-[15px] sm:text-base font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
               Services
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-[15px] sm:text-base">
               <li>
-                <Link href="/services/triage" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                <Link href="/services/triage" className="text-slate-700 hover:text-[#C86A28] transition-colors">
                   IGNOVA Triage
                 </Link>
               </li>
               <li>
-                <Link href="/services/edge" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                <Link href="/services/edge" className="text-slate-700 hover:text-[#C86A28] transition-colors">
                   IGNOVA Edge
                 </Link>
               </li>
               <li>
-                <Link href="/services/project-execution" className="text-slate-600 hover:text-[#C86A28] transition-colors">
+                <Link href="/services/project-execution" className="text-slate-700 hover:text-[#C86A28] transition-colors">
                   Project Execution
                 </Link>
               </li>
@@ -82,31 +82,31 @@ export default function Footer() {
 
           {/* Column 4: Contact & Direct Presence */}
           <div className="lg:col-span-3">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
+            <h4 className="text-[15px] sm:text-base font-bold uppercase tracking-wider text-[#0B2038] mb-4 font-accent">
               Connect
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-3 text-[15px] sm:text-base">
               <li>
                 <a
                   href={`mailto:${COMPANY.email}`}
-                  className="inline-flex items-center gap-2 text-slate-600 hover:text-[#C86A28] transition-colors"
+                  className="inline-flex items-center gap-2.5 text-slate-700 hover:text-[#C86A28] transition-colors"
                 >
-                  <Mail className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                  <Mail className="w-[18px] h-[18px] text-[#C86A28] flex-shrink-0" />
                   <span className="break-all">{COMPANY.email}</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`tel:${COMPANY.phoneRaw}`}
-                  className="inline-flex items-center gap-2 text-slate-600 hover:text-[#C86A28] transition-colors"
+                  className="inline-flex items-center gap-2.5 text-slate-700 hover:text-[#C86A28] transition-colors"
                 >
-                  <Phone className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                  <Phone className="w-[18px] h-[18px] text-[#C86A28] flex-shrink-0" />
                   <span>{COMPANY.phone}</span>
                 </a>
               </li>
               <li>
-                <div className="inline-flex items-start gap-2 text-slate-500 text-sm">
-                  <MapPin className="w-4 h-4 text-[#C86A28] flex-shrink-0 mt-0.5" />
+                <div className="inline-flex items-start gap-2.5 text-slate-700 text-[15px] sm:text-base">
+                  <MapPin className="w-[18px] h-[18px] text-[#C86A28] flex-shrink-0 mt-1" />
                   <span>{COMPANY.address}</span>
                 </div>
               </li>
@@ -116,9 +116,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-8 border-t border-[#E8E2D5] flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div className="pt-8 border-t border-[#E8E2D5] flex flex-col sm:flex-row items-center justify-between gap-4 text-[15px] text-slate-600">
           <p>&copy; {currentYear} IGNOVA Consulting &amp; Academy. All rights reserved.</p>
-          <p className="font-accent tracking-wide text-slate-500">
+          <p className="font-accent tracking-wide text-slate-600">
             Enabling execution &amp; impact.
           </p>
         </div>
