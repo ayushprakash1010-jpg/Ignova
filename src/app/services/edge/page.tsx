@@ -135,7 +135,7 @@ export default function EdgePage() {
         <div className="relative flex flex-col lg:block lg:min-h-[540px] xl:min-h-[560px]">
           <PracticeHeroVisual
             src="/images/services/edge-boardroom.jpg"
-            alt="Executive boardroom suite overlooking city skyline representing leadership advisory and critical hiring decisions"
+            alt="Executive boardroom suite overlooking a contemporary corporate glass campus representing leadership advisory and critical hiring decisions"
             objectPosition="object-[65%_center]"
           />
 
