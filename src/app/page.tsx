@@ -58,7 +58,7 @@ export default function HomePage() {
           </div>
 
           {/* Right Column: Balanced 50% Precision Industrial Operations */}
-          <div className="lg:col-span-6 relative min-h-[340px] sm:min-h-[420px] lg:min-h-full">
+          <div className="lg:col-span-6 relative min-h-[340px] sm:min-h-[420px] lg:min-h-full overflow-hidden bg-[#0B2038]">
             <Image
               src="/images/hero/hero-precision-plant.jpg"
               alt="State-of-the-art precision manufacturing plant with automated robotic systems and structural steel architecture"
@@ -66,6 +66,16 @@ export default function HomePage() {
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover object-center"
+            />
+            {/* Subtle desktop seam feather softening the split into deep navy */}
+            <div
+              aria-hidden="true"
+              className="hidden lg:block absolute inset-y-0 left-0 w-28 xl:w-36 bg-gradient-to-r from-[#0B2038] via-[#0B2038]/65 via-40% to-transparent pointer-events-none"
+            />
+            {/* Subtle mobile vertical seam feather */}
+            <div
+              aria-hidden="true"
+              className="lg:hidden absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#0B2038] via-[#0B2038]/55 to-transparent pointer-events-none"
             />
           </div>
 
