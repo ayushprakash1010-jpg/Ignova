@@ -41,9 +41,9 @@ export default function PracticeHeroVisual({
           className={`object-cover ${objectPosition}`}
         />
 
-        {/* Subtle editorial caption gradient */}
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#0B2038]/90 via-[#0B2038]/45 to-transparent pt-14 pb-5 px-6">
-          <span className="block text-xs font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent mb-1">
+        {/* High-contrast editorial caption scrim */}
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#071526]/95 via-[#0B2038]/85 via-55% to-transparent pt-20 pb-5 px-6">
+          <span className="block text-xs font-bold uppercase tracking-[0.2em] text-[#F59E56] font-accent mb-1">
             {eyebrow}
           </span>
           <p className="text-sm sm:text-[15px] font-medium text-white leading-snug">
