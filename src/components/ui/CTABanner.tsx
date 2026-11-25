@@ -21,45 +21,72 @@ export default function CTABanner({
   variant = "navy",
 }: CTABannerProps) {
   return (
-    <section className="py-20 md:py-28 bg-[#FDFCFB]">
+    <section className="py-16 md:py-24 bg-[#FDFCFB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`relative rounded-3xl p-10 sm:p-14 md:p-16 overflow-hidden shadow-2xl ${
-            variant === "orange" ? "bg-[#C86A28]" : "bg-[#0B2038]"
+          className={`relative rounded-2xl p-8 sm:p-12 lg:p-14 overflow-hidden shadow-xl ${
+            variant === "orange"
+              ? "bg-[#C86A28]"
+              : "bg-[#0B2038] border border-white/10"
           }`}
         >
-          {/* Subtle ambient light */}
+          {/* Top copper hairline signature accent */}
           <div
-            className={`absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl pointer-events-none ${
-              variant === "orange" ? "bg-white/10" : "bg-[#C86A28]/15"
-            }`}
+            aria-hidden="true"
+            className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#DF7C36] via-[#F59E56] to-[#DF7C36]"
           />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-orange-200 border border-white/15 text-xs sm:text-[13px] font-bold uppercase tracking-wider mb-6 font-accent">
-              <span className="w-2 h-2 rounded-full bg-[#DF7C36]" />
-              Executive Engagement
+          {/* Subtle architectural blueprint texture */}
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 opacity-[0.04] pointer-events-none"
+            style={{
+              backgroundImage:
+                "linear-gradient(#FFFFFF 1px, transparent 1px), linear-gradient(90deg, #FFFFFF 1px, transparent 1px)",
+              backgroundSize: "56px 56px",
+            }}
+          />
+
+          {/* Subtle warm ambient corner */}
+          <div
+            aria-hidden="true"
+            className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#DF7C36]/10 blur-3xl pointer-events-none"
+          />
+
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 lg:gap-12">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.08] text-[#F59E56] border border-white/15 text-xs sm:text-[13px] font-bold uppercase tracking-[0.16em] mb-5 font-accent">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DF7C36]" />
+                Executive Engagement
+              </div>
+
+              <h2
+                className="text-3xl sm:text-4xl lg:text-[40px] font-bold leading-[1.15] mb-4 tracking-tight"
+                style={{
+                  fontFamily: "var(--font-heading)",
+                  color: "#FFFFFF",
+                }}
+              >
+                {title}
+              </h2>
+
+              {subtitle && (
+                <p
+                  className={`text-base sm:text-lg leading-relaxed max-w-xl ${
+                    variant === "orange" ? "text-white/95" : "text-slate-300"
+                  }`}
+                >
+                  {subtitle}
+                </p>
+              )}
             </div>
 
-            <h2
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight mb-5 tracking-tight"
-              style={{
-                fontFamily: "var(--font-heading)",
-                color: "#FFFFFF",
-              }}
-            >
-              {title}
-            </h2>
-
-            <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
-              {subtitle}
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch sm:items-center gap-3.5 lg:flex-shrink-0">
               <Link
                 href={buttonHref}
-                className={variant === "orange" ? "btn-white" : "btn-primary"}
+                className={`${
+                  variant === "orange" ? "btn-white" : "btn-primary"
+                } whitespace-nowrap`}
               >
                 {buttonText}
                 <ArrowRight className="w-4 h-4" />
@@ -67,7 +94,7 @@ export default function CTABanner({
               {secondaryButtonText && secondaryButtonHref && (
                 <Link
                   href={secondaryButtonHref}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[15px] font-semibold rounded-xl text-white/90 hover:text-white border border-white/20 hover:bg-white/10 transition-all font-accent"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-[15px] font-semibold rounded-xl text-white hover:text-white border border-white/25 hover:border-white/45 hover:bg-white/[0.08] transition-all font-accent whitespace-nowrap"
                 >
                   {secondaryButtonText}
                 </Link>

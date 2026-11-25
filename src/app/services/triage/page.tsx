@@ -798,7 +798,7 @@ export default function TriagePage() {
 
       {/* ── 8. CTA Banner ── */}
       <CTABanner
-        variant="orange"
+        variant="navy"
         title="Ready to Build Workforce Capability?"
         subtitle="Start with a role-based assessment and design targeted interventions."
         buttonText="Discuss Your Capability Needs"

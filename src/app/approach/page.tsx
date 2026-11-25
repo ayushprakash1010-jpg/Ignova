@@ -128,14 +128,30 @@ export default function ApproachPage() {
       </section>
 
       {/* ─── 3. Performance Ambition Banner (PPT Slide 04) ─── */}
-      <section className="bg-gradient-to-r from-orange to-orange-dark py-14 md:py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p
-            className="text-sm font-bold uppercase tracking-[0.25em] text-white/80 mb-6 font-accent"
-          >
-            Performance Ambition
-          </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <section className="relative bg-[#0B2038] py-16 md:py-20 border-y border-white/10 overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{
+            backgroundImage:
+              "linear-gradient(#FFFFFF 1px, transparent 1px), linear-gradient(90deg, #FFFFFF 1px, transparent 1px)",
+            backgroundSize: "56px 56px",
+          }}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[#F59E56] mb-2 font-accent">
+              Performance Ambition
+            </p>
+            <h2
+              className="text-2xl sm:text-3xl font-bold text-white tracking-tight"
+              style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
+            >
+              Four Measurable Outcomes Across Every Mandate
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
             {AMBITION_PHRASES.map((phrase, idx) => (
               <motion.div
                 key={phrase}
@@ -143,10 +159,17 @@ export default function ApproachPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="bg-white/10 hover:bg-white/15 border border-white/20 rounded-xl px-5 py-4 transition-colors"
+                className="relative bg-white/[0.06] hover:bg-white/[0.1] border border-white/15 rounded-xl px-6 py-6 transition-all text-left overflow-hidden"
               >
+                <div
+                  aria-hidden="true"
+                  className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#DF7C36] to-[#F59E56]"
+                />
+                <span className="block text-xs font-bold tracking-[0.2em] text-[#F59E56] font-accent mb-2">
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
                 <p
-                  className="text-base sm:text-lg md:text-xl font-bold text-white tracking-tight"
+                  className="text-lg sm:text-xl font-bold text-white tracking-tight"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {phrase}
@@ -363,7 +386,7 @@ export default function ApproachPage() {
 
       {/* ─── 6. CTA Banner ─── */}
       <CTABanner
-        variant="orange"
+        variant="navy"
         title="Ready to Assess Your Performance Gaps?"
         subtitle="Start with a diagnostic baseline and build accountable execution across your plant and executive teams."
         buttonText="Schedule a Conversation"

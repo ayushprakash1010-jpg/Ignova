@@ -504,7 +504,7 @@ export default function EdgePage() {
 
       {/* ============ CTA BANNER ============ */}
       <CTABanner
-        variant="orange"
+        variant="navy"
         title="Need to Fill Business-Critical Roles?"
         subtitle="From executive search to volume hiring — we deliver credible shortlists."
         buttonText="Discuss Your Hiring Mandate"
