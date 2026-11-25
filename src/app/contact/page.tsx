@@ -329,6 +329,7 @@ function ContactForm() {
             variant="primary"
             size="lg"
             disabled={isSubmitting}
+            className="w-full sm:w-auto"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </Button>

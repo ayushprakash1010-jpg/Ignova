@@ -55,7 +55,7 @@ export default function ServiceCard({
             </h3>
 
             {/* Description / Mandate */}
-            <p className="text-sm sm:text-base text-slate-600 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-600 mb-6 leading-relaxed md:min-h-[4.75rem]">
               {description}
             </p>
 

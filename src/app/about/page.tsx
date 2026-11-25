@@ -68,16 +68,19 @@ const capabilityPillars = [
 
 const howWeWork = [
   {
+    tag: "Capability Mandate",
     trigger: "Capability gaps",
     solution: "IGNOVA TRIAGE",
     href: "/services/triage",
   },
   {
+    tag: "Talent Mandate",
     trigger: "Critical hiring",
     solution: "IGNOVA EDGE",
     href: "/services/edge",
   },
   {
+    tag: "Operational Mandate",
     trigger: "Operational improvement",
     solution: "PROJECT EXECUTION",
     href: "/services/project-execution",
@@ -302,7 +305,7 @@ export default function AboutPage() {
                   className="text-sm font-bold uppercase tracking-wider text-orange mb-2"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
-                  Strategic Mandate
+                  {item.tag}
                 </p>
                 <h3
                   className="text-2xl font-bold text-navy mb-6"

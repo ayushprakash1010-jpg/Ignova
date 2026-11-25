@@ -202,21 +202,25 @@ export default function EdgePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="relative bg-cream rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group text-center"
+                  className="relative bg-cream rounded-2xl p-7 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
                 >
-                  {/* Number badge */}
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-orange text-white text-lg font-bold mb-5">
-                    {step.number}
-                  </div>
+                  {/* Top copper gradient accent */}
+                  <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:to-orange transition-colors duration-300" />
 
-                  {/* Icon */}
-                  <div className="flex justify-center mb-4">
-                    <Icon className="w-6 h-6 text-navy/40 group-hover:text-orange transition-colors duration-300" />
+                  <div className="flex items-center justify-between mb-5">
+                    <span
+                      className="text-xs font-bold uppercase tracking-[0.2em] text-orange font-accent"
+                    >
+                      {step.number}
+                    </span>
+                    <div className="w-10 h-10 rounded-xl bg-orange/10 text-orange flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-5 h-5" />
+                    </div>
                   </div>
 
                   {/* Title */}
                   <h3
-                    className="text-xl font-bold text-navy mb-3"
+                    className="text-xl font-bold text-navy mb-2.5"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {step.title}
@@ -295,7 +299,7 @@ export default function EdgePage() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
             {scaleFeatures.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -305,10 +309,10 @@ export default function EdgePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-cream rounded-2xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
+                  className="w-full md:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1.35rem)] bg-cream rounded-2xl p-8 border border-cream-dark shadow-sm hover:shadow-lg hover:border-orange/30 hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white mb-5 group-hover:bg-orange transition-colors duration-300">
-                    <Icon className="w-5 h-5" />
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-orange/10 text-orange mb-5 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                    <Icon className="w-6 h-6" />
                   </div>
 
                   <h3

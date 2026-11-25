@@ -111,7 +111,7 @@ const METHODOLOGY_STAGES = [
     number: "04",
     title: "Validate & sustain",
     description: "Track KPIs; transfer ownership",
-    output: "KPI validation + standard controls",
+    output: "KPIs & standard controls",
   },
 ];
 
@@ -282,7 +282,7 @@ export default function ProjectExecutionPage() {
                   transition={{ duration: 0.5, delay: index * 0.15 }}
                   className="bg-white rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
                 >
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-navy text-white mb-6 group-hover:bg-orange transition-colors duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-orange/10 text-orange mb-5 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
                     <Icon className="w-6 h-6" />
                   </div>
 
@@ -416,7 +416,7 @@ export default function ProjectExecutionPage() {
           />
 
           {/* Three Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {ON_SITE_STEPS.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -426,27 +426,27 @@ export default function ProjectExecutionPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="relative bg-white rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group text-center"
+                  className="relative bg-white rounded-2xl p-7 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
                 >
-                  {/* Step number */}
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-orange text-white text-lg font-bold mb-6">
-                    {step.number}
-                  </div>
+                  <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:to-orange transition-colors duration-300" />
 
-                  <div className="flex justify-center mb-4">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-cream text-navy group-hover:bg-orange/10 group-hover:text-orange transition-colors duration-300">
-                      <Icon className="w-8 h-8" />
+                  <div className="flex items-center justify-between mb-5">
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange font-accent">
+                      {step.number}
+                    </span>
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-orange/10 text-orange group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-5 h-5" />
                     </div>
                   </div>
 
                   <h3
-                    className="text-xl font-bold text-navy mb-3"
+                    className="text-xl font-bold text-navy mb-2.5"
                     style={{ fontFamily: "var(--font-heading)" }}
                   >
                     {step.title}
                   </h3>
 
-                  <p className="text-[15px] sm:text-base text-charcoal-light">{step.description}</p>
+                  <p className="text-[15px] sm:text-base text-charcoal-light leading-relaxed">{step.description}</p>
                 </motion.div>
               );
             })}

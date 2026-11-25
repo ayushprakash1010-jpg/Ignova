@@ -354,8 +354,8 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Industrial Consulting */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
               className="bg-white/5 border border-white/10 rounded-2xl p-8"
@@ -370,8 +370,8 @@ export default function ServicesPage() {
                 {CLIENTS.industrial.map((client, index) => (
                   <motion.li
                     key={client}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.08 }}
                     className="flex items-center gap-3 text-white/90"
@@ -385,10 +385,10 @@ export default function ServicesPage() {
 
             {/* Recruitment Experience */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-white/5 border border-white/10 rounded-2xl p-8"
             >
               <p
