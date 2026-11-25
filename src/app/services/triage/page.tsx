@@ -47,7 +47,7 @@ const deliverColumns = [
     icon: GraduationCap,
     title: "Leadership Effectiveness",
     items: [
-      "High-Stakes Conversations & Negotiation",
+      "High-Stakes Conversations & Negotiation Workshops",
       "Decision-making & Team Collaboration",
     ],
   },
@@ -72,7 +72,7 @@ const domainCards = [
   {
     icon: Factory,
     title: "Understand Operations",
-    desc: "Processes, roles & operating mandates",
+    desc: "Processes, roles & business priorities",
   },
   {
     icon: ShieldCheck,
@@ -175,27 +175,24 @@ const technicalMethods = [
 
 const scorecardMetrics = [
   {
-    domain: "Domain Development",
-    metric: "Kaizen Implementation & Sustainability Rate",
-    detail: "Observable adoption of shop-floor improvements sustained over 90-day operating cycles.",
+    domain: "Domain",
+    metric: "Kaizen Implementation & Sustainability Rate · Workplace Application Rate",
+    detail:
+      "Observable adoption of shop-floor improvements and active participant application of learning to live operational challenges over 90-day cycles.",
     category: "Shop Floor",
   },
   {
-    domain: "Workplace Application",
-    metric: "Workplace Application Rate (%)",
-    detail: "Percentage of participants actively applying workshop learning to live operational challenges.",
-    category: "Execution",
-  },
-  {
     domain: "Leadership",
-    metric: "Team Production Target / Goal Attainment",
-    detail: "Measurable progress against shift production schedules and cross-functional performance goals.",
+    metric: "Team Production Target Achievement · Team Goal Attainment",
+    detail:
+      "Measurable progress against shift production schedules and cross-functional team performance goals.",
     category: "Operational",
   },
   {
-    domain: "Technical Excellence",
-    metric: "First Pass Yield (FPY %) / Quality & Productivity Gain (%)",
-    detail: "Verified reduction in scrap and rework alongside tangible line productivity improvements.",
+    domain: "Technical",
+    metric: "First Pass Yield (FPY %) · Project Quality & Productivity Gain (%)",
+    detail:
+      "Verified reduction in scrap and rework alongside tangible line productivity improvements.",
     category: "P&L Impact",
   },
 ];

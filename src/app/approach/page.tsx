@@ -13,10 +13,10 @@ import {
 } from "@/lib/constants";
 
 const AMBITION_PHRASES = [
-  "Close Talent Gaps",
-  "Build Critical Capability",
-  "Accelerate R&D",
-  "Improve P&L",
+  "Unlock capacity",
+  "Improve yield",
+  "Accelerate delivery",
+  "Strengthen margins",
 ];
 
 const GOVERNANCE_STEPS = [
@@ -108,8 +108,8 @@ export default function ApproachPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="THE IGNOVA FACTOR"
-            title="Four Stages from Diagnostic to Measurable Impact"
-            subtitle="How we structure capability, resources, and performance controls to deliver measurable results."
+            title="Assess Performance Gaps. Accountable Execution."
+            subtitle="From diagnostic baseline to standard performance controls — diagnose, prioritize, execute, and sustain."
             centered
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -266,7 +266,7 @@ export default function ProjectExecutionPage() {
           <SectionHeading
             label="Project Execution"
             title="Business Ambition Sets the Agenda"
-            subtitle="Action across market opportunity, the operating model and the people needed to deliver."
+            subtitle="Drive growth through market opportunity, operating models and the capabilities needed to deliver."
             centered
           />
 

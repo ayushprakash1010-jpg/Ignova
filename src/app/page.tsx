@@ -556,7 +556,7 @@ export default function HomePage() {
               PERFORMANCE AMBITION
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-[#0B2038] tracking-tight max-w-4xl leading-snug">
-              Close talent gaps, build capability, accelerate R&amp;D and improve P&amp;L
+              Unlock capacity, improve yield, accelerate delivery, and strengthen margins
             </h2>
           </div>
 
@@ -574,10 +574,10 @@ export default function HomePage() {
                 Diagnose
               </h3>
               <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Assess talent gaps, competency needs and operating constraints. Establish the performance baseline.
+                Assess talent, capability and operating gaps to establish a clear performance baseline.
               </p>
               <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: Diagnostic Baseline
+                Output: Performance Baseline
               </span>
             </div>
 
@@ -593,10 +593,10 @@ export default function HomePage() {
                 Prioritize
               </h3>
               <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Distinguish essential roles and capabilities from those that can wait. Agree focused priorities.
+                Align objectives and critical resources around high-impact operational mandates.
               </p>
               <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: Improvement Roadmap
+                Output: Focused Priorities
               </span>
             </div>
 
@@ -612,10 +612,10 @@ export default function HomePage() {
                 Execute
               </h3>
               <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Target the industry search and deliver talent and learning interventions.
+                Deploy specialist expertise with disciplined progress reviews on site.
               </p>
               <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: On-Site Trials &amp; Capability
+                Output: Targeted Interventions
               </span>
             </div>
 
@@ -627,13 +627,13 @@ export default function HomePage() {
                 </span>
               </div>
               <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
-                Impact
+                Sustain
               </h3>
               <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Put performance controls in place and track R&amp;D progress and P&amp;L impact.
+                Embed standard operating practices, clear ownership, and continuous improvement.
               </p>
               <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: Standard KPI Controls
+                Output: Performance Controls
               </span>
             </div>
 
@@ -683,6 +683,9 @@ export default function HomePage() {
       <section className="bg-[#0B2038] py-14 sm:py-16 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div>
+            <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.18em] text-[#F59E56] font-accent mb-2">
+              Build capability &middot; Secure talent &middot; Engineer performance
+            </p>
             <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-normal font-serif text-white tracking-tight leading-snug mb-2">
               Align the mandate. Mobilize expertise. Deliver performance.
             </h2>

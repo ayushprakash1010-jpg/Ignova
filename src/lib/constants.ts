@@ -120,25 +120,25 @@ export const IGNOVA_FACTOR = [
   {
     number: "01",
     title: "Diagnose",
-    description: "Talent gaps, competency needs & operating constraints",
+    description: "Talent, capability and operating gaps",
     output: "Performance baseline",
   },
   {
     number: "02",
     title: "Prioritize",
-    description: "Must-have vs. could have roles & capabilities",
+    description: "Objectives and critical resources",
     output: "Focused priorities",
   },
   {
     number: "03",
     title: "Execute",
-    description: "Target industry search; talent + learning delivery",
+    description: "Specialist expertise and progress reviews",
     output: "Targeted interventions",
   },
   {
     number: "04",
-    title: "Impact",
-    description: "Accelerated R&D; measurable P&L impact",
+    title: "Sustain",
+    description: "Standards, ownership and improvement",
     output: "Performance controls",
   },
 ];

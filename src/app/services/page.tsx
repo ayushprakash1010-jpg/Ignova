@@ -36,17 +36,17 @@ const performanceOutcomes = [
   },
   {
     num: "03",
-    tag: "TIME-TO-MARKET",
-    title: "Accelerate R&D & Ramp-Up",
+    tag: "ACCELERATE DELIVERY",
+    title: "Accelerate Delivery & Ramp-Up",
     desc: "Standardizing engineering handovers and aligning specialist talent to compress launch cycles and eliminate ramp-up bottlenecks.",
     metric: "Cycle time reduction • Launch schedule adherence • First-time-right engineering",
     icon: TrendingUp,
   },
   {
     num: "04",
-    tag: "BOTTOM-LINE ECONOMICS",
-    title: "Improve P&L & Operating Gains",
-    desc: "Ground-level consulting and shop-floor coaching that directly improve plant throughput, reduce scrap, and lift OEE.",
+    tag: "STRENGTHEN MARGINS",
+    title: "Unlock Capacity & Improve Yield",
+    desc: "Ground-level consulting and shop-floor coaching that directly expand plant throughput, reduce scrap, lift OEE, and strengthen margins.",
     metric: "OEE improvement • COPQ & scrap reduction • Direct labor productivity",
     icon: BarChart3,
   },
@@ -338,7 +338,7 @@ export default function ServicesPage() {
                 className="text-2xl font-bold text-white mb-2"
                 style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
               >
-                Governed by Four Stages: Diagnose, Prioritize, Execute, Impact
+                Governed by Four Stages: Diagnose, Prioritize, Execute, Sustain
               </h3>
               <p className="text-[15px] sm:text-base text-slate-300">
                 Every capability deployment follows our evidence-based execution architecture with dual-track leadership governance to guarantee accountability from day one.
