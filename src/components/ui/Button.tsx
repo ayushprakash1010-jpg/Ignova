@@ -23,7 +23,7 @@ export default function Button({
   disabled = false,
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-bold rounded-full transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] cursor-pointer";
+    "inline-flex items-center justify-center font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer";
 
   const variants = {
     primary:
@@ -37,9 +37,9 @@ export default function Button({
   };
 
   const sizes = {
-    sm: "px-5 py-2.5 text-sm gap-1.5 min-w-[100px]",
-    md: "px-7 py-3 text-[15px] gap-2 min-w-[140px]",
-    lg: "px-10 py-4 text-base sm:text-lg gap-3 min-w-[180px]",
+    sm: "px-4 py-2 text-sm gap-1.5 min-w-[96px]",
+    md: "px-6 py-3 text-[15px] gap-2 min-w-[130px]",
+    lg: "px-7 py-3.5 text-[15px] sm:text-base gap-2.5 min-w-[150px]",
   };
 
   const combinedClassName = cn(

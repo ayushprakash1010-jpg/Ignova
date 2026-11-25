@@ -368,7 +368,7 @@ export default function ContactPage() {
                 </span>
               </div>
               <h1
-                className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-navy leading-[1.12] text-balance"
+                className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight text-navy leading-[1.12] text-balance"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 Start With{" "}

@@ -190,7 +190,7 @@ export default function Navbar() {
             {/* Desktop Right Action: Editorial Outline Button */}
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-1.5 px-4 py-2 border border-slate-300 hover:border-[#0B2038] rounded-md text-sm font-semibold text-[#0B2038] transition-all font-accent"
+              className="group inline-flex items-center gap-1.5 px-4 py-2 border border-slate-300 hover:border-[#0B2038] rounded-xl text-sm font-semibold text-[#0B2038] transition-all font-accent"
             >
               Get in touch
               <ArrowUpRight className="w-4 h-4 text-slate-500 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#C86A28]" />
@@ -250,7 +250,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 border border-slate-300 rounded-md text-sm font-semibold text-[#0B2038] font-accent"
+                  className="w-full inline-flex items-center justify-center gap-1.5 px-4 py-2.5 border border-slate-300 rounded-xl text-sm font-semibold text-[#0B2038] font-accent"
                 >
                   Get in touch
                   <ArrowUpRight className="w-4 h-4 text-slate-500" />

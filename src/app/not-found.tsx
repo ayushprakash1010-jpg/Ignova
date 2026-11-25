@@ -25,7 +25,7 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center bg-cream px-4 sm:px-6 lg:px-8 py-24">
+    <div className="min-h-[80vh] flex items-center justify-center bg-cream px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-20">
       <div className="max-w-2xl w-full text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange/10 border border-orange/20 text-orange text-sm font-bold uppercase tracking-widest mb-6">
@@ -35,7 +35,7 @@ export default function NotFound() {
 
         {/* Heading */}
         <h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy tracking-tight mb-4"
+          className="text-4xl sm:text-5xl font-extrabold text-navy tracking-tight mb-4 text-balance"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           The strategy exists. <br />

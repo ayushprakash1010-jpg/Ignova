@@ -30,7 +30,7 @@ export default function SectionHeading({
         </div>
       )}
       <h2
-        className={`text-3xl sm:text-4xl md:text-[42px] font-extrabold tracking-tight leading-tight`}
+        className={`text-3xl sm:text-4xl lg:text-[40px] font-extrabold tracking-tight leading-tight`}
         style={{
           fontFamily: "var(--font-heading)",
           color: light ? "#FFFFFF" : "#0B2038",

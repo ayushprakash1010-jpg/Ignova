@@ -22,9 +22,9 @@ export default function HomePage() {
                 Connecting Shop Floor to Boardroom
               </div>
               
-              <h1 className="text-4xl sm:text-5xl lg:text-[44px] xl:text-[52px] 2xl:text-[56px] font-normal text-white font-serif leading-[1.1] mb-6 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[52px] font-bold text-white leading-[1.1] mb-6 tracking-tight">
                 Enabling execution<br />
-                <span className="italic font-normal">&amp; impact.</span>
+                <span className="text-[#DF7C36]">&amp; impact.</span>
               </h1>
 
               <p className="text-base lg:text-lg text-slate-300 font-normal leading-relaxed mb-8 max-w-lg">
@@ -36,14 +36,14 @@ export default function HomePage() {
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <Link
                 href="/services"
-                className="group inline-flex items-center gap-1.5 px-5 py-3 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-sm sm:text-[15px] font-semibold transition-all shadow-xs hover:shadow-md"
+                className="group inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl bg-[#DF7C36] hover:bg-[#C86A28] text-white text-sm sm:text-[15px] font-semibold transition-all shadow-xs hover:shadow-md"
               >
                 Explore services
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-1.5 px-5 py-3 rounded-md text-white hover:text-orange-200 text-sm sm:text-[15px] font-semibold transition-colors border border-white/20 hover:border-white/40"
+                className="group inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl text-white hover:text-orange-200 text-sm sm:text-[15px] font-semibold transition-colors border border-white/20 hover:border-white/40"
               >
                 Get in touch
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -92,7 +92,7 @@ export default function HomePage() {
             
             {/* Stat 1: 50+ Years */}
             <div className="md:border-r md:border-[#E8E2D5] md:pr-6 md:pl-2 first:pl-0">
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0B2038]" style={{ fontFamily: "var(--font-heading)" }}>
                 <AnimatedNumber value={50} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
@@ -105,7 +105,7 @@ export default function HomePage() {
 
             {/* Stat 2: 1,000+ Candidates */}
             <div className="md:border-r md:border-[#E8E2D5] md:px-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0B2038]" style={{ fontFamily: "var(--font-heading)" }}>
                 <AnimatedNumber value={1000} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
@@ -118,7 +118,7 @@ export default function HomePage() {
 
             {/* Stat 3: 8+ Years */}
             <div className="md:border-r md:border-[#E8E2D5] md:px-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0B2038]" style={{ fontFamily: "var(--font-heading)" }}>
                 <AnimatedNumber value={8} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
@@ -131,7 +131,7 @@ export default function HomePage() {
 
             {/* Stat 4: 12+ Clients */}
             <div className="md:pl-6">
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0B2038]" style={{ fontFamily: "var(--font-heading)" }}>
                 <AnimatedNumber value={12} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
@@ -173,7 +173,7 @@ export default function HomePage() {
               <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
                 SERVICE PORTFOLIO
               </span>
-              <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight leading-tight">
                 Three capabilities. One partner.
               </h2>
             </div>
@@ -188,7 +188,7 @@ export default function HomePage() {
             
             {/* Card 1: IGNOVA Triage */}
             <Reveal delay={0} className="h-full">
-              <div className="group border border-slate-200 rounded-lg overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
+              <div className="group border border-slate-200 rounded-xl overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
                 <div>
                   <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                     <Image
@@ -203,7 +203,7 @@ export default function HomePage() {
                     <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
                       APPLIED LEARNING
                     </span>
-                    <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
+                    <h3 className="text-xl sm:text-[22px] font-bold text-[#0B2038] mb-2">
                       IGNOVA Triage
                     </h3>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
@@ -228,7 +228,7 @@ export default function HomePage() {
 
             {/* Card 2: IGNOVA Edge */}
             <Reveal delay={0.1} className="h-full">
-              <div className="group border border-slate-200 rounded-lg overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
+              <div className="group border border-slate-200 rounded-xl overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
                 <div>
                   <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                     <Image
@@ -243,7 +243,7 @@ export default function HomePage() {
                     <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
                       CREDIBLE TALENT
                     </span>
-                    <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
+                    <h3 className="text-xl sm:text-[22px] font-bold text-[#0B2038] mb-2">
                       IGNOVA Edge
                     </h3>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
@@ -268,7 +268,7 @@ export default function HomePage() {
 
             {/* Card 3: Project Execution */}
             <Reveal delay={0.2} className="h-full">
-              <div className="group border border-slate-200 rounded-lg overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
+              <div className="group border border-slate-200 rounded-xl overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
                 <div>
                   <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
                     <Image
@@ -283,7 +283,7 @@ export default function HomePage() {
                     <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
                       OPERATIONAL EXCELLENCE
                     </span>
-                    <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
+                    <h3 className="text-xl sm:text-[22px] font-bold text-[#0B2038] mb-2">
                       Project Execution
                     </h3>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
@@ -323,7 +323,7 @@ export default function HomePage() {
               <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
                 ON-SITE EXECUTION
               </span>
-              <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight leading-tight mb-4">
                 Make change tangible where work happens.
               </h2>
               <p className="text-base sm:text-[17px] text-slate-600 leading-relaxed font-normal mb-6">
@@ -372,7 +372,7 @@ export default function HomePage() {
                       01
                     </span>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
+                      <h3 className="text-lg sm:text-xl font-bold text-[#0B2038] mb-1.5">
                         Diagnose at Source
                       </h3>
                       <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
@@ -391,7 +391,7 @@ export default function HomePage() {
                       02
                     </span>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
+                      <h3 className="text-lg sm:text-xl font-bold text-[#0B2038] mb-1.5">
                         Build Through Practice
                       </h3>
                       <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
@@ -410,7 +410,7 @@ export default function HomePage() {
                       03
                     </span>
                     <div>
-                      <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
+                      <h3 className="text-lg sm:text-xl font-bold text-[#0B2038] mb-1.5">
                         Execute Across Functions
                       </h3>
                       <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
@@ -437,7 +437,7 @@ export default function HomePage() {
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-[#C86A28] font-accent block mb-2">
               Performance Governance
             </span>
-            <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight leading-tight mb-4">
               Where Impact Becomes Visible
             </h2>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
@@ -538,7 +538,7 @@ export default function HomePage() {
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
               PERFORMANCE AMBITION
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal font-serif text-[#0B2038] tracking-tight max-w-4xl leading-snug">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight max-w-4xl leading-tight">
               Unlock capacity, improve yield, accelerate delivery, and strengthen margins
             </h2>
           </div>
@@ -554,7 +554,7 @@ export default function HomePage() {
                   </span>
                   <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#C86A28]" />
                 </div>
-                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
                   Diagnose
                 </h3>
                 <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
@@ -575,7 +575,7 @@ export default function HomePage() {
                   </span>
                   <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#C86A28]" />
                 </div>
-                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
                   Prioritize
                 </h3>
                 <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
@@ -596,7 +596,7 @@ export default function HomePage() {
                   </span>
                   <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#C86A28]" />
                 </div>
-                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
                   Execute
                 </h3>
                 <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
@@ -616,7 +616,7 @@ export default function HomePage() {
                     04
                   </span>
                 </div>
-                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
                   Sustain
                 </h3>
                 <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
@@ -643,7 +643,7 @@ export default function HomePage() {
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#C86A28] font-accent block mb-2">
               SECTOR REACH &amp; CREDENTIALS
             </span>
-            <h2 className="text-3xl sm:text-4xl font-normal font-serif text-[#0B2038] tracking-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight leading-tight mb-4">
               Trusted by India&apos;s Industrial &amp; Enterprise Leaders
             </h2>
             <p className="text-base sm:text-[17px] text-slate-600 leading-relaxed font-normal mb-5">
@@ -677,7 +677,7 @@ export default function HomePage() {
             <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.18em] text-[#F59E56] font-accent mb-2">
               Build capability &middot; Secure talent &middot; Engineer performance
             </p>
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-normal font-serif text-white tracking-tight leading-snug mb-2">
+            <h2 className="text-3xl sm:text-4xl lg:text-[38px] font-bold text-white tracking-tight leading-tight mb-2">
               Align the mandate. Mobilize expertise. Deliver performance.
             </h2>
             <p className="text-sm sm:text-base text-slate-300 font-normal">
@@ -690,7 +690,7 @@ export default function HomePage() {
           <div className="flex-shrink-0">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-1.5 px-6 py-3.5 rounded-md bg-[#DF7C36] hover:bg-[#C86A28] text-white text-sm sm:text-[15px] font-semibold transition-all shadow-xs hover:shadow-md"
+              className="group inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl bg-[#DF7C36] hover:bg-[#C86A28] text-white text-sm sm:text-[15px] font-semibold transition-all shadow-xs hover:shadow-md"
             >
               Get in touch
               <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

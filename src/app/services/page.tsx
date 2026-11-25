@@ -79,7 +79,7 @@ export default function ServicesPage() {
           </p>
 
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight mb-6 text-balance"
+            className="text-4xl sm:text-5xl lg:text-[52px] font-bold text-navy leading-[1.12] mb-6 text-balance"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Three Capabilities.{" "}
