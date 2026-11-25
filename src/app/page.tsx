@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, CheckCircle2, TrendingUp, ShieldCheck, Factory, Users } from "lucide-react";
 import ClientLogos from "@/components/ui/ClientLogos";
-import OperationalDiagnosticCalculator from "@/components/ui/OperationalDiagnosticCalculator";
 
 export default function HomePage() {
   return (
@@ -632,11 +631,6 @@ export default function HomePage() {
 
         </div>
       </section>
-
-      {/* =========================================================================
-          INTERACTIVE VALUE DEMONSTRATOR: Operational Leakage & P&L Drag Cockpit
-          ========================================================================= */}
-      <OperationalDiagnosticCalculator />
 
       {/* =========================================================================
           8. SECTOR REACH & CREDENTIALS: India's Industrial & Enterprise Leaders
