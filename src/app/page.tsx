@@ -12,7 +12,7 @@ export default function HomePage() {
           1. HERO SECTION: Full-Width Real Documentary Industrial Photography
           ========================================================================= */}
       <section className="relative pt-16 sm:pt-20 bg-[#0B2038] overflow-hidden">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[540px] lg:min-h-[580px]">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[540px] lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
           
           {/* Left Column: Balanced 50% Deep Navy Card flush to left margin */}
           <div className="lg:col-span-6 bg-[#0B2038] text-white flex flex-col justify-center px-4 sm:px-6 lg:pr-10 xl:pr-12 hero-content-pad py-14 lg:py-20 z-10">
