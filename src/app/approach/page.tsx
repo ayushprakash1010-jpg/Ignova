@@ -256,36 +256,41 @@ export default function ApproachPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
+            className="bg-white rounded-2xl border border-cream-dark shadow-sm overflow-hidden"
           >
-            <p
-              className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-6 text-center"
-              style={{ fontFamily: "var(--font-accent)" }}
-            >
-              GOVERNANCE CYCLE
-            </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-cream/60 border-b border-cream-dark px-6 py-3.5 flex items-center justify-between">
+              <p
+                className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-orange"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                Governance Cycle
+              </p>
+              <span className="text-xs font-medium text-charcoal-light hidden sm:inline font-accent">
+                Continuous accountability loop
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-cream-dark">
               {GOVERNANCE_STEPS.map((step, index) => (
-                <motion.div
+                <div
                   key={step}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className="relative bg-cream rounded-xl p-5 text-center border border-cream-dark group shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
+                  className="px-6 py-5 sm:py-6 flex items-center justify-between gap-3 hover:bg-cream/35 transition-colors"
                 >
-                  <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange text-white text-sm font-bold mb-3">
-                    {index + 1}
-                  </span>
-                  <p
-                    className="text-[15px] sm:text-base font-semibold text-navy"
-                    style={{ fontFamily: "var(--font-accent)" }}
-                  >
-                    {step}
-                  </p>
+                  <div>
+                    <span className="block text-xs font-bold tracking-[0.18em] text-orange font-accent mb-1">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <p
+                      className="text-base sm:text-lg font-bold text-navy leading-snug"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {step}
+                    </p>
+                  </div>
                   {index < GOVERNANCE_STEPS.length - 1 && (
-                    <ArrowRight className="absolute -right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-orange hidden md:block z-10" />
+                    <ArrowRight className="w-4 h-4 text-orange/60 hidden lg:block flex-shrink-0" />
                   )}
-                </motion.div>
+                </div>
               ))}
             </div>
           </motion.div>
