@@ -26,6 +26,7 @@ import {
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
+import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
 
 /* ── Hiring Process Steps (Slide 10) ── */
 const hiringSteps = [
@@ -132,66 +133,77 @@ export default function EdgePage() {
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 md:pt-40 md:pb-28">
-          <div className="max-w-4xl">
-            {/* Pillar tag */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6"
-            >
-              <span
-                className="inline-block px-4 py-2 bg-orange/10 text-orange text-sm font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 pb-20 md:pt-36 md:pb-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <div className="lg:col-span-7">
+              {/* Pillar tag */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="mb-5"
+              >
+                <span
+                  className="inline-block px-4 py-2 bg-orange/10 text-orange text-sm font-bold uppercase tracking-[0.2em] rounded-full border border-orange/20"
+                  style={{ fontFamily: "var(--font-accent)" }}
+                >
+                  Activate
+                </span>
+              </motion.div>
+
+              {/* Label */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-sm font-bold uppercase tracking-[0.25em] text-orange mb-3"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
-                Activate
-              </span>
-            </motion.div>
+                IGNOVA Edge
+              </motion.p>
 
-            {/* Label */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-sm font-bold uppercase tracking-[0.25em] text-orange mb-4"
-              style={{ fontFamily: "var(--font-accent)" }}
-            >
-              IGNOVA Edge
-            </motion.p>
+              {/* Main Heading */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-4xl sm:text-5xl xl:text-[54px] font-bold text-navy leading-[1.12] mb-6"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Critical Mandates into{" "}
+                <span className="text-orange">Evidence-Backed</span> Hiring
+                Decisions
+              </motion.h1>
 
-            {/* Main Heading */}
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-navy leading-[1.08] mb-6"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Critical Mandates into{" "}
-              <span className="text-orange">Evidence-Backed</span> Hiring
-              Decisions
-            </motion.h1>
+              {/* Subtitle */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-lg md:text-xl text-charcoal-light max-w-xl leading-relaxed mb-8"
+              >
+                Mandate precision. Structured assessment. Credible shortlists.
+              </motion.p>
 
-            {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl text-charcoal-light max-w-2xl leading-relaxed mb-8"
-            >
-              Mandate precision. Structured assessment. Credible shortlists.
-            </motion.p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+              >
+                <Button href="/contact" variant="primary" size="lg">
+                  Discuss Your Hiring Mandate
+                </Button>
+              </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              <Button href="/contact" variant="primary" size="lg">
-                Discuss Your Hiring Mandate
-              </Button>
-            </motion.div>
+            <div className="lg:col-span-5">
+              <PracticeHeroVisual
+                src="/images/services/edge-boardroom.jpg"
+                alt="Executive boardroom suite overlooking city skyline representing leadership advisory and critical hiring decisions"
+                eyebrow="Leadership & Search Rigor"
+                caption="Calibrated shortlists validated for expertise, behavior, and 90-day impact."
+              />
+            </div>
           </div>
         </div>
       </section>

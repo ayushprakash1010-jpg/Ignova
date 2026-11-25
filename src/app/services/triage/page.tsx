@@ -30,6 +30,7 @@ import {
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
+import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
 
 /* ─── data ─── */
 
@@ -205,49 +206,61 @@ export default function TriagePage() {
   return (
     <div className="overflow-hidden">
       {/* ── 1. Hero ── */}
-      <section className="relative bg-cream pt-32 pb-20 md:pb-28">
+      <section className="relative bg-cream pt-28 sm:pt-32 pb-20 md:pb-24 overflow-hidden">
         {/* subtle decorative circle */}
         <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-orange/5 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            {/* Pillar tag */}
-            <span
-              className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-6"
-              style={{ fontFamily: "var(--font-accent)" }}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-7"
             >
-              Architect
-            </span>
+              {/* Pillar tag */}
+              <span
+                className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-orange bg-orange/10 px-4 py-1.5 rounded-full mb-5"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                Architect
+              </span>
 
-            <p
-              className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-3"
-              style={{ fontFamily: "var(--font-accent)" }}
-            >
-              IGNOVA Triage
-            </p>
+              <p
+                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-3"
+                style={{ fontFamily: "var(--font-accent)" }}
+              >
+                IGNOVA Triage
+              </p>
 
-            <h1
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight max-w-3xl"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Build Role-Specific Competencies & Drive Performance
-            </h1>
+              <h1
+                className="text-4xl sm:text-5xl xl:text-[54px] font-bold text-navy leading-[1.12]"
+                style={{ fontFamily: "var(--font-heading)" }}
+              >
+                Build Role-Specific Competencies &amp; Drive Performance
+              </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-charcoal-light max-w-2xl">
-              Customize the intervention around the role and the performance
-              gap.
-            </p>
+              <p className="mt-6 text-lg md:text-xl text-charcoal-light max-w-xl leading-relaxed">
+                Customize the intervention around the role and the performance
+                gap.
+              </p>
 
-            <div className="mt-10">
-              <Button href="/contact" variant="primary" size="lg">
-                Discuss Your Capability Needs
-              </Button>
+              <div className="mt-8">
+                <Button href="/contact" variant="primary" size="lg">
+                  Discuss Your Capability Needs
+                </Button>
+              </div>
+            </motion.div>
+
+            <div className="lg:col-span-5">
+              <PracticeHeroVisual
+                src="/images/services/triage-engineers.jpg"
+                alt="Industrial engineering blueprints, precision calipers, and mechanical tooling on a shop-floor workbench"
+                eyebrow="Applied Technical Rigor"
+                caption="Role-specific competencies translated into observable workplace application."
+              />
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
