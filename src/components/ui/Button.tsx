@@ -51,6 +51,18 @@ export default function Button({
   );
 
   if (href) {
+    if (href.startsWith("#")) {
+      return (
+        <a
+          href={href}
+          className={combinedClassName}
+          style={{ fontFamily: "var(--font-accent)" }}
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
       <Link
         href={href}

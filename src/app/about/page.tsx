@@ -134,8 +134,8 @@ export default function AboutPage() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="mt-8 flex flex-wrap items-center justify-center gap-4"
             >
-              <Button href="#who-we-are" variant="primary" size="lg">
-                Explore Our Story
+              <Button href="/approach" variant="primary" size="lg">
+                Explore Our Approach
               </Button>
               <Button href="/contact" variant="outline" size="lg">
                 Discuss Strategic Mandates
