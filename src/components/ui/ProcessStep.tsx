@@ -23,10 +23,10 @@ export default function ProcessStep({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.15 }}
-      className="relative bg-white rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden"
+      className="relative bg-white rounded-2xl p-8 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
     >
       {/* Top gradient accent */}
-      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange via-orange-light to-orange" />
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:via-orange group-hover:to-orange transition-colors duration-300" />
 
       {/* Clean Typographic Index Label */}
       <span

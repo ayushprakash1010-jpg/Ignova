@@ -342,21 +342,27 @@ export default function TriagePage() {
 
           {/* Horizontal stepper */}
           <div className="relative flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-0 mt-4">
-            {/* Connector line (desktop) */}
-            <div className="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-orange/30 via-orange to-orange/30" />
+            {/* Scroll-drawn connector line (desktop) */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+              className="hidden md:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-orange/30 via-orange to-orange/30 origin-left"
+            />
 
             {journeySteps.map((step, i) => {
               const Icon = step.icon;
               return (
                 <motion.div
                   key={step.verb}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  className="relative flex flex-col items-center text-center md:flex-1"
+                  transition={{ duration: 0.45, delay: i * 0.14 }}
+                  className="group relative flex flex-col items-center text-center md:flex-1"
                 >
-                  <div className="z-10 w-20 h-20 rounded-full bg-white border-2 border-orange flex items-center justify-center shadow-md">
+                  <div className="z-10 w-20 h-20 rounded-full bg-white border-2 border-orange flex items-center justify-center shadow-md group-hover:scale-105 group-hover:shadow-lg transition-all duration-300">
                     <Icon className="w-8 h-8 text-orange" />
                   </div>
                   <h4

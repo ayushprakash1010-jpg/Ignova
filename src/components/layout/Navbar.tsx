@@ -95,10 +95,10 @@ export default function Navbar() {
                       aria-haspopup="true"
                       aria-expanded={servicesOpen}
                       aria-controls="desktop-services-menu"
-                      className={`flex items-center gap-1.5 px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent border-b-2 ${
+                      className={`relative flex items-center gap-1.5 px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent ${
                         active
-                          ? "border-[#C86A28] text-[#0B2038] font-bold"
-                          : "border-transparent text-slate-700 hover:text-[#C86A28]"
+                          ? "text-[#0B2038] font-bold"
+                          : "text-slate-700 hover:text-[#C86A28]"
                       }`}
                     >
                       {link.label}
@@ -107,6 +107,13 @@ export default function Navbar() {
                           servicesOpen ? "rotate-180 text-[#C86A28]" : "text-slate-400"
                         }`}
                       />
+                      {active && (
+                        <motion.span
+                          layoutId="navbar-active-indicator"
+                          transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                          className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#C86A28] rounded-full"
+                        />
+                      )}
                     </button>
                     <AnimatePresence>
                       {servicesOpen && (
@@ -161,13 +168,20 @@ export default function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className={`px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent border-b-2 ${
+                    className={`relative px-3 py-1.5 text-sm xl:text-[15px] font-semibold transition-colors font-accent ${
                       active
-                        ? "border-[#C86A28] text-[#0B2038] font-bold"
-                        : "border-transparent text-slate-700 hover:text-[#C86A28]"
+                        ? "text-[#0B2038] font-bold"
+                        : "text-slate-700 hover:text-[#C86A28]"
                     }`}
                   >
                     {link.label}
+                    {active && (
+                      <motion.span
+                        layoutId="navbar-active-indicator"
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                        className="absolute inset-x-3 -bottom-0.5 h-[2px] bg-[#C86A28] rounded-full"
+                      />
+                    )}
                   </Link>
                 );
               })}
@@ -176,10 +190,10 @@ export default function Navbar() {
             {/* Desktop Right Action: Editorial Outline Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 px-4 py-2 border border-slate-300 hover:border-[#0B2038] rounded-md text-sm font-semibold text-[#0B2038] transition-colors font-accent"
+              className="group inline-flex items-center gap-1.5 px-4 py-2 border border-slate-300 hover:border-[#0B2038] rounded-md text-sm font-semibold text-[#0B2038] transition-all font-accent"
             >
               Get in touch
-              <ArrowUpRight className="w-4 h-4 text-slate-500" />
+              <ArrowUpRight className="w-4 h-4 text-slate-500 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-[#C86A28]" />
             </Link>
           </div>
 

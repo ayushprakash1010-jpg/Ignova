@@ -13,7 +13,7 @@ function LogoCard({ client, index }: { client: ClientLogo; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.3, delay: index * 0.03 }}
-      className="group relative flex items-center justify-center h-20 sm:h-24 px-4 py-3 bg-white rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/50 hover:shadow-md transition-all duration-300 text-center overflow-hidden"
+      className="group relative flex items-center justify-center h-20 sm:h-24 px-4 py-3 bg-white rounded-xl border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center overflow-hidden"
       title={client.name}
       aria-label={client.name}
     >

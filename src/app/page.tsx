@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, CheckCircle2, ShieldCheck, Factory, Truck } from "lucide-react";
 import ClientLogos from "@/components/ui/ClientLogos";
+import { Reveal, AnimatedNumber } from "@/components/ui/MotionPrimitives";
 
 export default function HomePage() {
   return (
@@ -65,7 +66,7 @@ export default function HomePage() {
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center"
+              className="object-cover object-center animate-hero-settle"
             />
             {/* Subtle desktop seam feather softening the split into deep navy */}
             <div
@@ -92,7 +93,7 @@ export default function HomePage() {
             {/* Stat 1: 50+ Years */}
             <div className="md:border-r md:border-[#E8E2D5] md:pr-6 md:pl-2 first:pl-0">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
-                50+
+                <AnimatedNumber value={50} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
                 Years of industrial expertise
@@ -105,7 +106,7 @@ export default function HomePage() {
             {/* Stat 2: 1,000+ Candidates */}
             <div className="md:border-r md:border-[#E8E2D5] md:px-6">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
-                1,000+
+                <AnimatedNumber value={1000} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
                 Candidates hired
@@ -118,7 +119,7 @@ export default function HomePage() {
             {/* Stat 3: 8+ Years */}
             <div className="md:border-r md:border-[#E8E2D5] md:px-6">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
-                8+
+                <AnimatedNumber value={8} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
                 Years in recruitment
@@ -131,7 +132,7 @@ export default function HomePage() {
             {/* Stat 4: 12+ Clients */}
             <div className="md:pl-6">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-normal font-serif text-[#0B2038]">
-                12+
+                <AnimatedNumber value={12} suffix="+" />
               </div>
               <p className="text-sm sm:text-[15px] text-slate-800 font-semibold mt-1.5 font-accent">
                 Major recruitment clients
@@ -186,118 +187,124 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Card 1: IGNOVA Triage */}
-            <div className="group border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg transition-all duration-300 bg-white">
-              <div>
-                <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
-                  <Image
-                    src="/images/services/triage-engineers.jpg"
-                    alt="Industrial engineering blueprints, mechanical tooling schematics, and precision digital calipers on plant workstation"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+            <Reveal delay={0} className="h-full">
+              <div className="group border border-slate-200 rounded-lg overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
+                <div>
+                  <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
+                    <Image
+                      src="/images/services/triage-engineers.jpg"
+                      alt="Industrial engineering blueprints, mechanical tooling schematics, and precision digital calipers on plant workstation"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
+                      APPLIED LEARNING
+                    </span>
+                    <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
+                      IGNOVA Triage
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
+                      Capability transformation through technical excellence, leadership development and domain insight.
+                    </p>
+                    <p className="text-xs sm:text-[13px] font-semibold text-slate-500 font-accent">
+                      Six Sigma &middot; VSM &amp; SMED &middot; Root Cause Analysis
+                    </p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
-                    APPLIED LEARNING
-                  </span>
-                  <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
-                    IGNOVA Triage
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-                    Capability transformation through technical excellence, leadership development and domain insight.
-                  </p>
-                  <p className="text-xs sm:text-[13px] font-semibold text-slate-500 font-accent">
-                    Six Sigma &middot; VSM &amp; SMED &middot; Root Cause Analysis
-                  </p>
+                <div className="p-6 pt-0">
+                  <Link
+                    href="/services/triage"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
+                  >
+                    Explore Triage
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
                 </div>
               </div>
-              <div className="p-6 pt-0">
-                <Link
-                  href="/services/triage"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
-                >
-                  Explore Triage
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-              </div>
-            </div>
+            </Reveal>
 
             {/* Card 2: IGNOVA Edge */}
-            <div className="group border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg transition-all duration-300 bg-white">
-              <div>
-                <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
-                  <Image
-                    src="/images/services/edge-boardroom.jpg"
-                    alt="Prestigious executive boardroom suite with floor-to-ceiling glass windows and conference table for leadership search"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+            <Reveal delay={0.1} className="h-full">
+              <div className="group border border-slate-200 rounded-lg overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
+                <div>
+                  <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
+                    <Image
+                      src="/images/services/edge-boardroom.jpg"
+                      alt="Prestigious executive boardroom suite with floor-to-ceiling glass windows and conference table for leadership search"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
+                      CREDIBLE TALENT
+                    </span>
+                    <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
+                      IGNOVA Edge
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
+                      Strategic talent advisory, leadership and specialist search, onboarding and performance.
+                    </p>
+                    <p className="text-xs sm:text-[13px] font-semibold text-slate-500 font-accent">
+                      Executive Search &middot; Plant Leadership &middot; Specialist Roles
+                    </p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
-                    CREDIBLE TALENT
-                  </span>
-                  <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
-                    IGNOVA Edge
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-                    Strategic talent advisory, leadership and specialist search, onboarding and performance.
-                  </p>
-                  <p className="text-xs sm:text-[13px] font-semibold text-slate-500 font-accent">
-                    Executive Search &middot; Plant Leadership &middot; Specialist Roles
-                  </p>
+                <div className="p-6 pt-0">
+                  <Link
+                    href="/services/edge"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
+                  >
+                    Explore Edge
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
                 </div>
               </div>
-              <div className="p-6 pt-0">
-                <Link
-                  href="/services/edge"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
-                >
-                  Explore Edge
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-              </div>
-            </div>
+            </Reveal>
 
             {/* Card 3: Project Execution */}
-            <div className="group border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg transition-all duration-300 bg-white">
-              <div>
-                <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
-                  <Image
-                    src="/images/services/execution-robotics.jpg"
-                    alt="Orange multi-axis industrial robotic arm performing precision automated manufacturing welding"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+            <Reveal delay={0.2} className="h-full">
+              <div className="group border border-slate-200 rounded-lg overflow-hidden h-full flex flex-col justify-between hover:border-[#C86A28]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
+                <div>
+                  <div className="relative h-48 sm:h-52 w-full bg-slate-100 overflow-hidden">
+                    <Image
+                      src="/images/services/execution-robotics.jpg"
+                      alt="Orange multi-axis industrial robotic arm performing precision automated manufacturing welding"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
+                      OPERATIONAL EXCELLENCE
+                    </span>
+                    <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
+                      Project Execution
+                    </h3>
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
+                      Industrial performance consulting across quality, reliability, performance management and cross-functional productivity.
+                    </p>
+                    <p className="text-xs sm:text-[13px] font-semibold text-slate-500 font-accent">
+                      Yield Enhancement &middot; OEE Improvement &middot; Industry 4.0
+                    </p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent block mb-1.5">
-                    OPERATIONAL EXCELLENCE
-                  </span>
-                  <h3 className="text-xl sm:text-[22px] font-bold font-serif text-[#0B2038] mb-2">
-                    Project Execution
-                  </h3>
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-                    Industrial performance consulting across quality, reliability, performance management and cross-functional productivity.
-                  </p>
-                  <p className="text-xs sm:text-[13px] font-semibold text-slate-500 font-accent">
-                    Yield Enhancement &middot; OEE Improvement &middot; Industry 4.0
-                  </p>
+                <div className="p-6 pt-0">
+                  <Link
+                    href="/services/project-execution"
+                    className="inline-flex items-center gap-1 text-sm font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
+                  >
+                    Explore Project Execution
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
                 </div>
               </div>
-              <div className="p-6 pt-0">
-                <Link
-                  href="/services/project-execution"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-[#0B2038] group-hover:text-[#C86A28] font-accent transition-colors"
-                >
-                  Explore Project Execution
-                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </Link>
-              </div>
-            </div>
+            </Reveal>
 
           </div>
 
@@ -358,55 +365,61 @@ export default function HomePage() {
             <div className="lg:col-span-7 space-y-4">
               
               {/* Step 1: Diagnose at Source */}
-              <div className="p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/40 transition-colors">
-                <div className="flex items-start gap-4">
-                  <span className="w-9 h-9 rounded-full bg-[#0B2038] text-white text-sm font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5">
-                    01
-                  </span>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
-                      Diagnose at Source
-                    </h3>
-                    <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
-                      Observe operating conditions, line bottlenecks, material flow, and equipment losses directly in the active plant environment.
-                    </p>
+              <Reveal delay={0}>
+                <div className="group p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <span className="w-9 h-9 rounded-full bg-[#0B2038] group-hover:bg-[#C86A28] text-white text-sm font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5 transition-colors duration-300">
+                      01
+                    </span>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
+                        Diagnose at Source
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
+                        Observe operating conditions, line bottlenecks, material flow, and equipment losses directly in the active plant environment.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
 
               {/* Step 2: Build Through Practice */}
-              <div className="p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/40 transition-colors">
-                <div className="flex items-start gap-4">
-                  <span className="w-9 h-9 rounded-full bg-[#0B2038] text-white text-sm font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5">
-                    02
-                  </span>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
-                      Build Through Practice
-                    </h3>
-                    <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
-                      Apply structured workshops and coaching directly to live shop-floor challenges—validating real work solutions rather than textbook theory.
-                    </p>
+              <Reveal delay={0.1}>
+                <div className="group p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <span className="w-9 h-9 rounded-full bg-[#0B2038] group-hover:bg-[#C86A28] text-white text-sm font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5 transition-colors duration-300">
+                      02
+                    </span>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
+                        Build Through Practice
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
+                        Apply structured workshops and coaching directly to live shop-floor challenges—validating real work solutions rather than textbook theory.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
 
               {/* Step 3: Execute Across Functions */}
-              <div className="p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/40 transition-colors">
-                <div className="flex items-start gap-4">
-                  <span className="w-9 h-9 rounded-full bg-[#0B2038] text-white text-sm font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5">
-                    03
-                  </span>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
-                      Execute Across Functions
-                    </h3>
-                    <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
-                      Cross-functional teams take full ownership of root-cause corrective actions, standard process controls, and sustainable yield metrics.
-                    </p>
+              <Reveal delay={0.2}>
+                <div className="group p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#C86A28]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    <span className="w-9 h-9 rounded-full bg-[#0B2038] group-hover:bg-[#C86A28] text-white text-sm font-bold flex items-center justify-center flex-shrink-0 font-accent mt-0.5 transition-colors duration-300">
+                      03
+                    </span>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold font-serif text-[#0B2038] mb-1.5">
+                        Execute Across Functions
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
+                        Cross-functional teams take full ownership of root-cause corrective actions, standard process controls, and sustainable yield metrics.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
 
             </div>
 
@@ -435,64 +448,70 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             
             {/* Domain 1: Plant Leadership */}
-            <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
-              <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
-                <Factory className="w-5 h-5" />
+            <Reveal delay={0} className="h-full">
+              <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 h-full">
+                <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                  <Factory className="w-5 h-5" />
+                </div>
+                <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
+                  Plant Leadership
+                </h3>
+                <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                    <span><strong>OEE (%)</strong> &middot; Overall Equipment Effectiveness</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                    <span><strong>Productivity</strong> &middot; Line output &amp; efficiency</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
-                Plant Leadership
-              </h3>
-              <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>OEE (%)</strong> &middot; Overall Equipment Effectiveness</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>Productivity</strong> &middot; Line output &amp; efficiency</span>
-                </li>
-              </ul>
-            </div>
+            </Reveal>
 
             {/* Domain 2: Quality Leadership */}
-            <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
-              <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
-                <ShieldCheck className="w-5 h-5" />
+            <Reveal delay={0.1} className="h-full">
+              <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 h-full">
+                <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                  <ShieldCheck className="w-5 h-5" />
+                </div>
+                <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
+                  Quality Leadership
+                </h3>
+                <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                    <span><strong>Defect PPM</strong> reduction</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                    <span><strong>Cost of Poor Quality (COPQ)</strong></span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
-                Quality Leadership
-              </h3>
-              <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>Defect PPM</strong> reduction</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>Cost of Poor Quality (COPQ)</strong></span>
-                </li>
-              </ul>
-            </div>
+            </Reveal>
 
             {/* Domain 3: Supply Chain Leadership */}
-            <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/40 transition-colors">
-              <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
-                <Truck className="w-5 h-5" />
+            <Reveal delay={0.2} className="h-full">
+              <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#C86A28]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 h-full">
+                <div className="w-10 h-10 rounded-lg bg-orange-500/10 text-[#C86A28] flex items-center justify-center mb-4">
+                  <Truck className="w-5 h-5" />
+                </div>
+                <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
+                  Supply Chain Leadership
+                </h3>
+                <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                    <span><strong>On-Time Delivery (%)</strong></span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
+                    <span><strong>Inventory Turns</strong> &amp; working capital</span>
+                  </li>
+                </ul>
               </div>
-              <h3 className="text-[15px] font-bold uppercase tracking-wider text-[#0B2038] font-accent mb-3">
-                Supply Chain Leadership
-              </h3>
-              <ul className="space-y-2.5 text-sm sm:text-[15px] text-slate-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>On-Time Delivery (%)</strong></span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C86A28] flex-shrink-0" />
-                  <span><strong>Inventory Turns</strong> &amp; working capital</span>
-                </li>
-              </ul>
-            </div>
+            </Reveal>
 
           </div>
 
@@ -527,79 +546,87 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {/* Step 01 */}
-            <div className="relative">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-bold text-slate-400 font-accent">
-                  01
+            <Reveal delay={0}>
+              <div className="group relative">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-bold text-slate-400 group-hover:text-[#C86A28] transition-colors font-accent">
+                    01
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#C86A28]" />
+                </div>
+                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                  Diagnose
+                </h3>
+                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
+                  Assess talent, capability and operating gaps to establish a clear performance baseline.
+                </p>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                  Output: Performance Baseline
                 </span>
-                <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
-                Diagnose
-              </h3>
-              <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Assess talent, capability and operating gaps to establish a clear performance baseline.
-              </p>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: Performance Baseline
-              </span>
-            </div>
+            </Reveal>
 
             {/* Step 02 */}
-            <div className="relative">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-bold text-slate-400 font-accent">
-                  02
+            <Reveal delay={0.08}>
+              <div className="group relative">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-bold text-slate-400 group-hover:text-[#C86A28] transition-colors font-accent">
+                    02
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#C86A28]" />
+                </div>
+                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                  Prioritize
+                </h3>
+                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
+                  Align objectives and critical resources around high-impact operational mandates.
+                </p>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                  Output: Focused Priorities
                 </span>
-                <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
-                Prioritize
-              </h3>
-              <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Align objectives and critical resources around high-impact operational mandates.
-              </p>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: Focused Priorities
-              </span>
-            </div>
+            </Reveal>
 
             {/* Step 03 */}
-            <div className="relative">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-bold text-slate-400 font-accent">
-                  03
+            <Reveal delay={0.16}>
+              <div className="group relative">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-bold text-slate-400 group-hover:text-[#C86A28] transition-colors font-accent">
+                    03
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#C86A28]" />
+                </div>
+                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                  Execute
+                </h3>
+                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
+                  Deploy specialist expertise with disciplined progress reviews on site.
+                </p>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                  Output: Targeted Interventions
                 </span>
-                <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block" />
               </div>
-              <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
-                Execute
-              </h3>
-              <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Deploy specialist expertise with disciplined progress reviews on site.
-              </p>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: Targeted Interventions
-              </span>
-            </div>
+            </Reveal>
 
             {/* Step 04 */}
-            <div className="relative">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-bold text-slate-400 font-accent">
-                  04
+            <Reveal delay={0.24}>
+              <div className="group relative">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-bold text-slate-400 group-hover:text-[#C86A28] transition-colors font-accent">
+                    04
+                  </span>
+                </div>
+                <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
+                  Sustain
+                </h3>
+                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
+                  Embed standard operating practices, clear ownership, and continuous improvement.
+                </p>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
+                  Output: Performance Controls
                 </span>
               </div>
-              <h3 className="text-xl font-bold font-serif text-[#0B2038] mb-2">
-                Sustain
-              </h3>
-              <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                Embed standard operating practices, clear ownership, and continuous improvement.
-              </p>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#C86A28] font-accent">
-                Output: Performance Controls
-              </span>
-            </div>
+            </Reveal>
 
           </div>
 

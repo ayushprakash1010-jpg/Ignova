@@ -23,7 +23,7 @@ export default function PracticeHeroVisual({
         fill
         priority
         sizes="(max-width: 1024px) 100vw, 57vw"
-        className={`object-cover ${objectPosition}`}
+        className={`object-cover ${objectPosition} animate-hero-settle`}
       />
     </div>
   );

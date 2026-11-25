@@ -274,7 +274,7 @@ export default function ApproachPage() {
               {GOVERNANCE_STEPS.map((step, index) => (
                 <div
                   key={step}
-                  className="px-6 py-5 sm:py-6 flex items-center justify-between gap-3 hover:bg-cream/35 transition-colors"
+                  className="group px-6 py-5 sm:py-6 flex items-center justify-between gap-3 hover:bg-cream/35 transition-colors"
                 >
                   <p
                     className="text-base sm:text-lg font-bold text-navy leading-snug"
@@ -283,7 +283,7 @@ export default function ApproachPage() {
                     {step}
                   </p>
                   {index < GOVERNANCE_STEPS.length - 1 && (
-                    <ArrowRight className="w-4 h-4 text-orange/60 hidden lg:block flex-shrink-0" />
+                    <ArrowRight className="w-4 h-4 text-orange/60 hidden lg:block flex-shrink-0 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-orange" />
                   )}
                 </div>
               ))}

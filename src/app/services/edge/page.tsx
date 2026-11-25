@@ -227,9 +227,15 @@ export default function EdgePage() {
                     {step.description}
                   </p>
 
-                  {/* Connector line (except last) */}
+                  {/* Scroll-drawn connector line (except last) */}
                   {index < hiringSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-[2px] bg-orange/30" />
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: 0.2 + index * 0.14 }}
+                      className="hidden lg:block absolute top-1/2 -right-4 w-8 h-[2px] bg-orange/50 origin-left"
+                    />
                   )}
                 </motion.div>
               );
