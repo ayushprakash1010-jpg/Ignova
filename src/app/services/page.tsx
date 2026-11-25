@@ -56,7 +56,7 @@ export default function ServicesPage() {
   return (
     <div className="overflow-hidden">
       {/* ───────── 1. Hero ───────── */}
-      <section className="relative bg-cream pt-28 pb-16 md:pb-20 border-b border-[#E8E2D5] overflow-hidden">
+      <section className="relative bg-cream pt-32 pb-24 md:pb-28 border-b border-[#E8E2D5] overflow-hidden">
         {/* Subtle blueprint grid & warm radial accent */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div

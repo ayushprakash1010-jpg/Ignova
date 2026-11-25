@@ -84,7 +84,7 @@ export default function ApproachPage() {
             objectPosition="object-[65%_center]"
           />
 
-          <div className="relative z-10 w-full lg:w-[49%] xl:w-[48%] px-4 sm:px-6 lg:pr-6 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[540px] xl:min-h-[560px] flex flex-col justify-center">
+          <div className="relative z-10 w-full lg:w-[50%] xl:w-[49%] px-4 sm:px-6 lg:pr-2 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[540px] xl:min-h-[560px] flex flex-col justify-center">
             <div>
               <span
                 className="inline-block text-sm font-bold uppercase tracking-[0.2em] text-orange bg-orange/10 px-4 py-1.5 rounded-full border border-orange/20 mb-5"
