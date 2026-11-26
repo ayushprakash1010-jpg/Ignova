@@ -51,23 +51,34 @@ const performanceOutcomes = [
   },
 ];
 
+/** Renders the subtle architectural blueprint grid and ambient glow overlay for Services sections. */
+function BlueprintOverlay({ variant = "cream" }: { variant?: "cream" | "navy" }) {
+  const isNavy = variant === "navy";
+  const lineColor = isNavy ? "#FFFFFF" : "#0F2B4C";
+  return (
+    <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        className={isNavy ? "absolute inset-0 opacity-[0.05]" : "absolute inset-0 opacity-[0.03]"}
+        style={{
+          backgroundImage: `linear-gradient(${lineColor} 1px, transparent 1px), linear-gradient(90deg, ${lineColor} 1px, transparent 1px)`,
+          backgroundSize: isNavy ? "56px 56px" : "60px 60px",
+        }}
+      />
+      {isNavy ? (
+        <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#DF7C36]/10 blur-3xl" />
+      ) : (
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
+      )}
+    </div>
+  );
+}
+
 export default function ServicesPage() {
   return (
     <div className="overflow-hidden">
       {/* ───────── 1. Hero ───────── */}
       <section className="relative bg-cream pt-32 pb-24 md:pb-28 border-b border-[#E8E2D5] overflow-hidden">
-        {/* Subtle blueprint grid & warm radial accent */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
-        </div>
+        <BlueprintOverlay variant="cream" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p
@@ -335,8 +346,10 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── 5. Selected Client Experience (PPT Slide 17) ───────── */}
-      <section className="py-16 md:py-24 bg-navy text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-16 md:py-24 bg-navy text-white overflow-hidden">
+        <BlueprintOverlay variant="navy" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             label="Track Record & Credibility"
             title="Apply Experience Across Sectors & Business Functions"
