@@ -66,23 +66,34 @@ const capabilityPillars = [
   },
 ];
 
+/** Renders the subtle architectural blueprint grid and ambient glow overlay for About sections. */
+function BlueprintOverlay({ variant = "cream" }: { variant?: "cream" | "navy" }) {
+  const isNavy = variant === "navy";
+  const lineColor = isNavy ? "#FFFFFF" : "#0F2B4C";
+  return (
+    <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        className={isNavy ? "absolute inset-0 opacity-[0.05]" : "absolute inset-0 opacity-[0.03]"}
+        style={{
+          backgroundImage: `linear-gradient(${lineColor} 1px, transparent 1px), linear-gradient(90deg, ${lineColor} 1px, transparent 1px)`,
+          backgroundSize: isNavy ? "56px 56px" : "60px 60px",
+        }}
+      />
+      {isNavy ? (
+        <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#DF7C36]/10 blur-3xl" />
+      ) : (
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
+      )}
+    </div>
+  );
+}
+
 export default function AboutPage() {
   return (
     <>
       {/* ============ HERO SECTION ============ */}
       <section className="relative bg-cream border-b border-[#E8E2D5] overflow-hidden">
-        {/* Subtle blueprint grid & warm glow */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-          <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
-        </div>
+        <BlueprintOverlay variant="cream" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 md:pt-36 md:pb-24">
           <div className="max-w-4xl mx-auto text-center">
@@ -190,10 +201,7 @@ export default function AboutPage() {
 
       {/* ============ CREDIBILITY STATS ============ */}
       <section className="py-16 md:py-24 bg-navy relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 right-10 w-52 h-52 border border-white/[0.04] rounded-full" />
-          <div className="absolute bottom-10 left-10 w-72 h-72 border border-white/[0.04] rounded-full" />
-        </div>
+        <BlueprintOverlay variant="navy" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <SectionHeading
