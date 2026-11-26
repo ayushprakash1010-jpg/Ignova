@@ -34,16 +34,20 @@ export default function ClientLogos() {
   return (
     <div className="space-y-3.5 sm:space-y-4 w-full">
       {/* Industrial Clients Row */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-4">
+      <div className="flex flex-wrap justify-center lg:grid lg:grid-cols-5 gap-3.5 sm:gap-4">
         {CLIENT_LOGOS.industrial.map((client) => (
-          <LogoCard key={client.name} client={client} />
+          <div key={client.name} className="w-[calc(50%-0.4375rem)] sm:w-[calc(33.333%-0.67rem)] lg:w-auto">
+            <LogoCard client={client} />
+          </div>
         ))}
       </div>
 
       {/* Recruitment Clients Row */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5 sm:gap-4">
+      <div className="flex flex-wrap justify-center lg:grid lg:grid-cols-6 gap-3.5 sm:gap-4">
         {CLIENT_LOGOS.recruitment.map((client) => (
-          <LogoCard key={client.name} client={client} />
+          <div key={client.name} className="w-[calc(50%-0.4375rem)] sm:w-[calc(33.333%-0.67rem)] lg:w-auto">
+            <LogoCard client={client} />
+          </div>
         ))}
       </div>
     </div>

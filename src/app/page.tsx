@@ -620,18 +620,18 @@ export default function HomePage() {
       {/* =========================================================================
           8. CLIENT LOGOS & CREDENTIALS: India's Industrial & Enterprise Leaders
           ========================================================================= */}
-      <section className="bg-[#FAF9F6] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
+      <section className="bg-[#FAF9F6] py-16 sm:py-20 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="text-center max-w-5xl mx-auto mb-10 sm:mb-12">
+          <div className="text-center max-w-5xl mx-auto mb-10">
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight leading-tight mb-4">
               Trusted by India&apos;s Industrial &amp; Enterprise Leaders
             </h2>
 
             {/* GPWD Culture Pill */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs sm:text-[13px] font-semibold text-slate-700 font-accent">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#A84D14]" />
-              Supporting Organizations Towards GPWD Certification &amp; Culture Strengthening
+            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs sm:text-[13px] font-semibold text-slate-700 font-accent text-center">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#A84D14] flex-shrink-0" />
+              <span>Supporting Organizations Towards GPWD Certification &amp; Culture Strengthening</span>
             </div>
           </div>
 
