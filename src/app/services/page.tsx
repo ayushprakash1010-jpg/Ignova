@@ -317,11 +317,13 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="rounded-2xl bg-navy text-white p-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl"
+            className="relative overflow-hidden rounded-2xl bg-[#0B2038] border border-white/10 text-white p-8 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl"
           >
-            <div className="max-w-2xl">
+            <BlueprintOverlay variant="navy" />
+
+            <div className="relative z-10 max-w-3xl">
               <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
-                Unified Methodology & Governance
+                Unified Methodology &amp; Governance
               </span>
               <h3
                 className="text-2xl font-bold text-white mb-2"
@@ -329,14 +331,14 @@ export default function ServicesPage() {
               >
                 Governed by Four Stages: Diagnose, Prioritize, Execute, Sustain
               </h3>
-              <p className="text-[15px] sm:text-base text-slate-300">
+              <p className="text-[15px] sm:text-base text-slate-300 max-w-2xl">
                 Every capability deployment follows our evidence-based execution architecture with dual-track leadership governance to guarantee accountability from day one.
               </p>
             </div>
 
             <Link
               href="/approach"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-orange hover:bg-orange-dark text-white text-[15px] font-bold transition-all shadow-md flex-shrink-0 font-accent"
+              className="relative z-10 inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-orange hover:bg-orange-dark text-white text-[15px] font-bold transition-all shadow-md flex-shrink-0 font-accent"
             >
               <span>Explore Our Approach</span>
               <ArrowRight className="w-4 h-4" />
