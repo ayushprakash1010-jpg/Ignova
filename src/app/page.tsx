@@ -5,6 +5,37 @@ import ClientLogos from "@/components/ui/ClientLogos";
 import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
 import { Reveal, AnimatedNumber } from "@/components/ui/MotionPrimitives";
 
+const PERFORMANCE_STEPS = [
+  {
+    num: "01",
+    title: "Diagnose",
+    description:
+      "Assess talent, capability and operating gaps to establish a clear performance baseline.",
+    output: "Output: Performance Baseline",
+  },
+  {
+    num: "02",
+    title: "Prioritize",
+    description:
+      "Align objectives and critical resources around high-impact operational mandates.",
+    output: "Output: Focused Priorities",
+  },
+  {
+    num: "03",
+    title: "Execute",
+    description:
+      "Deploy specialist expertise with disciplined progress reviews on site.",
+    output: "Output: Targeted Interventions",
+  },
+  {
+    num: "04",
+    title: "Sustain",
+    description:
+      "Embed standard operating practices, clear ownership, and continuous improvement.",
+    output: "Output: Performance Controls",
+  },
+];
+
 export default function HomePage() {
   return (
     <div className="bg-white text-[#1E293B]">
@@ -527,91 +558,41 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+            {PERFORMANCE_STEPS.map((step, index) => (
+              <div key={step.num} className="relative h-full">
+                <Reveal delay={index * 0.08} className="h-full">
+                  <div className="group h-full flex flex-col justify-between p-6 rounded-xl bg-white border border-[#E8E2D5] shadow-2xs hover:border-[#A84D14]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                    <div>
+                      <span className="inline-block text-sm font-bold text-slate-600 group-hover:text-[#A84D14] transition-colors font-accent mb-2">
+                        {step.num}
+                      </span>
+                      <h3 className="text-xl font-bold text-[#0B2038] mb-2">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
 
-            {/* Step 01 */}
-            <Reveal delay={0}>
-              <div className="group relative">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-bold text-slate-600 group-hover:text-[#A84D14] transition-colors font-accent">
-                    01
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#A84D14]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
-                  Diagnose
-                </h3>
-                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                  Assess talent, capability and operating gaps to establish a clear performance baseline.
-                </p>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#A84D14] font-accent">
-                  Output: Performance Baseline
-                </span>
+                    <div className="pt-4 mt-5 border-t border-slate-100">
+                      <span className="block text-[11px] font-bold uppercase tracking-[0.08em] text-[#A84D14] font-accent leading-snug">
+                        {step.output}
+                      </span>
+                    </div>
+                  </div>
+                </Reveal>
+
+                {index < PERFORMANCE_STEPS.length - 1 && (
+                  <div
+                    aria-hidden="true"
+                    className="hidden lg:flex items-center justify-center absolute -right-8 top-1/2 -translate-y-1/2 w-8 pointer-events-none"
+                  >
+                    <ArrowRight className="w-4 h-4 text-[#A84D14]" />
+                  </div>
+                )}
               </div>
-            </Reveal>
-
-            {/* Step 02 */}
-            <Reveal delay={0.08}>
-              <div className="group relative">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-bold text-slate-600 group-hover:text-[#A84D14] transition-colors font-accent">
-                    02
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#A84D14]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
-                  Prioritize
-                </h3>
-                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                  Align objectives and critical resources around high-impact operational mandates.
-                </p>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#A84D14] font-accent">
-                  Output: Focused Priorities
-                </span>
-              </div>
-            </Reveal>
-
-            {/* Step 03 */}
-            <Reveal delay={0.16}>
-              <div className="group relative">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-bold text-slate-600 group-hover:text-[#A84D14] transition-colors font-accent">
-                    03
-                  </span>
-                  <ArrowRight className="w-4 h-4 text-slate-300 hidden lg:block transition-transform duration-200 group-hover:translate-x-1 group-hover:text-[#A84D14]" />
-                </div>
-                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
-                  Execute
-                </h3>
-                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                  Deploy specialist expertise with disciplined progress reviews on site.
-                </p>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#A84D14] font-accent">
-                  Output: Targeted Interventions
-                </span>
-              </div>
-            </Reveal>
-
-            {/* Step 04 */}
-            <Reveal delay={0.24}>
-              <div className="group relative">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-bold text-slate-600 group-hover:text-[#A84D14] transition-colors font-accent">
-                    04
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-[#0B2038] mb-2">
-                  Sustain
-                </h3>
-                <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mb-2.5">
-                  Embed standard operating practices, clear ownership, and continuous improvement.
-                </p>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#A84D14] font-accent">
-                  Output: Performance Controls
-                </span>
-              </div>
-            </Reveal>
-
+            ))}
           </div>
 
         </div>
