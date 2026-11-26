@@ -132,7 +132,7 @@ export default function AboutPage() {
                 Explore Our Approach
               </Button>
               <Button href="/contact" variant="outline" size="lg">
-                Discuss Strategic Mandates
+                Discuss Mandates
               </Button>
             </div>
           </div>
