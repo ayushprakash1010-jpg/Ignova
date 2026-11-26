@@ -8,7 +8,7 @@ import { Reveal, AnimatedNumber } from "@/components/ui/MotionPrimitives";
 export default function HomePage() {
   return (
     <div className="bg-white text-[#1E293B]">
-      
+
       {/* =========================================================================
           1. HERO SECTION: Full-Width Real Documentary Industrial Photography
           ========================================================================= */}
@@ -27,7 +27,7 @@ export default function HomePage() {
                 <span className="w-1.5 h-1.5 rounded-full bg-[#DF7C36]" />
                 Connecting Shop Floor to Boardroom
               </div>
-              
+
               <h1 className="text-4xl sm:text-5xl lg:text-[48px] xl:text-[52px] font-bold text-white leading-[1.1] mb-6 tracking-tight">
                 Enabling execution<br />
                 <span className="text-[#DF7C36]">&amp; impact.</span>
@@ -39,20 +39,20 @@ export default function HomePage() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="pt-2 grid grid-cols-2 sm:inline-grid sm:grid-cols-2 sm:self-start gap-3 sm:gap-4 w-full sm:w-auto">
               <Link
                 href="/services"
-                className="group inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl bg-[#A84D14] hover:bg-[#8C3F0F] text-white text-sm sm:text-[15px] font-semibold transition-all shadow-xs hover:shadow-md"
+                className="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-4 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-[#A84D14] hover:bg-[#8C3F0F] border border-transparent text-white text-[15px] sm:text-base font-semibold transition-all shadow-xs hover:shadow-md"
               >
-                Explore services
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span>Explore services</span>
+                <ArrowUpRight className="w-[18px] h-[18px] shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl text-white hover:text-orange-200 text-sm sm:text-[15px] font-semibold transition-colors border border-white/20 hover:border-white/40"
+                className="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-4 sm:px-7 py-3.5 sm:py-4 rounded-xl text-white hover:text-orange-200 text-[15px] sm:text-base font-semibold transition-colors border border-white/25 hover:border-white/50"
               >
-                Get in touch
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <span>Get in touch</span>
+                <ArrowUpRight className="w-[18px] h-[18px] shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
 
@@ -73,7 +73,7 @@ export default function HomePage() {
       <section className="bg-[#F4F0E8] border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0">
-            
+
             {/* Stat 1: 50+ Years */}
             <div className="md:border-r md:border-[#E8E2D5] md:pr-6 md:pl-2 first:pl-0">
               <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#0B2038]" style={{ fontFamily: "var(--font-heading)" }}>
@@ -151,7 +151,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="bg-white py-16 sm:py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
             <div>
               <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#A84D14] font-accent block mb-2">
@@ -161,7 +161,7 @@ export default function HomePage() {
                 Three capabilities. One partner.
               </h2>
             </div>
-            
+
             {/* Operational Triad Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 text-xs sm:text-sm font-semibold text-slate-700 font-accent">
               <span className="font-bold text-[#A84D14]">Focus:</span> People + Processes + Technology
@@ -169,7 +169,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
+
             {/* Card 1: IGNOVA Triage */}
             <Reveal delay={0} className="h-full">
               <div className="group border border-slate-200 rounded-xl overflow-hidden h-full flex flex-col justify-between hover:border-[#A84D14]/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 bg-white">
@@ -301,7 +301,7 @@ export default function HomePage() {
       <section className="bg-white py-16 sm:py-20 md:py-24 border-t border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Column: Narrative & Philosophy */}
             <div className="lg:col-span-5">
               <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#A84D14] font-accent block mb-2">
@@ -313,7 +313,7 @@ export default function HomePage() {
               <p className="text-base sm:text-[17px] text-slate-600 leading-relaxed font-normal mb-6">
                 Real operational improvement doesn&apos;t happen in abstract presentations. It happens directly on the shop floor—where operators, supervisors, and plant leadership address daily constraints in real time.
               </p>
-              
+
               {/* Core Advisory Principle */}
               <div className="p-4 sm:p-5 rounded-lg bg-[#FAF9F6] border-l-4 border-[#A84D14] border-y border-r border-[#E8E2D5] mb-6">
                 <p className="text-xs font-bold uppercase tracking-wider text-[#A84D14] font-accent mb-1">
@@ -347,7 +347,7 @@ export default function HomePage() {
 
             {/* Right Column: 3 On-Site Stages */}
             <div className="lg:col-span-7 space-y-4">
-              
+
               {/* Step 1: Diagnose at Source */}
               <Reveal delay={0}>
                 <div className="group p-6 rounded-xl bg-[#FAF9F6] border border-slate-200 hover:border-[#A84D14]/50 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
@@ -416,7 +416,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="bg-[#FAF9F6] py-16 sm:py-20 border-y border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-[#A84D14] font-accent block mb-2">
               Performance Governance
@@ -430,7 +430,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            
+
             {/* Domain 1: Plant Leadership */}
             <Reveal delay={0} className="h-full">
               <div className="p-6 sm:p-7 rounded-xl bg-white border border-slate-200/90 shadow-2xs hover:border-[#A84D14]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 h-full">
@@ -517,7 +517,7 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="bg-[#F4F0E8] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="mb-12">
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#A84D14] font-accent block mb-2">
               PERFORMANCE AMBITION
@@ -528,7 +528,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            
+
             {/* Step 01 */}
             <Reveal delay={0}>
               <div className="group relative">
@@ -620,18 +620,18 @@ export default function HomePage() {
       {/* =========================================================================
           8. CLIENT LOGOS & CREDENTIALS: India's Industrial & Enterprise Leaders
           ========================================================================= */}
-      <section className="bg-[#FAF9F6] py-16 sm:py-20 border-b border-[#E8E2D5]">
+      <section className="bg-[#FAF9F6] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-5xl mx-auto mb-10">
+
+          <div className="text-center max-w-5xl mx-auto mb-10 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight leading-tight mb-4">
               Trusted by India&apos;s Industrial &amp; Enterprise Leaders
             </h2>
 
             {/* GPWD Culture Pill */}
-            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs sm:text-[13px] font-semibold text-slate-700 font-accent text-center">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#A84D14] flex-shrink-0" />
-              <span>Supporting Organizations Towards GPWD Certification &amp; Culture Strengthening</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs sm:text-[13px] font-semibold text-slate-700 font-accent">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#A84D14]" />
+              Supporting Organizations Towards GPWD Certification &amp; Culture Strengthening
             </div>
           </div>
 
