@@ -346,31 +346,31 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── 5. Selected Client Experience (PPT Slide 17) ───────── */}
-      <section className="relative py-10 md:py-12 bg-navy text-white overflow-hidden">
+      <section className="relative py-12 md:py-14 lg:min-h-[calc(100svh-5rem)] lg:max-h-[680px] flex flex-col justify-center bg-navy text-white overflow-hidden">
         <BlueprintOverlay variant="navy" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-7 text-center max-w-5xl mx-auto">
-            <div className="mb-2.5">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-8 md:mb-10 text-center max-w-5xl mx-auto">
+            <div className="mb-3">
               <span
-                className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-white/10 text-orange-200 border border-white/15"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-white/10 text-orange-200 border border-white/15"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 Track Record &amp; Credibility
               </span>
             </div>
             <h2
-              className="text-3xl sm:text-[34px] lg:text-[36px] font-extrabold tracking-tight leading-tight text-white"
+              className="text-3xl sm:text-4xl lg:text-[38px] font-extrabold tracking-tight leading-tight text-white"
               style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
             >
               Apply Experience Across Sectors &amp; Business Functions
             </h2>
-            <p className="mt-2 text-base sm:text-[17px] text-slate-300 leading-relaxed">
+            <p className="mt-3 text-base sm:text-lg text-slate-300 leading-relaxed">
               Demonstrated impact across Tier-1 industrial manufacturing and premier enterprise institutions.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-7">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-8 md:mb-9">
             {[
               { title: "Industrial Consulting", clients: CLIENTS.industrial, delay: 0 },
               { title: "Recruitment Experience", clients: CLIENTS.recruitment, delay: 0.1 },
@@ -381,15 +381,15 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: group.delay }}
-                className="bg-white/5 border border-white/10 rounded-2xl p-6"
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7"
               >
                 <p
-                  className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-orange-light mb-4"
+                  className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-5"
                   style={{ fontFamily: "var(--font-accent)" }}
                 >
                   {group.title}
                 </p>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5">
                   {group.clients.map((client, index) => (
                     <motion.li
                       key={client}
@@ -400,7 +400,7 @@ export default function ServicesPage() {
                       className="flex items-center gap-3 text-white/90"
                     >
                       <span className="w-2 h-2 rounded-full bg-orange flex-shrink-0" />
-                      <span className="text-[15px] font-medium">{client}</span>
+                      <span className="text-base font-medium">{client}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -414,12 +414,12 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap items-center justify-center gap-2.5"
+            className="flex flex-wrap items-center justify-center gap-3"
           >
             {SECTORS.map((sector) => (
               <span
                 key={sector}
-                className="px-4 py-1.5 rounded-full border border-white/20 text-white/80 text-sm font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
+                className="px-5 py-2 rounded-full border border-white/20 text-white/80 text-[15px] font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 {sector}
