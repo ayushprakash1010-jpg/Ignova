@@ -632,14 +632,9 @@ export default function HomePage() {
           ========================================================================= */}
       <section className="bg-[#0B2038] py-14 sm:py-16 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
-          <div>
-            <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.18em] text-[#F59E56] font-accent mb-2.5">
-              Build capability &middot; Secure talent &middot; Engineer performance
-            </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-[36px] xl:text-[38px] font-bold text-white tracking-tight leading-tight">
-              Let&rsquo;s close the gap between ambition and execution.
-            </h2>
-          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-[36px] xl:text-[38px] font-bold text-white tracking-tight leading-tight">
+            Let&rsquo;s close the gap between ambition and execution.
+          </h2>
           <div className="flex-shrink-0">
             <Link
               href="/contact"
