@@ -7,28 +7,24 @@ import { Reveal, AnimatedNumber } from "@/components/ui/MotionPrimitives";
 
 const PERFORMANCE_STEPS = [
   {
-    num: "01",
     title: "Diagnose",
     description:
       "Assess talent, capability and operating gaps to establish a clear performance baseline.",
     output: "Output: Performance Baseline",
   },
   {
-    num: "02",
     title: "Prioritize",
     description:
       "Align objectives and critical resources around high-impact operational mandates.",
     output: "Output: Focused Priorities",
   },
   {
-    num: "03",
     title: "Execute",
     description:
       "Deploy specialist expertise with disciplined progress reviews on site.",
     output: "Output: Targeted Interventions",
   },
   {
-    num: "04",
     title: "Sustain",
     description:
       "Embed standard operating practices, clear ownership, and continuous improvement.",
@@ -560,13 +556,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
             {PERFORMANCE_STEPS.map((step, index) => (
-              <div key={step.num} className="relative h-full">
+              <div key={step.title} className="relative h-full">
                 <Reveal delay={index * 0.08} className="h-full">
                   <div className="group h-full flex flex-col justify-between p-6 rounded-xl bg-white border border-[#E8E2D5] shadow-2xs hover:border-[#A84D14]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
                     <div>
-                      <span className="inline-block text-sm font-bold text-slate-600 group-hover:text-[#A84D14] transition-colors font-accent mb-2">
-                        {step.num}
-                      </span>
                       <h3 className="text-xl font-bold text-[#0B2038] mb-2">
                         {step.title}
                       </h3>
