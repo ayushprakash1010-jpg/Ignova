@@ -32,6 +32,22 @@ const PERFORMANCE_STEPS = [
   },
 ];
 
+function ArchitecturalGridOverlay() {
+  return (
+    <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-[0.05]"
+        style={{
+          backgroundImage:
+            "linear-gradient(#FFFFFF 1px, transparent 1px), linear-gradient(90deg, #FFFFFF 1px, transparent 1px)",
+          backgroundSize: "56px 56px",
+        }}
+      />
+      <div className="absolute -bottom-28 -left-24 w-96 h-96 rounded-full bg-[#DF7C36]/[0.06] blur-3xl" />
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <div className="bg-white text-[#1E293B]">
@@ -40,7 +56,8 @@ export default function HomePage() {
           1. HERO SECTION: Full-Width Real Documentary Industrial Photography
           ========================================================================= */}
       <section className="relative pt-16 sm:pt-20 bg-[#0B2038] overflow-hidden">
-        <div className="relative flex flex-col lg:block lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
+        <ArchitecturalGridOverlay />
+        <div className="relative z-10 flex flex-col lg:block lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
           <PracticeHeroVisual
             src="/images/hero/hero-precision-plant.jpg"
             alt="State-of-the-art precision manufacturing plant with automated robotic systems and structural steel architecture"
@@ -623,8 +640,9 @@ export default function HomePage() {
       {/* =========================================================================
           9. CALL TO ACTION BANNER: Deep Navy (#0B2038)
           ========================================================================= */}
-      <section className="bg-[#0B2038] py-14 sm:py-16 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
+      <section className="relative bg-[#0B2038] py-14 sm:py-16 text-white overflow-hidden">
+        <ArchitecturalGridOverlay />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
           <h2 className="text-3xl sm:text-4xl lg:text-[36px] xl:text-[38px] font-bold text-white tracking-tight leading-tight">
             Let&rsquo;s close the gap between ambition and execution.
           </h2>
