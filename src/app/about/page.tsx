@@ -66,27 +66,6 @@ const capabilityPillars = [
   },
 ];
 
-const howWeWork = [
-  {
-    tag: "Capability Mandate",
-    trigger: "Capability gaps",
-    solution: "IGNOVA TRIAGE",
-    href: "/services/triage",
-  },
-  {
-    tag: "Talent Mandate",
-    trigger: "Critical hiring",
-    solution: "IGNOVA EDGE",
-    href: "/services/edge",
-  },
-  {
-    tag: "Operational Mandate",
-    trigger: "Operational improvement",
-    solution: "PROJECT EXECUTION",
-    href: "/services/project-execution",
-  },
-];
-
 export default function AboutPage() {
   return (
     <>
@@ -275,61 +254,6 @@ export default function AboutPage() {
                 </motion.div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ============ HOW WE WORK ============ */}
-      <section className="py-16 md:py-24 bg-cream border-y border-[#E8E2D5]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="How We Work"
-            title="Calibrate Mandates to Execution"
-            centered
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {howWeWork.map((item, index) => (
-              <motion.div
-                key={item.solution}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="group relative bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 border border-cream-dark hover:-translate-y-1 overflow-hidden"
-              >
-                {/* Top accent */}
-                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange via-orange-light to-orange" />
-
-                <p
-                  className="text-sm font-bold uppercase tracking-wider text-orange mb-2"
-                  style={{ fontFamily: "var(--font-accent)" }}
-                >
-                  {item.tag}
-                </p>
-                <h3
-                  className="text-2xl font-bold text-navy mb-6"
-                  style={{ fontFamily: "var(--font-heading)" }}
-                >
-                  {item.trigger}
-                </h3>
-
-                <div className="flex items-center gap-3 mb-6">
-                  <ArrowRight className="w-5 h-5 text-orange flex-shrink-0" />
-                  <span
-                    className="text-lg font-bold text-navy"
-                    style={{ fontFamily: "var(--font-accent)" }}
-                  >
-                    {item.solution}
-                  </span>
-                </div>
-
-                <Button href={item.href} variant="ghost" size="sm">
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
