@@ -5,7 +5,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface ServiceCardProps {
-  number: string;
+  number?: string;
   pillar: string;
   brand: string;
   items: string[];
@@ -16,7 +16,6 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({
-  number,
   pillar,
   brand,
   items,
@@ -36,13 +35,10 @@ export default function ServiceCard({
       <Link href={href} className="group block h-full">
         <div className="executive-card p-8 sm:p-9 h-full flex flex-col justify-between">
           <div>
-            {/* Pillar Badge & Index */}
-            <div className="flex items-center justify-between mb-6">
+            {/* Pillar Badge */}
+            <div className="mb-5">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-orange-500/10 text-[#A84D14] border border-[#A84D14]/25 font-accent">
                 {pillar}
-              </span>
-              <span className="text-2xl font-black text-slate-300 group-hover:text-[#A84D14]/40 transition-colors font-heading">
-                {number}
               </span>
             </div>
 

@@ -10,7 +10,6 @@ import CTABanner from "@/components/ui/CTABanner";
 import { SERVICES, EXCELLENCE_AGENDA, CLIENTS, SECTORS } from "@/lib/constants";
 
 const serviceEntries = Object.values(SERVICES);
-const numbers = ["01", "02", "03"];
 const serviceCardActions = [
   "Explore IGNOVA Triage",
   "Explore IGNOVA Edge",
@@ -117,7 +116,6 @@ export default function ServicesPage() {
             {serviceEntries.map((service, index) => (
               <ServiceCard
                 key={service.brand}
-                number={numbers[index]}
                 pillar={service.pillar}
                 brand={service.brand}
                 items={service.items}

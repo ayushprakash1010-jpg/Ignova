@@ -21,10 +21,10 @@ const AMBITION_PHRASES = [
 ];
 
 const GOVERNANCE_STEPS = [
-  "Establish baselines",
-  "Set targets",
-  "Assign ownership",
-  "Review results",
+  { label: "Establish baselines", icon: BarChart3 },
+  { label: "Set targets", icon: Target },
+  { label: "Assign ownership", icon: Users },
+  { label: "Review results", icon: CheckCircle2 },
 ];
 
 const STARTING_PATHS = [
@@ -263,45 +263,58 @@ export default function ApproachPage() {
             </div>
           </motion.div>
 
-          {/* Governance Steps */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white rounded-2xl border border-cream-dark shadow-sm overflow-hidden"
-          >
-            <div className="bg-cream/60 border-b border-cream-dark px-6 py-3.5 flex items-center justify-between">
-              <p
-                className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-orange"
-                style={{ fontFamily: "var(--font-accent)" }}
+          {/* Governance Steps (PPT Slide 13) */}
+          <div>
+            <div className="text-center mb-6">
+              <span
+                className="inline-flex items-center px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] bg-orange/10 text-orange border border-orange/25 font-accent"
               >
-                Governance Cycle
-              </p>
-              <span className="text-xs font-medium text-charcoal-light hidden sm:inline font-accent">
-                Continuous accountability loop
+                Governance
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-cream-dark">
-              {GOVERNANCE_STEPS.map((step, index) => (
-                <div
-                  key={step}
-                  className="group px-6 py-5 sm:py-6 flex items-center justify-between gap-3 hover:bg-cream/35 transition-colors"
-                >
-                  <p
-                    className="text-base sm:text-lg font-bold text-navy leading-snug"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {step}
-                  </p>
-                  {index < GOVERNANCE_STEPS.length - 1 && (
-                    <ArrowRight className="w-4 h-4 text-orange/60 hidden lg:block flex-shrink-0 transition-transform duration-200 group-hover:translate-x-1 group-hover:text-orange" />
-                  )}
-                </div>
-              ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
+              {GOVERNANCE_STEPS.map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <div key={step.label} className="relative h-full">
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.45, delay: index * 0.1 }}
+                      className="relative h-full bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/40 hover:-translate-y-1 transition-all duration-300 group overflow-hidden flex flex-col items-start"
+                    >
+                      <div
+                        aria-hidden="true"
+                        className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:to-orange transition-colors duration-300"
+                      />
+
+                      <div className="w-11 h-11 rounded-xl bg-orange/10 text-orange flex items-center justify-center mb-4 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                        <Icon className="w-5 h-5" />
+                      </div>
+
+                      <p
+                        className="text-lg sm:text-xl font-bold text-navy leading-snug"
+                        style={{ fontFamily: "var(--font-heading)" }}
+                      >
+                        {step.label}
+                      </p>
+                    </motion.div>
+
+                    {index < GOVERNANCE_STEPS.length - 1 && (
+                      <div
+                        aria-hidden="true"
+                        className="hidden lg:flex items-center justify-center absolute -right-8 top-1/2 -translate-y-1/2 w-8 pointer-events-none"
+                      >
+                        <ArrowRight className="w-4 h-4 text-orange" />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
