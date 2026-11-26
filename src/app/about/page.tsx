@@ -261,7 +261,7 @@ export default function AboutPage() {
       {/* ============ CTA BANNER ============ */}
       <CTABanner
         variant="navy"
-        title="Align the Mandate. Mobilize Expertise. Deliver Performance."
+        title="Let’s close the gap between ambition and execution."
         buttonText="Explore Our Services"
         buttonHref="/services"
         secondaryButtonText="Explore Our Approach"
