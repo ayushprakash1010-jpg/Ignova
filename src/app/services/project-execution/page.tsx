@@ -156,14 +156,14 @@ export default function ProjectExecutionPage() {
           />
         </div>
 
-        <div className="relative flex flex-col lg:block lg:min-h-[540px] xl:min-h-[560px]">
+        <div className="relative flex flex-col lg:block lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
           <PracticeHeroVisual
             src="/images/services/execution-robotics.jpg"
             alt="Automated precision industrial robotic arm performing high-efficiency manufacturing operations"
             objectPosition="object-right"
           />
 
-          <div className="relative z-10 w-full lg:w-[49%] xl:w-[48%] px-4 sm:px-6 lg:pr-6 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[540px] xl:min-h-[560px] flex flex-col justify-center">
+          <div className="relative z-10 w-full lg:w-[49%] xl:w-[48%] px-4 sm:px-6 lg:pr-6 hero-content-pad pt-12 pb-8 sm:pt-14 sm:pb-10 lg:py-20 lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px] flex flex-col justify-center">
             {/* Pillar tag */}
             <div className="mb-5">
               <span
