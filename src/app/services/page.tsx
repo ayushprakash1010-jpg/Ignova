@@ -346,80 +346,66 @@ export default function ServicesPage() {
       </section>
 
       {/* ───────── 5. Selected Client Experience (PPT Slide 17) ───────── */}
-      <section className="relative py-16 md:py-24 bg-navy text-white overflow-hidden">
+      <section className="relative py-10 md:py-12 bg-navy text-white overflow-hidden">
         <BlueprintOverlay variant="navy" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            label="Track Record & Credibility"
-            title="Apply Experience Across Sectors & Business Functions"
-            subtitle="Demonstrated impact across Tier-1 industrial manufacturing and premier enterprise institutions."
-            centered
-            light
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Industrial Consulting */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-6"
+          <div className="mb-7 text-center max-w-5xl mx-auto">
+            <div className="mb-2.5">
+              <span
+                className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs sm:text-[13px] font-bold uppercase tracking-wider bg-white/10 text-orange-200 border border-white/15"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
-                Industrial Consulting
-              </p>
-              <ul className="space-y-3">
-                {CLIENTS.industrial.map((client, index) => (
-                  <motion.li
-                    key={client}
-                    initial={{ opacity: 0, y: 8 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.08 }}
-                    className="flex items-center gap-3 text-white/90"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-orange flex-shrink-0" />
-                    <span className="text-base font-medium">{client}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-
-            {/* Recruitment Experience */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-8"
+                Track Record &amp; Credibility
+              </span>
+            </div>
+            <h2
+              className="text-3xl sm:text-[34px] lg:text-[36px] font-extrabold tracking-tight leading-tight text-white"
+              style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
             >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-6"
-                style={{ fontFamily: "var(--font-accent)" }}
+              Apply Experience Across Sectors &amp; Business Functions
+            </h2>
+            <p className="mt-2 text-base sm:text-[17px] text-slate-300 leading-relaxed">
+              Demonstrated impact across Tier-1 industrial manufacturing and premier enterprise institutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-7">
+            {[
+              { title: "Industrial Consulting", clients: CLIENTS.industrial, delay: 0 },
+              { title: "Recruitment Experience", clients: CLIENTS.recruitment, delay: 0.1 },
+            ].map((group) => (
+              <motion.div
+                key={group.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: group.delay }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6"
               >
-                Recruitment Experience
-              </p>
-              <ul className="space-y-3">
-                {CLIENTS.recruitment.map((client, index) => (
-                  <motion.li
-                    key={client}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.08 }}
-                    className="flex items-center gap-3 text-white/90"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-orange flex-shrink-0" />
-                    <span className="text-base font-medium">{client}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
+                <p
+                  className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-orange-light mb-4"
+                  style={{ fontFamily: "var(--font-accent)" }}
+                >
+                  {group.title}
+                </p>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2.5">
+                  {group.clients.map((client, index) => (
+                    <motion.li
+                      key={client}
+                      initial={{ opacity: 0, y: 8 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.3, delay: index * 0.06 }}
+                      className="flex items-center gap-3 text-white/90"
+                    >
+                      <span className="w-2 h-2 rounded-full bg-orange flex-shrink-0" />
+                      <span className="text-[15px] font-medium">{client}</span>
+                    </motion.li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
 
           {/* Sector Tags */}
@@ -428,12 +414,12 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="flex flex-wrap items-center justify-center gap-3"
+            className="flex flex-wrap items-center justify-center gap-2.5"
           >
             {SECTORS.map((sector) => (
               <span
                 key={sector}
-                className="px-5 py-2.5 rounded-full border border-white/20 text-white/80 text-[15px] font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
+                className="px-4 py-1.5 rounded-full border border-white/20 text-white/80 text-sm font-medium hover:border-orange/50 hover:text-orange-light transition-colors duration-300"
                 style={{ fontFamily: "var(--font-accent)" }}
               >
                 {sector}
