@@ -339,23 +339,34 @@ function ContactForm() {
   );
 }
 
+/** Renders the subtle architectural blueprint grid and ambient glow overlay for Contact sections. */
+function BlueprintOverlay({ variant = "cream" }: { variant?: "cream" | "navy" }) {
+  const isNavy = variant === "navy";
+  const lineColor = isNavy ? "#FFFFFF" : "#0F2B4C";
+  return (
+    <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div
+        className={isNavy ? "absolute inset-0 opacity-[0.05]" : "absolute inset-0 opacity-[0.03]"}
+        style={{
+          backgroundImage: `linear-gradient(${lineColor} 1px, transparent 1px), linear-gradient(90deg, ${lineColor} 1px, transparent 1px)`,
+          backgroundSize: isNavy ? "56px 56px" : "60px 60px",
+        }}
+      />
+      {isNavy ? (
+        <div className="absolute top-0 right-0 w-32 h-32 bg-[#DF7C36]/10 rounded-full blur-2xl" />
+      ) : (
+        <div className="absolute -top-24 right-0 w-[420px] h-[300px] bg-orange-500/[0.04] rounded-full blur-[90px]" />
+      )}
+    </div>
+  );
+}
+
 export default function ContactPage() {
   return (
     <>
       {/* ============ HERO SECTION ============ */}
       <section className="relative bg-cream border-b border-[#E8E2D5] overflow-hidden">
-        {/* Subtle blueprint grid & warm glow */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-          <div className="absolute -top-24 right-0 w-[420px] h-[300px] bg-orange-500/[0.04] rounded-full blur-[90px]" />
-        </div>
+        <BlueprintOverlay variant="cream" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-8 md:pb-10">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
@@ -513,41 +524,43 @@ export default function ContactPage() {
 
               {/* Integrated Services Panel */}
               <div className="bg-[#0B2038] rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[#DF7C36]/10 rounded-full blur-2xl pointer-events-none" />
+                <BlueprintOverlay variant="navy" />
 
-                <span
-                  className="text-xs font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent block mb-2"
-                >
-                  Integrated Services
-                </span>
-                <h3
-                  className="text-xl font-bold text-white mb-6"
-                  style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
-                >
-                  Our Capabilities
-                </h3>
+                <div className="relative z-10">
+                  <span
+                    className="text-xs font-bold uppercase tracking-[0.2em] text-[#DF7C36] font-accent block mb-2"
+                  >
+                    Integrated Services
+                  </span>
+                  <h3
+                    className="text-xl font-bold text-white mb-6"
+                    style={{ fontFamily: "var(--font-heading)", color: "#FFFFFF" }}
+                  >
+                    Our Capabilities
+                  </h3>
 
-                <div className="space-y-3">
-                  {capabilities.map((cap) => (
-                    <Link
-                      key={cap.href}
-                      href={cap.href}
-                      className="group flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-orange/30 transition-all duration-300"
-                    >
-                      <div>
-                        <span
-                          className="text-[15px] font-bold text-white group-hover:text-orange-light tracking-wide transition-colors block"
-                          style={{ fontFamily: "var(--font-accent)" }}
-                        >
-                          {cap.label}
-                        </span>
-                        <span className="text-sm text-slate-300">
-                          {cap.desc}
-                        </span>
-                      </div>
-                      <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-orange group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
-                    </Link>
-                  ))}
+                  <div className="space-y-3">
+                    {capabilities.map((cap) => (
+                      <Link
+                        key={cap.href}
+                        href={cap.href}
+                        className="group flex items-center justify-between px-4 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-orange/30 transition-all duration-300"
+                      >
+                        <div>
+                          <span
+                            className="text-[15px] font-bold text-white group-hover:text-orange-light tracking-wide transition-colors block"
+                            style={{ fontFamily: "var(--font-accent)" }}
+                          >
+                            {cap.label}
+                          </span>
+                          <span className="text-sm text-slate-300">
+                            {cap.desc}
+                          </span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-orange group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
