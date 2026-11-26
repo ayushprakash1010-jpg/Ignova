@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, ArrowRight, CheckCircle2, ShieldCheck, Factory, Truck } from "lucide-react";
 import ClientLogos from "@/components/ui/ClientLogos";
+import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
 import { Reveal, AnimatedNumber } from "@/components/ui/MotionPrimitives";
 
 export default function HomePage() {
@@ -12,10 +13,15 @@ export default function HomePage() {
           1. HERO SECTION: Full-Width Real Documentary Industrial Photography
           ========================================================================= */}
       <section className="relative pt-16 sm:pt-20 bg-[#0B2038] overflow-hidden">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-12 min-h-[540px] lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
-          
-          {/* Left Column: Balanced 50% Deep Navy Card flush to left margin */}
-          <div className="lg:col-span-6 bg-[#0B2038] text-white flex flex-col justify-center px-4 sm:px-6 lg:pr-10 xl:pr-12 hero-content-pad py-14 lg:py-20 z-10">
+        <div className="relative flex flex-col lg:block lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
+          <PracticeHeroVisual
+            src="/images/hero/hero-precision-plant.jpg"
+            alt="State-of-the-art precision manufacturing plant with automated robotic systems and structural steel architecture"
+            heightClassName="h-[340px] sm:h-[420px] lg:h-auto"
+          />
+
+          {/* Left Column: Hero copy dissolving into full-bleed factory visual */}
+          <div className="relative z-10 w-full lg:w-[49%] xl:w-[48%] text-white flex flex-col justify-center px-4 sm:px-6 lg:pr-6 hero-content-pad py-12 sm:py-16 lg:py-20 lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-bold uppercase tracking-[0.18em] text-[#DF7C36] font-accent mb-6 border border-white/10">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#DF7C36]" />
@@ -56,28 +62,6 @@ export default function HomePage() {
               <span>Scroll to explore</span>
               <span className="text-[#DF7C36] animate-bounce">&darr;</span>
             </div>
-          </div>
-
-          {/* Right Column: Balanced 50% Precision Industrial Operations */}
-          <div className="lg:col-span-6 relative min-h-[340px] sm:min-h-[420px] lg:min-h-full overflow-hidden bg-[#0B2038]">
-            <Image
-              src="/images/hero/hero-precision-plant.jpg"
-              alt="State-of-the-art precision manufacturing plant with automated robotic systems and structural steel architecture"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover object-center animate-hero-settle"
-            />
-            {/* Subtle desktop seam feather softening the split into deep navy */}
-            <div
-              aria-hidden="true"
-              className="hidden lg:block absolute inset-y-0 left-0 w-28 xl:w-36 bg-gradient-to-r from-[#0B2038] via-[#0B2038]/65 via-40% to-transparent pointer-events-none"
-            />
-            {/* Subtle mobile vertical seam feather */}
-            <div
-              aria-hidden="true"
-              className="lg:hidden absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#0B2038] via-[#0B2038]/55 to-transparent pointer-events-none"
-            />
           </div>
 
         </div>
