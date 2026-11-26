@@ -647,31 +647,25 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          9. CALL TO ACTION BANNER: Deep Navy (#0B2038), Strictly NO "your priority"
+          9. CALL TO ACTION BANNER: Deep Navy (#0B2038)
           ========================================================================= */}
       <section className="bg-[#0B2038] py-14 sm:py-16 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
           <div>
-            <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.18em] text-[#F59E56] font-accent mb-2">
+            <p className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.18em] text-[#F59E56] font-accent mb-2.5">
               Build capability &middot; Secure talent &middot; Engineer performance
             </p>
-            <h2 className="text-3xl sm:text-4xl lg:text-[38px] font-bold text-white tracking-tight leading-tight mb-2">
-              Align the mandate. Mobilize expertise. Deliver performance.
+            <h2 className="text-3xl sm:text-4xl lg:text-[36px] xl:text-[38px] font-bold text-white tracking-tight leading-tight">
+              Let&rsquo;s close the gap between ambition and execution.
             </h2>
-            <p className="text-sm sm:text-base text-slate-300 font-normal">
-              Start with mandate calibration and performance goals.
-            </p>
-            <p className="text-xs sm:text-[13px] text-slate-400 mt-2">
-              Confidential executive consultation &middot; Response within 1 business day &middot; Gurugram &amp; Pan-India
-            </p>
           </div>
           <div className="flex-shrink-0">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-1.5 px-6 py-3.5 rounded-xl bg-[#A84D14] hover:bg-[#8C3F0F] text-white text-sm sm:text-[15px] font-semibold transition-all shadow-xs hover:shadow-md"
+              className="group inline-flex items-center justify-center gap-2 whitespace-nowrap px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-[#A84D14] hover:bg-[#8C3F0F] text-white text-[15px] sm:text-base font-semibold transition-all shadow-xs hover:shadow-md"
             >
-              Get in touch
-              <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <span>Get in touch</span>
+              <ArrowUpRight className="w-[18px] h-[18px] shrink-0 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
         </div>
