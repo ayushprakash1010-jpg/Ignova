@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 interface ProcessStepProps {
-  number: string;
+  number?: string;
   title: string;
   description: string;
   output: string;
@@ -11,7 +11,6 @@ interface ProcessStepProps {
 }
 
 export default function ProcessStep({
-  number,
   title,
   description,
   output,
@@ -29,24 +28,16 @@ export default function ProcessStep({
         {/* Top gradient accent */}
         <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:via-orange group-hover:to-orange transition-colors duration-300" />
 
-        {/* Clean Typographic Index Label */}
-        <span
-          className="block text-xs font-bold uppercase tracking-[0.2em] text-orange mb-3"
-          style={{ fontFamily: "var(--font-accent)" }}
-        >
-          {number}
-        </span>
-
         {/* Title */}
         <h3
-          className="text-2xl font-bold text-navy mb-3"
+          className="text-xl xl:text-2xl font-bold text-navy mb-3"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-charcoal-light mb-5 leading-relaxed">{description}</p>
+        <p className="text-charcoal-light text-[15px] mb-5 leading-relaxed">{description}</p>
       </div>
 
       {/* Output */}

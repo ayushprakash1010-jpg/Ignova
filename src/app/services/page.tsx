@@ -255,7 +255,7 @@ export default function ServicesPage() {
           />
 
           {/* 4 Outcome Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-12">
             {performanceOutcomes.map((outcome, idx) => {
               const Icon = outcome.icon;
               return (
@@ -265,24 +265,20 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="bg-cream rounded-2xl p-7 border border-cream-dark shadow-sm hover:shadow-md hover:border-orange/30 transition-all flex flex-col justify-between"
+                  className="bg-cream rounded-2xl p-7 border border-cream-dark shadow-sm hover:shadow-md hover:border-orange/30 transition-all h-full flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-xs font-bold uppercase tracking-widest text-orange font-accent">
                         {outcome.tag}
                       </span>
-                      <span className="text-xl font-black text-slate-300 font-heading">
-                        {outcome.num}
-                      </span>
-                    </div>
-
-                    <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center mb-4 text-orange">
-                      <Icon className="w-5 h-5" />
+                      <div className="w-10 h-10 rounded-xl bg-orange/10 flex items-center justify-center text-orange">
+                        <Icon className="w-5 h-5" />
+                      </div>
                     </div>
 
                     <h3
-                      className="text-xl font-bold text-navy mb-3"
+                      className="text-xl font-bold text-navy mb-3 lg:min-h-[3.5rem] flex items-start"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {outcome.title}
@@ -293,11 +289,11 @@ export default function ServicesPage() {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-cream-dark">
+                  <div className="pt-4 border-t border-cream-dark lg:min-h-[6.5rem]">
                     <span className="text-xs font-bold uppercase tracking-wider text-charcoal/60 font-accent block mb-1">
                       Target Deliverable
                     </span>
-                    <p className="text-sm font-semibold text-navy">
+                    <p className="text-sm font-semibold text-navy leading-snug">
                       {outcome.metric}
                     </p>
                   </div>

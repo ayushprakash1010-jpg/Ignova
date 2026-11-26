@@ -129,11 +129,10 @@ export default function ApproachPage() {
             subtitle="From diagnostic baseline to standard performance controls — diagnose, prioritize, execute, and sustain."
             centered
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {IGNOVA_FACTOR.map((step, index) => (
               <ProcessStep
                 key={step.number}
-                number={step.number}
                 title={step.title}
                 description={step.description}
                 output={step.output}
@@ -176,15 +175,12 @@ export default function ApproachPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="relative bg-white/[0.06] hover:bg-white/[0.1] border border-white/15 rounded-xl px-6 py-6 transition-all text-left overflow-hidden"
+                className="relative bg-white/[0.06] hover:bg-white/[0.1] border border-white/15 rounded-xl px-6 py-7 transition-all text-center flex items-center justify-center overflow-hidden"
               >
                 <div
                   aria-hidden="true"
                   className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#DF7C36] to-[#F59E56]"
                 />
-                <span className="block text-xs font-bold tracking-[0.2em] text-[#F59E56] font-accent mb-2">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
                 <p
                   className="text-lg sm:text-xl font-bold text-white tracking-tight"
                   style={{ fontFamily: "var(--font-heading)" }}

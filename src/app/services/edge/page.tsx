@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import {
+  ArrowRight,
   Search,
   Target,
   ClipboardCheck,
@@ -192,56 +193,49 @@ export default function EdgePage() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {hiringSteps.map((step, index) => {
               const Icon = step.icon;
               return (
-                <motion.div
-                  key={step.number}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="relative bg-cream rounded-2xl p-7 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
-                >
-                  {/* Top copper gradient accent */}
-                  <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:to-orange transition-colors duration-300" />
+                <div key={step.title} className="relative h-full">
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.15 }}
+                    className="relative h-full flex flex-col bg-cream rounded-2xl p-7 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+                  >
+                    {/* Top copper gradient accent */}
+                    <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:to-orange transition-colors duration-300" />
 
-                  <div className="flex items-center justify-between mb-5">
-                    <span
-                      className="text-xs font-bold uppercase tracking-[0.2em] text-orange font-accent"
-                    >
-                      {step.number}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-orange/10 text-orange flex items-center justify-center group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                    <div className="w-11 h-11 rounded-xl bg-orange/10 text-orange flex items-center justify-center mb-5 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
-                  </div>
 
-                  {/* Title */}
-                  <h3
-                    className="text-xl font-bold text-navy mb-2.5"
-                    style={{ fontFamily: "var(--font-heading)" }}
-                  >
-                    {step.title}
-                  </h3>
+                    {/* Title */}
+                    <h3
+                      className="text-xl font-bold text-navy mb-2.5"
+                      style={{ fontFamily: "var(--font-heading)" }}
+                    >
+                      {step.title}
+                    </h3>
 
-                  {/* Description */}
-                  <p className="text-charcoal-light text-[15px] leading-relaxed">
-                    {step.description}
-                  </p>
+                    {/* Description */}
+                    <p className="text-charcoal-light text-[15px] leading-relaxed">
+                      {step.description}
+                    </p>
+                  </motion.div>
 
-                  {/* Scroll-drawn connector line (except last) */}
+                  {/* Connector arrow outside box (except last) */}
                   {index < hiringSteps.length - 1 && (
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: 0.2 + index * 0.14 }}
-                      className="hidden lg:block absolute top-1/2 -right-4 w-8 h-[2px] bg-orange/50 origin-left"
-                    />
+                    <div
+                      aria-hidden="true"
+                      className="hidden lg:flex items-center justify-center absolute -right-8 top-1/2 -translate-y-1/2 w-8 pointer-events-none"
+                    >
+                      <ArrowRight className="w-4 h-4 text-orange" />
+                    </div>
                   )}
-                </motion.div>
+                </div>
               );
             })}
           </div>
@@ -343,7 +337,7 @@ export default function EdgePage() {
           />
 
           {/* 4 Measured Hiring Outcomes */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-12">
             {[
               {
                 icon: Clock,
@@ -382,14 +376,14 @@ export default function EdgePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-xs flex flex-col justify-between hover:border-orange/40 hover:-translate-y-1 transition-all"
+                  className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-xs h-full flex flex-col justify-between hover:border-orange/40 hover:-translate-y-1 transition-all"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-xl bg-orange/10 flex items-center justify-center mb-5">
                       <Icon className="w-6 h-6 text-orange" />
                     </div>
                     <h3
-                      className="text-xl font-bold text-navy mb-2"
+                      className="text-xl font-bold text-navy mb-2 md:min-h-[3.5rem] flex items-start"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {outcome.title}
@@ -399,11 +393,11 @@ export default function EdgePage() {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-navy/10">
+                  <div className="pt-4 border-t border-navy/10 md:min-h-[5rem]">
                     <span className="text-xs font-bold uppercase tracking-wider text-orange font-accent block mb-1">
                       {outcome.measureLabel}
                     </span>
-                    <p className="text-sm font-bold text-navy font-accent">
+                    <p className="text-sm font-bold text-navy font-accent leading-snug">
                       {outcome.measureValue}
                     </p>
                   </div>

@@ -215,7 +215,7 @@ export default function ProjectExecutionPage() {
             centered
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 items-stretch">
             {FOCUS_AREAS.map((area, index) => {
               const Icon = area.icon;
               return (
@@ -225,32 +225,24 @@ export default function ProjectExecutionPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`relative bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/40 hover:-translate-y-1 transition-all duration-300 group flex flex-col justify-between ${
+                  className={`relative bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark shadow-md hover:shadow-xl hover:border-orange/40 hover:-translate-y-1 transition-all duration-300 group h-full flex flex-col justify-between ${
                     index === 4 ? "sm:col-span-2 lg:col-span-1" : ""
                   }`}
                 >
                   <div>
-                    {/* Number */}
-                    <span
-                      className="absolute top-5 right-5 text-4xl font-bold text-navy/10"
-                      style={{ fontFamily: "var(--font-heading)" }}
-                    >
-                      {area.number}
-                    </span>
-
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-orange/10 text-orange mb-5 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
                       <Icon className="w-6 h-6" />
                     </div>
 
                     <h3
-                      className="text-xl font-bold text-navy mb-2 leading-snug"
+                      className="text-xl font-bold text-navy leading-snug lg:min-h-[3.5rem] flex items-start"
                       style={{ fontFamily: "var(--font-heading)" }}
                     >
                       {area.title}
                     </h3>
                   </div>
 
-                  <p className="text-charcoal-light text-sm sm:text-[15px] leading-relaxed mt-2 pt-3 border-t border-navy/5">
+                  <p className="text-charcoal-light text-sm sm:text-[15px] leading-relaxed mt-3 pt-3 border-t border-navy/5 lg:min-h-[4.25rem]">
                     {area.description}
                   </p>
                 </motion.div>
@@ -338,11 +330,10 @@ export default function ProjectExecutionPage() {
             centered
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch">
             {METHODOLOGY_STAGES.map((stage, index) => (
               <ProcessStep
                 key={stage.title}
-                number={stage.number}
                 title={stage.title}
                 description={stage.description}
                 output={stage.output}
@@ -416,7 +407,7 @@ export default function ProjectExecutionPage() {
           />
 
           {/* Three Steps */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-12">
             {ON_SITE_STEPS.map((step, index) => {
               const Icon = step.icon;
               return (
@@ -426,17 +417,12 @@ export default function ProjectExecutionPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.15 }}
-                  className="relative bg-white rounded-2xl p-7 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
+                  className="relative h-full flex flex-col bg-white rounded-2xl p-7 border border-cream-dark shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group overflow-hidden"
                 >
                   <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-orange/70 via-orange-light to-orange/70 group-hover:from-orange group-hover:to-orange transition-colors duration-300" />
 
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange font-accent">
-                      {step.number}
-                    </span>
-                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-orange/10 text-orange group-hover:bg-orange group-hover:text-white transition-colors duration-300">
-                      <Icon className="w-5 h-5" />
-                    </div>
+                  <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-orange/10 text-orange mb-5 group-hover:bg-orange group-hover:text-white transition-colors duration-300">
+                    <Icon className="w-5 h-5" />
                   </div>
 
                   <h3
