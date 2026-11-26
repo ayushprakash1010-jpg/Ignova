@@ -61,7 +61,9 @@ export default function CTABanner({
               </div>
 
               <h2
-                className="text-3xl sm:text-4xl lg:text-[40px] font-bold leading-[1.15] mb-4 tracking-tight"
+                className={`text-3xl sm:text-4xl lg:text-[40px] font-bold leading-[1.15] tracking-tight ${
+                  subtitle ? "mb-4" : ""
+                }`}
                 style={{
                   fontFamily: "var(--font-heading)",
                   color: "#FFFFFF",

@@ -262,6 +262,7 @@ export default function AboutPage() {
       <CTABanner
         variant="navy"
         title="Let’s close the gap between ambition and execution."
+        subtitle=""
         buttonText="Explore Our Services"
         buttonHref="/services"
         secondaryButtonText="Explore Our Approach"

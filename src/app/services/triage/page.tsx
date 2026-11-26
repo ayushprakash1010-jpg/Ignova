@@ -34,6 +34,46 @@ import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
 
 /* ─── data ─── */
 
+interface HighlightCardItem {
+  label: string;
+  body: string;
+  emphasis?: boolean;
+}
+
+function TriageHighlightGrid({ cards }: { cards: HighlightCardItem[] }) {
+  return (
+    <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6 items-stretch">
+      {cards.map((card, i) => (
+        <motion.div
+          key={card.label}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          className="bg-navy rounded-2xl p-6 sm:p-7 border border-white/10 shadow-md text-center flex flex-col items-center h-full"
+        >
+          <p
+            className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.16em] text-[#F59E56] mb-3 md:min-h-[2.25rem] xl:min-h-0 flex items-center justify-center text-center"
+            style={{ fontFamily: "var(--font-accent)" }}
+          >
+            {card.label}
+          </p>
+          <p
+            className={
+              card.emphasis
+                ? "text-lg sm:text-[19px] text-white font-semibold leading-snug"
+                : "text-[15px] text-slate-200 leading-relaxed"
+            }
+            style={card.emphasis ? { fontFamily: "var(--font-heading)" } : undefined}
+          >
+            {card.body}
+          </p>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
 const deliverColumns = [
   {
     icon: Wrench,
@@ -465,64 +505,23 @@ export default function TriagePage() {
           </div>
 
           {/* Domain outcome + design principles */}
-          <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-navy rounded-2xl p-6 sm:p-7 text-center md:text-left"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Domain Outcome
-              </p>
-              <p
-                className="text-xl text-white font-semibold"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                Translate domain knowledge into better operational decisions.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Context-Led Development
-              </p>
-              <p className="text-charcoal-light text-[15px] leading-relaxed">
-                Map industry, functional &amp; role requirements to focus development on the knowledge needed for daily execution.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                A Journey Tailored to the Role
-              </p>
-              <p className="text-charcoal-light text-[15px] leading-relaxed">
-                Combine workshops, process observations &amp; workplace assignments around the operating context of each role.
-              </p>
-            </motion.div>
-          </div>
+          <TriageHighlightGrid
+            cards={[
+              {
+                label: "Domain Outcome",
+                body: "Translate domain knowledge into better operational decisions.",
+                emphasis: true,
+              },
+              {
+                label: "Context-Led Development",
+                body: "Map industry, functional & role requirements to focus development on the knowledge needed for daily execution.",
+              },
+              {
+                label: "A Journey Tailored to the Role",
+                body: "Combine workshops, process observations & workplace assignments around the operating context of each role.",
+              },
+            ]}
+          />
         </div>
       </section>
 
@@ -565,66 +564,23 @@ export default function TriagePage() {
           </div>
 
           {/* Leadership outcome + notes */}
-          <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-navy rounded-2xl p-6 sm:p-7 text-center md:text-left"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Leadership Outcome
-              </p>
-              <p
-                className="text-xl text-white font-semibold"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                Translate leadership decisions into operational action.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Assessment
-              </p>
-              <p className="text-charcoal-light text-[15px] leading-relaxed">
-                Leadership and behavioral assessments, including MBTI, build
-                self-awareness and inform individual development priorities.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white rounded-2xl p-6 sm:p-7 border border-cream-dark"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Journey
-              </p>
-              <p className="text-charcoal-light text-[15px] leading-relaxed">
-                Combine workshops, coaching and workplace application around the
-                demands of each leadership role.
-              </p>
-            </motion.div>
-          </div>
+          <TriageHighlightGrid
+            cards={[
+              {
+                label: "Leadership Outcome",
+                body: "Translate leadership decisions into operational action.",
+                emphasis: true,
+              },
+              {
+                label: "Assessment",
+                body: "Leadership and behavioral assessments, including MBTI, build self-awareness and inform individual development priorities.",
+              },
+              {
+                label: "Journey",
+                body: "Combine workshops, coaching and workplace application around the demands of each leadership role.",
+              },
+            ]}
+          />
         </div>
       </section>
 
@@ -675,64 +631,23 @@ export default function TriagePage() {
           </div>
 
           {/* Technical outcome + pedagogical pillars */}
-          <div className="mt-10 md:mt-12 grid md:grid-cols-3 gap-5 lg:gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-navy rounded-2xl p-6 sm:p-7 text-center md:text-left"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange-light mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Technical Outcome
-              </p>
-              <p
-                className="text-xl text-white font-semibold"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                Convert technical competence into quality &amp; productivity gains.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Practical Skill Assessment
-              </p>
-              <p className="text-charcoal-light text-[15px] leading-relaxed">
-                Assess tool knowledge &amp; practical proficiency before &amp; after capability interventions to identify gaps &amp; verify progress.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-cream rounded-2xl p-6 sm:p-7 border border-cream-dark"
-            >
-              <p
-                className="text-sm font-bold uppercase tracking-[0.2em] text-orange mb-2"
-                style={{ fontFamily: "var(--font-accent)" }}
-              >
-                Applied Real Projects
-              </p>
-              <p className="text-charcoal-light text-[15px] leading-relaxed">
-                Combine hands-on exercises &amp; workplace improvement projects to turn technical methods into repeatable execution.
-              </p>
-            </motion.div>
-          </div>
+          <TriageHighlightGrid
+            cards={[
+              {
+                label: "Technical Outcome",
+                body: "Convert technical competence into quality & productivity gains.",
+                emphasis: true,
+              },
+              {
+                label: "Practical Skill Assessment",
+                body: "Assess tool knowledge & practical proficiency before & after capability interventions to identify gaps & verify progress.",
+              },
+              {
+                label: "Applied Real Projects",
+                body: "Combine hands-on exercises & workplace improvement projects to turn technical methods into repeatable execution.",
+              },
+            ]}
+          />
         </div>
       </section>
 
