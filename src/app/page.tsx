@@ -618,21 +618,15 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          8. SECTOR REACH & CREDENTIALS: India's Industrial & Enterprise Leaders
+          8. CLIENT LOGOS & CREDENTIALS: India's Industrial & Enterprise Leaders
           ========================================================================= */}
       <section className="bg-[#FAF9F6] py-16 sm:py-20 md:py-24 border-b border-[#E8E2D5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="max-w-3xl mb-10">
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.2em] text-[#A84D14] font-accent block mb-2">
-              SECTOR REACH &amp; CREDENTIALS
-            </span>
+          <div className="text-center max-w-5xl mx-auto mb-10 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#0B2038] tracking-tight leading-tight mb-4">
               Trusted by India&apos;s Industrial &amp; Enterprise Leaders
             </h2>
-            <p className="text-base sm:text-[17px] text-slate-600 leading-relaxed font-normal mb-5">
-              Applying cross-industry operating depth, structured candidate assessment, and disciplined shop-floor execution across Manufacturing, Automotive, BFSI, and Technology.
-            </p>
 
             {/* GPWD Culture Pill */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-200/90 shadow-2xs text-xs sm:text-[13px] font-semibold text-slate-700 font-accent">
@@ -645,7 +639,7 @@ export default function HomePage() {
           <ClientLogos />
 
           {/* Industry Sectors Footer */}
-          <div className="mt-12 pt-6 border-t border-slate-200/80 text-sm text-slate-600 font-normal">
+          <div className="mt-10 pt-6 border-t border-slate-200/80 text-center text-sm text-slate-600 font-normal">
             Manufacturing &middot; Automotive &middot; Financial services &middot; Technology &middot; Healthcare
           </div>
 

@@ -230,7 +230,7 @@ export default function AboutPage() {
               <StatCounter key={stat.label} {...stat} light />
             ))}
           </div>
-          <p className="mt-8 text-center text-sm text-slate-600">
+          <p className="mt-8 text-center text-sm text-slate-300">
             Experience figures are based on the IGNOVA-provided corporate profile.
           </p>
         </div>
