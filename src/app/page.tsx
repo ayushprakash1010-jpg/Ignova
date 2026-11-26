@@ -575,8 +575,8 @@ export default function HomePage() {
             {PERFORMANCE_STEPS.map((step, index) => (
               <div key={step.title} className="relative h-full">
                 <Reveal delay={index * 0.08} className="h-full">
-                  <div className="group h-full flex flex-col justify-between p-6 rounded-xl bg-white border border-[#E8E2D5] shadow-2xs hover:border-[#A84D14]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
-                    <div>
+                  <div className="group h-full flex flex-col justify-between overflow-hidden rounded-xl bg-white border border-[#E8E2D5] shadow-2xs hover:border-[#A84D14]/45 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300">
+                    <div className="p-6 flex-1">
                       <h3 className="text-xl font-bold text-[#0B2038] mb-2">
                         {step.title}
                       </h3>
@@ -585,21 +585,33 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <div className="pt-4 mt-5 border-t border-slate-100">
-                      <span className="block text-[11px] font-bold uppercase tracking-[0.08em] text-[#A84D14] font-accent leading-snug">
-                        {step.output}
+                    {/* Connected Output Box */}
+                    <div className="bg-[#0B2038] px-5 xl:px-6 py-4 border-t-2 border-[#DF7C36]">
+                      <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-[#F59E56] font-accent mb-0.5">
+                        Output
+                      </span>
+                      <span className="block text-[14px] sm:text-[15px] xl:text-base font-bold text-white font-accent leading-snug">
+                        {step.output.replace(/^Output:\s*/i, "")}
                       </span>
                     </div>
                   </div>
                 </Reveal>
 
                 {index < PERFORMANCE_STEPS.length - 1 && (
-                  <div
-                    aria-hidden="true"
-                    className="hidden lg:flex items-center justify-center absolute -right-8 top-1/2 -translate-y-1/2 w-8 pointer-events-none"
-                  >
-                    <ArrowRight className="w-4 h-4 text-[#A84D14]" />
-                  </div>
+                  <>
+                    <div
+                      aria-hidden="true"
+                      className="hidden lg:flex items-center justify-center absolute -right-8 top-[34%] -translate-y-1/2 w-8 pointer-events-none"
+                    >
+                      <ArrowRight className="w-4 h-4 text-[#A84D14]" />
+                    </div>
+                    <div
+                      aria-hidden="true"
+                      className="hidden lg:flex items-center justify-center absolute -right-8 bottom-6 w-8 pointer-events-none"
+                    >
+                      <ArrowRight className="w-4 h-4 text-[#0B2038]" />
+                    </div>
+                  </>
                 )}
               </div>
             ))}
