@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Mail, MapPin, ArrowRight, CheckCircle, Clock, Globe, Phone } from "lucide-react";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
+import BlueprintOverlay from "@/components/ui/BlueprintOverlay";
 import { contactSchema, type ContactFormData } from "@/lib/contact-schema";
 
 const serviceOptions = [
@@ -339,34 +340,12 @@ function ContactForm() {
   );
 }
 
-/** Renders the subtle architectural blueprint grid and ambient glow overlay for Contact sections. */
-function BlueprintOverlay({ variant = "cream" }: { variant?: "cream" | "navy" }) {
-  const isNavy = variant === "navy";
-  const lineColor = isNavy ? "#FFFFFF" : "#0F2B4C";
-  return (
-    <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div
-        className={isNavy ? "absolute inset-0 opacity-[0.05]" : "absolute inset-0 opacity-[0.03]"}
-        style={{
-          backgroundImage: `linear-gradient(${lineColor} 1px, transparent 1px), linear-gradient(90deg, ${lineColor} 1px, transparent 1px)`,
-          backgroundSize: isNavy ? "56px 56px" : "60px 60px",
-        }}
-      />
-      {isNavy ? (
-        <div className="absolute top-0 right-0 w-32 h-32 bg-[#DF7C36]/10 rounded-full blur-2xl" />
-      ) : (
-        <div className="absolute -top-24 right-0 w-[420px] h-[300px] bg-orange-500/[0.04] rounded-full blur-[90px]" />
-      )}
-    </div>
-  );
-}
-
 export default function ContactPage() {
   return (
     <>
       {/* ============ HERO SECTION ============ */}
       <section className="relative bg-cream border-b border-[#E8E2D5] overflow-hidden">
-        <BlueprintOverlay variant="cream" />
+        <BlueprintOverlay variant="cream" glow="top-right" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-8 md:pb-10">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
@@ -524,7 +503,7 @@ export default function ContactPage() {
 
               {/* Integrated Services Panel */}
               <div className="bg-[#0B2038] rounded-2xl p-8 text-white shadow-xl relative overflow-hidden">
-                <BlueprintOverlay variant="navy" />
+                <BlueprintOverlay variant="navy" glow="top-right-compact" />
 
                 <div className="relative z-10">
                   <span

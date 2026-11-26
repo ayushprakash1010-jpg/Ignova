@@ -28,6 +28,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
 import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
+import BlueprintOverlay from "@/components/ui/BlueprintOverlay";
 
 /* ── Hiring Process Steps (Slide 10) ── */
 const hiringSteps = [
@@ -120,18 +121,7 @@ export default function EdgePage() {
     <>
       {/* ============ HERO SECTION ============ */}
       <section className="relative pt-16 sm:pt-20 bg-cream border-b border-[#E8E2D5] overflow-hidden">
-        {/* Decorative blueprint background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute bottom-16 left-0 w-[400px] h-[400px] bg-navy/[0.04] rounded-full blur-[100px]" />
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-        </div>
+        <BlueprintOverlay variant="cream" glow="bottom-left" />
 
         <div className="relative flex flex-col lg:block lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
           <PracticeHeroVisual
@@ -412,8 +402,10 @@ export default function EdgePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl bg-navy text-white p-8 sm:p-12 relative overflow-hidden shadow-xl"
+            className="rounded-3xl bg-[#0B2038] border border-white/10 text-white p-8 sm:p-12 relative overflow-hidden shadow-xl"
           >
+            <BlueprintOverlay variant="navy" />
+
             <div className="relative z-10 max-w-3xl mb-8">
               <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-2">
                 Operational Validation

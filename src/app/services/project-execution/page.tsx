@@ -22,6 +22,7 @@ import ProcessStep from "@/components/ui/ProcessStep";
 import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
 import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
+import BlueprintOverlay from "@/components/ui/BlueprintOverlay";
 
 /* ──────────────────────── DATA ──────────────────────── */
 
@@ -143,18 +144,7 @@ export default function ProjectExecutionPage() {
     <>
       {/* ============ HERO ============ */}
       <section className="relative pt-16 sm:pt-20 bg-cream border-b border-[#E8E2D5] overflow-hidden">
-        {/* Decorative blueprint background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute bottom-16 left-0 w-80 h-80 bg-navy/5 rounded-full blur-3xl" />
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-        </div>
+        <BlueprintOverlay variant="cream" glow="bottom-left" />
 
         <div className="relative flex flex-col lg:block lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
           <PracticeHeroVisual
@@ -348,9 +338,11 @@ export default function ProjectExecutionPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-10 rounded-2xl bg-navy p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6"
+            className="mt-10 relative overflow-hidden rounded-2xl bg-[#0B2038] border border-white/10 p-6 sm:p-8 text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl"
           >
-            <div>
+            <BlueprintOverlay variant="navy" topAccent />
+
+            <div className="relative z-10">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-orange-light font-accent block mb-1">
                 Execution Scorecard &amp; Controls
               </span>
@@ -358,7 +350,7 @@ export default function ProjectExecutionPage() {
                 Operational KPIs Monitored
               </h4>
             </div>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-sm font-accent">
+            <div className="relative z-10 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-sm font-accent">
               {[
                 "OEE (%)",
                 "First-pass yield (%)",
@@ -444,11 +436,9 @@ export default function ProjectExecutionPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-navy rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-xl"
+            className="bg-[#0B2038] border border-white/10 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-xl"
           >
-            {/* Decorative circles */}
-            <div className="absolute top-6 right-6 w-32 h-32 border border-white/5 rounded-full" />
-            <div className="absolute bottom-6 left-6 w-48 h-48 border border-white/5 rounded-full" />
+            <BlueprintOverlay variant="navy" />
 
             <div className="relative z-10">
               <div className="text-center max-w-2xl mx-auto mb-10">

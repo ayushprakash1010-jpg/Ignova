@@ -31,6 +31,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
 import PracticeHeroVisual from "@/components/ui/PracticeHeroVisual";
+import BlueprintOverlay from "@/components/ui/BlueprintOverlay";
 
 /* ─── data ─── */
 
@@ -244,18 +245,7 @@ export default function TriagePage() {
     <div className="overflow-hidden">
       {/* ── 1. Hero ── */}
       <section className="relative pt-16 sm:pt-20 bg-cream border-b border-[#E8E2D5] overflow-hidden">
-        {/* Subtle blueprint grid & warm glow beneath integrated photography */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div
-            className="absolute inset-0 opacity-[0.03]"
-            style={{
-              backgroundImage:
-                "linear-gradient(#0F2B4C 1px, transparent 1px), linear-gradient(90deg, #0F2B4C 1px, transparent 1px)",
-              backgroundSize: "60px 60px",
-            }}
-          />
-          <div className="absolute top-16 left-0 w-[420px] h-[420px] rounded-full bg-orange/[0.04] blur-[100px]" />
-        </div>
+        <BlueprintOverlay variant="cream" glow="top-left" />
 
         <div className="relative flex flex-col lg:block lg:min-h-[calc(100svh-5rem)] lg:max-h-[920px]">
           <PracticeHeroVisual
@@ -358,10 +348,11 @@ export default function TriagePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 md:mt-12 bg-navy rounded-2xl p-7 md:p-10 text-center"
+            className="mt-10 md:mt-12 relative overflow-hidden bg-[#0B2038] border border-white/10 rounded-2xl p-7 md:p-10 text-center shadow-xl"
           >
+            <BlueprintOverlay variant="navy" topAccent />
             <p
-              className="text-xl md:text-2xl text-white font-semibold italic"
+              className="relative z-10 text-xl md:text-2xl text-white font-semibold italic"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               &ldquo;Customize the intervention around the role and the

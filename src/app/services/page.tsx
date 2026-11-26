@@ -7,6 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import Button from "@/components/ui/Button";
 import CTABanner from "@/components/ui/CTABanner";
+import BlueprintOverlay from "@/components/ui/BlueprintOverlay";
 import { SERVICES, EXCELLENCE_AGENDA, CLIENTS, SECTORS } from "@/lib/constants";
 
 const serviceEntries = Object.values(SERVICES);
@@ -50,28 +51,6 @@ const performanceOutcomes = [
     icon: BarChart3,
   },
 ];
-
-/** Renders the subtle architectural blueprint grid and ambient glow overlay for Services sections. */
-function BlueprintOverlay({ variant = "cream" }: { variant?: "cream" | "navy" }) {
-  const isNavy = variant === "navy";
-  const lineColor = isNavy ? "#FFFFFF" : "#0F2B4C";
-  return (
-    <div aria-hidden="true" className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div
-        className={isNavy ? "absolute inset-0 opacity-[0.05]" : "absolute inset-0 opacity-[0.03]"}
-        style={{
-          backgroundImage: `linear-gradient(${lineColor} 1px, transparent 1px), linear-gradient(90deg, ${lineColor} 1px, transparent 1px)`,
-          backgroundSize: isNavy ? "56px 56px" : "60px 60px",
-        }}
-      />
-      {isNavy ? (
-        <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#DF7C36]/10 blur-3xl" />
-      ) : (
-        <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[560px] h-[320px] rounded-full bg-orange/[0.04] blur-[90px]" />
-      )}
-    </div>
-  );
-}
 
 export default function ServicesPage() {
   return (
