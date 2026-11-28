@@ -1,10 +1,12 @@
+export const SITE_URL = "https://www.ignovaconsulting.com";
+
 export const COMPANY = {
   name: "IGNOVA",
   fullName: "IGNOVA Consulting & Academy",
   tagline: "Architect. Activate. Accelerate.",
   description:
     "Three capabilities. One partner. Connecting people to business execution.",
-  email: "ignovacobsulting26@gmail.com",
+  email: "info@ignovaconsulting.com",
   phone: "+91 99715 24733",
   phoneRaw: "+919971524733",
   address: "L14C, Orchard Smartworld, Sector 61, Gurugram, Haryana",

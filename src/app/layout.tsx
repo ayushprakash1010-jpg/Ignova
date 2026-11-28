@@ -6,6 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import { COMPANY, SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,7 +28,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ignova-ek2m.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "IGNOVA Consulting & Academy | Architect. Activate. Accelerate.",
     template: "%s | IGNOVA",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     title: "IGNOVA Consulting & Academy | Architect. Activate. Accelerate.",
     description:
       "Three capabilities. One partner. Connecting people to business execution.",
-    url: "https://ignova-ek2m.vercel.app",
+    url: SITE_URL,
     siteName: "IGNOVA Consulting & Academy",
     images: [
       {
@@ -83,11 +84,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://ignova-ek2m.vercel.app/#organization",
+      "@id": `${SITE_URL}/#organization`,
       "name": "IGNOVA Consulting & Academy",
-      "url": "https://ignova-ek2m.vercel.app",
-      "logo": "https://ignova-ek2m.vercel.app/images/ignova-logo.png",
-      "email": "ignovacobsulting26@gmail.com",
+      "url": SITE_URL,
+      "logo": `${SITE_URL}/images/ignova-logo.png`,
+      "email": COMPANY.email,
       "telephone": "+91 99715 24733",
       "address": {
         "@type": "PostalAddress",
@@ -108,11 +109,11 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://ignova-ek2m.vercel.app/#website",
-      "url": "https://ignova-ek2m.vercel.app",
+      "@id": `${SITE_URL}/#website`,
+      "url": SITE_URL,
       "name": "IGNOVA Consulting & Academy",
       "publisher": {
-        "@id": "https://ignova-ek2m.vercel.app/#organization"
+        "@id": `${SITE_URL}/#organization`
       }
     }
   ]

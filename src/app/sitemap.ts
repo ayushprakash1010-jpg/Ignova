@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://ignova-ek2m.vercel.app";
+  const baseUrl = SITE_URL;
   const now = new Date();
 
   return [

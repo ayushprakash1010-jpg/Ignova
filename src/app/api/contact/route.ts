@@ -54,7 +54,7 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.IGNOVA_FORM_FROM || "onboarding@resend.dev";
-  const primaryTo = process.env.CONTACT_TO || COMPANY.email; // ignovacobsulting26@gmail.com
+  const primaryTo = process.env.CONTACT_TO || COMPANY.email;
   const fallbackTo = "growytvercel@gmail.com";
 
   if (!apiKey) {

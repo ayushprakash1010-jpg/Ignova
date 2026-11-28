@@ -9,6 +9,7 @@ import { Mail, MapPin, ArrowRight, CheckCircle, Clock, Globe, Phone } from "luci
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import BlueprintOverlay from "@/components/ui/BlueprintOverlay";
+import { COMPANY } from "@/lib/constants";
 import { contactSchema, type ContactFormData } from "@/lib/contact-schema";
 
 const serviceOptions = [
@@ -89,7 +90,7 @@ function ContactForm() {
     setSubmissionError("");
     setPrefilledMailto(null);
 
-    const fallbackMailto = `mailto:ignovacobsulting26@gmail.com?subject=${encodeURIComponent(
+    const fallbackMailto = `mailto:${COMPANY.email}?subject=${encodeURIComponent(
       `Inquiry from ${data.name} (${data.company})`
     )}&body=${encodeURIComponent(
       `Name: ${data.name}\nEmail: ${data.email}\nCompany: ${data.company}\nPhone: ${data.phone || "Not provided"}\nService: ${data.service || "General Inquiry"}\n\nMessage:\n${data.message}`
@@ -147,14 +148,14 @@ function ContactForm() {
                 className="inline-flex items-center gap-2 px-4 py-2.5 bg-[#A84D14] text-white rounded-lg text-sm font-semibold hover:bg-[#8C3F0F] transition-colors shadow-xs"
               >
                 <Mail className="w-4 h-4" />
-                Send Pre-filled Email to ignovacobsulting26@gmail.com
+                Send Pre-filled Email to {COMPANY.email}
               </a>
             </div>
           ) : (
             <p className="mt-1">
               If you prefer, email us at{" "}
-              <a className="underline font-semibold text-[#A84D14]" href="mailto:ignovacobsulting26@gmail.com">
-                ignovacobsulting26@gmail.com
+              <a className="underline font-semibold text-[#A84D14]" href={`mailto:${COMPANY.email}`}>
+                {COMPANY.email}
               </a>.
             </p>
           )}
@@ -473,10 +474,10 @@ export default function ContactPage() {
                         Corporate Inquiries
                       </p>
                       <a
-                        href="mailto:ignovacobsulting26@gmail.com"
+                        href={`mailto:${COMPANY.email}`}
                         className="text-[15px] text-charcoal font-medium hover:text-orange transition-colors break-all"
                       >
-                        ignovacobsulting26@gmail.com
+                        {COMPANY.email}
                       </a>
                     </div>
                   </div>
